@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchases_YTD__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(YEAR(TODAY()))= &quot;2020&quot;,
+&quot;Last Year: &quot; &amp;  TEXT(Sales_YTD_2019_RUS__c) &amp; BR() &amp;
+&quot;This Year: &quot; &amp;  TEXT(Sales_YTD_2020_RUS__c) &amp; BR(),
+
+IF(TEXT(YEAR(TODAY()))= &quot;2021&quot;,
+&quot;Last Year: &quot; &amp;  TEXT(Sales_YTD_2020_RUS__c) &amp; BR() &amp;
+&quot;This Year: &quot; &amp;  TEXT(Sales_YTD_2018_RUS__c) &amp; BR(),
+
+&apos;no information&apos;
+
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Purchases YTD</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

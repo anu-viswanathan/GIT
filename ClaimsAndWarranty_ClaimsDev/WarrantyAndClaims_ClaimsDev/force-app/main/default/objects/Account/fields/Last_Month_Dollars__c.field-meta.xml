@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Month_Dollars__c</fullName>
+    <description>Order Summary roll up fields. Rolls up the dollar amount of the customer&apos;s Shipped Orders for the previous month.</description>
+    <externalId>false</externalId>
+    <label>Last Month[$]</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eastern_Canada_IKO_Office_Address_Line_1__c</fullName>
+    <defaultValue>&quot;80 Stafford Drive&quot;</defaultValue>
+    <description>Eastern Canada Multi Line Address Line 1</description>
+    <externalId>false</externalId>
+    <label>Eastern Canada IKO Office Address Line 1</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

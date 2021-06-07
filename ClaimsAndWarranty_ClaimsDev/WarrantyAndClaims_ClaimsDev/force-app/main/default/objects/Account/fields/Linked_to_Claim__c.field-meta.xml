@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_to_Claim__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>UAT Sprint - IWCN 806 - True if the Case associated with the Account is not in draft status, otherwise, false.</description>
+    <externalId>false</externalId>
+    <label>Linked to Claim (Cannot Edit)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

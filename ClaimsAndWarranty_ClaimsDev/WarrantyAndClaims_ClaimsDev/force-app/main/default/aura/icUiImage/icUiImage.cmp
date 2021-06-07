@@ -1,0 +1,48 @@
+<!--
+ - Created by Yves Asselin and Andrea Pissinis on 1/21/2019.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                description="icUiImage"
+                access="global" >
+
+    <aura:attribute name="imageURL" type="String"
+                    default="https://picsum.photos/g/1200/600"
+                    access="global" />
+    <aura:attribute name="imageSize" type="String" default="100" access="global" />
+    <aura:attribute name="photoAlign" type="String" default="margin-right:auto" access="global" />
+    <aura:attribute name="marginTop" type="String" default="5" access="global"/>
+    <aura:attribute name="marginBottom" type="String" default="5" access="global"/>
+    <aura:attribute name="paddingTop" type="String" default="0" access="global" />
+    <aura:attribute name="paddingBottom" type="String" default="0" access="global" />
+    <aura:attribute name="paddingRight" type="String" default="0" access="global" />
+    <aura:attribute name="paddingLeft" type="String" default="0"  access="global" />
+    <aura:attribute name="backgroundColor" type="String" default="white" access="global"  />
+
+    <ltng:require styles="{!$Resource.FontCss}"/>
+
+
+    <div style="{!      v.photoAlign+
+                    '; padding-right:'
+                       +v.paddingRight+
+                    'px; padding-left:'
+                       +v.paddingLeft+
+                    'px; padding-top:'
+                       +v.paddingTop+
+                    'px; padding-bottom:'
+                       +v.paddingBottom+
+                    'px; background-color:'
+                       +v.backgroundColor+
+                    '; margin-top:'
+                       +v.marginTop+
+                    'px;  margin-bottom:'
+                       +v.marginBottom+
+                    'px; width:'
+                       +v.imageSize+'%'
+                 }">
+
+                <span class="">
+                    <img src="{!v.imageURL}"  alt="image" />
+                </span>
+    </div>
+</aura:component>

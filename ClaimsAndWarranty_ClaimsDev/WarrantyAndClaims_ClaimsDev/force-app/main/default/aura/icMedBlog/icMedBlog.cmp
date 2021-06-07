@@ -1,0 +1,77 @@
+<aura:component  description="icMedBlog" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="imgIkoBlog1" type="String" default="{!$Resource.icImgIkoBlog1}" />
+    <aura:attribute name="imgIkoBlog2" type="String" default="{!$Resource.icImgIkoBlog2}" />
+    <aura:attribute name="imgIkoBlog3" type="String" default="{!$Resource.icImgIkoBlog2}" />
+<!--    <aura:attribute name="ImageLink1" type="String" default="{!$Resource.p01MyDashboard800x460}" />-->
+
+    <div>
+        <div class="sdls-col"
+             style="
+                            width:100%;
+                            ">
+
+            <p class="slds-text-align--left"
+               style="postition: relative;
+                              padding-top:10px;
+                              margin-left:0px;
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:800;
+                              font-size:10px;
+                              letter-spacing:5px;
+                              background-color:white;
+                               ">
+
+                IKO PRO BLOG
+            </p>
+
+        </div>
+    </div>
+
+
+    
+    <div class="slds-grid"  style="max-width:1022px;  ">
+        <div class="slds-col">
+                <span>
+
+                <c:icUIBlogItem   image="{!v.imgIkoBlog1}"
+                                            title="You just can’t make this stuff up."
+                                            redirectURL="http://google.com"
+                                            description="Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit, sed do eiusmod tempor dunt
+                                                        ut labore et dolore magna aliqua. "  />
+                </span>
+        </div>
+        <div class="slds-col">
+                <span>
+                <c:icUIBlogItem   image="{!v.imgIkoBlog2}"
+                                            title="Asked to do the impossible—yet again."
+                                            redirectURL="http://google.com"
+                                            description="Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit, sed do eiusmod tempor dunt
+                                                        ut labore et dolore magna aliqua. "  />
+                </span>
+        </div>
+        <div class="slds-col">
+                <span>
+                <c:icUIBlogItem   image="{!v.imgIkoBlog3}"
+                                            redirectURL="http://google.com"
+                                            title="Not really enough time in the day."
+                                            description="Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit, sed do eiusmod tempor dunt
+                                                        ut labore et dolore magna aliqua. "  />
+                </span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</aura:component>

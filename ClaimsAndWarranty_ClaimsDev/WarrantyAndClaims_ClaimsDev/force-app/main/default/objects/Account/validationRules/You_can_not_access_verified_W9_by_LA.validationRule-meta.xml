@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>You_can_not_access_verified_W9_by_LA</fullName>
+    <active>true</active>
+    <description>You can not tick Verified W9 by LA(Account) when country is Canada.</description>
+    <errorConditionFormula>AND(
+ISCHANGED(  W9_Verified_by_LA_Account__c  ),
+(  BillingCountry  = &quot;Canada&quot;)
+)</errorConditionFormula>
+    <errorMessage>You can not tick Verified W9 by LA(Account) when country is Canada.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year__c</fullName>
+    <defaultValue>VALUE(RIGHT(TEXT(YEAR(TODAY())), 2) )</defaultValue>
+    <description>2 digit year for the Sample; used as part of the Sample Number</description>
+    <externalId>false</externalId>
+    <label>Year</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

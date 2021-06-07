@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IKO_Division_Visible_type__c</fullName>
+    <description>To check if the account is related to Decra or Non-Decra</description>
+    <externalId>false</externalId>
+    <label>IKO Division Visible type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decra</fullName>
+                <default>false</default>
+                <label>Decra</label>
+            </value>
+            <value>
+                <fullName>Non Decra</fullName>
+                <default>false</default>
+                <label>Non Decra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

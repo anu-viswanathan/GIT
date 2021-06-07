@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quebec_Contractors</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Owner_Full_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Contractor</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_STATE_CODE</field>
+        <operation>equals</operation>
+        <value>QC</value>
+    </filters>
+    <label>Quebec Contractors</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Residential_Admins</group>
+        <role>Business_Analyst</role>
+        <role>CEO</role>
+        <role>Eastern_Canada_Manager</role>
+        <role>IT_Director</role>
+        <role>QC_Sales</role>
+        <role>QC_Sales_Supervisor</role>
+        <role>Quebec_Tech_or_Rep</role>
+    </sharedTo>
+</ListView>

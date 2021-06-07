@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deficiency_Status_2_Year_Inspection__c</fullName>
+    <description>Status of deficiencies at the two year mark. This will be updated after the two year inspection is done and attached.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Status of the commercial warranty&apos;s two year inspection.</inlineHelpText>
+    <label>Deficiency Status (2 Year Inspection)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Installation_Deficiency_Status</valueSetName>
+    </valueSet>
+</CustomField>

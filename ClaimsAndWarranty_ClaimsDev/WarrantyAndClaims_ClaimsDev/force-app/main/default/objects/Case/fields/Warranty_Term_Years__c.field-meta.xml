@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Term_Years__c</fullName>
+    <description>Warranty term in years. Primarily for use in Conga, but can be used on layouts if needed. To be populated by CaseService class invoked through CaseTrigger.</description>
+    <externalId>false</externalId>
+    <label>Warranty Term (Years)</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

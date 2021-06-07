@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Date_Payment_Document_Generated__c</fullName>
+    <description>Populated by Conga when the Request Payment button is selected.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the last Payment was requested</inlineHelpText>
+    <label>Status Date: Payment Document Generated</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

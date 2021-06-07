@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Field_Application__c</fullName>
+    <externalId>false</externalId>
+    <label>Base Sheet (Field) Application</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Base_Sheet_Field__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAM Adhesive</fullName>
+                <default>false</default>
+                <label>SAM Adhesive</label>
+            </value>
+            <value>
+                <fullName>SAM Adhesive LVC</fullName>
+                <default>false</default>
+                <label>SAM Adhesive LVC</label>
+            </value>
+            <value>
+                <fullName>Type II Asphalt</fullName>
+                <default>false</default>
+                <label>Type II Asphalt</label>
+            </value>
+            <value>
+                <fullName>Type III Asphalt</fullName>
+                <default>false</default>
+                <label>Type III Asphalt</label>
+            </value>
+            <value>
+                <fullName>SEBS Asphalt</fullName>
+                <default>false</default>
+                <label>Modi-Melt SEBS Asphalt</label>
+            </value>
+            <value>
+                <fullName>Torch Applied</fullName>
+                <default>false</default>
+                <label>Torch Applied</label>
+            </value>
+            <value>
+                <fullName>Cold Gold Field Adhesive</fullName>
+                <default>false</default>
+                <label>Cold Gold Field Adhesive</label>
+            </value>
+            <value>
+                <fullName>Mechanically Attached</fullName>
+                <default>false</default>
+                <label>Mechanically Attached</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <controllingFieldValue>Modiflex MF-95-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-SS Base</controllingFieldValue>
+            <valueName>Type II Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <controllingFieldValue>Modiflex MF-95-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-SS Base</controllingFieldValue>
+            <valueName>Type III Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <controllingFieldValue>Modiflex MF-95-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-SS Base</controllingFieldValue>
+            <valueName>SEBS Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ArmourStick HD Base</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash HD</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash Sand</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash Sand HD</controllingFieldValue>
+            <controllingFieldValue>Armourbond 180</controllingFieldValue>
+            <controllingFieldValue>Armourvent Base</controllingFieldValue>
+            <controllingFieldValue>Armourvent HD Base</controllingFieldValue>
+            <valueName>SAM Adhesive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Modiflex MF-95-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-FS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-180-SS Base (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-FS Base</controllingFieldValue>
+            <controllingFieldValue>Modiflex MP-HD-SS Base</controllingFieldValue>
+            <valueName>Cold Gold Field Adhesive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Torchflex TF-95-SF Base</controllingFieldValue>
+            <controllingFieldValue>Torchflex TF-95-FF Base</controllingFieldValue>
+            <controllingFieldValue>Torchflex TP-180-FF Base</controllingFieldValue>
+            <controllingFieldValue>Torchflex TP-180-SF Base</controllingFieldValue>
+            <controllingFieldValue>Torchflex TP-HD-FF Base</controllingFieldValue>
+            <valueName>Torch Applied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fast n Stick 180 Base</controllingFieldValue>
+            <controllingFieldValue>Fast n Stick HD Base</controllingFieldValue>
+            <valueName>Mechanically Attached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Armourbond Flash</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash HD</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash Sand</controllingFieldValue>
+            <controllingFieldValue>Armourbond Flash Sand HD</controllingFieldValue>
+            <controllingFieldValue>Armourbond 180</controllingFieldValue>
+            <controllingFieldValue>Armourvent Base</controllingFieldValue>
+            <controllingFieldValue>Armourvent HD Base</controllingFieldValue>
+            <valueName>SAM Adhesive LVC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

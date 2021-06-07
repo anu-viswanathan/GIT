@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Intel_Report_User__c</columns>
+    <columns>Intel_Report_Role__c</columns>
+    <columns>Role_Type__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intel_Report_Role__c</field>
+        <operation>equals</operation>
+        <value>IKO North America,CA Commercial,US Commercial</value>
+    </filters>
+    <label>All</label>
+</ListView>

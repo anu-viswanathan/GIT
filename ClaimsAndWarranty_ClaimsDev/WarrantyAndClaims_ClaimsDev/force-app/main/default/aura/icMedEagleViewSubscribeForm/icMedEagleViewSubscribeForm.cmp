@@ -1,0 +1,40 @@
+<aura:component description="icMedEagleView" controller="icCTRLEagleview" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="eagleViewUserName" type="String" />
+	<aura:attribute name="eagleViewPassword" type="String" />
+	<aura:attribute name="subscribeResponse" type="String" />
+	<aura:attribute name="resultMessage" type="String" />	
+
+	<lightning:spinner aura:id="objSpinner" variant="brand" size="large" alternativeText="{!$Label.c.icLoading}" class="slds-hide" />
+
+
+
+
+	<form class="slds-form--stacked">
+
+		<div class="slds-text-heading_medium slds-align_center slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" style="{!if(or(v.resultMessage == null, v.resultMessage == ''), 'display:none','display:block')}">
+			{!v.resultMessage}
+		</div>
+
+		<aura:if isTrue="{!v.subscribeResponse == null}">
+			<div class="slds-grid slds-container--center slds-size--large slds-form--stacked">
+
+				<div class="slds-col slds-size_1-of-1">
+					<lightning:input label="{!$Label.c.icEagleView_Username_email_format}" type="text" name="eagleViewUserName" value="{!v.eagleViewUserName}" maxlength="255"/>
+
+					<lightning:input label="{!$Label.c.icEagleView_Password}" type="password" name="eagleViewPassword" value="{!v.eagleViewPassword}" maxlength="255"/>
+					<lightning:button name="subscribe" label="{!$Label.c.icSubscribe_to_EagleView}" onclick="{!c.handleSubscribeClick}" />
+				</div>
+			</div>
+
+			<aura:set attribute="else">
+				<div class="slds-grid slds-container--center slds-size--large slds-form--stacked">
+					<div class="slds-col slds-size_1-of-1">
+						<span>{!v.subscribeResponse}</span>
+						<lightning:button name="backToOpportunity" label="{!$Label.c.icBack_to_Opporutnity}" onclick="{!c.handleBackToOpportunityClick}" />
+					</div>
+				</div>
+			</aura:set>
+		</aura:if>
+
+	</form>
+</aura:component>

@@ -1,0 +1,37 @@
+<aura:component description="icUIBlogItem">
+    <aura:attribute name="title" type="String" default="My Title" />
+    <aura:attribute name="description" type="String" default="Some Description for this Tile" />
+    <aura:attribute name="redirectURL" type="String" />
+    <aura:attribute name="image" type="String" />
+
+
+
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12">
+
+
+
+          <span>
+            <img src="{!v.image}"/>
+           </span>
+        </div>
+        <div class="slds-col ">
+            <div class="slds-col ">
+                <span><p style="margin-left:25px; margin-right: 25px; font-weight: 800; font-size:12px; margin-top:20px; margin-bottom:5px;">{!v.title}</p></span>
+            </div>
+            <div class="slds-col ">
+                <span><p style="margin-left: 25px; margin-right: 25px; font-size:12px; ">{!v.description}</p></span>
+            </div>
+
+            <div class="slds-col ">
+                <span><p style="margin-top: 20px; margin-left: 25px; margin-right: 25px; font-size:10px; font-weight: 600;"><a href="{!v.redirectURL}"> <span style="color:#c62127; "> > </span> {!$Label.c.icREAD_MORE}</a></p></span>
+
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+
+
+</aura:component>

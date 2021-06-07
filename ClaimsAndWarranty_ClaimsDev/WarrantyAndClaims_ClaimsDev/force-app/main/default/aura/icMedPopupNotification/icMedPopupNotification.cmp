@@ -1,0 +1,35 @@
+<!--
+ - Created by Francois Poirier on 2019-11-29.
+ -->
+
+<aura:component controller="icCtrlPopupNotification" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:availableForFlowScreens" description="icMedPopupNotification">
+
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    <aura:attribute name="message" type="String" default="" />
+    <aura:attribute name="tag" type="String" />
+    <aura:attribute name="doNotShow" type="Boolean" default="false" />
+    <aura:attribute name="notificationViewId" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.showModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!--<p>this is the formatted Rich Text Version</p>-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                   <!--<aura:unescapedHtml value="{!v.message}"></aura:unescapedHtml>-->
+                    <lightning:formattedRichText value="{!v.message}"></lightning:formattedRichText>
+                </div>
+                <footer class="slds-modal__footer">
+                    <div class="slds-text-align--left">
+                        <lightning:input type="checkbox" label="{!$Label.c.Do_not_show_popup_message}" checked="{!v.doNotShow}" />
+                    </div>
+                    <div class="slds-text-align--right">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.handleCloseClick}">{!$Label.c.icClose}</button>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

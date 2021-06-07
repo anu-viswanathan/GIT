@@ -1,0 +1,21 @@
+<aura:component description="dataTablePagination">
+
+    <aura:attribute name="currentPageNumber" type="Integer" required="true" />
+    <aura:attribute name="maxPageNumber" type="Integer" required="true" />
+
+    <div class="slds-button-group" role="group">
+
+        <lightning:buttonGroup>
+            <lightning:button label="First" onclick="{!c.firstPage}"/>
+            <lightning:button label="Prev" onclick="{!c.prevPage}"/>
+            <button class="slds-button slds-button--neutral">
+                {!v.currentPageNumber} / {!v.maxPageNumber}
+            </button>
+            <lightning:button label="Next" onclick="{!c.nextPage}"/>
+            <lightning:button label="Last" onclick="{! c.lastPage}" />
+        </lightning:buttonGroup>
+
+
+    </div>
+
+</aura:component>

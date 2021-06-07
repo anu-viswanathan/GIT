@@ -1,0 +1,22 @@
+<aura:component controller="icCTRLProzone" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+
+	<aura:attribute name="remoteAuth" type="icDTOProzoneRemoteAuth" />
+	<aura:attribute name="remoteAuthEncrypted" type="icDTOProzoneRemoteAuth" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	Account Id : {!v.remoteAuth.accountId}
+	<br />
+	Session Id : {!v.remoteAuth.sessionId}
+
+	<br /><br />
+
+	<ui:button label="Encrypt" class="slds-button slds-button--brand" press="{!c.doEncrypt}" />
+
+	<br /><br />
+
+	Account Id : {!v.remoteAuthEncrypted.accountId}
+	<br />
+	Session Id : {!v.remoteAuthEncrypted.sessionId}
+
+</aura:component>

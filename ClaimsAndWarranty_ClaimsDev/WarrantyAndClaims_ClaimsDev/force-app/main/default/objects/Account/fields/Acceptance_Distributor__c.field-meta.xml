@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acceptance_Distributor__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Contains(TEXT(IKO_Products_Stocked__c), &apos;%&apos;), 
+IF(VALUE(SUBSTITUTE(TEXT(IKO_Products_Stocked__c), &apos;%&apos;, &apos;&apos;)) = 0, 
+&apos;Not Accepted&apos;, 
+IF(VALUE(SUBSTITUTE(TEXT(IKO_Products_Stocked__c), &apos;%&apos;, &apos;&apos;)) &gt;= 50, 
+&apos;High&apos;, 
+IF(VALUE(SUBSTITUTE(TEXT(IKO_Products_Stocked__c), &apos;%&apos;, &apos;&apos;)) &gt; 10, 
+&apos;Medium&apos;, 
+IF(VALUE(SUBSTITUTE(TEXT(IKO_Products_Stocked__c), &apos;%&apos;, &apos;&apos;)) &lt;= 10, 
+&apos;Low&apos;, 
+&apos;Unknown&apos; 
+)))), 
+&apos;Unknown&apos; 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Acceptance - Distributor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

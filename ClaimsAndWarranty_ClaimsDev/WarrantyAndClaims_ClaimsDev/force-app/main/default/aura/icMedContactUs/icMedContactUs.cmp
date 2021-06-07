@@ -1,0 +1,17 @@
+<aura:component controller="icCTRLContactUs" description="icPage icUIQuickShotItem" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="info" type="icDTOContactUs" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+
+
+	<div class="slds-box" style="width:60%;">
+		<h2 style="font-weight:600;">{!$Label.c.icYour_Sales_Rep_is} :</h2>
+		<br />
+        {!v.info.repName}
+		<br />
+		<aura:unescapedHtml value="{!v.info.repInfo}" />
+	</div>
+
+</aura:component>

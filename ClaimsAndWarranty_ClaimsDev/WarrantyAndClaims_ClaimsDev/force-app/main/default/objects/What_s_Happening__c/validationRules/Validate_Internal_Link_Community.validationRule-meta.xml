@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Internal_Link_Community</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Link_Type__c, &apos;Internal&apos;),
+ISBLANK(Internal_Community_Link__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Internal_Community_Link__c</errorDisplayField>
+    <errorMessage>Be sure to fill in the appropriate fields based on the link type selected.</errorMessage>
+</ValidationRule>

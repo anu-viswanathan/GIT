@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Premium_Co_op__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox indicates whether the CO-op credited will generate Premium Co-op or not.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this field only when allocating COOP $. When checked a 10% allocation will apply to the Premium Cap.</inlineHelpText>
+    <label>Allocate Premium CAP</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

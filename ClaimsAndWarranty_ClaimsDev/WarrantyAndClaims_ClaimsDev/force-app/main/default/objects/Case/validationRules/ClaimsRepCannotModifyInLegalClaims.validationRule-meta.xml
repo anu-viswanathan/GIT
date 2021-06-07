@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClaimsRepCannotModifyInLegalClaims</fullName>
+    <active>true</active>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-87
+Claims Rep cannot modify</description>
+    <errorConditionFormula>($Profile.Name = &apos;Commercial Claims Rep&apos; || $Profile.Name = &apos;Residential Claims Rep&apos;) &amp;&amp;  (PRIORVALUE( Legal__c ) = true &amp;&amp; Legal__c = false)</errorConditionFormula>
+    <errorDisplayField>Legal__c</errorDisplayField>
+    <errorMessage>Only Claims Managers are allowed to modify In Legal Claims.</errorMessage>
+</ValidationRule>

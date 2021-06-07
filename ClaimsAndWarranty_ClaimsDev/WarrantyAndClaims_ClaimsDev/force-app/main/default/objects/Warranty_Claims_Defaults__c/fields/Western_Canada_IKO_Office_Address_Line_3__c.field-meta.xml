@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Western_Canada_IKO_Office_Address_Line_3__c</fullName>
+    <defaultValue>&quot;L6W 1L4&quot;</defaultValue>
+    <description>Postal Code for Western Canada IKO Office</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Postal Code for Western Canada IKO Office</inlineHelpText>
+    <label>Western Canada IKO Office Address Line 3</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

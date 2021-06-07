@@ -1,0 +1,468 @@
+<!--
+ - Created by Yves Asselin on 2019-03-21.
+ -->
+
+<aura:component description="icTermsAndConditionsTEXT_ENG">
+
+
+
+    <div class="slds-grid slds-wrap" style="margin-top:50px;">
+
+        <div style="width:80%; margin:auto;" class="slds-col slds-size_1-of-1">
+            <span>
+                <h1 style="font-size:1.25rem;text-align: center;"><strong>IKO ROOFPRO<span style="position: relative; font-size:.85rem; top:-3px; font-family: Arial;"><sup>&trade;</sup></span> LOYALTY PROGRAM<br />
+                TERMS AND CONDITIONS</strong></h1>
+
+<br />
+    <strong>
+        <h2>Please click
+            <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/#36000000b5po/a/1R000000Y23k/nIYe092VxVdxXApdVs1rAeiYInnN3mfVRODErisw3m0" rel="noopener">
+
+                <u>here</u>
+
+            </a>
+
+            to review the complete IKO ROOFPRO terms and conditions.</h2>
+
+    </strong>
+
+                <br />
+
+    <p>
+        The IKO ROOFPRO™ PROGRAM (hereinafter the “<strong>Program</strong>”) is a loyalty marketing program owned and operated by IKO Industries Ltd. in Canada, and by IKO Industries Inc. in the US (hereinafter referred to as “<strong>IKO</strong>” or “<strong>we</strong>”). The Program allows roofing installers (hereinafter “ Contractors” and individually a “ Contractor” or “ you”) to benefit from special offers and programs designed to enhance your business.
+    </p>
+
+                <br />
+
+    <p>
+        IKO has approved you, the Contractor, for acceptance into the Program, as evidenced by the approval letter issued by IKO to you (the “<strong>Approval Letter</strong>”). IKO is prepared to accept you as a member of the Program, subject to your acceptance of these terms and conditions (sometimes hereinafter referred to as the “<strong>Agreement</strong>”) and subject to the payment by you to IKO of the applicable Program Fee as set out in the Approval Letter. You agree and acknowledge that once accepted, these terms and conditions will govern your participation in the Program.
+    </p>
+
+                <br />
+
+    <p>
+        <strong>1.	THE PROGRAM</strong> – Provided that the Contractor is in compliance with all its obligations under the Program, IKO will provide the Program to the Contractor as set out below:
+    </p>
+
+                <br />
+
+    <p>
+        a.	The Program benefits and rules are set out in the
+
+        <a target="_blank"  href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23a/AMuMxu9.MjXAI4mOGlwTY2araDcFArtXpjS5lfUL2E8" rel="noopener">
+            <u>IKO ROOFPRO Program Benefits Guide</u>
+        </a>
+
+        IKO ROOFPRO Program Benefits Guide (the “<strong>Benefits Guide</strong>”) and in the IKO ROOFPRO Policy Guide (the “<strong>Policy Guide</strong>”), which terms and conditions are incorporated herein (collectively the “<strong>Guides</strong>”). In accepting this Agreement, the Contractor acknowledges and agrees that the Contractor’s rights and obligations under the Program will be in accordance with this Agreement and the Guides, and that the Contractor has read this Agreement and the Guides and understands the terms and conditions set out therein.
+    </p>
+
+                <br />
+
+    <p>
+        b.	The Program is a tiered program consisting of three (3) tiers, and the Contractor has been accepted into the Program at the tier level indicated on the Approval Letter (the “<strong>Contractor Tier Level</strong>”). The Contractor should address any issues it may have with the assigned Contractor Tier Level with its IKO sales representative prior to acceptance of this Agreement and payment of the membership fee. The criteria by which IKO has made its determination of the Contractor Tier Level can be found in
+
+        <a target="_blank"      href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 4 of the Policy Guide</u>.
+        </a>
+
+
+                <br />
+
+        The manner in which the initial membership fee may be prorated is set out in
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 3 of the Policy Guide</u>.
+        </a>
+
+    </p>
+
+                <br />
+
+    <p>
+        c.	Movement between tiers, both upward and downward, will be instituted by IKO in accordance with the rules set out in
+
+        <a target="_blank"      href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 4 of the Policy Guide</u>.
+        </a>.
+
+        In addition, the Contractor may have rights to a tier buy-up in accordance with
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 4(c)(iii) of the Policy Guide</u>
+        </a>.
+    </p>
+
+                <br />
+
+    <p>
+        d.	Current Program benefits to be provided by IKO to the Contractor, as may be applicable to each tier in the Program, are as set out in the
+
+        <a target="_blank"          href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23a/AMuMxu9.MjXAI4mOGlwTY2araDcFArtXpjS5lfUL2E8" rel="noopener">
+            <u>Benefits Guide</u>
+        </a>
+
+        (the “<strong>Program Benefits</strong>”). The Program Benefits consist of preferred access to third party services (the “<strong>Third-Party Program Benefits</strong>”) as well as internal benefits granted by IKO (the “<strong>Internal IKO Program Benefits</strong>”) all of which are detailed in the Benefits Guide, as well as the Co-Op program benefits which are also detailed in
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 12 of the Policy Guide</u>
+        </a>.
+    </p>
+
+                <br />
+
+    <p>
+        e.	Except as described in the Policy Guide, the Program Benefits have no monetary value whatsoever and cannot be the basis of a monetary claim against IKO. Program Benefits are limited to the Contractor while a member of the Program and are non-transferable. In addition, access to certain of the Program Benefit are limited by Contractor Tier Level, as detailed in the Guides.
+    </p>
+
+                <br />
+
+    <p>
+        f.	IKO may from time to time, in its sole discretion, unilaterally add, remove or modify Third-Party Program Benefits. IKO will endeavor to provide prior notice if feasible.
+    </p>
+
+                <br />
+
+    <p>
+        g.	In addition, IKO may from time to time in its sole discretion add or remove, or change the operational rules or criteria for, Internal IKO Program Benefits, and in the case of removal of any Internal IKO Program Benefits or a change in their operational rules or criteria, upon prior notice to the Contractor.
+    </p>
+
+                <br />
+
+    <p>
+        h.	In addition to the rights set out above, IKO specifically reserves the right, from time to time in its discretion, to unilaterally amend the terms and conditions of this Agreement and the Guides. Amendment to the terms and conditions of this Agreement and the Guide, which are wholly within IKO’s control, will be made upon prior notice to the Contractor.
+    </p>
+
+                <br />
+
+    <p>
+        i.	IKO assumes no liability to Contractors whatsoever by reason of the amendment to the Program, in whole or in part, the addition and deletion of Third-Party Providers, changes made by Third-Party Providers to their terms and conditions or policies, or any changes to this Agreement or the Guide made in accordance with this Section 1.
+    </p>
+
+                <br />
+
+    <p>
+        j.	IKO reserves the right to withdraw or terminate the Program on prior notice to the Contractors. Please refer to
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 9(d) of the Policy Guide</u>
+        </a>
+
+        for Contractors’ rights in such situation.
+    </p>
+
+                <br />
+
+    <p>
+        k.	The providers of the Third-Party Program Benefits (“<strong>Third-Party Providers</strong>”) are independent parties and are not subcontractors, agents or representatives of IKO, and IKO bears no responsibility for the quality or continued availability of the Third-Party Program Benefits, and the Contractor releases IKO from any and all liability in respect thereto.
+    </p>
+
+                <br />
+
+    <p>
+        l.	IKO’s performance and provision of the Program and Program Benefits shall be excused by events which are outside the reasonable control of IKO, (“<strong>Force Majeure Events</strong>”), which shall include but not be limited to acts or omissions of the Third-Party Providers, and interruptions in service of any Program Benefit as a result of a Force Majeure Event, including without limitation interruptions in service of the IT platforms on which the Program is run.
+    </p>
+
+                <br />
+
+    <p>
+        <strong>2. CONTRACTOR OBLIGATIONS</strong>
+    </p>
+
+                <br />
+
+    <p>
+        a.	While a member of the Program, the Contractor agrees that it will comply with all ongoing qualification requirements set out in
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 2 of the Policy Guide</u>
+        </a>
+
+        , as well as the rules detailed in the Policy Guide (collectively the “<strong>Contractor Obligations</strong>”), at its sole cost and expense.
+    </p>
+
+                <br />
+
+    <p>
+        b.	The Contractor agrees that it will not hold itself out to the public as a subcontractor, agent, representative or employee of IKO, and that it has no authority to bind IKO in any matter whatsoever.
+    </p>
+
+                <br />
+
+    <p>
+        c.	The Contractor acknowledges and agrees that the failure to fulfill all of the Contractor Obligations may result in the termination of the Contractor’s membership in the Program without notice.
+    </p>
+
+                <br />
+
+    <p>
+        d.	Upon termination of the Contractor’s membership in the Program for any reason, or in the event that the Program itself is withdrawn or terminated, Contractor shall immediately cease using, and discard or return as directed by IKO all material (either in paper or electronic form), telephone book advertisements, papers, signs and business cards and all marketing or promotional materials displaying the IKO name, logo or any IKO trademark/trade name, and shall cease making any representations suggesting that the Contractor remains a member of the Program.
+    </p>
+
+                <br />
+
+    <p>
+        e.	The Contractor agrees that it will not disclose any details regarding the Program to third parties without the prior written consent of IKO.
+    </p>
+
+                <br />
+
+    <p>
+        <strong>3. INDEMNITY AND RELEASE</strong>
+    </p>
+
+                <br />
+
+    <p>
+        Contractor shall indemnify, defend and save IKO, its officers, directors, employees and affiliates, harmless from any claims, demands, actions, liabilities, costs, expenses and damages (collectively the “Claims”) based upon any allegation that: (a) the Contractor is an agent, representative or employee of IKO; (b) the Contractor or its employees, agents or subcontractors were negligent in performing work for their customers; (c) the acts or omissions of the Contractor or its employees, agents or subcontractors which damaged the property of others or resulted in personal injury; (d) the Contractor failed to comply with the terms of this Agreement or with the applicable building codes, laws, regulations, or rules, or with the terms of any agreement entered into by the Contractor for any Third Party Program Benefits; (e) the Contractor performed any wrongful or illegal act(s); (f) the Contractor made any misrepresentation to any of its customers; (g) the Contractor made an misrepresentation in its application to the Program or during the application process; and (h) the Contractor has provided warranties that extend beyond the terms and conditions of the IKO limited warranty in effect from time to time.
+    </p>
+
+                <br />
+
+    <p>
+        The Contractor forever releases IKO from any Claims arising from the Program, the Contractor’s use of any Third-Party Program Benefits or the discontinuation or unavailability of any Program Benefits, or the change in the Program rules or criteria.
+    </p>
+
+                <br />
+
+    <p>
+        The obligations of this section shall survive termination of the Agreement and the Contractor’s membership in the Program.
+    </p>
+
+                <br />
+
+                <p><strong>4.	TRADEMARKS AND INTELLECTUAL PROPERTY</strong></p>
+
+                <br />
+
+    <p>
+        The Contractor acknowledges and agrees that that IKO or its affiliates is the exclusive owner of IKO and IKO logo trademarks, as well as trademarks associated with IKO products, and undertakes not to contest or challenge the validity and use by IKO of such trademarks or other intellectual property owned by IKO. Save as set out herein, no license or right is granted or implied by this Agreement under, or for the use of, any trademarks, trade names or other intellectual property owned or controlled by IKO or in which IKO has any rights, except as otherwise provided in the Policy Guide. This Agreement shall not entitle the Contractor to use or otherwise identify itself or its business with any IKO trade name, trademark or other identification to IKO. So long as Contractor is a member of the Program, Contractor is an authorized user of the IKO trademark(s) and logo(s) for advertisement and publicity purposes only, and only in the manner as may be prescribed by IKO in
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 12 of the Policy Guide</u>.
+        </a>
+
+        Contractor undertakes not to use any confusingly similar trademarks to the IKO trademark(s) and logo(s). Contractor shall not register or attempt in any manner to register IKO’s trademark(s), or any other confusingly similar Trademark(s), in association with roofing services and products. The Contractor shall discontinue the use of any of the IKO trade names or trademarks and the IKO logo immediately upon the request of IKO, and the costs of same shall be borne by the Contractor.
+    </p>
+
+                <br />
+
+    <p><strong>5.	RELATIONSHIP OF PARTIES</strong></p>
+
+                <br />
+
+    <p>
+        The parties are not partners and this Agreement is not a partnership or joint venture. The Contractor is an independent contractor, and this Agreement shall not entitle the Contractor to use or otherwise identity itself or its business with any trade name, trademark or other identification to IKO, except as set out herein. The Contractor is not a representative, agent, nor an employee of IKO. IKO does not warrant or guarantee or make any representation regarding the workmanship of this or any other contractor, and Contractor agrees not to represent to third parties and customers that its workmanship is in any way warranted by IKO.
+    </p>
+
+                <br />
+
+    <p><strong>6. TERM AND TERMINATION</strong></p>
+
+                <br />
+
+    <p>
+        a.	The Contractor’s membership in the Program shall commence upon the later of (i) acceptance of this Agreement and (ii) payment of the applicable Program Fee, and the initial membership term will continue until December 31st of the current program year (the “Term”).
+    </p>
+
+                <br />
+
+    <p>
+        b.	The Term automatically renews at the end of the current program year for a one (1) year period, and thereafter for successive one (1) year periods, provided that the applicable Program Fee for each such renewal term has been paid. Failure to pay the Program Fee for the renewal term within the established time limits may result in suspension of the Contractor’s membership and benefits, in accordance with
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 8 of the Policy Guide</u>
+        </a>,
+
+        or in the termination of the Contractor’s membership in accordance with
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Sections 9(b) and (c) of the Policy Guide</u>
+        </a>
+    </p>
+
+                <br />
+
+    <p>
+        c.	The Contractor may terminate its membership in the Program at any time and for any reason by providing thirty (30) days prior written notice to IKO, in accordance with
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 9(a) of the Policy Guide</u>
+        </a>.
+
+        Please refer to
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 9(a) of the Policy Guide</u>
+        </a>
+
+        for the refund policy and to
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Section 9(c) of the Policy Guide</u>
+        </a>
+
+        for cessation of benefits.
+    </p>
+
+                <br />
+
+    <p>
+        d.	IKO may terminate the Contractor’s membership in the program at its discretion at any time and without compensation or any refund of fees paid, including without limitation, the Contractor’s bankruptcy or insolvency, the Contractor’s failure to adhere to the Contractor Obligations, abuse of these terms and conditions or the rules set out in the Policy Guide, or any other actions deemed by IKO in its sole discretion to be deleterious to IKO, the Program, or the interest of the Third-Party Providers. Please refer to
+
+        <a target="_blank" href="https://iko.my.salesforce.com/sfc/p/36000000b5po/a/1R000000Y23f/CJ9ZbTQRa8jEC3Qe6EnAGiEV3DEzKX4kYHLYamdp78c" rel="noopener">
+            <u>Sections 9(b) and (c) of the Policy Guide</u>
+        </a>
+
+        for further details.
+    </p>
+
+                <br />
+
+    <p>7.	LIMITATION OF LIABILITY</p>
+
+                <br />
+
+    <p>
+        THE PROGRAM AND THE PROGRAM BENEFITS PROVIDED THEREUNDER ARE PROVIDED "AS IS" AND “AS AVAILABLE.” IKO MAKES NO GUARANTEES, REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARISING BY LAW OR OTHERWISE, INCLUDING BUT NOT LIMITED TO, CONTENT, QUALITY, ACCURACY, COMPLETENESS, EFFECTIVENESS, RELIABILITY, FITNESS FOR A PARTICULAR PURPOSE, USEFULNESS, USE OR RESULTS TO BE OBTAINED FROM THE PROGRAM AND PROGRAM BENEFITS, INCLUDING WARRANTIES AS TO UNINTERRUPTED OR ERROR FREE SERVICE, ACCESSIBILITY, PRIVACY OF FILES OR ELECTRONIC MESSAGES OR SECURITY. IKO (INCLUDING ITS LICENSEES, ASSIGNEES, SUBSIDIARIES, AFFILIATES, AND THIRD PARTY PROVIDERS, AND THE RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, SHAREHOLDERS AND REPRESENTATIVES) SHALL NOT BE LIABLE TO THE CONTRACTOR IN RESPECT OF ANY CLAIM, DEMAND OR ACTION, IRRESPECTIVE OF THE NATURE OF THE CAUSE OF THE CLAIM, DEMAND OR ACTION, ALLEGING ANY LOSS, INJURY OR DAMAGES, DIRECT OR INDIRECT, WHICH MAY RESULT FROM THE USE OR POSSESSION OF THE PROGRAM AND PROGRAM BENEFITS, OR FOR ANY LOSS OF PROFIT, REVENUE, CONTRACTS OR SAVINGS, OR ANY OTHER DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE CONTRACTOR’S USE OF OR INABILITY TO USE THE PROGRAM AND PROGRAM BENEFITS, ANY DEFECT OR ERROR IN ANY OF THE PROGRAM OR PROGRAM BENEFITS, OR ANY BREACH OF THIS AGREEMENT, WHETHER IN AN ACTION IN CONTRACT OR TORT OR BASED ON A WARRANTY.
+    </p>
+
+                <br />
+
+                <p><strong>8.	PRIVACY STATEMENT AND CONSENT</strong></p>
+
+                <br />
+
+    <p>
+        IKO values your right to privacy, and strives to protect your personal information. Your personal information will be collected, used and disclosed as required to fulfill the purposes for which it was collected. IKO implements the necessary administrative, technical and organizational measures for ensuring a level of security appropriate to the specific risks we have identified.
+    </p>
+
+                <br />
+
+    <p>
+        At the time of your application to the Program, and in order to allow IKO to review and evaluate your application, you provided IKO with certain personal information and consented to its collection, use and disclosure in accordance with the
+
+        <a href="#">Privacy Policy – IKO ROOFPRO Application</a>.
+
+        This personal information may have included your name, address, telephone number and email address, as well as information gathered by IKO in course of checking references you provided, and/or running credit or background checks on you (collectively, the “<strong>Information</strong>”).
+    </p>
+
+                <br />
+
+    <p>
+        Now that you have been accepted into the Program, in order to administer your membership in the Program and provide you with the Program Benefits, as same may be provided to you from time to time, IKO will continue to hold, use and process the Information and such further information as you may provide from time to time, including information which may be provided or be available to IKO via your use of the Contractor Portal, a Program Benefit described in the Guides, for purposes of administering your membership in the Program.
+    </p>
+
+                <br />
+
+    <p>
+        IKO will be sharing your name and contact information with the Third-Party Providers so that they can communicate with you directly about the Third-Party Program Benefits and administer the Third-Party Program Benefits. The current Third-Party Providers are as set out in the
+
+        <a href="#">Benefits Guide</a>,
+
+        but additional Providers with whom IKO may share your Information may be added from time to time. Please note that IKO will not be sharing your personal information with any outside parties who are not Third-Party Providers without your express prior written consent.
+    </p>
+
+                <br />
+
+    <p>
+        By participating in the Program, you are agreeing that IKO may use the Information that you provide to as summarized in this Section 8 and in accordance with the terms set out in the
+
+        <a href="#">Privacy Policy – IKO ROOFPRO Program</a>.
+    </p>
+
+                <br />
+
+    <p>
+        <strong>9.	CONSENT TO RECEIVE ELECTRONIC COMMUNICATION FROM IKO AND THIRD-PARTY PROVIDERS</strong>
+    </p>
+
+                <br />
+
+    <p>
+        IKO Industries Inc. and the
+
+        <a href="#">Third-Party Providers</a>
+
+        would like to communicate with you electronically in order to keep you informed about the Program, the Program Benefits, as well as keep you updated on IKO products and industry news.
+    </p>
+
+                <br />
+
+    <p>
+        If you grant your consent by checking the box below, you can unsubscribe at any time by utilizing the unsubscribe link that can be found on subsequent communications, or by contacting IKO, in the US at IKO Industries Inc. at
+
+        <strong>
+            IKO ROOFPRO Contractor Program, 235 West South Tec Drive, Kankakee, IL 60901, and in Canada at IKO Industries Ltd. at IKO ROOFPRO Contractor Program, 1600 42nd Ave S.E. Calgary, Alberta T2G 5B5
+        </strong>; or in either the US or Canada, email us at
+
+        <a target="_blank" href="mailto:ikoroofpro@iko.com" rel="noopener">ikoroofpro@iko.com</a>,
+
+        or call 1-866-ROOFPR0 (1-866-766-3770), or by contacting the relevant Third-Party Provider at the address provided as part of any email communication from them.
+    </p>
+
+                <br />
+
+    <p><strong>10.	MANDATORY AND BINDING ARBITRATION – CLASS ACTION WAIVER</strong></p>
+
+                <br />
+
+    <p>
+        EVERY CLAIM, CONTROVERSY OR DISPUTE OF ANY KIND WHATSOEVER (EACH AN “<strong>ACTION</strong>”) BETWEEN YOU AND IKO (INCLUDING ANY OF IKO’S EMPLOYEES AND AGENTS) RELATING TO OR ARISING OUT OF THE PROGRAM SHALL BE RESOLVED BY FINAL AND BINDING ARBITRATION, REGARDLESS OF WHETHER THE ACTION SOUNDS IN CONTRACT, TORT, WARRANTY, STATUTE OR ANY OTHER LEGAL OR EQUITABLE THEORY.
+
+        <strong>
+            YOU AND IKO AGREE THAT ANY ACTION WILL BE ARBITRATED ON AN INDIVIDUAL BASIS AND THAT NO CLAIM(S) WILL BE CONSOLIDATED OR AGGREGATED WITH THE CLAIM(S) OF ANY OTHER PERSONS BY CLASS ACTION, CLASS ARBITRATION, IN A REPRESENTATIVE CAPACITY OR OTHERWISE
+        </strong>.
+
+        TO ARBITRATE AN ACTION AGAINST IKO, YOU MUST INITIATE THE ARBITRATION, FOR U.S. CLAIMS, IN ACCORDANCE WITH THE FEDERAL ARBITRATION ACT, TO BE CONDUCTED BY A SINGLE ARBITRATOR IN ACCORDANCE WITH THE RULES OF THE AMERICAN ARBITRATION ASSOCIATION, AND FOR CANADIAN CLAIMS, IN ACCORDANCE WITH THE ARBITRATION ACT, R.S.A. 2000, c. A-43, ALBERTA, AS MAY BE AMENDED) AND YOU MUST COMMENCE THE ARBITRATION AND PROVIDE WRITTEN NOTICE TO IKO BY CERTIFIED MAIL AT THE APPLICABLE ADDRESS NOTED ABOVE IN SECTION 9, WITHIN THE APPLICABLE TIME PERIOD PRESCRIBED IMMEDIATELY BELOW. IF YOU PREVAIL ON YOUR CLAIMS IN THE ARBITRATION, IKO WILL REIMBURSE YOU FOR ANY FILING AND ADMINISTRATIVE FEES PAID BY YOU TO THE ARBITRATION ORGANIZATION. Some jurisdictions do not allow mandatory arbitration, so the above arbitration provision may not apply to you in those jurisdictions. An Action may also be referred to another arbitration organization if you and IKO agree in writing. IKO will not elect arbitration for any Action you file in court in which you agree not to seek to recover more than $25,000, including attorneys’ fees and costs, so long as the claim is individual and pending only in that court. If any portion of this arbitration provision is not enforced in the arbitration, then either you or IKO can file a lawsuit in court to adjudicate the arbitrability of the Action and the enforceability of the portion of the arbitration provision at issue.
+    </p>
+
+                <br />
+
+    <p>
+        NO ACTION AGAINST IKO RELATING TO OR ARISING OUT OF THE PROGRAM SHALL BE BROUGHT LATER THAN ONE (1) YEAR AFTER ANY CAUSE OF ACTION HAS ARISEN OR ACCRUED. OR SUCH LONGER PERIOD OF TIME IF APPLICABLE LAWS DO NOT ALLOW FOR THE FOREGOING ONE (1) YEAR LIMITATION PERIOD.
+    </p>
+
+                <br />
+
+    <p><strong>11.	MISCELLANEOUS</strong></p>
+
+                <br />
+
+    <p>
+        a.	The Program shall be governed in accordance with the laws of the State of Delaware and the laws of the United States applicable thereto with respect to a Contractor located in the United States, and in accordance with the laws of the Province of Ontario and the laws of Canada applicable thereto with respect to a Contractor located in Canada, in either case without regard to principles of conflict of law.
+    </p>
+
+                <br />
+
+    <p>
+        b.	No waiver by IKO or the Contractor of any breach or default hereunder shall be deemed to be a waiver of any preceding or subsequent breach or default.
+    </p>
+
+                <br />
+
+    <p>
+        c.	Membership in the Program, the benefits provided thereunder and the Contractor’s rights and obligations thereunder may not be assigned or transferred by the Contractor without the prior written consent of IKO, which consent may be unreasonably withheld.
+    </p>
+
+                <br />
+
+    <p>
+        d.	Any notice required or permitted to be given by either party to the other shall be deemed sufficiently given if made in writing and mailed by registered mail, all charges prepaid, addressed if in the US to IKO Industries Inc.at
+
+        <strong>
+            IKO ROOFPRO Contractor Program, ATTN: Loyalty Program Administration, 235 West South Tec Drive, Kankakee, IL 60901, and if in Canada to IKO Industries Ltd. at IKO ROOFPRO Contractor Program ATTN: Loyalty Program Administration 1600 42nd Ave S.E. Calgary, Alberta T2G 5B5
+        </strong>
+
+        or in either the US or Canada by email to
+
+        <a target="_blank" href="mailto:ikoroofpro@iko.com" rel="noopener">ikoroofpro@iko.com</a>,
+
+        and if to Contractor to the address or email address set out on the Contractor’s application. Either party may from time to time change the address for notice by giving written notice of such change to the other party.
+    </p>
+
+
+
+        </span>
+        </div>
+    </div>
+</aura:component>

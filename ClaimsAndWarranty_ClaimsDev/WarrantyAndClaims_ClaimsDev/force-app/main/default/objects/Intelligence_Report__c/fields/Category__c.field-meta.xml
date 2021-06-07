@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3-Tabs</fullName>
+                <default>false</default>
+                <label>3-Tabs</label>
+            </value>
+            <value>
+                <fullName>Hi and Ridge</fullName>
+                <default>false</default>
+                <label>Hi and Ridge</label>
+            </value>
+            <value>
+                <fullName>Ice &amp; Water</fullName>
+                <default>false</default>
+                <label>Ice &amp; Water</label>
+            </value>
+            <value>
+                <fullName>Laminates</fullName>
+                <default>false</default>
+                <label>Laminates</label>
+            </value>
+            <value>
+                <fullName>Leading Edge</fullName>
+                <default>false</default>
+                <label>Leading Edge</label>
+            </value>
+            <value>
+                <fullName>Underlayment</fullName>
+                <default>false</default>
+                <label>Underlayment</label>
+            </value>
+            <value>
+                <fullName>Adhesives/Primers</fullName>
+                <default>false</default>
+                <label>Adhesives/Primers</label>
+            </value>
+            <value>
+                <fullName>AquaBarrier</fullName>
+                <default>false</default>
+                <label>AquaBarrier</label>
+            </value>
+            <value>
+                <fullName>Asphalt</fullName>
+                <default>false</default>
+                <label>Asphalt</label>
+            </value>
+            <value>
+                <fullName>Coverboards</fullName>
+                <default>false</default>
+                <label>Coverboards</label>
+            </value>
+            <value>
+                <fullName>Felts</fullName>
+                <default>false</default>
+                <label>Felts</label>
+            </value>
+            <value>
+                <fullName>ISO</fullName>
+                <default>false</default>
+                <label>ISO</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Mod Bit</fullName>
+                <default>false</default>
+                <label>Mod Bit</label>
+            </value>
+            <value>
+                <fullName>Vapour Retarders</fullName>
+                <default>false</default>
+                <label>Vapour Retarders</label>
+            </value>
+            <value>
+                <fullName>Category 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Category 1</label>
+            </value>
+            <value>
+                <fullName>Category 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Category 2</label>
+            </value>
+            <value>
+                <fullName>Category 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Category 3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

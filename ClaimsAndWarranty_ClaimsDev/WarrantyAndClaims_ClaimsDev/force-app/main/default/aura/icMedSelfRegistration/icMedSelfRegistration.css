@@ -1,0 +1,91 @@
+.THIS div {
+	display: block;
+}
+
+.THIS .showError {
+	display: block;
+	color: rgb(255, 0, 0);    
+    align-items: center;
+    justify-content: center;
+    position: relative;    
+    font-weight: 300;
+    padding: .5rem 2rem .5rem .5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.THIS .hideError {
+	display: none;
+}
+
+.THIS .centerPanel {
+	text-align: left;
+	min-width: 280px;
+	max-width: 390px;
+	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	display: inline-block;
+	position: relative;
+	font-family: Montserrat;
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+	vertical-align: middle;
+	z-index: 0;
+}
+
+.THIS .inputContainer {
+	margin-bottom: 10px;
+	padding: 12px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+.THIS .inputBox {
+	margin-left: 10px;
+	margin-top: 3px;
+	border: 0 solid transparent;
+	width: 70%;
+	-webkit-appearance: none;
+}
+
+.THIS .inputIcon {
+	color: #696969;
+	font-size: 22px;
+	float: left;
+}
+
+.THIS .formButton {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	background-color: #2574a9;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 10px 12px;
+	font-size: 16px;
+	font-family: Montserrat;
+	font-weight: 700;
+	line-height: 1.42857143;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+}
+
+.THIS .formButton:hover, 
+.THIS .formButton:hover {
+    background-color: rgb(19, 95, 144);
+    color: rgb(0, 0, 0);
+    border-color: rgb(19, 95, 144);
+}

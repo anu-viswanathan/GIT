@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Image_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>Image( 	 
+CASE(Brand__c,
+&quot;CRCI&quot;, $Setup.Claims_Config__c.CRCI__c,
+&quot;IKOL&quot;, $Setup.Claims_Config__c.IKOL__c,
+&quot;IKOI&quot;, $Setup.Claims_Config__c.IKOI__c,
+&quot;IKOM&quot;, $Setup.Claims_Config__c.IKOM__c,
+&quot;BLAIRI&quot;,$Setup.Claims_Config__c.BLAIRI__c,
+&quot;HYLOADI&quot;,$Setup.Claims_Config__c.HYLOADI__c,
+&quot;DECRA&quot;,$Setup.Claims_Config__c.DECRAL__c,
+&quot;&quot;), &quot;Image&quot;, 70, 120)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Image URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

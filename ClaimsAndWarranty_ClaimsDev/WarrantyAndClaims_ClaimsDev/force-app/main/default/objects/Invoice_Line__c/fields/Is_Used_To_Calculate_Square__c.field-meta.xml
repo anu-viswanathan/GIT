@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Used_To_Calculate_Square__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used for calculation on roll up summaries for Bundles and Squares. This will have no impact on Purchase and Rebate Rollup summaries.</description>
+    <externalId>false</externalId>
+    <label>Used To Calculate Squares</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

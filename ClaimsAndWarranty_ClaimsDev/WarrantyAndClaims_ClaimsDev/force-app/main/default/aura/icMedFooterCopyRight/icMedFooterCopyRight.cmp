@@ -1,0 +1,101 @@
+<aura:component description="icMedFooterCopyRight" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="thisYear" type="String"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:attribute name="copyrightType" type="String" default="IKO Industries Ltd. and its affiliates. All rights reserved."/>
+
+
+    <div class="slds-grid center-div " style="max-width:1022px;  ">
+
+        <div class="slds-col ">
+
+            <div class="slds-x-small-show-only slds-text-align--center">
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            ">
+
+                        <span style="font-size: 8px;
+                                     text-align:center;
+                                     vertical-align: middle;
+                                     display: table-cell;
+                                     margin:auto;
+
+                                     ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+            </div>
+            <div class="slds-small-show-only slds-text-align--center">
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            ">
+
+                    <span style="font-size: 12px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+                                 margin:auto;
+
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+
+            </div>
+            <div class="slds-medium-show-only slds-text-align--left">
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            ">
+
+                    <span style="font-size: 9px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+                                 margin-top:-100px;
+                                 margin-right:auto;
+                                 margin-left:auto;
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+            </div>
+            <div class="slds-max-medium-hide slds-text-align--left" style="width:100%; margin-top:-25px;">
+
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            margin-top:-25px;
+                            ">
+                    <span style="font-size: 9px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+                                 tex
+                                 margin:auto;
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</aura:component>

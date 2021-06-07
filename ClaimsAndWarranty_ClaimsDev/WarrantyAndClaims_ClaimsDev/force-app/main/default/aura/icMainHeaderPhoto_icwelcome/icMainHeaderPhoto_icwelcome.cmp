@@ -1,0 +1,118 @@
+<!--
+ - Created by Yves Asselin on 2018-08-14.
+ -->
+
+<aura:component  controller="icHTMLTextController" description="icMainHeaderPhoto" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="headerPhotoName" type="String" default=""/>
+    <aura:attribute name="fullLanguageCode" type="String" default="{!$Locale.language}"/>
+    <aura:attribute name="languageCode" type="String" />
+
+
+
+    <!--    <aura:if  {!v.fullLanguageCode if = 'en'}>-->
+
+    <aura:if isTrue="{!v.fullLanguageCode == 'en'}">
+
+
+<!--        <div class="slds-col slds-x-small-show-only slds-text-align&#45;&#45;center">-->
+
+<!--            <img src="{!$Resource.icWelcomeHeaderSmall_EN}" style="width:100%;" />-->
+
+<!--        </div>-->
+<!--        <div class="slds-col slds-small-show-only slds-text-align&#45;&#45;center">-->
+<!--            <img src="{!$Resource.icWelcomeHeaderSmall_EN}" style="width:100%; margin-bottom: 10px; " />-->
+
+<!--        </div>-->
+        <div class="slds-col img_medium-show-only slds-text-align--center wrapperHeight" style="">
+            <img src="{!$Resource.icWelcomeHeaderSmall_EN}" />
+
+        </div>
+        <div class="slds-col img_x-large slds-text-align--center" style="max-height:35vh;" >
+            <img src="{!$Resource.icWelcomeHeaderLarge_EN}" style="height:100%; object-fit: cover;"/>
+        </div>
+
+<!--        <div class="slds-clearfix img_x-large  slds-text-align&#45;&#45;center">-->
+<!--            <div class="slds-clearfix">-->
+<!--                <div class="slds-float_left" style="height:35vh">-->
+<!--                    <img src="{!$Resource.icWelcomeHeaderLarge_EN}" style="height:100%; object-fit: cover;" />-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!--    <p>{!v.fullLanguageCode}</p>-->
+
+
+    </aura:if>
+    <aura:if isTrue="{!v.fullLanguageCode == 'fr'}">
+
+
+<!--        <div class="slds-col slds-x-small-show-only slds-text-align&#45;&#45;center">-->
+
+<!--            <img src="{!$Resource.icWelcomeHeaderSmall_FR}" style="width:100%;" />-->
+
+<!--        </div>-->
+<!--        <div class="slds-col slds-small-show-only slds-text-align&#45;&#45;center">-->
+<!--            <img src="{!$Resource.icWelcomeHeaderSmall_FR}" style="width:100%; margin-bottom: 10px; " />-->
+
+<!--        </div>-->
+<!--        <div class="slds-col slds-medium-show-only slds-text-align&#45;&#45;center wrapperHeight" style="">-->
+<!--            <img src="{!$Resource.icWelcomeHeaderSmall_FR}" style="width:100%; " />-->
+
+<!--        </div>-->
+<!--        <div class="slds-col slds-show_large slds-hide_x-large slds-text-align&#45;&#45;center" style="height:35vh;" >-->
+<!--            <img src="{!$Resource.icWelcomeHeaderLarge_FR}" style="height:100%; object-fit: cover;"/>-->
+<!--        </div>-->
+
+<!--        <div class="slds-clearfix slds-show_x-large  slds-text-align&#45;&#45;center">-->
+<!--            <div class="slds-clearfix">-->
+<!--                <div class="slds-float_left" style="height:35vh;">-->
+<!--                    <img src="{!$Resource.icWelcomeHeaderLarge_FR}" style="height:100%;object-fit: cover;" />-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!--    <p>{!v.fullLanguageCode}</p>-->
+        <div class="slds-col img_medium-show-only slds-text-align--center wrapperHeight" style="">
+            <img src="{!$Resource.icWelcomeHeaderSmall_FR}" />
+
+        </div>
+        <div class="slds-col img_x-large slds-text-align--center" style="max-height:35vh;" >
+            <img src="{!$Resource.icWelcomeHeaderLarge_FR}" style="height:100%; object-fit: cover;"/>
+        </div>
+
+
+    </aura:if>
+    <aura:if isTrue="{!v.fullLanguageCode == 'es'}">
+
+
+        <div class="slds-col slds-x-small-show-only slds-text-align--center">
+
+            <img src="{!$Resource.icHeaderMobile_es}" style="width:100%;" />
+
+        </div>
+        <div class="slds-col slds-small-show-only slds-text-align--center">
+            <img src="{!$Resource.icHeaderTablet_es}" style="width:100%; margin-bottom: 10px; " />
+
+        </div>
+        <div class="slds-col slds-medium-show-only slds-text-align--center wrapperHeight" style="">
+            <img src="{!$Resource.icHeaderTablet_es}" style="width:100%;" />
+
+        </div>
+        <div class="slds-col slds-show_large slds-hide_x-large slds-text-align--center" style="" >
+            <img src="{!$Resource.icheaderDesktop_es}" style="width:100%; margin-left:100px; "/>
+        </div>
+
+        <div class="slds-clearfix slds-show_x-large  slds-text-align--center">
+            <div class="slds-clearfix">
+                <div class="slds-float_left">
+                    <img src="{!$Resource.icHeaderDesktopLarge_es}" style="" />
+                </div>
+            </div>
+        </div>
+        <!--    <p>{!v.fullLanguageCode}</p>-->
+
+
+
+    </aura:if>
+    <!--{!v.fullLanguageCode}-->
+</aura:component>

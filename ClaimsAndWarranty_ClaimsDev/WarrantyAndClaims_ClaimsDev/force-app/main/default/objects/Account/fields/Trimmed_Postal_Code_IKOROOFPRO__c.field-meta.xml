@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trimmed_Postal_Code_IKOROOFPRO__c</fullName>
+    <description>Used to search for Accounts in the same region, so a TSR can be appointed to a ROOFPRO Account/Applicant from that region. Field set as External ID as this is the only way for flow to search Accounts without throwing errors.
+(Flow: IKO ROOFPRO Matching TSRs). This field is populated with an Account Workflow field update.</description>
+    <externalId>true</externalId>
+    <label>Trimmed Postal Code</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

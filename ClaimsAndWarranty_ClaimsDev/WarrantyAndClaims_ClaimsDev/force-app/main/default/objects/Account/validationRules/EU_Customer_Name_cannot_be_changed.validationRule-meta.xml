@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Customer_Name_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>To avoid users changing the EU Account Name</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;EU_Customer&quot;, 
+ISCHANGED(Name), 
+NOT($Profile.Name = &quot;System Administrator&quot;), 
+NOT($Profile.Name = &quot;IKO API Only&quot;)
+)</errorConditionFormula>
+    <errorMessage>You cannot change the name of a Customer account.</errorMessage>
+</ValidationRule>

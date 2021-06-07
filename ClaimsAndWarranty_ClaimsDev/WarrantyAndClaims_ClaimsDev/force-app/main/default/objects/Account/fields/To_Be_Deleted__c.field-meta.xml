@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_Be_Deleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For NA: When checked, email is sent to Vincent with request to delete the record.
+For EU: used for Data Stewards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Your data steward will be notified and will delete this record.</inlineHelpText>
+    <label>To Be Deleted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

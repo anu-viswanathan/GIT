@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isApproved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>CLAIMSV2-176 Checked by approval processes. if this is checked, the claim should not be able to be resubmitted. This duplicates Salom&apos;s ClaimApproved__c field a bit but that had a bad name and a number of other related problems, so we should *move* towards using this gradually.</description>
+    <externalId>false</externalId>
+    <label>Approved?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

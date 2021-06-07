@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Taxes_Additive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If flagged, the Tax Rate and Secondary Tax Rate are combined to apply to the settlement values; otherwise, the secondary Tax Rate is applied to the Pre-Tax Settlement + Primary Tax Amount</description>
+    <externalId>false</externalId>
+    <label>Taxes Additive</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

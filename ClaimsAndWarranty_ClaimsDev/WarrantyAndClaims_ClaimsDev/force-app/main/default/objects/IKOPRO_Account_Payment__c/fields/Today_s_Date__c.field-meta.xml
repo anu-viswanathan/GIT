@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( $User.ROOFPRO_Portal_Language__c  , 
+
+&quot;Quebec French&quot;,
+TEXT(DAY(Today())) &amp;  &quot; &quot; &amp;
+CASE( MONTH(Today()) ,
+1, &quot;janvier&quot;,
+2, &quot;février&quot;,
+3, &quot;mars&quot;,
+4, &quot;avril&quot;,
+5, &quot;mai&quot;,
+6, &quot;juin&quot;,
+7, &quot;juillet&quot;,
+8, &quot;août&quot;,
+9, &quot;septembre&quot;,
+10, &quot;octobre&quot;,
+11, &quot;novembre&quot;,
+&quot;décembre&quot;)&amp; &quot;, &quot; &amp;
+TEXT(YEAR(Today()))
+,
+
+&quot;English&quot;, 
+CASE( MONTH(Today()) ,
+1, &quot;Jan.&quot;,
+2, &quot;Feb.&quot;,
+3, &quot;Mar.&quot;,
+4, &quot;Apr.&quot;,
+5, &quot;May&quot;,
+6, &quot;Jun.&quot;,
+7, &quot;Jul.&quot;,
+8, &quot;Aug.&quot;,
+9, &quot;Sep.&quot;,
+10, &quot;Oct.&quot;,
+11, &quot;Nov.&quot;,
+&quot;Dec.&quot;) &amp; &quot; &quot; &amp;
+TEXT(DAY(Today()))
+&amp; &quot;, &quot; &amp;
+TEXT(YEAR(Today()))
+,
+
+&quot;Spanish&quot;, 
+TEXT(DAY(Today())) &amp;  
+CASE( MONTH(Today()) ,
+1, &quot; de enero de&quot;,
+2, &quot; de febrero de&quot;,
+3, &quot; de marzo de&quot;,
+4, &quot; de bril de&quot;,
+5, &quot; de de mayo de&quot;,
+6, &quot; de junio de&quot;,
+7, &quot; de julio de&quot;,
+8, &quot; de agosto de&quot;,
+9, &quot; de septiembre de&quot;,
+10, &quot; de octubre de&quot;,
+11, &quot; de noviembre de&quot;,
+&quot;de diciembre de&quot;) &amp; &quot; &quot; &amp;
+TEXT(YEAR(Today()))
+,
+
+TEXT(Today())
+)</formula>
+    <label>Today&apos;s Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

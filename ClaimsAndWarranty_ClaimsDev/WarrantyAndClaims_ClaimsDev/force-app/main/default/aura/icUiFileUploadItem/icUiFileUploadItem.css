@@ -1,0 +1,56 @@
+/**
+ * Created by Dongliang Zhang on 2020-02-06.
+ */
+
+.THIS {
+    margin: 10px 0;
+    font-weight: 500;
+    border: 1px solid;
+
+}
+
+.THIS .overSize{
+    background:red;
+}
+
+
+.THIS .highlight{
+    border-color:springgreen!important;
+    color:springgreen!important;
+}
+
+.THIS .highlight svg{
+    fill:springgreen!important;
+}
+
+.THIS .slds-box{
+    border: 3px springgreen solid;
+
+    border-radius: 5px;
+}
+
+.THIS .slds-button{
+    border:unset!important;
+    width:100%!important;;
+    height:100%!important;;
+}
+
+.THIS .slds-button:focus{
+    outline: unset!important;
+    box-shadow: unset!important;
+}
+
+.THIS .hiddenItem{
+    display:none!important;
+}
+
+
+/*
+.THIS .slds-button svg{
+    fill: springgreen!important;
+}
+
+.THIS .slds-button svg:hover{
+    fill: seagreen;
+}
+*/

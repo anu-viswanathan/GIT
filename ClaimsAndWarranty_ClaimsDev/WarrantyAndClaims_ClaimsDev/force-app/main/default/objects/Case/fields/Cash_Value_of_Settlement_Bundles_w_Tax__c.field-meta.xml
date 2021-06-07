@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cash_Value_of_Settlement_Bundles_w_Tax__c</fullName>
+    <description>Calculates the Cash Value of the Bundles with Taxes, so this can be referenced in other fields or a Conga doc</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    TEXT(Account.BillingCountryCode) = &apos;CA&apos;,
+    IF(
+        Taxes_Additive__c,
+	Cash_Value_of_Settlement_Bundles__c * (1 + Tax_Rate__c + Secondary_Tax_Rate__c),
+	(Cash_Value_of_Settlement_Bundles__c * (1 + Tax_Rate__c)) * (1 + Secondary_Tax_Rate__c)
+    ),
+    Cash_Value_of_Settlement_Bundles__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cash Value of Settlement Bundles w/ Tax</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

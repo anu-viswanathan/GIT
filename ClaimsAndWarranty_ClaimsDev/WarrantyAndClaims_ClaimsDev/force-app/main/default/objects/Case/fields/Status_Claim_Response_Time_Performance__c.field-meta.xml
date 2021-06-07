@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Claim_Response_Time_Performance__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-71
+It is calculated as Response Date (D) - Status Date Claim Open (E) - Status Accumulated Total Days (C). If the calculation is less then or equals to ZERO, then set it to 1.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Claim Response Time Performance</inlineHelpText>
+    <label>Status Claim Response Time Performance</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

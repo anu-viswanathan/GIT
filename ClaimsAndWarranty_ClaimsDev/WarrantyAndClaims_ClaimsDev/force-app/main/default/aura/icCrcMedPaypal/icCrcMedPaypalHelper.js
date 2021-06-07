@@ -1,0 +1,7 @@
+({
+    getToken : function (component, event) {
+
+
+
+    }
+})

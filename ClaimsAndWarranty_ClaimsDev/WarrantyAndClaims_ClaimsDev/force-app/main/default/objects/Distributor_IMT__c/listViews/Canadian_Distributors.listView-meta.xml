@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canadian_Distributors</fullName>
+    <columns>NAME</columns>
+    <columns>Address__c</columns>
+    <columns>State_Province__c</columns>
+    <columns>Distributor_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Country_Code__c</field>
+        <operation>equals</operation>
+        <value>CA</value>
+    </filters>
+    <label>Canadian Distributors</label>
+    <language>en_US</language>
+</ListView>

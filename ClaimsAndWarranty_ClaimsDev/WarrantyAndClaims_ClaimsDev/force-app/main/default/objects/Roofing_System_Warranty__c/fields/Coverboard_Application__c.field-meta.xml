@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coverboard_Application__c</fullName>
+    <externalId>false</externalId>
+    <label>Coverboard Application</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Coverboard__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Type II Asphalt</fullName>
+                <default>false</default>
+                <label>Type II Asphalt</label>
+            </value>
+            <value>
+                <fullName>Type III Asphalt</fullName>
+                <default>false</default>
+                <label>Type III Asphalt</label>
+            </value>
+            <value>
+                <fullName>SEBS Asphalt</fullName>
+                <default>false</default>
+                <label>Modi-Melt SEBS Asphalt</label>
+            </value>
+            <value>
+                <fullName>Millennium Adhesive</fullName>
+                <default>false</default>
+                <label>Millennium Adhesive</label>
+            </value>
+            <value>
+                <fullName>Mechanically Attached</fullName>
+                <default>false</default>
+                <label>Mechanically Attached</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Roofkraft Base F/R 180</controllingFieldValue>
+            <controllingFieldValue>Roofkraft Base F/R 95</controllingFieldValue>
+            <controllingFieldValue>ShieldBase 180</controllingFieldValue>
+            <controllingFieldValue>ShieldBase Sand</controllingFieldValue>
+            <controllingFieldValue>CoverShield</controllingFieldValue>
+            <controllingFieldValue>Fibreboard</controllingFieldValue>
+            <controllingFieldValue>Gypsum Board</controllingFieldValue>
+            <controllingFieldValue>Mineral Wool</controllingFieldValue>
+            <controllingFieldValue>ProtectoBase 180</controllingFieldValue>
+            <controllingFieldValue>Protectoboard</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/2&quot; (12.7mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/4&quot; (6.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/8&quot; (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 3/16&quot; (4.8mm)</controllingFieldValue>
+            <valueName>Type II Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Roofkraft Base F/R 180</controllingFieldValue>
+            <controllingFieldValue>Roofkraft Base F/R 95</controllingFieldValue>
+            <controllingFieldValue>ShieldBase 180</controllingFieldValue>
+            <controllingFieldValue>ShieldBase Sand</controllingFieldValue>
+            <controllingFieldValue>CoverShield</controllingFieldValue>
+            <controllingFieldValue>Fibreboard</controllingFieldValue>
+            <controllingFieldValue>Gypsum Board</controllingFieldValue>
+            <controllingFieldValue>Mineral Wool</controllingFieldValue>
+            <controllingFieldValue>ProtectoBase 180</controllingFieldValue>
+            <controllingFieldValue>Protectoboard</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/2&quot; (12.7mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/4&quot; (6.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/8&quot; (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 3/16&quot; (4.8mm)</controllingFieldValue>
+            <valueName>Type III Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Roofkraft Base F/R 180</controllingFieldValue>
+            <controllingFieldValue>Roofkraft Base F/R 95</controllingFieldValue>
+            <controllingFieldValue>ShieldBase 180</controllingFieldValue>
+            <controllingFieldValue>ShieldBase Sand</controllingFieldValue>
+            <controllingFieldValue>CoverShield</controllingFieldValue>
+            <controllingFieldValue>Fibreboard</controllingFieldValue>
+            <controllingFieldValue>Gypsum Board</controllingFieldValue>
+            <controllingFieldValue>Mineral Wool</controllingFieldValue>
+            <controllingFieldValue>ProtectoBase 180</controllingFieldValue>
+            <controllingFieldValue>Protectoboard</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/2&quot; (12.7mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/4&quot; (6.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/8&quot; (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 3/16&quot; (4.8mm)</controllingFieldValue>
+            <valueName>SEBS Asphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Roofkraft Base F/R 180</controllingFieldValue>
+            <controllingFieldValue>Roofkraft Base F/R 95</controllingFieldValue>
+            <controllingFieldValue>ShieldBase 180</controllingFieldValue>
+            <controllingFieldValue>ShieldBase Sand</controllingFieldValue>
+            <controllingFieldValue>CoverShield</controllingFieldValue>
+            <controllingFieldValue>Fibreboard</controllingFieldValue>
+            <controllingFieldValue>Gypsum Board</controllingFieldValue>
+            <controllingFieldValue>Mineral Wool</controllingFieldValue>
+            <controllingFieldValue>ProtectoBase 180</controllingFieldValue>
+            <controllingFieldValue>Protectoboard</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/2&quot; (12.7mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/4&quot; (6.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/8&quot; (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 3/16&quot; (4.8mm)</controllingFieldValue>
+            <valueName>Millennium Adhesive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Roofkraft Base F/R 180</controllingFieldValue>
+            <controllingFieldValue>Roofkraft Base F/R 95</controllingFieldValue>
+            <controllingFieldValue>ShieldBase 180</controllingFieldValue>
+            <controllingFieldValue>ShieldBase Sand</controllingFieldValue>
+            <controllingFieldValue>CoverShield</controllingFieldValue>
+            <controllingFieldValue>Fibreboard</controllingFieldValue>
+            <controllingFieldValue>Gypsum Board</controllingFieldValue>
+            <controllingFieldValue>Mineral Wool</controllingFieldValue>
+            <controllingFieldValue>ProtectoBase 180</controllingFieldValue>
+            <controllingFieldValue>Protectoboard</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/2&quot; (12.7mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/4&quot; (6.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 1/8&quot; (3.0mm)</controllingFieldValue>
+            <controllingFieldValue>Protectoboard 3/16&quot; (4.8mm)</controllingFieldValue>
+            <valueName>Mechanically Attached</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,169 @@
+<!--
+ - Created by sinan.bunni on 2019-08-05.
+ -->
+<aura:component description="lightningFileUploadParentModal"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:hasSObjectName"
+                access="global"
+                controller="FileDataTableAuraController">
+
+    <!-- DataTable Lightning Component attributes -->
+    <aura:attribute name="data" type="Object"/> <!-- data: all the files associated with the object -->
+    <aura:attribute name="currentData" type="Object"/> <!-- currentData: current files in the data table -->
+
+    <aura:attribute type="String" name="sortField"/> <!--sortField: sort the column ascending or descending orders -->
+    <aura:attribute type="Boolean" name="sortAsc"/> <!-- sortAsc: sort the columns in ascending order -->
+
+    <!-- DataTable Pagination -->
+    <aura:attribute type="Integer" name="pageNumber" default="1"/> <!-- pageNumber: the current page number of the data table -->
+    <aura:attribute type="Integer" name="maxPage" default="1"/> <!-- maxPage: the maximum number of pages required to view the files -->
+
+    <!-- File Upload -->
+    <aura:attribute name="multiple" type="Boolean" default="true"/> <!--multiple: whether multiple files are allowed for upload -->
+    <aura:attribute name="accept" type="List" default="['.pdf','.csv','.xlsx', '.mp3', '.mpa', '.wav', '.wam', '.7z',
+                                                        '.arj', '.rar', '.zip', '.log', '.xml', '.bmp', '.gif', '.jpeg',
+                                                        '.jpg', '.png', '.svg', '.doc', '.docx', '.rtf', '.txt', '.tex',
+                                                        '.wks', '.wps']"/> <!--accept: the format of files that are accepted for upload -->
+
+    <!-- JS Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.pageNumber}" action="{!c.renderPage}"/>
+    <aura:handler name="fileUploadFinished" event="c:updateFilesDataTableEvent" action="{! c.handleUpdateFilesDataTable}" />
+
+    <!-- Onload finished files - update the file(s) Title -->
+    <div aura:id="showChildModal"></div> <!-- the modal to update the File titles (child component creation) -->
+
+    <lightning:card iconName="standard:coaching" title="Files" class="slds-text-title_caps">
+
+        <!-- Upload Files -->
+        <div class="slds-col slds-size--8-of-12" aura:id="fileUploadCmp">
+            <lightning:fileUpload label=""
+                                  multiple="{!v.multiple}"
+                                  accept="{!v.accept}"
+                                  recordId="{!v.recordId}"
+                                  onuploadfinished="{! c.uploadFileFinished}"
+            />
+        </div>
+
+        <!-- Files Data Table -->
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <!-- Data Table Headers -->
+            <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate"
+                         onclick="{! c.sortByTitle}"
+                         title="Title">
+                        Title
+                        <aura:if isTrue="{!v.sortField == 'Title'}">
+                                    <span>
+                                        <aura:if isTrue="{!v.sortAsc}">
+                                            &#8593;
+                                        </aura:if>
+                                        <aura:set attribute="else">
+                                            &#8595;
+                                        </aura:set>
+                                    </span>
+                        </aura:if>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate"
+                         onclick="{! c.sortByVersionNumber}"
+                         title="VersionNumber">
+                        Version Number
+                        <aura:if isTrue="{!v.sortField == 'VersionNumber'}">
+                                    <span>
+                                        <aura:if isTrue="{!v.sortAsc}">
+                                            &#8593;
+                                        </aura:if>
+                                        <aura:set attribute="else">
+                                            &#8595;
+                                        </aura:set>
+                                    </span>
+                        </aura:if>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate"
+                         onclick="{! c.sortByCreatedByName}"
+                         title="CreatedBy.Name">
+                        Content Version User
+                        <aura:if isTrue="{!v.sortField == 'CreatedByName'}">
+                                    <span>
+                                        <aura:if isTrue="{!v.sortAsc}">
+                                            &#8593;
+                                        </aura:if>
+                                        <aura:set attribute="else">
+                                            &#8595;
+                                        </aura:set>
+                                    </span>
+                        </aura:if>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate"
+                         onclick="{! c.sortByOwnerName}"
+                         title="Owner.Name">
+                        Content Version Owner
+                        <aura:if isTrue="{!v.sortField == 'OwnerName'}">
+                                    <span>
+                                        <aura:if isTrue="{!v.sortAsc}">
+                                            &#8593;
+                                        </aura:if>
+                                        <aura:set attribute="else">
+                                            &#8595;
+                                        </aura:set>
+                                    </span>
+                        </aura:if>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate"
+                         onclick="{! c.sortByContentModifiedDate}"
+                         title="ContentModifiedDate">
+                        Content Modified Date
+                        <aura:if isTrue="{!v.sortField == 'ContentModifiedDate'}">
+                                    <span>
+                                        <aura:if isTrue="{!v.sortAsc}">
+                                            &#8593;
+                                        </aura:if>
+                                        <aura:set attribute="else">
+                                            &#8595;
+                                        </aura:set>
+                                    </span>
+                        </aura:if>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <!-- Data Table Rows -->
+            <tbody>
+            <aura:iteration items="{! v.currentData}" var="row">
+                <tr>
+                    <th scope="row" data-label="Title">
+                        <div class="slds-truncate" title="{!row.Title}">
+                            <a href="" id="{! row.ContentDocumentId}" onclick="{!c.openFile}" aura:id="file_title">{!row.Title}</a>
+                        </div>
+                    </th>
+                    <th scope="row" data-label="VersionNumber">
+                        <div class="slds-truncate" title="{!row.VersionNumber}">{!row.VersionNumber}</div>
+                    </th>
+                    <th scope="row" data-label="CreatedBy.Name">
+                        <div class="slds-truncate" title="{!row.CreatedBy.Name}">{!row.CreatedBy.Name}</div>
+                    </th>
+                    <th scope="row" data-label="Owner.Name">
+                        <div class="slds-truncate" title="{!row.Owner.Name}">{!row.Owner.Name}</div>
+                    </th>
+                    <th scope="row" data-label="ContentModifiedDate">
+                        <div class="slds-truncate" title="{!row.ContentModifiedDate}">{!row.ContentModifiedDate}</div>
+                    </th>
+                </tr>
+            </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:card>
+
+    <!-- DataTable Pagination -->
+    <c:dataTablePagination currentPageNumber="{!v.pageNumber}" maxPageNumber="{!v.maxPage}"/>
+
+</aura:component>

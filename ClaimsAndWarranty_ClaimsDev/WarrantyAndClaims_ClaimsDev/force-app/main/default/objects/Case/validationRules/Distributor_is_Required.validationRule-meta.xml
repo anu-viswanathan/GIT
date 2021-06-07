@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_is_Required</fullName>
+    <active>true</active>
+    <description>When the Claim Origin is Distributor, the Distributor field must be filled.</description>
+    <errorConditionFormula>AND( 
+TEXT(Origin) = &apos;Distributor&apos;, 
+TEXT(Claim_Stage__c)  = &apos;Submitted&apos;, 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+ISBLANK( Distributor__r.Id)
+)</errorConditionFormula>
+    <errorDisplayField>Distributor__c</errorDisplayField>
+    <errorMessage>Please add a Distributor.</errorMessage>
+</ValidationRule>

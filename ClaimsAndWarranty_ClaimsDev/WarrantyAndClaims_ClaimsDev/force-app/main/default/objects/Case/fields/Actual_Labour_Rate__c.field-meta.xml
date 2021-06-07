@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Labour_Rate__c</fullName>
+    <description>Labour rate actually applied on the build</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Override value for Labour Rate when required; setting this value (including to 0) will be used in suggested settlement calculations</inlineHelpText>
+    <label>Actual Labour Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Payment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To distinguish a first payment for the applicant (contact or account) with subsequent payments.</description>
+    <externalId>false</externalId>
+    <label>First Payment</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

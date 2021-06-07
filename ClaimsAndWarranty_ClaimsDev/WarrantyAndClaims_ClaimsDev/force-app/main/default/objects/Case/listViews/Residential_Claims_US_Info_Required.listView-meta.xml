@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residential_Claims_US_Info_Required</fullName>
+    <columns>Claim_Number__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Claim_Stage__c</columns>
+    <columns>Claim_Sub_Stage__c</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>Priority_Indicator__c</columns>
+    <columns>Priority_Score__c</columns>
+    <columns>CasePrioritySort__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Case_Age__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Residential_Claim</value>
+    </filters>
+    <filters>
+        <field>Sector__c</field>
+        <operation>equals</operation>
+        <value>US</value>
+    </filters>
+    <filters>
+        <field>Claim_Sub_Stage__c</field>
+        <operation>equals</operation>
+        <value>Info Required</value>
+    </filters>
+    <label>Residential - US - Info Required</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CEO</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

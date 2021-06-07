@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Details__c</fullName>
+    <defaultValue>&quot;Width:&quot; &amp; BR() &amp;
+&quot;Length:&quot; &amp; BR() &amp;
+&quot;Cutout Length:&quot; &amp; BR() &amp;
+&quot;Tape Width:&quot; &amp; BR() &amp;
+&quot;Transfer Percent:&quot;</defaultValue>
+    <description>This is to allow Lab users to enter the details such as width, length, cutout length, tape width, transfer percent and other details.</description>
+    <externalId>false</externalId>
+    <label>Product Details</label>
+    <length>131072</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

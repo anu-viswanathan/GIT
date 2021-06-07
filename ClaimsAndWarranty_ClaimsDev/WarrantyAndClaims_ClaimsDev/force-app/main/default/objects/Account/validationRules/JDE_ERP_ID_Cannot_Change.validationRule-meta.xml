@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JDE_ERP_ID_Cannot_Change</fullName>
+    <active>true</active>
+    <description>ClaimsV2-893
+Doesn&apos;t allow the JDE ERP ID to be changed, for safety reasons.</description>
+    <errorConditionFormula>AND(
+    NOT(
+        OR(
+           $Profile.Name = &apos;System Administrator&apos;,
+           $Profile.Name = &apos;IKO Power User&apos;
+          )
+        ),
+    !ISBLANK(PRIORVALUE(JDE_ERP_ID__c))
+    &amp;&amp; ISCHANGED(JDE_ERP_ID__c)
+)</errorConditionFormula>
+    <errorDisplayField>JDE_ERP_ID__c</errorDisplayField>
+    <errorMessage>You cannot change the account&apos;s JDE ERP Id</errorMessage>
+</ValidationRule>

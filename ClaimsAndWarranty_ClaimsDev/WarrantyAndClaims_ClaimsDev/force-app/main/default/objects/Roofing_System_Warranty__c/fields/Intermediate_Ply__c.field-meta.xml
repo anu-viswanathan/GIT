@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intermediate_Ply__c</fullName>
+    <externalId>false</externalId>
+    <label>Intermediate Ply</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fast n Stick 180 Base</fullName>
+                <default>false</default>
+                <label>Fast n Stick 180 Base</label>
+            </value>
+            <value>
+                <fullName>Fast n Stick HD Base</fullName>
+                <default>false</default>
+                <label>Fast n Stick HD Base</label>
+            </value>
+            <value>
+                <fullName>Armourbond Flash</fullName>
+                <default>false</default>
+                <label>Armourbond Flash</label>
+            </value>
+            <value>
+                <fullName>Armourbond Flash HD</fullName>
+                <default>false</default>
+                <label>Armourbond Flash HD</label>
+            </value>
+            <value>
+                <fullName>Armourbond Flash Sand</fullName>
+                <default>false</default>
+                <label>Armourbond Flash Sand</label>
+            </value>
+            <value>
+                <fullName>Armourbond Flash Sand HD</fullName>
+                <default>false</default>
+                <label>Armourbond Flash Sand HD</label>
+            </value>
+            <value>
+                <fullName>Armourbond 180</fullName>
+                <default>false</default>
+                <label>Armourbond 180</label>
+            </value>
+            <value>
+                <fullName>Armourvent Base</fullName>
+                <default>false</default>
+                <label>Armourvent Base</label>
+            </value>
+            <value>
+                <fullName>Armourvent HD Base</fullName>
+                <default>false</default>
+                <label>Armourvent HD Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MF-95-SS Base</fullName>
+                <default>false</default>
+                <label>Modiflex MF-95-SS Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-FS Base</fullName>
+                <default>false</default>
+                <label>Modiflex MP-180-FS Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-FS Base (3.0mm)</fullName>
+                <default>false</default>
+                <label>Modiflex MP-180-FS Base (3.0mm)</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-SS Base</fullName>
+                <default>false</default>
+                <label>Modiflex MP-180-SS Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-SS Base (3.0mm)</fullName>
+                <default>false</default>
+                <label>Modiflex MP-180-SS Base (3.0mm)</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-HD-FS Base</fullName>
+                <default>false</default>
+                <label>Modiflex MP-HD-FS Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-HD-SS Base</fullName>
+                <default>false</default>
+                <label>Modiflex MP-HD-SS Base</label>
+            </value>
+            <value>
+                <fullName>Torchflex TF-95-SF Base</fullName>
+                <default>false</default>
+                <label>Torchflex TF-95-SF Base</label>
+            </value>
+            <value>
+                <fullName>Torchflex TF-95-FF Base</fullName>
+                <default>false</default>
+                <label>Torchflex TF-95-FF Base</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-180-FF Base</fullName>
+                <default>false</default>
+                <label>Torchflex TP-180-FF Base</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-180-SF Base</fullName>
+                <default>false</default>
+                <label>Torchflex TP-180-SF Base</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-HD-FF Base</fullName>
+                <default>false</default>
+                <label>Torchflex TP-HD-FF Base</label>
+            </value>
+            <value>
+                <fullName>IKO No. 15 Felt Perforated</fullName>
+                <default>false</default>
+                <label>IKO No. 15 Felt Perforated</label>
+            </value>
+            <value>
+                <fullName>IKO Type IV Glass Felt</fullName>
+                <default>false</default>
+                <label>IKO Type IV Glass Felt</label>
+            </value>
+            <value>
+                <fullName>IKO Type 6 Glass Felt</fullName>
+                <default>false</default>
+                <label>IKO Type 6 Glass Felt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

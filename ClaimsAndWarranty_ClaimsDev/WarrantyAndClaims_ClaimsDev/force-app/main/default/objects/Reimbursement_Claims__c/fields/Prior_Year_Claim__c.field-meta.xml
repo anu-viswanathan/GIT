@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prior_Year_Claim__c</fullName>
+    <description>Checked when the claim was processed the year after it was submitted by the contractor.</description>
+    <externalId>false</externalId>
+    <formula>OR(  
+AND(ISBLANK(Date_Sent_to_IMT__c), ISBLANK(Date_Approved_and_Check_Processed__c), ISBLANK(Final_Approval_On__c), ISBLANK(Final_Rejection_On__c),  TEXT(Internal_Status__c)  &lt;&gt; &quot;Draft&quot;, Hidden_Field_Claim_Yearly_Cut_Off_Date__c &lt;  $CustomMetadata.Loyalty_Coop_Cut_Off_Date__mdt.Coop_Cut_Off_Date.Coop_Cut_Off_Date__c),
+
+ Hidden_Field_Claim_Yearly_Cut_Off_Date__c &lt; Date_Sent_to_IMT__c ,
+Hidden_Field_Claim_Yearly_Cut_Off_Date__c  &lt; Date_Approved_and_Check_Processed__c ,
+Hidden_Field_Claim_Yearly_Cut_Off_Date__c  &lt; Final_Approval_On__c ,
+Hidden_Field_Claim_Yearly_Cut_Off_Date__c  &lt; Final_Rejection_On__c 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PRIOR YEAR CLAIM</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

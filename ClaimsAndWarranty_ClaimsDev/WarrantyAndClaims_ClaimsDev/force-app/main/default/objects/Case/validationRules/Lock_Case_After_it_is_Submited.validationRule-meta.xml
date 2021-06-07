@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Case_After_it_is_Submited</fullName>
+    <active>true</active>
+    <description>After a Case is submitted, it cannot be edited by the Sales Team. This validation rule only applies to Commercial and Residential claims.</description>
+    <errorConditionFormula>AND( 
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;, 
+$Profile.Name &lt;&gt; &apos;IKO Power User&apos;, 
+$Profile.Name &lt;&gt; &apos;Commercial Claims Rep&apos;, 
+$Profile.Name &lt;&gt; &apos;Claims Manager&apos;, 
+$Profile.Name &lt;&gt; &apos;Lab Manager&apos;,
+$Profile.Name &lt;&gt; &apos;Lab Technician&apos;,
+$Profile.Name &lt;&gt; &apos;Residential Claims Rep&apos;,
+OR(
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Submitted&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Awaiting Docs&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;In Lab&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;File Preparation&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Assessment&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Offered&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Payment&quot;),
+ISPICKVAL(PRIORVALUE( Claim_Stage__c ),  &quot;Closed&quot;)
+),
+OR(
+RecordType.DeveloperName = &apos;Commercial_Claim&apos;,
+RecordType.DeveloperName = &apos;Residential_Claim&apos;
+)
+)</errorConditionFormula>
+    <errorMessage>This case has been submitted and cannot be edited.</errorMessage>
+</ValidationRule>

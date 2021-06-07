@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Warranty_Status_Must_be_Draft</fullName>
+    <active>true</active>
+    <description>The status of a new warranty must be &apos;Draft&apos;. ClaimsV2-783  https://ikoussfsc.atlassian.net/browse/CLAIMSV2-783</description>
+    <errorConditionFormula>ISNEW()
+ &amp;&amp; !ISPICKVAL( Warranty_Status__c , &apos;Draft&apos;)</errorConditionFormula>
+    <errorDisplayField>Warranty_Status__c</errorDisplayField>
+    <errorMessage>For new warranty, the Status must be &apos;Draft&apos;.</errorMessage>
+</ValidationRule>

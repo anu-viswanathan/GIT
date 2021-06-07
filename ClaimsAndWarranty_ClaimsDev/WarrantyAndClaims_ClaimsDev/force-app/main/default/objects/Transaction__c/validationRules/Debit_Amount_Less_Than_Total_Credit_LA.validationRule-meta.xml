@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debit_Amount_Less_Than_Total_Credit_LA</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($Profile.Name = &quot;IKOPRO Loyalty Admin&quot;,
+NOT($Permission.LA_Restriction_On_Transaction_Amount_Field), Text(Transaction_Type__c)=&quot;Debit&quot;, 
+Text(Currency_Used__c)= &quot;Co-op $&quot;,
+ISBLANK( Reimbursement_Claim__c),
+OR(Amount__c &gt; Account_ID__r.Available_COOP_Funds__c+1,Amount__c &gt; 5000 ))</errorConditionFormula>
+    <errorMessage>You cannot debit more than available Co-Op funds OR 5000 Co-Op Funds. To debit more than 5000 Co-Op funds, please contact IKO Loyalty Program Manager.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,25 @@
+<aura:component description="icMedEagleView" controller="icCTRLEagleview" implements="force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="isCustomerSubscribed" type="Boolean" />
+    <aura:attribute name="isInCommunity" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.isCustomerSubscribed != null}">
+        <div style="text-align:center">
+            <div style="{!if(v.isCustomerSubscribed, 'display:block', 'display:none')}">
+                <!-- <a href="{!v.orderLink}" class="slds-button slds-button_neutral">Create EagleView Report Order LINK</a> -->
+                <!--<button class="slds-button slds-button_neutral" onclick="{!c.doCreateOrder}">Create EagleView Report Order</button>-->
+                <lightning:button variant="neutral" label="{!$Label.c.icCreate_EagleView_Report_Order}" onclick="{!c.doCreateOrder}" />
+
+            </div>
+            <div style="{!if(not(v.isCustomerSubscribed), 'display:block', 'display:none')}">
+                <!-- <a href="{!v.subscribeLink}" class="slds-button slds-button_neutral">Subscribe to EagleView</a> -->
+                <lightning:button variant="brand" label="{!$Label.c.icSubscribe_to_EagleView}" onclick="{!c.doSubscribe}" />
+
+                <!--<button class="slds-button slds-button_neutral" onclick="{!c.doSubscribe}">Subscribe to EagleView</button>-->
+            </div>
+        </div>
+    </aura:if>
+
+</aura:component>

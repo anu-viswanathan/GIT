@@ -1,0 +1,57 @@
+<aura:component implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" controller="MDPERSONATOR.MD_ExpressEntry" access="global">
+    <ltng:require scripts="{!join(',', $Resource.jQuery + '/jquery/jquery-3.3.1.min.js', $Resource.jQuery + '/jquery/jquery-ui.min.js')}"
+                  styles="{!$Resource.jQuery + '/jquery/jquery-ui.min.css'}" afterScriptsLoaded="{!c.scriptsLoaded}" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="street" type="String" default="" />
+    <aura:attribute name="city" type="String" default="" />
+    <aura:attribute name="state" type="String" default="" />
+    <aura:attribute name="postalCode" type="String" default="" />
+    <aura:attribute name="country" type="String" default="US" access="global" />
+    <aura:attribute name="license" type="String" />
+
+    <aura:attribute name="streetObjField" type="String" default="" access="global" />
+    <aura:attribute name="cityObjField" type="String" default="" access="global" />
+    <aura:attribute name="stateObjField" type="String" default="" access="global" />
+    <aura:attribute name="postalCodeObjField" type="String" default="" access="global" />
+    <aura:attribute name="countryObjField" type="String" default="" access="global" />
+    
+    <aura:attribute name="cmpHeader" type="String" default="Location Address Lookup" access="global" />
+    <aura:attribute name="mixedCase" type="Boolean" default="true" access="global" />
+    <aura:attribute name="minLookup" type="Integer" default="3" access="global" />
+    
+    <lightning:layout >
+        <lightning:layoutItem padding="around-small" size="12">
+            <div aria-labelledby="express_form">
+                <fieldset class="slds-box">
+                    <legend id="newexpenseform" class="slds-text-heading_medium slds-p-vertical_medium">
+                        {!v.cmpHeader}
+                    </legend>
+
+                    <form class="slds-form_stacked">          
+                        <lightning:input aura:id="streetField" label="Street"
+                                        value="{!v.street}"
+                                        placeholder="Type here..."/> 
+                        <lightning:input aura:id="cityField" label="City"
+                                        value="{!v.city}"/>
+                        <lightning:input aura:id="stateField" label="State"
+                                        value="{!v.state}"/>
+                        <lightning:input aura:id="postalField" label="Postal Code"
+                                        value="{!v.postalCode}"/>
+                        <lightning:input aura:id="countryField" label="Country"  
+                                        name="country"
+                                        value="{!v.country}"/>
+                        <lightning:button label="Clear"
+                                        class="slds-m-top_medium"
+                                        variant="neutral"
+                                        onclick="{!c.clearAddress}"/>
+                        <lightning:button label="Save Address" 
+                                        class="slds-m-top_medium"
+                                        variant="brand"
+                                        onclick="{!c.saveAddress}"/>
+                    </form>
+                </fieldset>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

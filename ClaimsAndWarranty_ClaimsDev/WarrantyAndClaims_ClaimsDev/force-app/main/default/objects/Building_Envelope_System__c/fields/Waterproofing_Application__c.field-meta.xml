@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waterproofing_Application__c</fullName>
+    <externalId>false</externalId>
+    <label>Waterproofing Application</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Waterproofing__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAM Adhesive</fullName>
+                <default>false</default>
+                <label>SAM Adhesive</label>
+            </value>
+            <value>
+                <fullName>IKO Mod Bit Primer</fullName>
+                <default>false</default>
+                <label>IKO Mod Bit Primer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AquaBarrier FP</controllingFieldValue>
+            <valueName>SAM Adhesive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AquaBarrier TG</controllingFieldValue>
+            <valueName>IKO Mod Bit Primer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

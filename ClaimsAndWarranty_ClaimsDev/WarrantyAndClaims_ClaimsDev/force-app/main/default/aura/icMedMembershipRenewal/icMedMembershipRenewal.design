@@ -1,0 +1,9 @@
+<!--
+ - Created by Francois Poirier on 2019-11-04.
+ -->
+
+<design:component>
+    <design:attribute name="contractorId" label="Contractor Id" />
+    <design:attribute name="accountPaymentId" label="Account Payment Id" />
+    <design:attribute name="languageCode" label="Language" />
+</design:component>

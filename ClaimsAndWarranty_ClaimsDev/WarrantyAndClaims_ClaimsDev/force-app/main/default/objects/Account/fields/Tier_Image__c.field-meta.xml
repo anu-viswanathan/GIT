@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+CASE(Present_Tier_Lookup__r.Name , &quot;Tier 1&quot;, &quot;/resource/IKOPRO_Logo_Tier_1&quot;, &quot;Tier 2&quot;, &quot;/resource/IKOPRO_Logo_Tier_2&quot;, &quot;Tier 3&quot;, &quot;/resource/IKOPRO_Logo_Tier_3&quot;,&quot;Tier 0&quot;, &quot;No Image Available&quot;, &apos;No Tier Chosen&apos;), &apos;No Tier Chosen&apos;,60,100
+)</formula>
+    <label>Tier Image</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

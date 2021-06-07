@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MAPIC_ERP_ID_is_8_Digits</fullName>
+    <active>true</active>
+    <description>Mapics IDs are 8 digits, so let&apos;s make sure they&apos;re 8 digits long.</description>
+    <errorConditionFormula>!ISBLANK(Mapics_ERP_ID__c )
+ &amp;&amp; !(
+ REGEX( Mapics_ERP_ID__c , &apos;\\d{8}&apos;)
+ || REGEX( Mapics_ERP_ID__c , &apos;[9]{8}(-\\d{5})?&apos;)
+ )</errorConditionFormula>
+    <errorDisplayField>Mapics_ERP_ID__c</errorDisplayField>
+    <errorMessage>Mapics IDs are exactly 8 digits. If it starts with 0&apos;s make sure to enter the leading zeroes (e.g. 00296372 instead of just 296372)</errorMessage>
+</ValidationRule>

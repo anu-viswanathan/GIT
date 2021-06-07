@@ -1,0 +1,307 @@
+<aura:component
+        implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+        controller="CaseService"
+        access="global">
+
+    <ltng:require
+            scripts="/resource/Lgt_InputLookup/js/jquery-2.2.4.min.js,/resource/claims_jquery/jquery/jquery-ui.min.js"
+            styles="{!$Resource.claims_jquery + '/jquery/jquery-ui.min.css'}" afterScriptsLoaded="{!c.scriptsLoaded}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="inputLookupEvent" event="c:inputLookupEvt" action="{!c.handleLookupEvent}"/>
+    <aura:handler name="selectEvent" event="c:inputLookupSelectEvt" action="{!c.handleLookupSelect}"/>
+
+    <aura:attribute name="record" type="Case" default="{ 'sobjectType': 'Case', 'Subject': ''}"/>
+
+    <aura:attribute name="street" type="String" default=""/>
+    <aura:handler name="change" value="{!v.street}" action="{!c.scriptsLoaded}"/>
+    <aura:attribute name="city" type="String" default=""/>
+    <aura:attribute name="state" type="String" default=""/>
+    <aura:attribute name="postalCode" type="String" default=""/>
+    <aura:attribute name="country" type="String" default="Canada" access="global"/>
+    <aura:attribute name="license" type="String"/>
+    <aura:attribute name="contactOfInterest" type="String" default=""/>
+
+    <aura:attribute name="addressVerified" type="Boolean" default="false"/>
+    <aura:attribute name="autoCompleteDisplay" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="createDraftButtonDisplay" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="showNonDistributorFields" type="Boolean" default="true" access="global"/>
+    
+    <aura:attribute name="contactSalutations" type="List" default="[]"/>
+    <aura:attribute name="contactSalutation" type="String" default=""/>
+    <aura:attribute name="contactFirstName" type="String" default=""/>
+    <aura:attribute name="contactLastName" type="String" default=""/>
+    <aura:attribute name="streetObjField" type="String" default="BillingStreet" access="global"/>
+    <aura:attribute name="cityObjField" type="String" default="BillingCity" access="global"/>
+    <aura:attribute name="stateObjField" type="String" default="BillingStateCode" access="global"/>
+    <aura:attribute name="postalCodeObjField" type="String" default="BillingPostalCode" access="global"/>
+    <aura:attribute name="countryObjField" type="String" default="BillingCountryCode" access="global"/>
+
+    <aura:attribute name="sectorOptions" type="LtngSelectOption[]"/>
+    <aura:attribute name="brandOptions" type="LtngSelectOption[]"/>
+    <aura:attribute name="recordTypeOptions" type="LtngSelectOption[]"/>
+    <aura:attribute name="stateOptions" type="LtngSelectOption[]"/>
+    <aura:attribute name="countryOptions" type="LtngSelectOption[]"/>
+
+    <aura:attribute name="maxReturns" type="Integer" default="25" access="global"/>
+    <aura:attribute name="cmpHeader" type="String" default="Start a Claim Case" access="global"/>
+    <aura:attribute name="mixedCase" type="Boolean" default="true" access="global"/>
+    <aura:attribute name="minLookup" type="Integer" default="3" access="global"/>
+    <aura:attribute name="resetCount" type="Integer" default="0"/>
+
+    <aura:attribute name="parentList" type="List" default="[]" description="Controlling BillingCountry picklist"/>
+    <aura:attribute name="childList" type="List" default="[]" description="Children BillingState picklist"/>
+    <aura:attribute name="pickListMap" type="Map" description="Map between Controlling value to child value"/>
+
+    <aura:attribute name="streetLookup" type="string" default=""/>
+    <aura:attribute name="bcPredictions" type="List" default="[]"/>
+    <aura:attribute name="selectedVals" type="list" default="[]" access="global"/>
+
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="parentFieldAPI" type="String" default="BillingCountryCode"/>
+    <!-- Account BillingCountryCode field -->
+    <aura:attribute name="childFieldAPI" type="String" default="BillingStateCode"/>
+    <!-- Account BillingStateCode field -->
+
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem padding="around-small" size="12" mediumDeviceSize="12" smallDeviceSize="12" largeDeviceSize="8">
+            <div aria-labelledby="express_form">
+                <fieldset class="slds-box">
+                    <legend id="newexpenseform" class="slds-text-heading_medium slds-p-vertical_medium">
+                        {!v.cmpHeader}
+                    </legend>
+
+                    <form class="slds-form_stacked">
+                        <lightning:select name="origin" label="Origin" value="{!v.record.Origin}"
+                                          onchange="{!c.onOriginChange}">
+                            <option value="">choose one...</option>
+                            <option value="Owner">Owner</option>
+                            <option value="Distributor">Distributor</option>
+                            <option value="Contractor">Contractor</option>
+                            <option value="Builder">Builder</option>
+                        </lightning:select>
+                        <div aura:id="distributor-lookup" class="slds-hide" style="margin-top: 10px; margin-bottom : 10px">
+                            <label class="slds-form-element__label slds-no-flex"
+                                lightning-input_input="">Distributor</label>                                   
+                                <c:inputLookup type="Account" value="{!v.record.Distributor__c}" className="slds-input "
+                                                        filter=" RecordType.Name IN ('Distributor', 'US Distributor', 'Residential Account') AND Legacy_Claim_Account__c IN (FALSE) "
+                                                        resetFlag="{!v.resetCount}"/> 
+                        </div>
+                        <aura:if isTrue="{!v.record.Origin != 'Distributor'}">
+                            <label>Home Owner Information</label>
+                            <lightning:card title="">
+                                <aura:if isTrue="{!or(v.record.Origin == 'Builder',v.record.Origin == 'Contractor')}">
+                                    <div class="demo-only" style="padding:0.5rem;background:#16325c;margin-top: -16px;">
+                                        <div class="slds-text-color_inverse">{!$Label.c.Help_Text_for_Contractor_Builder_Origin}
+                                        </div>
+                                    </div>
+                                </aura:if>
+
+                                <lightning:combobox name="contactSalutation" aura:id="requiredField" label="Salutation" value="{!v.contactSalutation}" placeholder="" options="{! v.contactSalutations }" />
+                                <lightning:input label="First Name" aura:id="requiredField" value="{!v.contactFirstName}"></lightning:input>
+                                <lightning:input label="Last Name" aura:id="requiredField" value="{!v.contactLastName}"></lightning:input>
+
+                            </lightning:card>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.record.Origin == 'Distributor'}">
+                            <div aura:id="contractor-lookup" class="slds-show " style="margin-top: 10px; margin-bottom : 10px">
+                                <label class="slds-form-element__label slds-no-flex"
+                                       lightning-input_input="">Distributor Contact</label>
+                                <c:inputLookup type="Contact" value="{!v.record.ContactId}" className="slds-input "
+                                                    filter="{!'AccountId = \'' + v.record.Distributor__c + '\''}"
+                                                    resetFlag="{!v.resetCount}"/> 
+                                <aura:if isTrue="{!and(v.contactOfInterest != '', and(v.contactOfInterest != undefined, v.contactOfInterest != null))}">
+
+                                    <aura:if isTrue="{!v.record.ContactId == null}">
+                                        <div style="color: red;">Please select existing contact</div>
+                                    </aura:if>
+                                    
+                                </aura:if>
+                            </div>
+                            
+                        </aura:if>
+                        <aura:if isTrue="{!v.record.Origin == 'Contractor'}">
+
+                            <div aura:id="contractor-lookup" class="slds-show " style="margin-top: 10px; margin-bottom : 10px">
+                              
+                                <aura:if isTrue="{!or(v.record.Origin == 'Builder', v.record.Origin == 'Contractor')}">
+                                    <div class="demo-only" style="padding:0.5rem;background:#16325c">
+                                        <div class="slds-text-color_inverse">{!$Label.c.Help_text_for_Contact_of_interest}
+                                        </div>
+                                    </div>
+                                </aura:if>
+                                
+                                <label class="slds-form-element__label slds-no-flex"
+                                       lightning-input_input="">Contractor</label>
+                                <c:inputLookup type="Account" value="{!v.record.Contractor__c}" className="slds-input "
+                                       filter=" RecordType.Name IN ('Contractor', 'US Contractor', 'Residential Account') AND Legacy_Claim_Account__c IN (FALSE)"
+                                       resetFlag="{!v.resetCount}"/>
+                            </div>
+
+                            <div aura:id="contractor-lookup" class="slds-show " style="margin-top: 10px; margin-bottom : 10px">
+                                <label class="slds-form-element__label slds-no-flex"
+                                       lightning-input_input="">Contact of Interest</label>
+                                <c:inputLookup type="Contact" value="{!v.record.Contact_of_Interest__c}" className="slds-input "
+                                                filter="{!'AccountId = \'' + v.record.Contractor__c + '\''}"
+                                                resetFlag="{!v.resetCount}"/> 
+                                    <aura:if isTrue="{!and(v.contactOfInterest != '', and(v.contactOfInterest != undefined, v.contactOfInterest != null))}">
+
+                                        <aura:if isTrue="{!v.record.Contact_of_Interest__c == null}">
+                                            <div style="color: red;">Please select existing contact</div>
+                                        </aura:if>
+                                        
+                                    </aura:if>
+                            </div>
+                        </aura:if>                        
+                        
+                        <aura:if isTrue="{!v.record.Origin == 'Builder'}">
+
+                            <div aura:id="contractor-lookup" class="slds-show " style="margin-top: 10px; margin-bottom : 10px">
+                                <aura:if isTrue="{!or(v.record.Origin == 'Builder', v.record.Origin == 'Contractor')}">
+                                    <div class="demo-only" style="padding:0.5rem;background:#16325c">
+                                        <div class="slds-text-color_inverse">{!$Label.c.Help_text_for_Contact_of_interest}
+                                        </div>
+                                    </div>
+                                </aura:if>
+                                <label class="slds-form-element__label slds-no-flex"
+                                       lightning-input_input="">Builder</label>
+                                <c:inputLookup type="Account" value="{!v.record.Builder__c}" className="slds-input "
+                                       filter=" RecordType.Name IN ('Residential Account', 'Other', 'US Contractor') "
+                                       resetFlag="{!v.resetCount}"/>
+                            </div>
+
+                            <div aura:id="Builder-lookup" class="slds-show " style="margin-top: 10px; margin-bottom : 10px">
+
+                                
+                                <label class="slds-form-element__label slds-no-flex"
+                                       lightning-input_input="">Contact of Interest</label>
+                                    <c:inputLookup type="Contact" value="{!v.record.Contact_of_Interest__c}" className="slds-input "
+                                       filter="{!'AccountId = \'' + v.record.Builder__c + '\''}"
+                                       resetFlag="{!v.resetCount}"/> 
+                                        <aura:if isTrue="{!and(v.contactOfInterest != '', and(v.contactOfInterest != undefined, v.contactOfInterest != null))}">
+                                            <aura:if isTrue="{!v.record.Contact_of_Interest__c == null}">
+                                                <div style="color: red;">Please select existing contact</div>
+                                            </aura:if>
+                                        </aura:if>
+                            </div>
+                        </aura:if>
+                        
+						<aura:if isTrue="{!v.showNonDistributorFields}">
+                            <lightning:input
+                                    id="eestreetField"
+                                    aura:id="streetField" label="Street"
+                                    value="{!v.street}"
+                                    onchange="{!c.handleStreetChange}"
+                                    placeholder="Type here..."/>
+                            <aura:if isTrue="{! and(v.bcPredictions.length > 0, v.autoCompleteDisplay)}">
+                                <ul class="city_predictions">
+                                    <aura:iteration items="{!v.bcPredictions}" var="bcPrediction">
+                                        <li class="slds-listbox__item">
+                                            <a onclick="{!c.fillBoxes}"
+                                               data-deliveryAddress="{!bcPrediction.deliveryAddress}"
+                                               data-locality="{!bcPrediction.locality}"
+                                               data-administrativeArea="{!bcPrediction.administrativeArea}"
+                                               data-postalCode="{!bcPrediction.postalCode}">{!bcPrediction.label}</a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </aura:if>
+                            <lightning:input aura:id="cityField" label="City" value="{!v.city}"
+                                             onchange="{!c.onManualAddressChange}"/>
+    
+                            <!-- <lightning:input aura:id="stateField" label="State" value="{!v.state}"/> -->
+    
+                            <lightning:select name="childField"
+                                              value="{!v.state}"
+                                              label="State/Province"
+                                              onchange="{!c.onManualAddressChange}">
+                                <aura:iteration items="{!v.childList}" var="value">
+                                    <option value="{!value.label}">{!value.label}</option>
+                                </aura:iteration>
+                            </lightning:select>
+    
+                            <lightning:input aura:id="postalField" label="Zip/Postal Code" value="{!v.postalCode}"
+                                             onchange="{!c.onManualAddressChange}"/>
+    
+                            <!-- <lightning:input aura:id="countryField" label="Country" name="country" value="{!v.country}"/> -->
+                            <lightning:select name="parentField"
+                                              aura:id="countryField"
+                                              value="{!v.country}"
+                                              label="Country"
+                                              onchange="{!c.parentFieldChange}">
+                                              
+                                <aura:iteration items="{!v.parentList}" var="value">
+                                    <option value="{!value.label}" selected="{!value.label == v.country}">{!value.label}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                    </aura:if>
+
+
+                        <lightning:select name="recordtype" label="Record Type" value="{!v.record.RecordTypeId}">
+                            <aura:iteration items="{!v.recordTypeOptions}" var="o">
+                                <ui:inputSelectOption label="{!o.label}" text="{!o.value}"/>
+                            </aura:iteration>
+                        </lightning:select>
+
+                        <lightning:select name="sector" label="Sector" value="{!v.record.Sector__c}" onchange="{!c.onSectorChange}">
+                            <aura:iteration items="{!v.sectorOptions}" var="o">
+                                <ui:inputSelectOption label="{!o.label}" text="{!o.value}"/>
+                            </aura:iteration>
+                        </lightning:select>
+
+
+                        <lightning:select name="brand" label="Brand" value="{!v.record.Brand__c}">
+                            <aura:iteration items="{!v.brandOptions}" var="o">
+                                <ui:inputSelectOption label="{!o.label}" text="{!o.value}"/>
+                            </aura:iteration>
+                        </lightning:select>
+
+                        <lightning:button label="Clear"
+                                          class="slds-m-top_medium"
+                                          variant="neutral"
+                                          onclick="{!c.clearAddress}"/>
+                        <lightning:button label="Create Draft"
+                                          class="slds-m-top_medium"
+                                          variant="brand"
+                                          disabled="{!v.createDraftButtonDisplay}"
+                                          onclick="{!c.saveAddress}"/>                        
+                    </form>
+                </fieldset>
+            </div>            
+        </lightning:layoutItem>
+            <lightning:layoutItem mediumDeviceSize="12" smallDeviceSize="12" largeDeviceSize="4" size="12" padding="around-small">
+            <div >
+            <div aria-labelledby="express_form">
+            <fieldset class="slds-box">
+            <legend id="newexpenseform" class="slds-text-heading_medium slds-p-vertical_medium">
+            Related Accounts
+            </legend>
+            <form class="slds-form_stacked">
+            <c:icShowRelatedAccounts 
+                        aura:id="icShowRelatedAccounts" 
+                        caseObj="{!v.record}"   
+                        street="{!v.street}" 
+                        state="{!v.state}" 
+                        country="{!v.country}" 
+                        postalCode="{!v.postalCode}" 
+                        isCallingFromCaseClaimForm="true"
+                        city="{!v.city}">
+            </c:icShowRelatedAccounts>
+            </form>
+            </fieldset>
+            </div>
+            </div>
+            </lightning:layoutItem>
+    </lightning:layout>
+
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

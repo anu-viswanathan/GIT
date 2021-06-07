@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Owner_Change</fullName>
+    <active>true</active>
+    <description>2019-11-28 Activated as per CLAIMSV2-288</description>
+    <errorConditionFormula>AND(
+ Warranty_Transfer_Count__c &gt;= 2,
+ Transferred__c = TRUE
+)</errorConditionFormula>
+    <errorMessage>You cannot change the Warranty Owner more than once.</errorMessage>
+</ValidationRule>

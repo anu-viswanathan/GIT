@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Language_Filter__c</fullName>
+    <description>2019-07-05. This was meant to be used in the TNC paramater to filter the language for templates, but that doesn&apos;t seem to work. Maybe delete?</description>
+    <externalId>false</externalId>
+    <formula>CASE( Preferred_Language__c ,
+&apos;English&apos;, &apos;[EN]&apos;,
+&apos;Quebec French&apos;, &apos;[FR]&apos;,
+&apos;Spanish&apos;, &apos;[ES]&apos;,
+&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>(deprecated) Conga Language Filter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,279 @@
+<!--
+ - Created by Francois Poirier on 2019-03-28.
+ -->
+
+<aura:component description="icUiCalendar" controller="icCtrlUiCalendarEvent" access="global">
+    <aura:attribute name="dayDate" type="Date" />
+    <aura:attribute name="dayOfWeek" type="String" />
+    <aura:attribute name="dayNumber" type="String" default="1" />
+    <aura:attribute name="monthNumber" type="String" />
+    <aura:attribute name="monthName" type="String" />
+    <aura:attribute name="yearNumber" type="String" />
+    <aura:attribute name="firstDayOfMonth" type="Date" />
+    <aura:attribute name="firstDayOfCalendar" type="String" />
+    <aura:attribute name="firstDayOfNextMonth" type="String" />
+    <aura:attribute name="lastDayOfMonth" type="Date" />
+    <aura:attribute name="lastDayOfCalendar" type="String" />
+    <aura:attribute name="allCalendarDates" type="String[]" />
+    <aura:attribute name="allDates" type="Date[]" />
+    <aura:attribute name="events" type="Object" />
+    <aura:attribute name="resetClick" type="Boolean" default="false" />
+    <aura:attribute name="eventsToDisplay" type="Object[]" default="[]" />
+    <aura:attribute name="viewMode" type="String" default="month" />
+    <aura:attribute name="numberOfDays" type="Integer" default="42" />
+    <aura:attribute name="showHours" type="Boolean" default="false" />
+    <aura:attribute name="firstHour" type="Integer" default="8" />
+    <aura:attribute name="lastHour" type="Integer" default="16" />
+    <aura:attribute name="ready" type="Boolean" default="false" />
+    <aura:attribute name="firstMonth" type="Boolean" default="true" />
+
+    <aura:attribute name="isNotShow" type="String"/>
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.dayDate}" action="{!c.dateChange}" />
+    <aura:renderIf  isTrue="{!v.ready}">
+
+
+    <div class="">
+        <table >
+            <tr class="slds-p-bottom--large monthSelector">
+                <th colspan="2">
+                    <lightning:buttonIcon iconName="utility:chevronleft" onclick="{!c.movePrevious}" variant="bare" alternativeText="{!$Label.c.Previous}" disabled="{!v.firstMonth}" />
+
+                </th>
+                <th colspan="3" class="monthTh"><span class="monthName">{!v.monthName + ' ' + v.yearNumber}</span></th>
+                <th colspan="2">
+                    <lightning:buttonIcon iconName="utility:chevronright" onclick="{!c.moveNext}" variant="bare" alternativeText="{!$Label.c.Next}" />
+
+                </th>
+            </tr>
+            <tr>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.sun}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.mon}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.tue}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.wed}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.thu}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.fri}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="upperCase">
+                    <div class="content">
+                        <div class="table">
+                            <div class="table-cell dayName">
+                                {!$Label.c.sat}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+<!--                <td class="upperCase">-->
+<!--                    <div class="content">-->
+<!--                        <div class="table">-->
+<!--                            <div class="table-cell dayName">-->
+<!--                                {!$Label.c.sun}-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </td>-->
+            </tr>
+            <tr>
+                <td class="{!if((lessthan(v.allDates[0], v.firstDayOfMonth) || greaterthan(v.allDates[0], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[0]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if(lessthan(v.allDates[1], v.firstDayOfMonth), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[1]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if((lessthan(v.allDates[2], v.firstDayOfMonth) || greaterthan(v.allDates[2], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[2]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if((lessthan(v.allDates[3], v.firstDayOfMonth) || greaterthan(v.allDates[3], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[3]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if((lessthan(v.allDates[4], v.firstDayOfMonth) || greaterthan(v.allDates[4], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[4]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if((lessthan(v.allDates[5], v.firstDayOfMonth) || greaterthan(v.allDates[5], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[5]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+                <td class="{!if((lessthan(v.allDates[6], v.firstDayOfMonth) || greaterthan(v.allDates[6], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                    <c:icUiCalendarCell dayDate="{!v.allCalendarDates[6]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                </td>
+            </tr>
+            <aura:if isTrue="{!v.viewMode == 'month'}">
+                <tr>
+                    <td class="{!if((lessthan(v.allDates[7], v.firstDayOfMonth) || greaterthan(v.allDates[7], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[7]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[8], v.firstDayOfMonth) || greaterthan(v.allDates[8], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[8]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[9], v.firstDayOfMonth) || greaterthan(v.allDates[9], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[9]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[10], v.firstDayOfMonth) || greaterthan(v.allDates[10], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[10]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[11], v.firstDayOfMonth) || greaterthan(v.allDates[11], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[11]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[12], v.firstDayOfMonth) || greaterthan(v.allDates[12], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[12]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[13], v.firstDayOfMonth) || greaterthan(v.allDates[13], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[13]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="{!if((lessthan(v.allDates[14], v.firstDayOfMonth) || greaterthan(v.allDates[14], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[14]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[15], v.firstDayOfMonth) || greaterthan(v.allDates[15], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[15]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[16], v.firstDayOfMonth) || greaterthan(v.allDates[16], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[16]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[17], v.firstDayOfMonth) || greaterthan(v.allDates[17], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[17]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[18], v.firstDayOfMonth) || greaterthan(v.allDates[18], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[18]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[19], v.firstDayOfMonth) || greaterthan(v.allDates[19], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[19]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[20], v.firstDayOfMonth) || greaterthan(v.allDates[20], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[20]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="{!if((lessthan(v.allDates[21], v.firstDayOfMonth) || greaterthan(v.allDates[21], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[21]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[22], v.firstDayOfMonth) || greaterthan(v.allDates[22], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[22]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[23], v.firstDayOfMonth) || greaterthan(v.allDates[23], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[23]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[24], v.firstDayOfMonth) || greaterthan(v.allDates[24], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[24]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[25], v.firstDayOfMonth) || greaterthan(v.allDates[25], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[25]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[26], v.firstDayOfMonth) || greaterthan(v.allDates[26], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[26]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[27], v.firstDayOfMonth) || greaterthan(v.allDates[27], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[27]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="{!if((lessthan(v.allDates[28], v.firstDayOfMonth) || greaterthan(v.allDates[28], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[28]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[29], v.firstDayOfMonth) || greaterthan(v.allDates[29], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[29]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[30], v.firstDayOfMonth) || greaterthan(v.allDates[30], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[30]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[31], v.firstDayOfMonth) || greaterthan(v.allDates[31], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[31]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[32], v.firstDayOfMonth) || greaterthan(v.allDates[32], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[32]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[33], v.firstDayOfMonth) || greaterthan(v.allDates[33], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[33]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[34], v.firstDayOfMonth) || greaterthan(v.allDates[34], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[34]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="{!if((lessthan(v.allDates[35], v.firstDayOfMonth) || greaterthan(v.allDates[35], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[35]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[36], v.firstDayOfMonth) || greaterthan(v.allDates[36], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[36]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[37], v.firstDayOfMonth) || greaterthan(v.allDates[37], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[37]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[38], v.firstDayOfMonth) || greaterthan(v.allDates[38], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[38]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[39], v.firstDayOfMonth) || greaterthan(v.allDates[39], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[39]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[40], v.firstDayOfMonth) || greaterthan(v.allDates[40], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[40]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                    <td class="{!if((lessthan(v.allDates[41], v.firstDayOfMonth) || greaterthan(v.allDates[41], v.lastDayOfMonth) ), 'notCurrentMonth', '')}">
+                        <c:icUiCalendarCell dayDate="{!v.allCalendarDates[41]}" firstDayOfMonth="{!v.firstDayOfMonth}" events="{!v.events}" resetClick="{!v.resetClick}" eventsToDisplay="{!v.eventsToDisplay}" />
+                    </td>
+                </tr>
+            </aura:if>
+        </table>
+        <div class="calendarTextContainer">
+            <span class="calendarCopyText">{!$Label.c.icCalendarCopyText}</span>
+<!--            <span class="calendarRedText" >{!$Label.c.icCalendarRedText}</span>&nbsp;-->
+<!--            <span class="calendarBlackBoldText">{!$Label.c.icCalendarBlackBoldText}</span>&nbsp;-->
+            <span class="{!if(($Label.c.icCalendarBlackBoldText == v.isNotShow),'notDisplay','calendarBlackBoldText')}">{!$Label.c.icCalendarBlackBoldText}&nbsp;</span>
+<!--            <span class="calendarRegularText">{!$Label.c.icCalendarRegularText}</span>-->
+            <span class="{!if(($Label.c.icCalendarRegularText == v.isNotShow),'notDisplay','')}">{!$Label.c.icCalendarRegularText}</span>
+        </div>
+
+    </div>
+    </aura:renderIf>
+</aura:component>

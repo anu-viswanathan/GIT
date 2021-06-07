@@ -1,0 +1,53 @@
+<!--
+ - Created by Francois Poirier on 2019-03-26.
+ -->
+
+<aura:component description="icUiCalendarCell" access="global" >
+    <aura:attribute name="dayDate" type="Date" />
+    <aura:attribute name="dayOfWeek" type="String" />
+    <!--<aura:attribute name="isWeekend" type="Boolean" default="false" />-->
+    <aura:attribute name="dayNumber" type="String" default="1" />
+    <aura:attribute name="monthNumber" type="String" />
+    <aura:attribute name="yearNumber" type="String" />
+    <aura:attribute name="firstDayOfMonth" type="Date" />
+    <aura:attribute name="events" type="Object" />
+    <aura:attribute name="todayEvents" type="Object[]" default="[]" />
+    <aura:attribute name="eventsToDisplay" type="Object[]" default="[]" />
+    <aura:attribute name="resetClick" type="Boolean" default="false" />
+
+   <!-- <aura:attribute name="firstDayOfMonth" type="String" />
+    <aura:attribute name="firstDayOfCalendar" type="String" />
+    <aura:attribute name="firstDayOfNextMonth" type="String" />
+    <aura:attribute name="lastDayOfMonth" type="String" />
+    <aura:attribute name="lastDayOfCalendar" type="String" />
+    <aura:attribute name="allCalendarDates" type="String[]" />-->
+
+    <aura:handler name="change" value="{!v.dayDate}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.resetClick}" action="{!c.resetClick}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+    <div class="content" aura:id="calCell">
+        <div  class="table" aura:id="calCell">
+           <!-- <aura:if isTrue="{!greaterthan(v.todayEvents.length, 0)}">
+            <div onclick="{!c.handleDayClick}" class="table-cell pointer" aura:id="calCell">
+                <span class="dayNumber">{!v.dayNumber}</span>
+            </div>
+                <aura:set attribute="else">-->
+                    <div class="table-cell" aura:id="calCell">
+                        <span class="dayNumber">{!v.dayNumber}</span>
+                    </div>
+               <!-- </aura:set>
+            </aura:if>-->
+        </div>
+    </div>
+    <!--<div  onclick="{!c.handleDayClick}">
+        <p aura:id="calCell">
+        <aura:if isTrue="{!v.todayEvents.length > 0}">
+            *
+            <aura:set attribute="else">
+            &nbsp;
+            </aura:set>
+        </aura:if>
+        </p>
+    </div>-->
+</aura:component>

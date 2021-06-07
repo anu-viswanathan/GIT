@@ -1,0 +1,2359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Warranty</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Warranty_with_Roof</compactLayoutAssignment>
+    <description>Used for Commercial Warranties, which can be registered by the Contractors</description>
+    <label>Commercial Warranty</label>
+    <picklistValues>
+        <picklist>Deck_Type__c</picklist>
+        <values>
+            <fullName>%3F%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acier %2F Bois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acier%2F Beton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asbestos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aspenite 5%2F16%22%2C0%2E00%2C1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aspenite 7%2F16%22%2C0%2E00%2C1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bois et Metal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conc%2C GBd%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conc%2E %2F Steel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conc%2E%2F Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete %2F Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete %2F Wood Plank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete%2FTectum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contre-plaque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coreslab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Dk%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Dk%2FWood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Dk%2Fplywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimensional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Metal Roof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gyp%2E Bd%2E %2F Wd Plk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gyp%2E Bd%2E%2FSteel Q Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gyp%2EBd%2E%2F Steel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypcrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypse%2F Acier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypsum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypsum Plank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hollow Core Plank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulated Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LW Conc%2F Steel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lite Wt%2E Conc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metal %2F Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metal Roof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metal%2C Wood %26 Siporex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plywd%2F Strammit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plywood%2FWood Plank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rapidex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shiplap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siporex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel %2F Conc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel %2F Tectum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel %2F Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel Q Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel%2F Concrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel%2F Gypsum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel%2FConc%2FWood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel%2FGyprock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel%2FPlywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stl%2FWd%2FConc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strammit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structural Concrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26G Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tectum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tectum%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waferboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood %26 Concrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood Plank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood Planks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood%2FConcrete%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood%2FDrywall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood%2FMetal%2FConcrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood-G%2EBd%2FSteel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y-Tong %2F Wood</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deficiency_Status_2_Year_Inspection__c</picklist>
+        <values>
+            <fullName>No Deficiencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repairs Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repairs Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expired__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fasteners__c</picklist>
+        <values>
+            <fullName>Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adphalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asphalte Colle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bakor Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ballast System %28Inverted%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cap Nails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deckfast Screws</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dekfast %2312</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dekfast %2314</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fas N Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixe Mecaniquement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully Adhered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gravier de Riviere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insta-stik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olybond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olympic Lite Wt%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2FO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screws %26 Plates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermostik Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True Fast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V%2ER%2E ADHESIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vis et Rondelles</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IKO_Source_System__c</picklist>
+        <values>
+            <fullName>JDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mapics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WCMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WMS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Installation_Deficiency_Status__c</picklist>
+        <values>
+            <fullName>No Deficiencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repairs Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repairs Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insulation__c</picklist>
+        <values>
+            <fullName>%2315 Perf%2E%2F3%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 %26 2%22 IKO THERM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 %26 3%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Fibreboard- partial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 NF Weatherguard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 ProtecRSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Std%2E Ctd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E0%22 %26 1%2E5%22 %26 2%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E0%22 %26 2%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E4%22 %2B 2%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5 ISO %26 Sloped Type 1 EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %26 1%2E8%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %26 2%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %26 2%2E5%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %2B 2%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %2B 2%2E0%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 %2B 3%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Roxall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22x4x4 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E6%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E8%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E8%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Celotex F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 H%2ED%2E Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 JM Duraboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Nord Fibre H%2ED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Std%2E Ctd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Protection board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F8%22 ISO %26 3%2E3%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2  X  2%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 1%2E5%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 2%22 Roofmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 2%2E5%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 3%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 3%2E3%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 4%2E25%22 Type 2 eps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 1%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 1%2E5%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 1%2E6%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 1%2E75%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 2%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 2%2E3%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 2%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 2%2E7%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 3%2E0%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 3%2E5%22 EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 %2B 3%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 Fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 Fibreglass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 NRG Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 Polyisoyanurate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 Roxul Min-wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22%2B 3%2E3%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22%2B1%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E0%22 %2B 2%2E5%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E0%22 %2B 3%2E2%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E3%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E4 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 %26 3%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 %2B 3%2E5%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 IFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 Isox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E7%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E7%22 Iso%2F EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E7%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E8%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E8%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 %26 4%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 IKOTherm %2F AC-Foam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Isox IFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Roxul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Styrofoam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Type IV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 XPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E2%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E2%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E3%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E5%22 Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E6%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E8%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 DOW Styrofoam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 EPS%2FSloped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Extruded Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Roofmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Type IV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 Type IV XPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%22 EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E5%22 IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AC Foam II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apache Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlas Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bizolon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buildex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dekmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS Type 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS Type 1- Sloped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS Type 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS Type 2 %26 2%2E5%22 ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS Type 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS with 2%2E5 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS%2Fexisting F%2EBd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS-Pente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing 3%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Deckmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing F%2EBd%2E%2F Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expanded Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extruded %26 Expanded Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extruded Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fescoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibre de verre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firestone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firestone Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully adhered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glass Fibre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H%2ED%2E Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hunter Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hytherm Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Therm%2F Firestone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISO - 95%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insta-stik Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox IFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox Isomar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox Laminate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Izo-Fibre II Pente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Izofibre T-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Izolon T-2 SL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modul R Composite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRG 2 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRG 3 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nfld%2E Styrofoam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O%2EC%2E Formular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part Iso %2F HAL Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastifab EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polybase R%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polyiso %26 Type 2 HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polyiso%2FXPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posi-Slope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R-20 Sloped EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R-Max</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofmate CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roxall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2FO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Ballast System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped EPS %2F Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped EPS%2F 3%22 Polyiso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped F%2EBoard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Hunter Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structodeck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF-95-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered E-NRG-Y</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered Truefoam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam R20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam R30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam Tapered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truefoam Type II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 1 Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 4 Polystyrene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type IV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type IV Roofmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>existing 1%2E5%22 fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>polyiso %2F EPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overlay_Board__c</picklist>
+        <values>
+            <fullName>1%22 F%2E Board- Partial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Hunter Iso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 IBI Fibrebd %26 1%2F2%22 Std%2E Ctd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Modular Protec RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Securipan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%22 Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%22 Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Cascades F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Cont%2E F%2EBd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Dens-Deck %26 3mm Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 EMCO HD Fibrebd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 FB  Naturelle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Fibre de Bois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Gyproc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Imp%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 J%2EM%2E Retrofit Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 JM Duraboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Natural F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Nord Fibre H%2ED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Permalite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Roofcraft FR board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Secure Rock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Securipan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Std%2E Coated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Tentest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Dens Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 DensDeck %26 3mm Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Isolant Pente Lamine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 MB Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Panneau Asphaltique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Protection Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4%22 Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F8%22Protectobd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 MM Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 mm Tatami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2E9mm Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 1%2F2%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 1%2F2%22 Std%2E Ctd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 1%2F4%22 Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 1%2F8%22 Protectobd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 X 3mm Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 1%2F2%22 Securpan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 x 3%2E0mm Asphalt Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%22 Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 Isox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E7%22 Iso 95 %2F 1%2F2%22 Std%2E Ctd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 Roofmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E0mm Asphalt Recovery Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E0mm Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2F16%22 Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2F4%22 Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3mm Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E5 mm Protectobd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%22 Fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2F8%22 Contre-plaque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2F8%22 Dens Dek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2F8%22 Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 mm Dens-Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6mm Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2F16%22 Donnaconna Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2F16%22 F%2E Bd%2E Sheathing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Celotex F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Composite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dens-Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FR Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fib Bd%2FGyp Bd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiberboard %2F Protecto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiberglass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibre Ventile 1%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franbase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gyp%2E Bd%2F ProtectoBd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypsum Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HAL Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm Covershield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isox IFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modul R TS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O%2ES%2EB%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P%2ET%2E Board%2FDens-deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panneau Asphaltique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panneau de fibres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permaboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plasti Fab - Type 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plywood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polybase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polybase RT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polystyrne Bizolap Type 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectobd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard%2F Structodeck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R-Craft 95 Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R-Craft 95 Base FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recovery Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RoofCraft 180 FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofcraft FR Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2FO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securipan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped EPS%2F Protectobd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped F%2E Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sloped Perlite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Std%2E Coated F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structodeck F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered EPS system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapered Fiberboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tentess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Diamond Shield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labor %26 Membrane</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vapour_Retardant__c</picklist>
+        <values>
+            <fullName>%2315 Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2325-%2315 Perf%2F2 ply %2315 Perf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Ply %2315 %2B 2 Plies %2315</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Ply No%2E 25 Glass %26 1 Ply %2315</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Ply Type IV Glass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2%22 Dens-deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 mil%2E Clear Poly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 %2B 2 %2F %2315 Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Plies %2315 Perf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Plies BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Plies Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Plies Type IV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Plis %2315</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Ply %2315 %26 Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Ply %2315 %2B 2 Ply %2315</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Ply %2315 Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Ply %2315 Felt %26 Kraft V%2FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 plies %2315 felt %26 MF-95-SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 plies Armourbond 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 ply %2315 EMCO felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 ply %2315 felt %26 1 ply nail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5%22 %26 3%2E0%22 IKO Therm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Ply %2315 EMCO felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 plies of %2315 felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Plies %2315 Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 mil poly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 ply smooth on gypsum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40%2F60%2F40 Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 mil poly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abond Flash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aquabarrier AVB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ArmourGard %28Fbr%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ArmourGard IWP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourgard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourgard %26 IKO MVP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourgard %2F %2315 per felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bakor PE200HT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bakor-vapor bloc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blueskin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blueskin ROOF RF-200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constop Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Densdeck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplex Renf%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durop VR 96%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duroperm kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eave Guard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existant Multicouche</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing 2 ply felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing 2%22 F%2E Bd%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing 2-ply SBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing 4 ply felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing CTP BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing EPDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Mineral Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Smooth APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Smooth BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing roof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Ice %26 Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO M%2EV%2EP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kraft %2F 2 plies %2315</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kraft %2F felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kraft%2C %26 2 Plies %2315 felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lexsuco Permate VB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF-95-FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF-95-SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF-95-SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF-95-SS %2F Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP 95-SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP-180-FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP-180-SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No%2E 15 Felt %26 MF-95-SS%2F2 Ply No%2E 15 Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part 6 mil poly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perma-seal FG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permabloc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permagrip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permaseal PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permstop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poly VB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofcraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2FO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPAR Kraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sopra- Vap R</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spar Kraft V%2ER%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF 95 FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF-95-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TF-95-SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TP 180 FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TP-180-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TP-180-FF-Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TP-180-SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TP-95-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toiture existant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tri-flex 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trilamine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type IV Glass Ply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type IV glass%2F %2315 felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vapourstop 198</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Substatus__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Term__c</picklist>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

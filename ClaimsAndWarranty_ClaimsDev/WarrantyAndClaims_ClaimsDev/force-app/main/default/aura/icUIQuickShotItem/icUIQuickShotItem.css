@@ -1,0 +1,63 @@
+.THIS #dashLine {
+    z-index: 300;
+    width: 30px;
+    height: 1px;
+    background-color:  #9C9C9C;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    align-content: center;
+}
+
+
+/*.THIS .slds-max-medium-hide{*/
+/*    !*background-color:black;*!*/
+/*    position: relative;*/
+/*    left:200px;*/
+/*}*/
+/*@media screen and (min-width: 480px) and (max-width: 1024px){*/
+/*    .THIS .quickShotTextNumbers{*/
+/*        font-size: 2em!important;*/
+/*    }*/
+
+
+/*    .THIS .quickShotText{*/
+/*        font-size:0.8em!important;*/
+/*    }*/
+/*}*/
+
+.THIS .quickShotText{
+    padding-top:20px;
+    display: contents;
+    text-align:center;
+}
+.THIS .quickShotTextNumbers{
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:20px;
+}
+
+
+@media screen and (min-width: 1024px){
+    .THIS{
+        /*background-color:black;*/
+        /*position: relative;*/
+        /*left:200px;*/
+    }
+}
+
+@media only screen and  (min-width: 769px) and (max-width: 1023px){
+    .THIS .quickShotText{
+        font-size:0.8em!important;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    .THIS .quickShotText{
+        font-size:0.9em!important;
+        line-height: 0.9em!important;
+    }
+}

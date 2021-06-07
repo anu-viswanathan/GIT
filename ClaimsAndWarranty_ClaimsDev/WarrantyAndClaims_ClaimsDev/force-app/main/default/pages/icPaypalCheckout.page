@@ -1,0 +1,101 @@
+<apex:page controller="icCTRLPaypalVF" showheader="false" sidebar="false">
+
+    <apex:form >
+        <apex:actionFunction name="savePayment" action="{!savePayment}"/>
+        <apex:inputHidden id="paymentDetailId" value="{!strPaymentDetails}"/>
+    </apex:form>
+    <div id="paypal-button"></div>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        paypal.Button.render({
+            // Configure environment
+            //'AX_0D0YqnLcU1AX5YnhnASfJZio1taMetz4WhDnovzILMizEptr9SK9e8fJ-m5T_ghop-ZpQmZmYutFc',
+            env: '{!IF($Setup.Paypal__c.isSandbox__c, 'sandbox', 'production')}',
+            client: {
+                sandbox: '{!$Setup.Paypal__c.Sandbox_Client_Id__c}',
+                production: '{!$Setup.Paypal__c.Production_Client_Id__c}'
+            },
+            // Customize button (optional)
+            locale: "{!IF(locale == '', 'en_US', locale)}",
+            style: {
+                size: 'small',
+                color: 'gold',
+                shape: 'pill',
+            },
+
+            // Enable Pay Now checkout flow (optional)
+            commit: true,
+
+            // Set up a payment
+            payment: function (data, actions) {
+                console.log("account payment id ===> {!sfPaymentId}");
+                console.log("Account payment.Net_Membership_Fee__c ====> {!accountPayment.Net_Membership_Fee__c}");
+                var netAmount = {!accountPayment.Net_Membership_Fee__c};
+                if( netAmount == "0.00" ) {
+                    alert('{!$Label.icAmount_must_be_greater_than_0_00}');
+                }
+                else {
+                    var payerInfo = {};
+                    payerInfo.email = "{!paymentContact.Email}";
+                    payerInfo.first_name = "{!paymentContact.FirstName}";
+                    payerInfo.last_name = "{!paymentContact.LastName}";
+                    if ("{!thisPaymentAddress.zipCode}" != "") {
+                        var billingAddress = {};
+                        billingAddress.line1 = "{!thisPaymentAddress.street}";
+                        billingAddress.city = "{!thisPaymentAddress.city}";
+                        billingAddress.country_code = "{!thisPaymentAddress.country}";
+                        billingAddress.state = "{!thisPaymentAddress.state}";
+                        billingAddress.postal_code = "{!thisPaymentAddress.zipCode}";
+                        payerInfo.billing_address = billingAddress;
+                    }
+
+                    console.log(JSON.stringify(payerInfo));
+                    return actions.payment.create({
+                        transactions: [{
+                            amount: {
+                                total: '{!IF(accountPayment.Net_Membership_Fee__c == null, "0.00", accountPayment.Net_Membership_Fee__c)}',
+                                currency: '{!IF(accountPayment.Currency__c =="", "USD", accountPayment.Currency__c)}'
+                            },
+                            invoice_number: "{!accountPayment.Name}"
+
+                        }],
+                        payer: {
+                            payer_info: payerInfo
+                        }
+                    });
+                }
+
+            },
+            // Execute the payment
+            onAuthorize: function (data, actions) {
+                return actions.payment.execute().then(function () {
+                    // Show a confirmation message to the buyer
+                    window.alert('{!$Label.icThank_you_for_your_purchase}');
+                    return actions.payment.get().then(function (paymentDetails) {
+                        /*var objPD = JSON.parse(paymentDetails);
+                        console.log(paymentDetails);
+                        console.log(objPD);*/
+
+                        var tmpStrPaymentDetails = JSON.stringify(paymentDetails);
+                        jQuery("[id$='paymentDetailId']").val(tmpStrPaymentDetails);
+
+                        savePayment();
+
+
+                    });
+
+                });
+
+            },
+            onError: function (err) {
+                parent.postMessage(true);
+                window.alert(err);
+            }
+
+
+        }, '#paypal-button');
+
+    </script>
+</apex:page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Cost_of_Additional_Settlement_Item__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>CLAIMSV2 - 75. The field is populated from the Case Products by summing the total of multiplying the Case Product Quantity with the default Rate (20$)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The field is populated from the Case Products by summing the total of multiplying the Case Product Quantity with the default Rate (20$)</inlineHelpText>
+    <label>Total Cost of Additional Settlement Item</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

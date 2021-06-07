@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Administrator__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Populated with Process Builder and taken from the same value on the Contractor Admin Profile page.</description>
+    <externalId>false</externalId>
+    <label>Lead Administrator</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>startsWith</operation>
+            <value>IKOPRO Contractor</value>
+        </filterItems>
+        <filterItems>
+            <field>User.Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Id</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Lead_Admin2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

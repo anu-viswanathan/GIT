@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handseal_Replacement_Bundles__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>CLAIMSV2-88. The purpose of this field is to capture the number of bundles of shingles to the customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of bundles of shingles assigned to the customer</inlineHelpText>
+    <label>Handseal Replacement Bundles</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

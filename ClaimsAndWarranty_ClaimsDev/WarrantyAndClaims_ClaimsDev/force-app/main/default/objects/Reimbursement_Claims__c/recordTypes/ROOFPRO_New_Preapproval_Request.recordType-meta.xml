@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROOFPRO_New_Preapproval_Request</fullName>
+    <active>true</active>
+    <description>New Preapproval Request</description>
+    <label>ROOFPRO New Preapproval Request</label>
+    <picklistValues>
+        <picklist>Internal_Status__c</picklist>
+        <values>
+            <fullName>New Preapproval Request</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reimbursement_Items__c</picklist>
+        <values>
+            <fullName>Digital Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Literature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personalized Promotional Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premiums items and wearables</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Advertising%2C Yellow Pages and Billboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radio and TV Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samples %26 Displays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck Wraps and Graphics</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>New Preapproval</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

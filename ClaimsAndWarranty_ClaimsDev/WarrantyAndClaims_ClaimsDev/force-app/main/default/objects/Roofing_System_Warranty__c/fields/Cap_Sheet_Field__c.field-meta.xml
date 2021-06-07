@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cap_Sheet_Field__c</fullName>
+    <externalId>false</externalId>
+    <label>Cap Sheet (Field)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Torchflex TP-180 Cap</fullName>
+                <default>false</default>
+                <label>Torchflex TP-180 Cap</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-250 Cap</fullName>
+                <default>false</default>
+                <label>Torchflex TP-250 Cap</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-250 Cap (5.0mm)</fullName>
+                <default>false</default>
+                <label>Torchflex TP-250 Cap (5.0mm)</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-HD Cap</fullName>
+                <default>false</default>
+                <label>Torchflex TP-HD Cap</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180 Cap</fullName>
+                <default>false</default>
+                <label>Modiflex MP-180 Cap</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-250 Cap</fullName>
+                <default>false</default>
+                <label>Modiflex MP-250 Cap</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-HD Cap</fullName>
+                <default>false</default>
+                <label>Modiflex MP-HD Cap</label>
+            </value>
+            <value>
+                <fullName>PrevENt Torchflex TP-250 Cap</fullName>
+                <default>false</default>
+                <label>PrevENt Torchflex TP-250 Cap</label>
+            </value>
+            <value>
+                <fullName>PrevENt Torchflex TP-HD Cap</fullName>
+                <default>false</default>
+                <label>PrevENt Torchflex TP-HD Cap</label>
+            </value>
+            <value>
+                <fullName>PrevENt Modiflex MP-250 Cap</fullName>
+                <default>false</default>
+                <label>PrevENt Modiflex MP-250 Cap</label>
+            </value>
+            <value>
+                <fullName>PrevENt Modiflex MP-HD Cap</fullName>
+                <default>false</default>
+                <label>PrevENt Modiflex MP-HD Cap</label>
+            </value>
+            <value>
+                <fullName>PrevENt Armourcool Granular HD Cap</fullName>
+                <default>false</default>
+                <label>PrevENt Armourcool Granular HD Cap</label>
+            </value>
+            <value>
+                <fullName>Armourcool TP-HD Cap</fullName>
+                <default>false</default>
+                <label>Armourcool Granular TP-HD Cap</label>
+            </value>
+            <value>
+                <fullName>Armourplast Granular APP</fullName>
+                <default>false</default>
+                <label>Armourplast Granular APP</label>
+            </value>
+            <value>
+                <fullName>Armourplast Classic</fullName>
+                <default>false</default>
+                <label>Armourplast Classic</label>
+            </value>
+            <value>
+                <fullName>Armourplast Classic (5.0mm)</fullName>
+                <default>false</default>
+                <label>Armourplast Classic (5.0mm)</label>
+            </value>
+            <value>
+                <fullName>ArmourStick HD Cap</fullName>
+                <default>false</default>
+                <label>ArmourStick HD Cap</label>
+            </value>
+            <value>
+                <fullName>IKO No. 15 Felt Perforated</fullName>
+                <default>false</default>
+                <label>IKO No. 15 Felt Perforated</label>
+            </value>
+            <value>
+                <fullName>IKO Type IV Glass Felt</fullName>
+                <default>false</default>
+                <label>IKO Type IV Glass Felt</label>
+            </value>
+            <value>
+                <fullName>IKO Type 6 Glass Felt</fullName>
+                <default>false</default>
+                <label>IKO Type 6 Glass Felt</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-SS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Modiflex MP-180-SS</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-SS Base</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Modiflex MP-180-SS Base</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-180-SS Base(3.0 MM)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Modiflex MP-180-SS Base(3.0 MM)</label>
+            </value>
+            <value>
+                <fullName>Modiflex MP-HD-SS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Modiflex MP-HD-SS</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-180 FF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Torchflex TP-180 FF</label>
+            </value>
+            <value>
+                <fullName>Torchflex TP-HD-FF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Torchflex TP-HD-FF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

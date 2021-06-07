@@ -1,0 +1,12 @@
+<template>  
+  <div class="slds-box"> 
+      <lightning-card >    
+      <lightning-button slot="actions" label="Update" onclick={updateRecord}></lightning-button>  
+      <div class="slds-box">  
+        <lightning-datatable  
+        data={conList.data} columns={cols} key-field="Id">  
+        </lightning-datatable>  
+      </div>  
+    </lightning-card>  
+  </div>  
+  </template>

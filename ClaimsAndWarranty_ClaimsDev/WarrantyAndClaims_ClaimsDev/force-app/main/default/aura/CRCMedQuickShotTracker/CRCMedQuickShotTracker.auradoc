@@ -1,0 +1,6 @@
+<aura:documentation>
+    <aura:description>Documentation for CRCMedQuickShotTracker</aura:description>
+    <aura:example name="CRCMedQuickShotTracker" ref="CRCMedQuickShotTracker" label="CRCMedQuickShotTracker">
+        Example for CRCMedQuickShotTracker
+    </aura:example>
+</aura:documentation>

@@ -1,0 +1,11 @@
+<design:component label="Location Address Lookup">
+    <design:attribute name="streetObjField" label="Street" description="Enter API name of street address field to update"></design:attribute>
+    <design:attribute name="cityObjField" label="Locality/City/Town" description="Enter API name of city field to update"></design:attribute>
+    <design:attribute name="stateObjField" label="State/Province" description="Enter API name of state field to update"></design:attribute>
+    <design:attribute name="postalCodeObjField" label="Postal Code" description="Enter API name of postal code field to update"></design:attribute>
+    <design:attribute name="countryObjField" label="Country" description="Enter API name of country field to update"></design:attribute>
+    <design:attribute name="minLookup" label="Minimum Input Characters" description="Number of characters in input before suggestions are returned"></design:attribute>
+    <design:attribute name="mixedCase" label="Mixed Casing" description="Enabled mixed casing, otherwise upper casing"></design:attribute>
+    <design:attribute name="country" label="Default Country" description="Default country selected"></design:attribute>
+    <design:attribute name="cmpHeader" label="Component Header" description="Enter a name to displayed on the component"></design:attribute>
+</design:component>

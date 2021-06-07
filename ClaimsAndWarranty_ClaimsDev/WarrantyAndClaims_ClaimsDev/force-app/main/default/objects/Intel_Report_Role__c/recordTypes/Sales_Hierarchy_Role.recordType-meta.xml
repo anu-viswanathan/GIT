@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Hierarchy_Role</fullName>
+    <active>true</active>
+    <description>For roles that fit within the hierarchy for email distribution</description>
+    <label>Sales Hierarchy Role</label>
+</RecordType>

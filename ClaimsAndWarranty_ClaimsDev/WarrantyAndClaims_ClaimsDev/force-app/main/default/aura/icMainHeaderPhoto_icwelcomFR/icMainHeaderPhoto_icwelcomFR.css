@@ -1,0 +1,237 @@
+/**
+ * Created by Yves Asselin on 2018-08-14.
+ */
+.THIS{
+    margin:0;
+    padding:0;
+}
+
+
+@media only screen and (max-width: 980px){
+    .THIS .img_medium-show-only>img{
+        display: block;
+    }
+
+    .THIS .img_x-large>img{
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 981px){
+    .THIS .img_medium-show-only>img{
+        display: block;
+    }
+
+    .THIS .img_x-large>img{
+        display:none;
+    }
+}
+
+
+/* Phone */
+/*@media only screen and  (min-width: 320px) and (max-width:550px) {*/
+
+/*    !* For mobile : *!*/
+/*    .THIS{*/
+/*        position:relative;*/
+/*        !*top:-60px;*!*/
+/*    }*/
+
+/*    .THIS .mediaWidth {*/
+/*        width:480px !important;*/
+/*    }*/
+
+/*    .THIS .showTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showLargeTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showLargeDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .img_x_large{*/
+/*        display:none;*/
+/*    }*/
+
+/*    .THIS .img_medium-show-only{*/
+/*        display: block;*/
+/*    }*/
+
+/*}*/
+/*!* Tablets *!*/
+/*@media only screen and  (min-width: 551px) and (max-width: 768px) {*/
+
+/*    !* For TABLETS : *!*/
+
+
+/*    .THIS body {*/
+/*        width:767px;*/
+
+/*    }*/
+
+/*    .THIS .showPhoneOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showLargeTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showLargeDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .img_x_large{*/
+/*        display:none;*/
+/*    }*/
+
+/*    .THIS .img_medium-show-only{*/
+/*        display: block;*/
+/*    }*/
+
+/*}*/
+/*!* Large Tablets*!*/
+
+
+
+
+/*@media only screen and  (min-width: 769px) and (max-width: 980px) {*/
+
+/*    !* For between TABLET and DESKTOP Small : *!*/
+
+/*    .THIS body {*/
+/*        width:1023px;*/
+
+/*    }*/
+/*    .THIS .showPhoneOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+
+/*    .THIS .showDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .showLargeDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*    .THIS .img_x_large{*/
+/*        display:none;*/
+/*    }*/
+
+/*    .THIS .img_medium-show-only{*/
+/*        display: block;*/
+/*    }*/
+
+/*}*/
+/*!*Desktop *!*/
+/*@media only screen and  (min-width: 981px) and (max-width: 1500px) {*/
+/*    .THIS body {*/
+/*        width:1024px;*/
+
+/*    }*/
+
+/*    .THIS .img_x_large{*/
+/*        display:block;*/
+/*    }*/
+
+/*    .THIS .img_medium-show-only{*/
+/*        display: none;*/
+/*    }*/
+
+
+/*    .THIS .showPhoneOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showLargeTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+
+
+/*    .THIS .showLargeDesktopOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+
+/*}*/
+/*!* Large Desktop *!*/
+/*@media only screen and (min-width:1501px) {*/
+/*    !* For DESKTOP LARGE: *!*/
+
+/*    .THIS .showPhoneOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showLargeTabletOnly{*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+/*    }*/
+/*    .THIS .showDesktopOnly {*/
+/*        display: none !important;*/
+/*        margin-left: auto !important;*/
+/*        margin-right: auto !important;*/
+/*    }*/
+
+/*    .THIS .img_medium-show-only{*/
+/*        display: none;*/
+/*    }*/
+
+
+/*}*/

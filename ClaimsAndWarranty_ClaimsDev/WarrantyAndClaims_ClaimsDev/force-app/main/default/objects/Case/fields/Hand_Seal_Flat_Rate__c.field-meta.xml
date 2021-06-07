@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hand_Seal_Flat_Rate__c</fullName>
+    <defaultValue>100</defaultValue>
+    <description>CLAIMSV2 - 77. This field is used to hold the constant value of the flat rate for handseal</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Constant value of the flat rate for handseal</inlineHelpText>
+    <label>Hand Seal Flat Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

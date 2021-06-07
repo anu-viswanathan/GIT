@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Business_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Architect</fullName>
+                <default>false</default>
+                <label>Architect</label>
+            </value>
+            <value>
+                <fullName>Distributor construction materials</fullName>
+                <default>false</default>
+                <label>Distributor construction materials</label>
+            </value>
+            <value>
+                <fullName>Distributor lumberyards (wood)</fullName>
+                <default>false</default>
+                <label>Distributor lumberyards (wood)</label>
+            </value>
+            <value>
+                <fullName>Distributor roofing materials</fullName>
+                <default>false</default>
+                <label>Distributor roofing materials</label>
+            </value>
+            <value>
+                <fullName>DIY Chain</fullName>
+                <default>false</default>
+                <label>DIY Chain</label>
+            </value>
+            <value>
+                <fullName>DIY independent store</fullName>
+                <default>false</default>
+                <label>DIY independent store</label>
+            </value>
+            <value>
+                <fullName>DIY organized</fullName>
+                <default>false</default>
+                <label>DIY organized</label>
+            </value>
+            <value>
+                <fullName>Engineering company</fullName>
+                <default>false</default>
+                <label>Engineering company</label>
+            </value>
+            <value>
+                <fullName>Facade contractor</fullName>
+                <default>false</default>
+                <label>Facade contractor</label>
+            </value>
+            <value>
+                <fullName>Floor Contractor</fullName>
+                <default>false</default>
+                <label>Floor Contractor</label>
+            </value>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <label>Food</label>
+            </value>
+            <value>
+                <fullName>Gardenhouse manuf or trade</fullName>
+                <default>false</default>
+                <label>Gardenhouse manuf or trade</label>
+            </value>
+            <value>
+                <fullName>General contractor</fullName>
+                <default>false</default>
+                <label>General contractor</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Housing association</fullName>
+                <default>false</default>
+                <label>Housing association</label>
+            </value>
+            <value>
+                <fullName>Inspection company</fullName>
+                <default>false</default>
+                <label>Inspection company</label>
+            </value>
+            <value>
+                <fullName>Other Liquids contractor</fullName>
+                <default>false</default>
+                <label>Liquids contractor</label>
+            </value>
+            <value>
+                <fullName>Manufacturer</fullName>
+                <default>false</default>
+                <label>Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Ministry of Defense</fullName>
+                <default>false</default>
+                <label>Ministry of Defense</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Prefab manuf or trade</fullName>
+                <default>false</default>
+                <label>Prefab manuf or trade</label>
+            </value>
+            <value>
+                <fullName>Road contractor</fullName>
+                <default>false</default>
+                <label>Road contractor</label>
+            </value>
+            <value>
+                <fullName>Roof contractor</fullName>
+                <default>false</default>
+                <label>Roof contractor</label>
+            </value>
+            <value>
+                <fullName>Syndic</fullName>
+                <default>false</default>
+                <label>Syndic</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DIY Retail</controllingFieldValue>
+            <valueName>DIY Chain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY Retail</controllingFieldValue>
+            <valueName>DIY independent store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIY Retail</controllingFieldValue>
+            <valueName>DIY organized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <valueName>Gardenhouse manuf or trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <valueName>Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <valueName>Prefab manuf or trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specifier</controllingFieldValue>
+            <valueName>Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specifier</controllingFieldValue>
+            <valueName>Engineering company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specifier</controllingFieldValue>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Food</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specifier</controllingFieldValue>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Ministry of Defense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>Facade contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>Floor Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>General contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>Other Liquids contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>Road contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contractor</controllingFieldValue>
+            <valueName>Roof contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Distributor construction materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Distributor lumberyards (wood)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Distributor roofing materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Government</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Housing association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Inspection company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Syndic</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

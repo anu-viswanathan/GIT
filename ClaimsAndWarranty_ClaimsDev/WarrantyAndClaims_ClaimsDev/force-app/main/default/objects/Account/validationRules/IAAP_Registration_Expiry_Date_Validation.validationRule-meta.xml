@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAAP_Registration_Expiry_Date_Validation</fullName>
+    <active>true</active>
+    <description>This ensures that the IAAP expiry date for contractors will always be after the registration date.</description>
+    <errorConditionFormula>IAP_Registered_Date__c &gt; IAP_Registration_Expiry_Date__c</errorConditionFormula>
+    <errorDisplayField>IAP_Registration_Expiry_Date__c</errorDisplayField>
+    <errorMessage>IAAP Registration Expiry Date cannot be before the IAAP Registration Date</errorMessage>
+</ValidationRule>

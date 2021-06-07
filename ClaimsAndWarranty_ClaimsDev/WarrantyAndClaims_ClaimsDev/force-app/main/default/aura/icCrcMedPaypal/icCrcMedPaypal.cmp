@@ -1,0 +1,12 @@
+<aura:component description="icCrcMedPaypal" implements="lightning:availableForFlowScreens,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="accountPaymentId" type="String" access="global"/>
+    <aura:attribute name="contactId" type="String" access="global" />
+
+   <!-- <aura:handler name="render" value="{!this}" action="{!c.doInit}" />-->
+
+    <div class="iframe-container">
+       <!-- <span>account payment Id === {!v.accountPaymentId}</span>
+        <span>Contact Id === {!v.contactId}</span>-->
+        <iframe aura:id="paypalCheckoutIF" width="155px" height="55px" src="{!$Label.c.crc_paypal_VF_page_url + '?paymentid=' + v.accountPaymentId + '&amp;contactId=' + v.contactId}"  frameborder="none"/>
+    </div>
+</aura:component>

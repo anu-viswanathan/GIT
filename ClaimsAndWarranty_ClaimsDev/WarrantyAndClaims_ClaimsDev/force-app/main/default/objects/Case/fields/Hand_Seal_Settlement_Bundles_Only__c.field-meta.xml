@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hand_Seal_Settlement_Bundles_Only__c</fullName>
+    <description>Hand Seal Settlement Amount without the flat fee of $100. This is needed for correspondence with customers.</description>
+    <externalId>false</externalId>
+    <formula>BLANKVALUE(Num_of_Bundles_for_Settlement__c, Suggested_Bundles_for_Settlement__c)
+  * Calculated_Hand_Seal_Bundle_Rate__c</formula>
+    <inlineHelpText>Hand Seal Settlement Amount for the bundles only. An additional flat fee is paid to the customer for the total settlement.</inlineHelpText>
+    <label>Hand Seal Settlement (Bundles Only)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

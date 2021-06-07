@@ -1,0 +1,407 @@
+.THIS{
+    /*position:relative;*/
+    /*!*left:-4px;*!*/
+    /*top:-8px;*/
+
+}
+
+.THIS .tabStyle{
+    position: relative;
+    top:-40px;
+}
+
+
+.THIS .hideContent{
+    display:none!important;
+}
+
+.THIS .iko-tile.btnFontSizeFR{
+    font-size:10px!important;
+    line-height:10px;
+    transform:scaleX(0.94);
+}
+
+.THIS .labelFontSizeFR{
+    font-size:15px!important;
+    line-height:18px;
+}
+
+.THIS .labelFontSizeFR>div.cIcUiCommunityWelcomeItem{
+    transform:scaleX(.94);
+}
+
+.THIS .languageNavigation{
+    display: inline-flex;
+    position: absolute;
+    z-index: 999;
+    color: #FFFFFF;
+    padding-top: 8px;
+    right:8%;
+}
+
+.THIS .languageNavigation>span{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top:25px;
+    margin-left: 15px;
+    border-bottom: #FFFFFF solid 1px;
+    border-left: #FFFFFF solid 1px;
+    border-right:#FFFFFF solid 1px;
+    border-radius: 10px;
+    position: relative;
+    top: -28px;
+    color: #81858D;
+    background-color:#3D3F3E;
+}
+
+
+.THIS .languageNavigation>span>a{
+    text-decoration: none;
+    color:#81858D;
+    padding-left:5px;
+    padding-right:5px;
+    background:transparent;
+    border:none;
+}
+
+.THIS .languageNavigation>span>button{
+    text-decoration: none;
+    color:#81858D;
+    padding-left:5px;
+    padding-right:5px;
+    background:transparent;
+    border:none;
+}
+
+.THIS .cCenterPanel{
+    margin-top:0;
+}
+
+.THIS .welcomeMain {
+	background-size: cover;
+	/*background: url(/file-asset/IKO_Cambridge_shingles_Harvard_Slat?v=1) 50% 50%/cover no-repeat fixed rgb(255, 255, 255);*/
+	/*min-height: 100%;*/
+	/*width: 100%;*/
+    height:100vh;
+	text-align: -webkit-center;
+    text-align: -moz-center;
+
+	vertical-align: center;
+	position: absolute;
+    top:0;
+    left:0;
+	display: inline-block;
+	align-items: center;
+	/*margin-top:-8px;*/
+	/*margin-left:-8px;*/
+    /*background-image: linear-gradient(to top, rgba(122,122,122,0.8), white, white, white, white, white);*/
+    background-attachment: fixed;
+    background-position: bottom;
+
+}
+
+.THIS .welcomeMain .cIcMainHeaderPhoto_icwelcome>img{
+    /*box-shadow: 0px 7px 5px #8b8b8b;*/
+}
+
+.THIS .content-wrapper {
+	 /*width: 40%;*/
+	 /*height: 100%;*/
+    /*margin:0 auto;*/
+    margin-top:45px;
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    text-align: -moz-center;
+    text-align: -webkit-center;
+    /*margin-top: 20px;*/
+    /*width:100%;*/
+	 /*top:2vh;*/
+    position: relative;
+ }
+
+/*.THIS .content-wrapper .center-wrap{*/
+/*    margin-left: auto;*/
+/*    margin-right:auto;*/
+/*}*/
+
+.THIS .text-wrapper{
+	font-family: Montserrat medium;
+	font-size:15px;
+	line-height:18px;
+}
+.THIS .text-wrapper span.red-text{
+	font-weight: 600;
+	color:#be141f;
+    font-family: Montserrat medium, 'Open Sans', 'sans-serif', 'Semi-Bold';
+}
+.THIS .text-wrapper span.content-text{
+	font-weight:400;
+	color:#606060;
+    /*opacity:.9;*/
+}
+.THIS .text-underline{
+    text-decoration: underline;
+}
+.THIS .iko-tile-wrapper {
+	/*padding: 5px;*/
+	/*display: inline-flex;*/
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:30px;
+    padding-top:30px;
+    width:300px;
+    text-align:center;
+}
+.THIS .iko-tile-wrapper:not(:last-child){
+    border-right: 1px black dotted;
+}
+
+.THIS .iko-tile-button{
+    height:38px;
+    width:185px;
+    background: #000000;
+    /*border-radius:8px;*/
+    margin-top:20px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.THIS .iko-tile-button:hover{
+    background-color:#950d16;
+
+}
+
+.THIS .iko-tile-button>a:hover{
+    text-decoration: none;
+}
+
+.THIS .iko-tile-button .iko-tile{
+	/*border: 2px solid black;*/
+	/*background-color: white;*/
+	color: white;
+	/*padding: 14px 28px;*/
+    font-weight:600;
+	font-size: 10px;
+    line-height:10px;
+    font-family: Montserrat, 'Open Sans', 'sans-serif', 'Semi-Bold';
+	cursor: pointer;
+    text-decoration: none;
+    padding-top:14px;
+	/*border-radius: 5px;*/
+	/*height: 5em;*/
+    /*width: 10em;*/
+    text-transform: uppercase;
+}
+
+
+.THIS .whiteText{
+    color: #FFFFFF!important;
+    font-weight:600;
+}
+/*.THIS .iko-tile:hover {*/
+/*  background-color: #4CAF50;*/
+/*  color: white;*/
+/*}*/
+
+/*@media only screen and (max-width: 480px){*/
+/*    .THIS .welcomeMain{*/
+/*        !*height:140%;*!*/
+/*    }*/
+
+/*    .THIS .iko-tile-wrapper:not(:last-child){*/
+/*        border-right: unset;*/
+/*        border-bottom: 1px black dashed;*/
+/*    }*/
+
+/*    .THIS .content-wrapper{*/
+/*        display: unset;*/
+/*        !*left: calc(50% - 250px);*!*/
+
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 481px) and (max-width:767px){*/
+/*    .THIS .welcomeMain{*/
+/*        !*height:130%;*!*/
+/*    }*/
+
+/*    .THIS .iko-tile-wrapper:not(:last-child){*/
+/*        border-right: unset;*/
+/*        border-bottom: 1px black dashed;*/
+/*    }*/
+
+/*    .THIS .content-wrapper{*/
+/*        !*display:unset;*!*/
+/*        !*left: calc(50% - 150px);*!*/
+/*        margin-left:auto;*/
+/*        margin-right:auto;*/
+/*        width:300px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width:768px) and (max-width: 900px) {*/
+/*    .THIS .content-wrapper{*/
+/*        display: unset;*/
+/*        !*left: calc(50% - 150px);*!*/
+
+/*    }*/
+
+/*    !*.THIS .welcomeMain{*!*/
+/*    !*    !*height:130%;*!*!*/
+/*    !*}*!*/
+
+/*    .THIS .iko-tile-wrapper:not(:last-child){*/
+/*        border-right: unset;*/
+/*        border-bottom: 1px red dashed;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width:600px){*/
+/*    .THIS .welcomeMain{*/
+/*        height:100vh;*/
+/*    }*/
+/*}*/
+
+@media only screen and (max-width:980px){
+    /*.THIS .content-wrapper{*/
+    /*    display:inline-flex;*/
+    /*}*/
+
+    .THIS .languageNavigation{
+        left:15%;
+    }
+
+
+
+
+    .THIS .content-wrapper{
+        margin-left:auto;
+        margin-right:auto;
+        width:300px;
+        margin-top:220px;
+        transform: scale(1.8);
+        /*display: unset;*/
+        /*margin-left: calc(50% - 500px);*/
+    }
+    .THIS .iko-tile-wrapper{
+        /*transform:scale(1.5);*/
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+
+    .THIS .iko-tile-wrapper:not(:last-child){
+        border-right: unset;
+        border-bottom: 1px black dotted;
+    }
+    .THIS .welcomeMain{
+        /*height: calc( 1800px - 20% + 10vh );*/
+        width:100%;
+    }
+
+    .THIS .img_medium-show-only{
+        display:block;
+        width:100%;
+        background: black;
+        border-bottom: 10px #333333 solid;
+    }
+
+    .THIS .img_x-large{
+        display:none;
+    }
+
+    .THIS .img_medium-show-only>img{
+        max-height: 35vh;
+        object-fit: fill;
+    }
+
+
+    .THIS .languageNavigation{
+        /*left: 25%;*/
+    }
+
+}
+
+@media screen and (min-width:981px) and (max-width:1279px) {
+    .THIS .content-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 900px;
+        /*display: unset;*/
+        /*margin-left: calc(50% - 500px);*/
+    }
+
+    .THIS .img_medium-show-only{
+        display:none;
+    }
+
+    .THIS .img_x-large{
+        display:block;
+
+    }
+
+    .THIS .img_x-large>img{
+        max-height: 35vh;
+        object-fit: cover;
+        border-bottom: 10px #333333 solid;
+    }
+
+    .THIS .languageNavigation p{
+        font-size:11px;
+        margin-top:3px;
+    }
+
+
+    .THIS .tabFR.adjustImg1{
+        position: relative;
+       left:1px;
+    }
+
+}
+    /*
+/*}*/
+
+@media only screen and (min-width: 1280px){
+    .THIS .welcomeMain .cIcMainHeaderPhoto_icwelcome{
+        /*box-shadow: 0px 7px 5px #8b8b8b;*/
+    }
+    .THIS .content-wrapper{
+        margin-left:auto;
+        margin-right:auto;
+        width:900px;
+        /*display: unset;*/
+        /*margin-left: calc(50% - 500px);*/
+    }
+
+    .THIS .languageNavigation p{
+        font-size:11px;
+        margin-top:3px;
+    }
+
+
+    .THIS .img_medium-show-only{
+        display:none;
+    }
+
+    .THIS .img_x-large{
+        display:block;
+    }
+
+    .THIS .img_x-large>img{
+        max-height: 35vh;
+        object-fit: cover;
+        border-bottom: 10px solid #333333;
+    }
+
+
+
+    .THIS .tabFR.adjustImg1{
+        position: relative;
+        left:2px;
+    }
+    /*.THIS .iko-tile-wrapper{*/
+    /*    !*width:350px;*!*/
+    /*}*/
+}

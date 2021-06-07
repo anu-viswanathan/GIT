@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Owner_Company__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Company that owns Commercial Building</description>
+    <externalId>false</externalId>
+    <label>Warranty Owner (Company)</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Warranties (Owner (Company))</relationshipLabel>
+    <relationshipName>Warranties1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

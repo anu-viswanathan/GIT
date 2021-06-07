@@ -1,0 +1,50 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes">
+	<style>
+		.slds-modal__container{
+		       max-width: 70rem !important;
+		       width:70% !important;
+		}
+	</style>		
+
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+
+    <aura:attribute name="message" type="String" default="" />
+	<aura:attribute name="messageType" type="String" default="warning" />
+	<aura:attribute name="messageBackground" type="String" default="warning" />
+
+	<force:recordData aura:id="labSampleData"
+                      recordId="{!v.recordId}"
+                    layoutType="COMPACT"
+                    mode="EDIT"
+                    targetRecord="{!v.record}"
+                    targetFields="{!v.simpleRecord}"
+                    targetError="{!v.recordError}" 
+					fields="Observation__c,Status__c"
+              />
+
+    <aura:if isTrue="{!v.simpleRecord.Status__c == 'Approved'}">
+        <c:pageMessage message="You cannot update an approved record" messageType="error" background="error" />
+
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.simpleRecord.Status__c == 'In Approval'}">
+                <c:pageMessage message="You cannot update a record awaiting approval" messageType="error" background="error" />
+
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.message != ''}">
+                        <c:pageMessage message="{!v.message}" messageType="{!v.messageType}" background="{!v.messageBackground}" />
+                    </aura:if>
+
+                    <lightning:button label="Save" class="slds-m-top--medium" variant="brand" onclick="{!c.handleSaveRecord}"/>
+
+                    <lightning:button label="Save and Close" class="slds-m-top--medium" variant="brand" onclick="{!c.handleSaveRecordAndClose}"/>
+
+                    <lightning:inputRichText value="{!v.simpleRecord.Observation__c}" placeholder="Record your observations here"  class="bigtextarea" />
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+
+
+</aura:component>

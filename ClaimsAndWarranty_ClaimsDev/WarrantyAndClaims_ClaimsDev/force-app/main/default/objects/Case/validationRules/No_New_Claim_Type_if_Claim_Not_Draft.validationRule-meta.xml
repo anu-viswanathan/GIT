@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_New_Claim_Type_if_Claim_Not_Draft</fullName>
+    <active>true</active>
+    <description>Sales reps can’t add claim types if the Claim Stage is not Draft.</description>
+    <errorConditionFormula>!ISPICKVAL( Claim_Stage__c , &quot;Draft&quot;)
+ &amp;&amp;  ISCHANGED(Number_of_Claim_Types__c)
+ &amp;&amp;  (BEGINS($Profile.Name , &apos;CACS&apos;)
+  || BEGINS($Profile.Name , &apos;CARS&apos;)
+  || BEGINS($Profile.Name , &apos;USRS&apos;))</errorConditionFormula>
+    <errorMessage>You can’t add a Claim Type because the Claim has already been submitted.</errorMessage>
+</ValidationRule>

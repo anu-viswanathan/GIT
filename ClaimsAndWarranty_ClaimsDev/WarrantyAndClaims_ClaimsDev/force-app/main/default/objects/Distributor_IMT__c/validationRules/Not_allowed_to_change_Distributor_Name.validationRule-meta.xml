@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_allowed_to_change_Distributor_Name</fullName>
+    <active>true</active>
+    <description>to prevent contractors from changing these records</description>
+    <errorConditionFormula>ISCHANGED(Name)</errorConditionFormula>
+    <errorMessage>You are not allowed to change this record.</errorMessage>
+</ValidationRule>

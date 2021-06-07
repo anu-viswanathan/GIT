@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Organic_Type__c</fullName>
+    <description>2019-04-18 This should be removed. It does not accomplish the goal and is a waste of a roll up field.</description>
+    <externalId>false</externalId>
+    <label>(deprecated) Conga Organic Type</label>
+    <summaryFilterItems>
+        <field>Claim_Type__c.Is_Primary__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Claim_Type__c.Product_Type__c</field>
+        <operation>equals</operation>
+        <value>A Organic, C Lam/Org, J Total, K Lock</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Claim_Type__c.Case__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

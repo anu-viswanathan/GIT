@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ticked if this IKOPRO Benefit should not be used for Tiers anymore (i.e. &apos;Retired&apos; Benefit). When this checkbox is ticked, the &apos;inactive for Tier&apos;-checkboxes will automatically be ticked, so the benefit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ticked if this IKOPRO Benefit should not be used for Tiers anymore (i.e. &apos;Retired&apos; Benefit)</inlineHelpText>
+    <label>Inactive</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

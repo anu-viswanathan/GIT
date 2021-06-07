@@ -1,0 +1,6 @@
+<aura:component description="MedPaymentInvoicePDF_Renewals" controller="icCtrlLogOut" implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="accountPaymentId" type="String" />
+    <div>
+        <lightning:button name="icPaymentInvoicePDF" label="{!$Label.c.icPayment_Invoice_PDF_button_label}" onclick="{!c.goToPDF}" />
+    </div>
+</aura:component>

@@ -1,0 +1,14 @@
+<aura:component access="GLOBAL"
+                implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:lightningQuickAction" controller="LabSampleService">
+    <aura:attribute name="albumId" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="height" type="Integer" default="500"/>
+    <aura:attribute name="permissionId" type="String" />
+    <aura:attribute name="showSharinPix" type="Boolean" default="false" />
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+
+    <aura:if isTrue="{!v.showSharinPix}">
+        <sharinpix:SharinPix aura:id="sharinpix-cmp" AlbumId="{! v.recordId }" height="{! v.height }" permissionId="{!v.permissionId}" />
+    </aura:if>
+
+</aura:component>

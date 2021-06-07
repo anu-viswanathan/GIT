@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Start_Date_Validation</fullName>
+    <active>true</active>
+    <description>This ensures that the warranty start date is not before the Estimated Completion Date</description>
+    <errorConditionFormula>Work_Completion_Date__c &gt;  Warranty_Start_Date__c</errorConditionFormula>
+    <errorDisplayField>Warranty_Start_Date__c</errorDisplayField>
+    <errorMessage>Warranty Start Date Cannot Be Before Estimated Completion Date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Samples_Collected_must_be_Yes</fullName>
+    <active>true</active>
+    <description>Samples Collected must be Yes prior to Submitted a Claim.</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos;, 
+TEXT(Origin) = &apos;Distributor&apos; 
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+OR(
+TEXT( Samples_Collected__c) = &apos;&apos;,
+TEXT( Samples_Collected__c) = &apos;No&apos;
+),
+TEXT( Claim_Stage__c ) = &apos;Submitted&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Samples_Collected__c</errorDisplayField>
+    <errorMessage>Please make sure Samples are collected before Submitting a Claim.</errorMessage>
+</ValidationRule>

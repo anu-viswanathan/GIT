@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Samples_Tracking_Number_is_Required</fullName>
+    <active>false</active>
+    <description>Tracking Number is required in order to Submit a Claim when the Samples Collected field is &quot;Yes&quot;</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos;, 
+TEXT(Origin) = &apos;Distributor&apos; 
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+TEXT(  Samples_Collected__c ) = &apos;Yes&apos;, 
+ISBLANK( Tracking_Number__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Tracking_Number__c</errorDisplayField>
+    <errorMessage>Please enter a Tracking Number prior to Submitting a Claim.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is the yearly cut off date for Loyalty project coop funds. This date can vary every year. On this date, all coop of a contractor will expire.</description>
+    <label>Loyalty Coop Cut Off Date</label>
+    <pluralLabel>Loyalty Coop Cut Off Dates</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

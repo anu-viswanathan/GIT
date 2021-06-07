@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Structure__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of Structure/Building where the product is installed</inlineHelpText>
+    <label>Type of Structure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barn</fullName>
+                <default>false</default>
+                <label>Barn</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>Garage</fullName>
+                <default>false</default>
+                <label>Garage</label>
+            </value>
+            <value>
+                <fullName>Manufact Home</fullName>
+                <default>false</default>
+                <label>Manufact Home</label>
+            </value>
+            <value>
+                <fullName>Multi-Unit</fullName>
+                <default>false</default>
+                <label>Multi-Unit</label>
+            </value>
+            <value>
+                <fullName>Residence</fullName>
+                <default>false</default>
+                <label>Residence</label>
+            </value>
+            <value>
+                <fullName>Shed</fullName>
+                <default>false</default>
+                <label>Shed</label>
+            </value>
+            <value>
+                <fullName>(none)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(none)</label>
+            </value>
+            <value>
+                <fullName>Residence Shed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Residence Shed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

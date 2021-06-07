@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CongaCurrentYear__c</fullName>
+    <description>2019-05-10 Why does this exist? I think it was used to put the year into Conga Templates, but that can be easily done with switches an controls. Verify that it&apos;s not being used in any templates and then delete this.</description>
+    <externalId>false</externalId>
+    <formula>YEAR(TODAY())</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The year of today. Literally. If it&apos;s August 30th of 2049 this could say 2049.</inlineHelpText>
+    <label>(Do Not Use) CongaCurrentYear</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

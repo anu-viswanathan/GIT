@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Installation_Deficiency_Status__c</fullName>
+    <description>CLAIMSV2-38 Deficiencies are noted and must be reporated. You can&apos;t go from &quot;repairs required&quot; to &quot;no deficiencies&quot; because that makes no sense.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The current status of the deficiencies, if any.</inlineHelpText>
+    <label>Installation Deficiency Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Installation_Deficiency_Status</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Diamond Shield</controllingFieldValue>
+            <valueName>No Deficiencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diamond Shield</controllingFieldValue>
+            <valueName>Repairs Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diamond Shield</controllingFieldValue>
+            <valueName>Repairs Completed</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

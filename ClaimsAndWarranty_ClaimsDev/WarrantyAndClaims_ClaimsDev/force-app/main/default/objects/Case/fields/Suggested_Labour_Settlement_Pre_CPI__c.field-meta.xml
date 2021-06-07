@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suggested_Labour_Settlement_Pre_CPI__c</fullName>
+    <description>Used to track the Suggested Labour Settlement before the CPI Index is applied</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Calculated based on the Actual/Suggested # of Bundles x the Actual/Suggested Labour Rate (&quot;Actual&quot; value always takes precedence when populated, even if 0).</inlineHelpText>
+    <label>Suggested Labour Settlement (Pre CPI)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

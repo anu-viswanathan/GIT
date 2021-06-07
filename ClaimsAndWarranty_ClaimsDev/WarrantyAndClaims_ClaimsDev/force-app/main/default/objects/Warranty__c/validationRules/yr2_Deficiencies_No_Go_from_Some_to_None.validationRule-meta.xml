@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>yr2_Deficiencies_No_Go_from_Some_to_None</fullName>
+    <active>true</active>
+    <description>CLAIMSV2-38 You can&apos;t go from having deficincies to having none. That makes no sense.</description>
+    <errorConditionFormula>(ISPICKVAL(  Deficiency_Status_2_Year_Inspection__c  , &apos;No Deficiencies&apos; )
+ || ISPICKVAL( Deficiency_Status_2_Year_Inspection__c, &apos;&apos; )
+ )
+&amp;&amp; (CONTAINS( TEXT(PRIORVALUE(Deficiency_Status_2_Year_Inspection__c)) , &apos;Repairs&apos; )
+
+)</errorConditionFormula>
+    <errorDisplayField>Installation_Deficiency_Status__c</errorDisplayField>
+    <errorMessage>You can&apos;t choose No Deficiencies if you&apos;ve already indicated that the roof had deficiencies.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ic_Approved_Certified_with_TPO_Manufac__c</fullName>
+    <description>ic_US Commercial</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For which TPO Manufacturer are they an approved/certified applicator</inlineHelpText>
+    <label>Approved/Certified with TPO Manufacturer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carlisle</fullName>
+                <default>false</default>
+                <label>Carlisle</label>
+            </value>
+            <value>
+                <fullName>Firestone</fullName>
+                <default>false</default>
+                <label>Firestone</label>
+            </value>
+            <value>
+                <fullName>Johns Mansville</fullName>
+                <default>false</default>
+                <label>Johns Mansville</label>
+            </value>
+            <value>
+                <fullName>GAF</fullName>
+                <default>false</default>
+                <label>GAF</label>
+            </value>
+            <value>
+                <fullName>Versico</fullName>
+                <default>false</default>
+                <label>Versico</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

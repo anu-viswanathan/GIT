@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Verification_Status__c</fullName>
+    <description>Indicate that the address validated by Melissa Data&apos;s service, reviewed by a Manager, or imported from the WCMS system (marked as &quot;Verified&quot;); &quot;In Approval&quot; denotes awaiting manager approval. &quot;Pending&quot; is while MelissaData is initializing record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate that the address validated by Melissa Data&apos;s service, reviewed by a Manager, or imported from the WCMS system (marked as &quot;Verified&quot;); &quot;In Approval&quot; denotes awaiting manager approval. &quot;Pending&quot; is while MelissaData is initializing record</inlineHelpText>
+    <label>Address Verification Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Verification</fullName>
+                <default>false</default>
+                <label>In Verification</label>
+            </value>
+            <value>
+                <fullName>Verified</fullName>
+                <default>false</default>
+                <label>Verified</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_with_order_from_last_6_months</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>EU_Business_Type__c</columns>
+    <columns>EU_Last_Order_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EU_Last_Order_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>N_MONTHS_AGO:6</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.EU_Customer</value>
+    </filters>
+    <filters>
+        <field>EU_CRM_Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Non-buying</value>
+    </filters>
+    <label>Customer with order from last 6 months</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>IKO_EU</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

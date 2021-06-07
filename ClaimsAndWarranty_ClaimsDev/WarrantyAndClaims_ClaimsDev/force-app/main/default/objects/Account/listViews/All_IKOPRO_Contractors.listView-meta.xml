@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_IKOPRO_Contractors</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Present_Tier_Lookup__c</columns>
+    <columns>ACCOUNT.IS_PARNTER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.IKOPRO_Contractor</value>
+    </filters>
+    <label>All IKO ROOFPRO Contractors</label>
+    <sharedTo>
+        <group>CARS</group>
+        <group>Loyalty_Team</group>
+        <group>System_Administrators</group>
+        <group>USRS</group>
+    </sharedTo>
+</ListView>

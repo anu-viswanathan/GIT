@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Total_Pre_Tax__c</fullName>
+    <description>Used to determine the approval process. Any modifications to this formula should be done in parallel with Total_Suggested_Settlement_Cost__c to ensure alignment. Max of total override amount or the calculation is used. ClaimsV2-590 https://ikoussfsc.atlassian.net/browse/CLAIMSV2-590</description>
+    <externalId>false</externalId>
+    <formula>MAX(  BLANKVALUE(Settlement_Amount__c,0) , 
+IF(
+		TEXT(Settlement_Type__c) = &apos;Money or Material Offer&apos;,
+		(
+			MAX(
+				Bundle_Material_Value__c, 
+				Cash_Value_of_Settlement_Bundles__c 
+			)
+		),
+		IF(
+			OR(TEXT(Settlement_Type__c) = &apos;Cash Settlement&apos;,TEXT(Settlement_Type__c) = &apos;Cash Settlement - Material Only&apos;),
+			    IF(NOT(ISBLANK(Settlement_Amount__c)),
+            	Settlement_Amount__c,Cash_Value_of_Settlement_Bundles__c
+									),
+			IF(
+				TEXT(Settlement_Type__c) = &apos;Hand Seal&apos;,
+			 Hand_Seal_Material_Settlement_Cost__c,
+				Bundle_Material_Value__c
+			)
+		)
+	)
+		+ 
+	IF(
+					AND(
+	        OR(TEXT(Settlement_Type__c) = &apos;Cash Settlement&apos;,TEXT(Settlement_Type__c) = &apos;Cash Settlement - Material Only&apos;),
+		       NOT(ISBLANK(Settlement_Amount__c))
+									),
+								 Total_Cost_of_Additional_Settlement_Item__c,
+								 Actual_Labor_Total__c + Total_Cost_of_Additional_Settlement_Item__c
+	)
+)</formula>
+    <inlineHelpText>Used to determine the total amount of the settlement for the approval process.</inlineHelpText>
+    <label>Settlement Total (Pre-Tax)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

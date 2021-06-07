@@ -1,0 +1,15 @@
+<!--
+ - Created by Francois Poirier on 2019-05-03.
+ -->
+
+<aura:component description="icMedAccountId" controller="icCtrlMedAccountId" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="accountId" type="String" default="Not Found" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div>
+        <div class="accountIdText">
+            <span>{!$Label.c.icROOFPRO_ID} : {!v.accountId}</span>
+<!--        <span style="width: 100%; display: inline-block;">{!$Label.c.icROOFPRO_ID} : {!v.accountId}</span>-->
+
+        </div>
+    </div>
+</aura:component>

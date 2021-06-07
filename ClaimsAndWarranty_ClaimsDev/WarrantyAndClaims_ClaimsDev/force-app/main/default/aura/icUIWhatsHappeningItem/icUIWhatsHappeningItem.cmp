@@ -1,0 +1,141 @@
+<aura:component controller="icCtrlWhatsHappening" description="icUIWhatsHappening">
+    <aura:attribute name="title" type="String" default="My Title" />
+    <aura:attribute name="description" type="String" default="Some Description for this Tile" />
+    <aura:attribute name="redirectURL" type="String" default="" />
+    <aura:attribute name="image" type="String" />
+    <aura:attribute name="firstItem" type="Boolean" default="false" />
+    <aura:attribute name="lastItem" type="Boolean" default="false" />
+    <aura:attribute name="singleItem" type="Boolean" default="false" />
+    <aura:attribute name="posAbs" type="Boolean" default="false" />
+    <aura:attribute name="linkType" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="externalLink" type="String" />
+    <aura:attribute name="internaldesktop" type="String" />
+    <aura:attribute name="internalmobile" type="String" />
+    <aura:attribute name="emailTo" type="String" />    
+    <aura:attribute name="currentTheme" type="String" />
+
+    <div class="slds-col slds-size_12-of-12" style="{!if(v.singleItem, 'height: 100%;', if(v.firstItem, 'height: 100%; padding-right:5px; padding-left:5px; margin-left: -5px;', if(v.lastItem, 'height: 100%; padding-right:5px; padding-left:5px; margin-left: 5px;', 'height: 100%; padding-right:5px; padding-left:5px')))}">
+<!--    <div class="slds-col slds-size_12-of-12" style="{!if(v.singleItem, 'height: 100%;', if(v.firstItem, 'height: 100%; border-right:5px solid #ffffff;', if(v.lastItem, 'height: 100%;border-left:5px solid #ffffff;', 'height: 100%; border-right:5px solid #ffffff; border-left:5px solid #ffffff;')))}">-->
+        <div class="slds-grid slds-wrap" style="height: 100%; display: block; position: relative; background-color: #f6f6f6;">
+            
+            <div class="slds-col slds-size_12-of-12">
+                <span>
+                    <img src="{!'/resource/'+v.image}" style="width:100%; height: 100%;"/>
+               </span>
+            </div>
+
+            <div class="slds-col slds-size_12-of-12 ">
+                
+                <div class="slds-col" style="height: 42px;">
+                    <span>
+                        <p style="margin-left:25px;
+                                    margin-right: 25px;
+                                    font-weight: 600;
+                                    font-size:12px;
+                                    margin-top:20px;
+                                    margin-bottom:5px;
+                                    color: rgb(51,51,51);
+                                    opacity:0.95;">
+                            {!v.title}
+                        </p>
+                    </span>
+                </div>
+
+                <div class="slds-col">
+                    <span>
+                        <p style="margin-left: 25px;
+                                    margin-right: 25px;
+                                    font-size:12px;
+                                    color: rgb(51,51,51);
+                                    opacity:0.75;
+                                    height:100%;
+
+                                    /*text-overflow: ellipsis;
+                                    word-break: break-all;
+                                    -webkit-hyphens: auto;
+                                    -moz-hyphens: auto;
+                                    hyphens:auto;
+                                    display:-webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp:10;
+                                    overflow:hidden;
+                                    height:222px;*/
+
+                                    padding-bottom:62px;
+                                    "
+                            class="descriptionText">
+                            {!v.description}
+                        </p>
+                    </span>
+                </div>
+
+                <div class="slds-col" style="position:absolute; bottom:0;">
+<!--                <div class="slds-col" style="{!if(v.posAbs, '', 'bottom:0; margin-bottom:10px;')}">-->
+                    <span>
+                        <aura:if isTrue="{!v.linkType =='External'}">
+                            <p style="margin-top: 20px;
+                                        margin-left: 25px;
+                                        margin-right: 25px;
+                                        /*margin-bottom:20px;*/
+                                        margin-bottom:25px;
+                                        font-size:10px;
+                                        font-weight: 600;
+                                        color: rgb(51,51,51);
+                                        opacity:0.95;">
+                                <a href="javascript:void(0)" onclick="{!c.navToExternal}" style="margin-bottom:30px;"> 
+                                    <span style="color: #940D15"> > </span> {!v.linkLabel}
+                                </a>
+                            </p>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.linkType =='Internal'}">
+                            <p style="margin-top: 20px;
+                                        margin-left: 25px;
+                                        margin-right: 25px;
+                                        /*margin-bottom:20px;*/
+                                        margin-bottom:25px;
+                                        font-size:10px;
+                                        font-weight: 600;
+                                        color: rgb(51,51,51);
+                                        opacity:0.95;">
+                                <a href="javascript:void(0)" onclick="{!c.navToInternal}" style="margin-bottom:30px;">
+                                    <span style="color: #940D15"> > </span> {!v.linkLabel}
+                                </a>
+                            </p>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.linkType == 'Email To'}">
+                            <p style="margin-top: 20px;
+                                        margin-left: 25px;
+                                        margin-right: 25px;
+                                        /*margin-bottom:20px;*/
+                                        margin-bottom:25px;
+                                        font-size:10px;
+                                        font-weight: 600;
+                                        color: rgb(51,51,51);
+                                        opacity:0.95;">
+                                <a href="{!'mailto:' + v.emailTo}" style="margin-bottom:30px;">
+                                    <span style="color: #940D15"> > </span> {!v.linkLabel}
+                                </a>
+                            </p>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.linkType == 'No Link' || v.linkType == '' || v.linkType == null}">
+                            <p style="
+                                        margin-top: 20px;
+                                        margin-left: 25px;
+                                        margin-right: 25px;
+                                        margin-bottom:25px;
+                                        font-size:10px;
+                                        font-weight: 600;">
+                                <br />
+                            </p>
+                        </aura:if>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

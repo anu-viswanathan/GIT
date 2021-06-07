@@ -1,0 +1,13 @@
+<!--
+ - Created by Francois Poirier on 2019-03-25.
+ -->
+
+<aura:component description="icMedPaymentInvoicePDF" controller="icCtrlLogOut" implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="accountPaymentId" type="String" />
+
+    <!--<aura:handler event="aura:doneRendering" action="{!c.doneRendering}" />-->
+    <div>
+        <lightning:button name="icPaymentInvoicePDF" label="{!$Label.c.icPayment_Invoice_PDF_button_label}" onclick="{!c.goToPDF}" />
+        <!--<iframe class="iframe-container.iframe" id="icPaymentInvoicePDF" aura:id="icPaymentInvoicePDF" src="{!'/apex/icPaymentInvoicePDF?id=' + v.accountPaymentId}" frameborder="none" onloadeddata="{!c.doneRendering}" />-->
+    </div>
+</aura:component>

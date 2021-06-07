@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Type_Fields_Won_t_Update</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Number_of_Claim_Types__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Number_of_Claim_Types__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Primary_Claim_Concern__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Claim Type Fields Won&apos;t Update</label>
+    <sharedTo>
+        <role>CEO</role>
+    </sharedTo>
+</ListView>

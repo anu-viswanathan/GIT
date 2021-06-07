@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Date_Formula__c</fullName>
+    <description>Field to display to external users (Contractors) only: Date of Rejection of Approval</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Final_Approval_On__c )),
+TEXT(DAY(Final_Approval_On__c )) &amp; &quot; &quot; &amp;  
+IF(Contractor_Language__c = &quot;Quebec French&quot;,
+CASE(MONTH(Final_Approval_On__c ), 1, &quot;janvier&quot;, 2, &quot;février&quot;, 3, &quot;mars&quot;,  4, &quot;avril&quot;,  5, &quot;mai&quot;,  6, &quot;juin&quot;, 7, &quot;juillet&quot;, 8, &quot;août&quot;, 9, &quot;septembre&quot;, 10, &quot;octobre&quot;, 11, &quot;novembre&quot;, 12, &quot;décembre&quot;, &quot;&quot;),
+IF(Contractor_Language__c = &quot;Spanish&quot;,
+CASE(MONTH(Final_Approval_On__c ), 1, &quot;de enero de&quot;, 2, &quot;de febrero de&quot;, 3, &quot;de marzo de&quot;,  4, &quot;de abril de&quot;,  5, &quot;de mayo de&quot;,  6, &quot;de junio de&quot;, 7, &quot;de julio de&quot;, 8, &quot;de agosto de&quot;, 9, &quot;de septiembre de&quot;, 10, &quot;de octubre de&quot;, 11, &quot;de noviembre de&quot;, 12, &quot;de diciembre de&quot;, &quot;&quot;),CASE(MONTH(Final_Approval_On__c), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;,  4, &quot;April&quot;,  5, &quot;May&quot;,  6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;&quot;))) &amp;  &quot; &quot; &amp; 
+TEXT(YEAR(Final_Approval_On__c )) , 
+
+IF(NOT(ISBLANK(Final_Rejection_On__c)),
+TEXT(DAY(Final_Rejection_On__c)) &amp; &quot; &quot; &amp; 
+IF(Contractor_Language__c = &quot;Quebec French&quot;,
+CASE(MONTH(Final_Rejection_On__c), 1, &quot;janvier&quot;, 2, &quot;février&quot;, 3, &quot;mars&quot;,  4, &quot;avril&quot;,  5, &quot;mai&quot;,  6, &quot;juin&quot;, 7, &quot;juillet&quot;, 8, &quot;août&quot;, 9, &quot;septembre&quot;, 10, &quot;octobre&quot;, 11, &quot;novembre&quot;, 12, &quot;décembre&quot;, &quot;&quot;),
+IF(Contractor_Language__c = &quot;Spanish&quot;,
+CASE(MONTH(Final_Rejection_On__c), 1, &quot;de enero de&quot;, 2, &quot;de febrero de&quot;, 3, &quot;de marzo de&quot;,  4, &quot;de abril de&quot;,  5, &quot;de mayo de&quot;,  6, &quot;de junio de&quot;, 7, &quot;de julio de&quot;, 8, &quot;de agosto de&quot;, 9, &quot;de septiembre de&quot;, 10, &quot;de octubre de&quot;, 11, &quot;de noviembre de&quot;, 12, &quot;de diciembre de&quot;, &quot;&quot;),
+CASE(MONTH(Final_Rejection_On__c), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;,  4, &quot;April&quot;,  5, &quot;May&quot;,  6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;&quot;))) &amp; &quot; &quot; &amp;  
+TEXT(YEAR(Final_Rejection_On__c)), &quot;&quot;
+))</formula>
+    <label>Datex</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

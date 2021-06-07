@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Cheque_Amount_Number__c</fullName>
+    <description>Solution to show Currency as Dollar sign ($) instead of CurrencyCode in an environment with Multi-currency enabled (visible to external users - ROOFPRO Contractors).</description>
+    <externalId>false</externalId>
+    <formula>Check_Amount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Paid Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

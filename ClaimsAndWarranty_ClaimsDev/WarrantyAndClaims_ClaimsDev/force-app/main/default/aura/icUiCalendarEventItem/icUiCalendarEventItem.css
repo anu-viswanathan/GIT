@@ -1,0 +1,66 @@
+/**
+ * Created by Francois Poirier on 2019-06-03.
+ */
+
+.THIS {
+}
+
+.THIS .todayEventIcon{
+    line-height:10px;
+}
+
+.THIS .slds-icon-utility-chevronright.slds-icon_container{
+    transform:scale(0.9,0.8);
+}
+
+.THIS .eventDate {
+    color: #818080;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    font-size: medium;
+}
+
+.THIS .eventTitle{
+    color:#000;
+    font-weight:500;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    /*font-size: x-large;*/
+    padding-top:0!important;
+    line-height:20px;
+}
+
+.THIS .eventDescription {
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    /*font-size: medium;*/
+}
+
+.THIS .eventIcon{
+    display:block;
+    margin-left:4%;
+}
+
+.THIS .eventIcon span{
+    color:#3D3F3E;
+    padding-left:10px;
+    padding-top:4px;
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: small;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width:768px){
+    .THIS .eventDate{
+        font-size:14px!important;
+    }
+
+    .THIS .eventDescription{
+        font-size:16px!important;
+    }
+
+    .THIS .eventTitle{
+        font-size:20px!important;
+    }
+
+}

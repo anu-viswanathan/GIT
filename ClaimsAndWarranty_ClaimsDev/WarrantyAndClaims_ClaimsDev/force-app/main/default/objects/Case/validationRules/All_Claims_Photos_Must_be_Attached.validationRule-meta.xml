@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Claims_Photos_Must_be_Attached</fullName>
+    <active>true</active>
+    <description>All Claim Photos must be attached prior to Submitting a Claim.</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos;, 
+TEXT(Origin) = &apos;Distributor&apos; 
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+TEXT( Claim_Stage__c ) = &apos;Submitted&apos;, 
+NOT( All_Claim_Photos_Attached__c)
+)</errorConditionFormula>
+    <errorDisplayField>All_Claim_Photos_Attached__c</errorDisplayField>
+    <errorMessage>Please make sure All Claims Photos are attached prior to submitting a Claim (tick the box &apos;All Claim Photos Attached?&apos; when this is the case).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,253 @@
+/**
+ * Created by yvesasselin on 2018-08-12.
+ */
+ .THIS {
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+
+}
+
+
+
+.THIS .legalTextLarge {
+    color: darkgrey;
+    font-size:16px;
+    font-weight:600 ;
+    text-transform: uppercase ;
+    letter-spacing: 2px ;
+    font-family: Montserrat, 'Open Sans', 'sans-serif' ;
+
+}
+
+
+.THIS .legalTextLargeLine {
+    color: darkgrey ;
+    font-size:11px ;
+    font-weight:600;
+    text-transform: uppercase ;
+    letter-spacing: 2px;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    margin-left:15px;
+    margin-right:15px;
+
+
+}
+
+/*.THIS #smallFooterHeightdjustment {*/
+    /*height: 400px !important;*/
+    /*background-color: pink !important;*/
+
+/*}*/
+
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+    .THIS .bottomGrid {
+    }
+
+    .THIS #smallFooterHeightdjustment {
+        height:1500px!important;
+        background-color: pink!important;
+
+    }
+
+
+    .THIS .legalTextLarge {
+        color: darkgrey !important;
+        font-size:16px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+        line-height:50px!important;
+
+    }
+
+    .THIS .legalTextLargeLine {
+        color: darkgrey !important;
+        font-size:17px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+        margin-left:15px;
+        margin-right:15px;
+    }
+
+    .THIS .gotQuestionBlock {
+        /*padding-left:50px !important;*/
+        /*padding-right:50px !important;*/
+        line-height:30px!important;
+        font-size:16px!important;
+        color:white!important
+    }
+
+    .THIS .followUsType {
+        /*color:red !important;*/
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+        font-weight: 300 !important;
+        margin-bottom: 25px !important;
+
+    }
+
+    .THIS .ikoResidentialType {
+        /*color:red !important;*/
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        font-weight: 400 !important;
+        margin-bottom: 30px !important;
+
+    }
+
+
+    .THIS .ikoCommercialType {
+        /*color:red !important;*/
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        font-weight: 400 !important;
+        margin-bottom: 20px !important;
+
+
+    }
+
+
+    /*.THIS .backgroundColorMarker {*/
+            /*background-color: purple!important;*/
+        /*}*/
+
+
+}
+
+
+/* xxxxxxxxxxxxxxxxxxx    For TABLETS :   xxxxxxxxxxxxxxxxxxxxxxxxx */
+
+@media only screen and  (min-width: 480px) and (max-width: 768px) {
+
+    .THIS .legalTextLarge {
+        color: darkgrey !important;
+        font-size:11px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+
+    }
+
+    .THIS .legalTextLargeLine {
+        color: darkgrey !important;
+        font-size:14px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+        margin-left:15px;
+        margin-right:15px;
+    }
+
+    .THIS .gotQuestionBlock {
+        padding-left:50px !important;
+        padding-right:50px !important;
+        font-size:20px !important;
+        color:white !important;
+    }
+
+    .THIS .followUsType {
+        /*color:red !important;*/
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+        font-weight: 300 !important;
+        margin-bottom: 25px !important;
+
+    }
+
+    .THIS .ikoResidentialType {
+        /*color:red !important;*/
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        font-weight: 400 !important;
+        margin-bottom: 30px !important;
+
+    }
+
+
+    .THIS .ikoCommercialType {
+        /*color:red !important;*/
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        font-weight: 400 !important;
+        margin-bottom: 20px !important;
+
+
+    }
+
+
+    /*.THIS .backgroundColorMarker {*/
+        /*background-color: darkblue!important;*/
+    /*}*/
+
+
+}
+
+
+/* xxxxxxxxxxxx     For between TABLET & DESKTOP Small :   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   */
+
+@media only screen and  (min-width: 769px) and (max-width: 1024px) {
+
+    .THIS .legalTextLarge {
+        color: darkgrey !important;
+        font-size:10px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+
+    }
+
+    .THIS .legalTextLargeLine {
+        color: darkgrey !important;
+        font-size:11px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+        margin-left:10px;
+        margin-right:10px;
+    }
+
+    /*.THIS .backgroundColorMarker {*/
+        /*background-color: pink!important;*/
+    /*}*/
+
+
+}
+
+
+/*    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   For DESKTOP LARGE:   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    */
+
+@media only screen and (min-width: 1025px) {
+
+    .THIS .legalTextLarge {
+        color: darkgrey !important;
+        font-size:10px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+
+    }
+
+    .THIS .legalTextLargeLine {
+        color: darkgrey !important;
+        font-size:11px !important;
+        font-weight:600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+        margin-left:15px;
+        margin-right:15px;
+    }
+    /*.THIS .backgroundColorMarker {*/
+        /*background-color: gold!important;*/
+    /*}*/
+
+}

@@ -1,0 +1,62 @@
+<aura:component controller="icCTRLShowRelatedAccounts" implements="force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome">
+    
+    <aura:attribute name="street" type="String" default="" />
+    <aura:attribute name="city" type="String" default="" />
+    <aura:attribute name="state" type="String" default="" />
+    <aura:attribute name="postalCode" type="String" default="" />
+    <aura:attribute name="country" type="String"  default="Canada" access="global" />
+    
+    <aura:attribute name="caseObj" type="Case"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isCallingFromCaseClaimForm" type="Boolean" default="false"/>
+    <aura:attribute name="relatedAccounts" type="list" default="[]"/>
+    <aura:method name="fetchRelatedAccounts" action="{!c.fetchAccounts}" />
+    <aura:method name="clearAccounts" action="{!c.clearAccounts}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <lightning:layout multipleRows="true" title="Related Accounts" >
+        
+        <aura:if isTrue="{!!empty(v.relatedAccounts)}">
+            <aura:iteration items="{!v.relatedAccounts}" var="accountObj">
+                
+                <lightning:layoutItem size="4" padding="around-small">
+                    {!accountObj.fullAddress} &nbsp;&nbsp;
+                    <!-- <aura:if isTrue="{!!accountObj.isAssociated}">
+                                <lightning:icon iconName="action:approval" alternativeText="Approved" title="Approved" size="xx-small"/>
+                            </aura:if> -->
+                    
+                </lightning:layoutItem>
+                
+                
+                <lightning:layoutItem size="4" padding="around-small">
+                    <aura:if isTrue="{!and(v.isCallingFromCaseClaimForm, !accountObj.isAssociated) }">
+                        <!-- <lightning:formattedUrl value="#" label="Use this account" name="{!accountObj.Id}"/> -->
+                        <!-- <a href="#" onclick="{!c.onSelectAccount }" name="{!accountObj.relatedAccountObj.Id}">Create Case for Account</a> -->
+                        <lightning:button label="Use this account" title="Use this account" 
+                                          onclick="{!c.onSelectAccount }" name="{!accountObj.relatedAccountObj.Id}"/>
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!and(v.isCallingFromCaseClaimForm, accountObj.isAssociated) }">
+                        <a href="#" onclick="{!c.onSelectCase}" name="{!accountObj.caseObj.Id}">{!accountObj.caseObj.CaseNumber}</a>
+                    </aura:if>
+                    
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="4" padding="around-small">
+                    <aura:if isTrue="{!and(v.isCallingFromCaseClaimForm, accountObj.isAssociated) }">
+                        <a href="#" onclick="{!c.onSelectCase}" name="{!accountObj.caseObj.Id}">{!accountObj.caseObj.Claim_Number__c}</a>
+                    </aura:if>
+                    
+                </lightning:layoutItem>
+                
+            </aura:iteration>
+            <aura:set attribute="else">
+                No Address Available
+            </aura:set>      
+        </aura:if>
+        
+    </lightning:layout>
+    
+    
+</aura:component>

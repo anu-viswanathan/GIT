@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canadian_Residential</fullName>
+    <active>true</active>
+    <label>Canadian Residential</label>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Competitor Product Intel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer Intel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Product Intel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofer Intel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target Account Info %28Dealer%2FRoofer%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

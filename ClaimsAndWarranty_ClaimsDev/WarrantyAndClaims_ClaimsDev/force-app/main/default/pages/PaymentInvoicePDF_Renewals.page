@@ -1,0 +1,172 @@
+<apex:page standardController="IKOPRO_Account_Payment__c" renderAs="pdf" showHeader="FALSE" standardStylesheets="False">
+  
+    
+    
+    <body>
+    
+    <table width="100%" >
+    <tr style="font-size:35px;font-family: Arial, Helvetica, sans-serif;font-weight: bold">
+     <td colspan="2" align="Center">{!$Label.INVOICE}</td>
+     </tr>
+    </table>
+    
+    <apex:image url="{!If( IKOPRO_Account_Payment__c.Contractor__r.Loyalty_Program_Type__c == 'CRC', $Resource.CRC_Logo_For_InvoicePDF, $Resource.IKO_Logo_For_InvoicePDF)}" style="float:right; width:25%;" />
+    
+        
+    <table width="100%" >
+    
+    <tr><td colspan="2" height="30"></td></tr>
+    
+     
+     
+     <tr><td colspan="2" height="30"></td></tr>
+     
+     <tr style="font-size:20px;font-family: Arial, Helvetica, sans-serif;font-weight: bold">
+      <td colspan="2">{!IKOPRO_Account_Payment__c.IKO_Office__c}</td> 
+     </tr>
+     
+     <tr><td colspan="2" height="5"></td></tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td>{!IKOPRO_Account_Payment__c.HIDDEN_Field_City_Street__c}</td>
+     <td align="Right">{!IKOPRO_Account_Payment__c.Name}</td>
+     </tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td>{!IKOPRO_Account_Payment__c.HIDDEN_Field_State__c}</td>
+     <td align="Right">{!IKOPRO_Account_Payment__c.Today_s_Date__c}    
+        
+      </td>
+     </tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td colspan="2">{!$Label.Phone} : (866) 766-3770</td>
+     </tr>
+     <tr><td colspan="2" height="20"></td></tr>
+      
+      <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif;font-weight: bold">
+      <td colspan="2">{!$Label.To} :</td> 
+     </tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+      <td colspan="2">{!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.Contractor_Name_Formula__c , IKOPRO_Account_Payment__c.Applicant__r.Company_Name_Applicant__c) } 
+       </td>
+     </tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td colspan="2">{!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.BillingStreet, IKOPRO_Account_Payment__c.Applicant__r.Company_Street_Applicant__c)} 
+      </td>     
+     </tr>
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td colspan="2">{!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.BillingCity, IKOPRO_Account_Payment__c.Applicant__r.Company_City_Applicant__c)}, 
+     {!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.BillingState, IKOPRO_Account_Payment__c.Applicant__r.Company_State_Province_Code_Applicant__c)}, 
+     {!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.BillingPostalCode, IKOPRO_Account_Payment__c.Applicant__r.Zip_Postal_Code_Applicant__c)} 
+     </td>
+     </tr> 
+     
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td colspan="2">{!$Label.Phone} : {!If(IKOPRO_Account_Payment__c.Contractor__r.Name !='APPLICANTS' ,IKOPRO_Account_Payment__c.Contractor__r.Phone, IKOPRO_Account_Payment__c.Applicant__r.Company_Phone_Applicant__c)}
+     </td>
+     </tr>
+     
+      <tr><td colspan="2" height="20"></td></tr>
+      
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif;font-weight: bold">
+     <td colspan="2" >{!$Label.Membership} {!IKOPRO_Account_Payment__c.Year__c} : $<apex:outputText value="{0, number, 0.00}">
+    <apex:param value="{!IKOPRO_Account_Payment__c.Full_Membership_Fee__c}"/>
+   </apex:outputText>    
+    </td>
+     </tr>   
+     
+     <tr><td colspan="2" height="20"></td></tr>
+      
+     <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+     <td colspan="2" >{!$Label.Comments}</td>
+     </tr> 
+     <p></p>
+     
+    </table>
+    
+       
+    <p></p>
+    
+    <table  border="1" cellpadding="5" width="100%" height="400">
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif;font-weight: bold">
+    <td width="10%">{!$Label.QUANTITY}</td>
+    <td width="60%">Description</td>
+    <td width="15%" align="Right">{!$Label.UNIT_PRICE}</td>
+    <td width="15%" align="Right">Total</td>
+    </tr>
+      
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif"  >
+    <td height="30">1</td>
+    <td>{!IKOPRO_Account_Payment__c.Item_Description__c}</td>
+    
+    <td align="Right">$   
+    <apex:outputText value="{0, number, 0.00}">
+    
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Due_Amount__c= null , 0.00 , IKOPRO_Account_Payment__c.Due_Amount__c)}"/>
+    
+     
+   </apex:outputText>    
+    </td>
+    <td align="Right">$     
+    <apex:outputText value="{0, number, 0.00}">
+    
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Due_Amount__c= null , 0.00 , IKOPRO_Account_Payment__c.Due_Amount__c)}"/>
+       
+   </apex:outputText> </td>
+    </tr>
+    
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif"  >
+    <td height="30">1</td>
+    <td>{!$Label.Discount}</td>
+    <td align="Right">- $     
+    <apex:outputText value="{0, number, 0.00}">
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Discount_Amount__c = null , 0.00 , IKOPRO_Account_Payment__c.Discount_Amount__c)}"/>
+   </apex:outputText> </td>
+    <td align="Right">- $     
+    <apex:outputText value="{0, number, 0.00}">
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Discount_Amount__c = null , 0.00 , IKOPRO_Account_Payment__c.Discount_Amount__c)}"/>
+   </apex:outputText> </td>
+    </tr>
+    
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif"  >
+    <td height="30">1</td>
+    <td>{!$Label.Credit}</td>
+    <td align="Right">- $     
+    <apex:outputText value="{0, number, 0.00}">
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Credits__c = null , 0.00 , IKOPRO_Account_Payment__c.Credits__c)}"/>
+   </apex:outputText> </td>
+    <td align="Right">- $     
+    <apex:outputText value="{0, number, 0.00}">
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Credits__c = null , 0.00 , IKOPRO_Account_Payment__c.Credits__c)}"/>
+   </apex:outputText> </td>
+    </tr>
+       
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+    <td colspan="2" ><p></p> {!$Label.Questions}</td>
+    <td align="Right">{!$Label.SUBTOTAL}</td>
+    <td align="Right">$     
+    <apex:outputText value="{0, number, 0.00}">
+    <!--------------------Field Change------------------------->
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Net_Membership_Fee__c = null , 0.00 , IKOPRO_Account_Payment__c.Net_Membership_Fee__c)}"/>
+   </apex:outputText></td>
+    </tr>
+    
+    <tr style="font-size:15px;font-family: Arial, Helvetica, sans-serif">
+    <td colspan="2" ></td>
+    <td align="Right">{!$Label.TOTAL_DUE}</td>
+    <td align="Right">$     
+    <apex:outputText value="{0, number, 0.00}">
+   <!--------------------Field Change------------------------->
+    <apex:param value="{!If(IKOPRO_Account_Payment__c.Net_Membership_Fee__c = null , 0.00 , IKOPRO_Account_Payment__c.Net_Membership_Fee__c)}"/>
+   </apex:outputText></td>
+    </tr>
+    
+    </table>
+                
+    </body>
+   
+</apex:page>

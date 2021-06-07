@@ -1,0 +1,11 @@
+<aura:component description="CRCMedAccountId" controller="icCtrlMedAccountId" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="accountId" type="String" default="Not Found" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div>
+        <div class="accountIdText">
+            <span>{!$Label.c.CRCROOFPRO_ID} : {!v.accountId}</span>
+            <!--        <span style="width: 100%; display: inline-block;">{!$Label.c.icROOFPRO_ID} : {!v.accountId}</span>-->
+
+        </div>
+    </div>
+</aura:component>

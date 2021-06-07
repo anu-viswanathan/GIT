@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Paid_Amounts__c</fullName>
+    <description>Paid amounts from all Account Payment records.</description>
+    <externalId>false</externalId>
+    <label>All Paid Amounts</label>
+    <summarizedField>IKOPRO_Account_Payment__c.Paid_Amount__c</summarizedField>
+    <summaryForeignKey>IKOPRO_Account_Payment__c.Contractor__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

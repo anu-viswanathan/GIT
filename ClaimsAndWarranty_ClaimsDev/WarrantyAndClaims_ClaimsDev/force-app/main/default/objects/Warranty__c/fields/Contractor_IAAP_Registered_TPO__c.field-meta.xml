@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contractor_IAAP_Registered_TPO__c</fullName>
+    <description>Claims V2 - 1075 - When a contractor is linked to a warranty and the contractor is IAAP TPO certified, then this field will reflect the same value found on the Contractor IAAP TPO Certified field.</description>
+    <externalId>false</externalId>
+    <formula>Contractor__r.IAAP_TPO__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Contractor IAAP Registered TPO</inlineHelpText>
+    <label>Contractor IAAP Registered TPO</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

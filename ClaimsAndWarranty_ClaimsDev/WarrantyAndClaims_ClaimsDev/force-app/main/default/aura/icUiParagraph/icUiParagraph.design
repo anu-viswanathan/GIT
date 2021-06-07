@@ -1,0 +1,78 @@
+<!--
+ - Created by Yves Asselin and Andrea Pissinis on 1/21/2019.
+ -->
+
+<design:component label="icUi ZAP Paragraph">
+
+    <design:attribute name="BodyText"
+                      label="Enter Text"
+                      description="(Use HTML tags to format text ie: b, i, u)"
+                      required="false"
+    />
+    <design:attribute name="backgroundColor"
+                      label="Background Color (red, rgb(0,0,255), #990000)"
+                      required="false"
+    />
+    <design:attribute name="fontSize"
+                      label="Font Size"
+                      required="false"
+    />
+    <design:attribute name="fontWeight"
+                      label="Font Weight"
+                      required="false"
+    />
+    <design:attribute name="fontFamily"
+                      label="Font Family"
+                      datasource="Arial,Helvetica,Arial Black,Comic Sans MS,
+                                  Consolas,Courier,Impact,Lucida Console,Lucida Grande,
+                                  Montserrat,Salesforce Sans,Tahoma,Trebuchet MS,Verdana"
+                      default="Montserrat"
+    />
+    <design:attribute name="lineHeight"
+                      label="Line Height"
+                      datasource="0.5,0.75,1,1.25,1.5,1.75,2,2.25,2.5,3"
+                      default="1"
+    />
+    <design:attribute name="marginTop"
+                      label="Margin ABOVE paragraph (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="marginBottom"
+                      label="Margin BELOW paragraph (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingLeft"
+                      label="Padding Left (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingRight"
+                      label="Padding Right (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingTop"
+                      label="Padding Top (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingBottom"
+                      label="Padding Bottom (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="fontColor"
+                      label="Font Color (red, rgb(0,0,255), #990000)"
+                      required="false"
+    />
+    <design:attribute name="textAlign"
+                      label="Text Align"
+                      datasource="center,left,right,justify"
+                      default="center"
+    />
+    <design:attribute name="textTransform"
+                      label="Text Transform"
+                      datasource="uppercase,lowercase,capitalize,none"
+                      default="none"
+    />
+    <design:attribute name="letterSpace"
+                      label="Letter Spacing"
+                      required="false"
+    />
+</design:component>

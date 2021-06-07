@@ -1,0 +1,275 @@
+.THIS #myLeads-fade {
+    width:33.3333%;
+    max-height:257px !important;
+    position:relative;
+    /*background-image: url('/sfsites/c/resource/p01MyDashboard800x460');*/
+    /*background-image: url('https://iko--c.visualforce.com/resource/1539612167000/p01MyDashboard800x460');*/
+    /*background-image: url('/resource/1539612167000/p01MyDashboard800x460');*/
+    background-image: url('/resource/p01MyDashboard800x460');
+
+   /*background-image: url('/resource/p01MyDashboard800x460');*/
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+
+.THIS #myLeads-fade:hover{
+    width:33.3333%;
+
+    background-image: url('/resource/p01over?');
+
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+.THIS #myLeads-fade2 {
+    width: 33.3333%;
+
+    background-image: url('/resource/p02MyLeads800x460');
+    background-repeat: no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+}
+.THIS #myLeads-fade2:hover{
+    width:33.3333%;
+    margin-right:-1px;
+    background-size:100%;
+
+    background-image: url('/resource/p02over');
+    background-repeat:no-repeat;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+.THIS #myLeads-fade3 {
+    width:33.3333%;
+
+    background-image: url('/resource/p03MyRewards800x460');
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+}
+
+
+.THIS #myLeads-fade3:hover{
+    width:33.3333%;
+    background-image: url('/resource/p03over');
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+
+.THIS #myLeads-fade4 {
+    width:33.3333%;
+
+    background-image: url('/resource/p04IKOUniversity800x460');
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+}
+
+
+
+.THIS #myLeads-fade4:hover{
+    width:33.3333%;
+    /*background-image: url('/resource/p04IKOUniversityComingSoon');*/
+
+    background-image: url('/resource/p04over');
+
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+.THIS #myLeads-fade5 {
+    width: 33.3333%;
+
+    background-image: url('/resource/p05ProZone800x460');
+    background-repeat: no-repeat;
+    margin-right: -1px;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+}
+.THIS #myLeads-fade5:hover{
+    width:33.3333%;
+    /*background-image: url('/sfsites/c/resource/p05over');*/
+
+    background-image: url('/resource/p05over');
+    background-repeat:no-repeat;
+    margin-right:-1px;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+.THIS #myLeads-fade6 {
+    width:33.3333%;
+
+    /*background-image: url('/resource/p06Forum800x460');*/
+
+
+    background-image: url('/resource/p06ForumComingSoon');
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+}
+
+
+.THIS #myLeads-fade6:hover{
+    width:33.3333%;
+    /*background-image: url('/resource/p06ForumComingSoon');*/
+
+    background-image: url('/resource/p06Forum800x460');
+    background-repeat:no-repeat;
+    background-size:100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: bottom;
+
+}
+
+
+
+
+
+
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+    /* For TABLETS : */
+
+
+    .THIS .mediaWidth {
+        width:479px !important;
+    }
+
+    .THIS .linkTileHeader {
+        /*color:red !important;*/
+        font-size: 0.6rem !important;
+        letter-spacing:1.5px;
+    }
+
+
+}
+
+
+
+@media only screen and  (min-width: 480px) and (max-width: 768px) {
+
+    /* For TABLETS : */
+
+
+
+    .THIS .mediaWidth {
+        width: 767px !important;
+    }
+
+    .THIS .linkTileSize {
+        width:256px !important;
+        height:199px !important;
+        margin-top:10px!important;
+
+    }
+
+    .THIS body {
+        width:768px
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and  (min-width: 769px) and (max-width: 1024px) {
+
+    /* For between TABLET and DESKTOP Small : */
+
+    .THIS .mediaWidth {
+        width:1022px !important;
+    }
+
+}
+
+
+@media only screen and  (min-width: 1025px) and (max-width: 1500px) {
+
+    /* For DESKTOP Small : */
+    /*.THIS .navMobile {*/
+    /*display:none !important;*/
+    /*margin-left: auto!important;*/
+    /*margin-right: auto!important;*/
+
+    /*}*/
+
+    .THIS .mediaWidth {
+        width:1022px !important;
+    }
+
+
+
+
+}

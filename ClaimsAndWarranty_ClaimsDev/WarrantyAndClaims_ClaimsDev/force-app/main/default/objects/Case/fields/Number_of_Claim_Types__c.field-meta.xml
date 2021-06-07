@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Claim_Types__c</fullName>
+    <description>The total number of claim types, regardless of whether they’re Primary or not. We’re using this to facilitate some validation rules.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total number of Claim Types associated with this Claim.</inlineHelpText>
+    <label>Number of Claim Types</label>
+    <summaryForeignKey>Claim_Type__c.Case__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

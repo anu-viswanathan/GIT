@@ -1,0 +1,66 @@
+<!--
+ - Created by yvesasselin on 2018-08-12.
+ -->
+
+<!--
+ - Created by yvesasselin on 2018-08-12.
+ -->
+
+<aura:component description="icUIShopTalkItem">
+
+
+    <aura:attribute name="author" type="String" default="Author" />
+    <aura:attribute name="company" type="String" default="Company" />
+    <aura:attribute name="city" type="String" default="City" />
+    <aura:attribute name="publishedDate" type="String" default="Published Date" />
+    <aura:attribute name="title" type="String" default="My Title" />
+    <aura:attribute name="description" type="String" default="Description for this Tile" />
+    <aura:attribute name="redirectURL" type="String" />
+
+
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12">
+
+
+
+            <span>
+                <p style="font-weight:600;  font-size:10px; ">
+
+                    BY: <span style="color: #c62127;">{!v.author} • {!v.company}</span> •  {!v.city} • {!v.publishedDate}
+                </p>
+            </span>
+
+            <span>
+                <p style="margin-top:15px;  font-weight: 600; font-size:16px;  margin-bottom:0px;">
+
+                    {!v.title}
+                </p>
+            </span>
+
+            <span>
+                <p style=" font-weight: 300; font-size:12px; margin-bottom:25px;">
+
+                    {!v.description}
+                </p>
+            </span>
+
+
+            <span>
+                <p style="margin-top: 20px;  margin-right: 25px; font-size:10px; font-weight: 600;">
+                    <a href="{!v.redirectURL}">
+                        <span style="color:#c62127; "> > </span> ADD YOUR STORY
+                    </a>
+                </p>
+            </span>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</aura:component>

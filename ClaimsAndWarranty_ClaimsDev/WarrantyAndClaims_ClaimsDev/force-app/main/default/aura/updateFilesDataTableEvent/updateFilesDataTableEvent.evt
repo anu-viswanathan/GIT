@@ -1,0 +1,7 @@
+<!--
+ - Created by sinan.bunni on 2019-07-26.
+ -->
+
+<aura:event type="COMPONENT" description="updateFilesDataTableEvent">
+    <aura:attribute name="fileUploadFinished" type="Boolean" />
+</aura:event>

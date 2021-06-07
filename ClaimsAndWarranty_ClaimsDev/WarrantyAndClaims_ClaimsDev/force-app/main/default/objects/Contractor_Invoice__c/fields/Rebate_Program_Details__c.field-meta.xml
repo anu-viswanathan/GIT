@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebate_Program_Details__c</fullName>
+    <description>Please share the rebate program under which you are submitting this invoice.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please share the rebate program under which you are submitting this invoice.</inlineHelpText>
+    <label>Rebate Program Details</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

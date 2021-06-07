@@ -1,0 +1,33 @@
+<aura:component >
+
+    <aura:attribute name="applicationState" type="Object" />
+    <aura:attribute name="application" type="Object" />
+    <aura:attribute name="AsyncSubmitFormDTO" type="icDTOLoanForm"/>
+
+
+    <div aria-labelledby="loandetails">
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--center">
+            <legend id="newexpenseform" class="slds-text-heading--small
+          slds-p-vertical--medium">
+                {!$Label.c.icApplication_Status}
+            </legend>
+
+            <!-- NEW LOAN DETAILS FORM -->
+            <form class="slds-form--stacked" style="width: 50%;margin-left:  auto;margin-right:  auto;" aura:id="formLoanDiv">
+
+                {!$Label.c.icThe_following_application_is} {!v.applicationState.applicationState} {!$Label.c.icCurrentlyUnderReviewByGreensky}
+<br/>
+                {!$Label.c.icApplication_ID}: {!v.application.applicationId}  <br/>
+
+                {!$Label.c.icApplicant}: {!v.AsyncSubmitFormDTO.applicantFirstName}   {!v.AsyncSubmitFormDTO.applicantLastName} <br/>
+
+                {!$Label.c.icRequested_Loan_Amount}: {!v.AsyncSubmitFormDTO.requestedLoanAmount}
+
+
+            </form>
+
+        </fieldset>
+    </div>
+
+
+</aura:component>

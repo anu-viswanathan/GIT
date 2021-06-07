@@ -1,0 +1,98 @@
+<aura:component controller="icCTRLProzone" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="remoteAuth" type="icDTOProzoneRemoteAuth" />
+	<aura:attribute name="fullLanguageCode" type="String" default="{!$Locale.language}"/>
+	<aura:attribute name="languageCode" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+		<!--<div class="slds-text-heading_medium slds-align_center" style="height:100%;width:100%;">-->
+			<!--<header class="slds-align_absolute-center">-->
+				<!--<h2 style=" margin-bottom: 10px;" id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.icPROZone_Portal}</h2>-->
+			<!--</header>-->
+		<!--</div>-->
+
+		<div class="slds-p-around_x-small" style="">
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Order History</label> -->
+				<div class="slds-form-element__control">
+					<!--<a href="{!format($Label.c.Prozone_Url_Order_History, v.remoteAuth.accountId, v.remoteAuth.sessionId, $Locale.language) }">-->
+					<a href="{!format($Label.c.CRC_Prozone_Url_Order_History, v.remoteAuth.accountId, v.remoteAuth.sessionId, v.languageCode) }">
+						<ui:button label="{!$Label.c.icOrder_History}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- a.	View transactions in Prozone. (IKO-210): 
+				prod: <a href="{!'https://prozone.iko.com/frontend/orders.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/orders.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Prozone – Order History Page 
+				https://prozone.iko.com/frontend/orders.php -->
+			</div>
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Videos and Tools</label> -->
+				<div class="slds-form-element__control">
+					<a href="{!format($Label.c.CRC_Prozone_Url_Videos_and_Tools, v.remoteAuth.accountId, v.remoteAuth.sessionId, v.languageCode)}">
+						<ui:button label="{!$Label.c.icVideos_and_Tools}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- b.	Videos and Tools in Prozone. (IKO-219):
+				prod: <a href="{!'https://prozone.iko.com/frontend/custom-page-1.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/custom-page-1.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Prozone CMS Page that point to Videos
+				https://prozone.iko.com/frontend/page.php?id=KZGEJ0Gixjg -->
+			</div>
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Literature Products</label> -->
+				<div class="slds-form-element__control">
+					<a href="{!format($Label.c.CRC_Prozone_Url_Order_Materials, v.remoteAuth.accountId, v.remoteAuth.sessionId,  v.languageCode)}">
+						<ui:button label="{!$Label.c.icOrder_Materials}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- c.	Order Literature in Prozone (IKO-220):
+				prod: <a href="{!'https://prozone.iko.com/frontend/custom-page-2.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/custom-page-2.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Literature product category page
+				https://prozone.iko.com/frontend/product-category.php?id=/xCjV0Vi88E -->
+			</div>
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Limited Warranty Submission</label> -->
+				<div class="slds-form-element__control">
+					<a href="{!format($Label.c.CRC_Prozone_Url_Limited_Warranty_Submission, v.remoteAuth.accountId, v.remoteAuth.sessionId,  v.languageCode)}">
+						<ui:button label="{!$Label.c.icLimited_Warranty_Submission}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- d.	Warranty Submission in Prozone (IKO-224) 
+				prod: <a href="{!'https://prozone.iko.com/frontend/spp-apply-warranty.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/spp-apply-warranty.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Warranty application page
+				https://prozone.iko.com/frontend/spp-apply-warranty.php -->
+			</div>
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Submitted Warranty Applications</label> -->
+				<div class="slds-form-element__control">
+					<a href="{!format($Label.c.CRC_Prozone_Url_Submitted_Warranty_Applications, v.remoteAuth.accountId, v.remoteAuth.sessionId,  v.languageCode)}">
+						<ui:button label="{!$Label.c.icSubmitted_Warranty_Applications}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- e.	View Submitted Warranty Applications In Progress (IKO-223) 
+				prod: <a href="{!'https://prozone.iko.com/frontend/spp-warranties.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/spp-warranties.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Warranty list page
+				https://prozone.iko.com/frontend/spp-warranties.php -->
+			</div>
+
+			<div class="slds-form-element iko-button-wrapper">
+				<!-- <label class="slds-form-element__label" for="inputNameSample1">Submitted Warranty Applications</label> -->
+				<div class="slds-form-element__control">
+					<a href="{!format($Label.c.CRC_Prozone_Url_Update_Shipping_Info, v.remoteAuth.accountId, v.remoteAuth.sessionId,  v.languageCode)}">
+						<ui:button label="{!$Label.c.icUpdate_Shipping_Info}" class="slds-button slds-button--brand iko-button" />
+					</a>
+				</div>
+				<!-- e.	View Submitted Warranty Applications In Progress (IKO-223)
+				prod: <a href="{!'https://prozone.iko.com/frontend/spp-warranties.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				stagging: <a href="{!'https://sppstaging.iko.com/frontend/spp-warranties.php?accountid=' + v.remoteAuth.accountId + '&amp;sessionid=' + v.remoteAuth.sessionId}">
+				Warranty list page
+				https://prozone.iko.com/frontend/spp-warranties.php -->
+			</div>
+		</div>
+	</div>
+</aura:component>

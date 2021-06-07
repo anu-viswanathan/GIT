@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Name_Verification_Status__c</fullName>
+    <description>2019-04-30 Added by Slalom. This should be removed because it violates conventional Salesforce behaviour which is that a checkbox is checked when it&apos;s condition is true. Also: we don&apos;t need to do this.</description>
+    <externalId>false</externalId>
+    <formula>Case__r.Contact.Name_Verification_Status__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>(remove)Contact Name Verification Status</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_Verification_Status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True, if the Account Name has been modified, otherwise, false
+            True: Not verified, False: verified
+            Claims Manager will be able to edit the field to verify the Account Name manually.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>THIS FIELD IS BACKWARDS. Do not use it. The associated workfow rule has been disabled.</inlineHelpText>
+    <label>(deprecated) Name Verification Status</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

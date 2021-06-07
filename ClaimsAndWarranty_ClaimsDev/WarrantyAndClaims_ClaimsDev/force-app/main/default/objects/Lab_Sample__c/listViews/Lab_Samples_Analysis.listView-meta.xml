@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lab_Samples_Analysis</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Case__c</columns>
+    <columns>Sample_Number__c</columns>
+    <columns>Claim_Number__c</columns>
+    <columns>Claim_Stage__c</columns>
+    <columns>Claim_Sub_Stage__c</columns>
+    <columns>Received_Date_Brampton__c</columns>
+    <columns>Case_Priority_Indicator__c</columns>
+    <columns>Case_Priority_Score__c</columns>
+    <columns>LabSamplePrioritySort__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Analysis</value>
+    </filters>
+    <filters>
+        <field>Claim_Stage__c</field>
+        <operation>equals</operation>
+        <value>In Lab</value>
+    </filters>
+    <filters>
+        <field>Claim_Sub_Stage__c</field>
+        <operation>equals</operation>
+        <value>Analysis</value>
+    </filters>
+    <label>Lab Samples Analysis</label>
+</ListView>

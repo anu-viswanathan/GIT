@@ -1,0 +1,3 @@
+<design:component label="CRC Terms And Conditions">
+    <design:attribute name="fileName" label="fileName" />
+</design:component>

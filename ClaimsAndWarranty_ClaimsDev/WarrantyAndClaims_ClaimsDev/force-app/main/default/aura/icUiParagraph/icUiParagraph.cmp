@@ -1,0 +1,74 @@
+<!--
+ - Created by Yves Asselin and Andrea Pissinis on 1/21/2019.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                description="icUiParagraph"
+                access="global" >
+
+    <aura:attribute name="BodyText"
+                    type="String"
+                    default="Enter text&lt;br/&gt;here. Text &lt;b&gt;here&lt;/b&gt;"
+                    access="global" />
+    <aura:attribute name="marginTop" type="String" default="0" access="global" />
+    <aura:attribute name="marginBottom" type="String" default="0" access="global" />
+    <aura:attribute name="textAlign" type="String" default="left" access="global" />
+    <aura:attribute name="textTransform" type="String" default="none" access="global"  />
+    <aura:attribute name="paddingTop" type="String" default="0" access="global" />
+    <aura:attribute name="paddingBottom" type="String" default="0" access="global" />
+    <aura:attribute name="paddingRight" type="String" default="0" access="global" />
+    <aura:attribute name="paddingLeft" type="String" default="0"  access="global" />
+    <aura:attribute name="fontColor" type="String" default="black" access="global"  />
+    <aura:attribute name="backgroundColor" type="String" default="white" access="global"  />
+    <aura:attribute name="fontSize" type="String" default="14" access="global"  />
+    <aura:attribute name="fontFamily" type="String" default="Montserrat" access="global"  />
+    <aura:attribute name="fontWeight" type="String" default="300" access="global"  />
+    <aura:attribute name="lineHeight" type="String" default="1" access="global"  />
+    <aura:attribute name="letterSpace" type="String" default="1" access="global"  />
+
+
+
+    <ltng:require styles="{!$Resource.FontCss}"/>
+
+
+    <div style="{! 'margin-top:'
+                        +v.marginTop+
+                    'px; margin-bottom:'
+                        +v.marginBottom+
+                    'px; padding-right:'
+                        + v.paddingRight+
+                    'px; padding-left:'
+                        + v.paddingLeft+
+                    'px; padding-top:'
+                        + v.paddingTop+
+                    'px; padding-bottom:'
+                        + v.paddingBottom+
+                    'px; background-color:'
+                         + v.backgroundColor+
+                    '; text-align:'
+                         +v.textAlign+
+                   ';'}">
+
+            <span class="header"
+                  style="{! 'text-transform:'
+                                +v.textTransform+
+                            '; font-weight:'
+                                +v.fontWeight+
+                            '; font-size:'
+                                +v.fontSize+
+                            'px; color:'
+                                +v.fontColor+
+                            '; letter-spacing:'
+                                +v.letterSpace+
+                            'px; font-family:'
+                                +v.fontFamily+
+                            ';  margin-bottom:'
+                                + v.marginBottom+
+                            'px;  line-height:'
+                                + v.lineHeight+
+                            ';'
+                         }">
+                <aura:unescapedHtml value="{!v.BodyText}" />
+            </span>
+    </div>
+</aura:component>

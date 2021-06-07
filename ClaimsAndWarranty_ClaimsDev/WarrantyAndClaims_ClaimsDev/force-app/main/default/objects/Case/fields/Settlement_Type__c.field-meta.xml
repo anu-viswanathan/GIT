@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Type__c</fullName>
+    <description>Indicates what type of Settlement this will be, which will have downstream impact on calclulations</description>
+    <externalId>false</externalId>
+    <label>Settlement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Default</fullName>
+                <default>true</default>
+                <label>Default</label>
+            </value>
+            <value>
+                <fullName>Hand Seal</fullName>
+                <default>false</default>
+                <label>Hand Seal</label>
+            </value>
+            <value>
+                <fullName>Cash Settlement</fullName>
+                <default>false</default>
+                <label>Cash Settlement</label>
+            </value>
+            <value>
+                <fullName>Cash Settlement - Material Only</fullName>
+                <default>false</default>
+                <label>Cash Settlement - Material Only</label>
+            </value>
+            <value>
+                <fullName>Goodwill</fullName>
+                <default>false</default>
+                <label>Goodwill</label>
+            </value>
+            <value>
+                <fullName>Money or Material Offer</fullName>
+                <default>false</default>
+                <label>Money or Material Offer</label>
+            </value>
+            <value>
+                <fullName>Manual Calculation</fullName>
+                <default>false</default>
+                <label>Manual Calculation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

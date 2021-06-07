@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Goodwill_Offer_Text_EN__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(Conga_Bundles__c),
+    &quot;As a Goodwill gesture, &amp; VALUE(Brand_Short_Name__c) is willing to pay the sum of &amp;  VALUE(Settlement_Total_Pre_Tax__c)(plus applicable taxes), to settle your claim&quot;,
+	IF(AND (
+		NOT(ISBLANK( Conga_Bundles__c )),
+		NOT (ISBLANK(Conga_Labour_Cost__c)) 	
+		),
+	        &quot;As a Goodwill gesture, VALUE(Brand_Short_Name__c) is willing to provide  Bundles_Causing_Concern__c bundles of  Conga_Replacement_Product__c shingles, and Settlement_Total_Pre_Tax__c (plus applicable taxes), to settle your claim&quot;,
+                &quot; As a Goodwill gesture, VALUE(Brand_Short_Name__c) is willing to provide  Bundles_Causing_Concern__c bundles of  Conga_Replacement_Product__c shingles to settle your claim&quot;
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Settlement Goodwill Offer Text EN</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Sources_with_Tiers_Status</fullName>
+    <active>true</active>
+    <description>Tier 2 and Tier 3 contractors are eligible to get Co-op $ from 4 sources: Rebate Invoices reward, Loyalty Admin, LMS Training Participation and Co-op Starter Bonus.</description>
+    <errorConditionFormula>AND( OR(Account_ID__r.Present_Tier_Lookup__r.Tier_Label__c=&quot;2&quot;,Account_ID__r.Present_Tier_Lookup__r.Tier_Label__c=&quot;3&quot;), Text(Transaction_Type__c)=&quot;Credit&quot;,AND(Text(Transaction_Sources__c)!=&quot;Rebate Invoices reward&quot;,Text(Transaction_Sources__c)!=&quot;Loyalty Admin&quot;,Text(Transaction_Sources__c)!=&quot;LMS Training Participation&quot;,Text(Transaction_Sources__c)!=&quot;Co-op Starter Bonus&quot;,Text(Transaction_Sources__c)!=&quot;Co-Op Reimbursement&quot;), OR(Text(Currency_Used__c)=&quot;Co-op $&quot;,Text(Currency_Used__c)=&quot;Premium Co-op $&quot;))</errorConditionFormula>
+    <errorMessage>Tier 2 and Tier 3 contractors are eligible to get Co-op $ from 4 sources: Rebate Invoices reward, Loyalty Admin, LMS Training Participation and Co-op Starter Bonus.</errorMessage>
+</ValidationRule>

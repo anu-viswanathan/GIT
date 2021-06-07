@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Replacement_Product__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(IF( ISBLANK(Num_of_Bundles_for_Settlement__c) ,  
+  Suggested_Bundles_for_Settlement__c , 
+  Num_of_Bundles_for_Settlement__c))
+&amp; &quot; &quot; &amp;
+IF( ISBLANK( Replacement_Product__c ) ,
+   TEXT(Product__r.Unit_of_Measure__c) &amp; &quot; &quot; &amp;  Product__r.Name ,
+   TEXT( Replacement_Product__r.Unit_of_Measure__c) &amp; &quot; &quot; &amp;  Replacement_Product__r.Name )</formula>
+    <label>Conga Replacement Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

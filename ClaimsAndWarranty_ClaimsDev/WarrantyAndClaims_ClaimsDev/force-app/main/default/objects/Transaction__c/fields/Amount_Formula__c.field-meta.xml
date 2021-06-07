@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Formula__c</fullName>
+    <description>New Comment by Harsh : Changing data type from formula (text) to formula (number) to handle negative amount.
+
+Old Comment : shows COOP dollars if Currency used = Coop Dollars, otherwise other currency (USD or CAD based on the &apos;Currency Used&apos;-field.</description>
+    <externalId>false</externalId>
+    <formula>Amount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Amount ($)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

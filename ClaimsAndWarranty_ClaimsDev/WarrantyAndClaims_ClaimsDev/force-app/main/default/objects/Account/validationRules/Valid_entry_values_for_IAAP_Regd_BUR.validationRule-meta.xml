@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_entry_values_for_IAAP_Regd_BUR</fullName>
+    <active>false</active>
+    <description>Valid entry values for IAAP Registered BUR based on IAAP Registered SBS</description>
+    <errorConditionFormula>OR ( AND (  RecordType.Name = &apos;Contractor&apos;, ISPICKVAL (IAP_Registered_SBS__c, &apos;IAAP Diamond Registered&apos;), ISPICKVAL ( IAAP_Registered_BUR__c, &apos;IAAP Registered&apos;)), AND ( RecordType.Name = &apos;Contractor&apos;, ISPICKVAL (IAP_Registered_SBS__c, &apos;IAAP Registered&apos;), ISPICKVAL ( IAAP_Registered_BUR__c, &apos;IAAP Diamond Registered&apos;)))</errorConditionFormula>
+    <errorMessage>If IAAP Diamond Registered value is selected for IAAP Reg. SBS, then IAAP Reg. BUR MUST have IAAP Diamond Registered or None as Values. 
+If IAAP Registered is selected for IAAP Reg. SBS, then IAAP Reg. BUR MUST have IAAP Registered or None as values.</errorMessage>
+</ValidationRule>

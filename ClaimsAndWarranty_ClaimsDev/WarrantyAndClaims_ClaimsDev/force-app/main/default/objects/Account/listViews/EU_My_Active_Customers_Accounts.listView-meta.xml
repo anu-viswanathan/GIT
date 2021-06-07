@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_My_Active_Customers_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>EU_Business_Type__c</columns>
+    <columns>EU_System_External_Reference__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.EU_Customer</value>
+    </filters>
+    <filters>
+        <field>EU_CRM_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>My Active Customers Accounts</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>IKO_EU</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

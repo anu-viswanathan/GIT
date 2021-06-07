@@ -1,0 +1,169 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="icCRCThemeCommunityTemplateR5">
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="thisYear" type="String"/>
+    <aura:attribute name="langPicker" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="home" type="String" default="/" />
+
+
+
+
+    <aura:attribute name="dashboards" type="Aura.Component[]" required="false"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+
+
+    <div id="GreyTopBar " class= "slds-show_large hideElementOnDesktop" style="margin-bottom:-55px; width:100%; height: 55px;background-color: #d3d4d8">
+    </div>
+
+    <div class="container" style="max-width:1024px; margin: auto;">
+
+        <div class="menuContainer" style="height: 75px; margin-bottom:40px">
+
+            <div class="navDesktop hideElementOnTablet hideElementsOnMobile"
+                 style="width:2300px;
+                        margin-bottom:-55px;
+                        height:55px;
+
+                        /*background-color: red;*/
+                        background-color: #d3d4d8;
+
+                        ">
+            </div>
+
+
+            <div class="navMobile mobileSearchBar
+                        hideElementOnTablet"
+                 style="width:100%;
+                        height:55px;
+                        /*background-color: red;*/
+                        background-color: #d3d4d8;
+
+                        ">
+            </div>
+            <!--/////////-->
+            <!--            <div id="searchMenuPosition" class="slds-col slds-size&#45;&#45;6-of-12"  >-->
+            <!--                <div class="searchRegion "-->
+
+            <!--                     style="height:35px;-->
+            <!--                            width: 100%;-->
+            <!--                            ">-->
+            <!--                   <span style="background-color: transparent; ">-->
+            <!--                       {!v.search}-->
+            <!--                   </span>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <!--            <div id="profileMenuPosition"-->
+            <!--                 class="profileMenuRegion-->
+            <!--                        slds-col-->
+            <!--                        slds-size&#45;&#45;3-of-12-->
+            <!--                        slds-float_right"-->
+            <!--            >-->
+            <!--                <span style="">-->
+
+            <!--                    {!v.profileMenu}-->
+            <!--                </span>-->
+            <!--            </div>-->
+
+            <!--            <div class="slds-col profileMenuRegion accountIdPosition slds-col slds-size&#45;&#45;3-of-12">-->
+            <!--                <div class="whiteText accountId">-->
+            <!--                    <c:icMedAccountId />-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--/////////-->
+            <div class="slds-grid slds-container--large" id="LogoSearchPosition" >
+                <div id="searchMenuPosition" class="searchRegion slds-col slds-size--6-of-12"  >
+                    <div>
+                       <span style="background-color: white; ">
+                           {!v.search}
+                       </span>
+                    </div>
+                </div>
+
+                <div id="profileMenuPosition" class="profileMenuRegion slds-col slds-size--3-of-12 hideElementOnTablet hideElementsOnMobile" >
+                    <div>
+                        {!v.profileMenu}
+                    </div>
+                </div>
+                <div class="profileMenuRegion accountIdPosition slds-col slds-size--3-of-12">
+                    <div class="accountId">
+                        <c:CRCMedAccountId />
+                    </div>
+                </div>
+            </div>
+            <!--/////////-->
+
+            <!--            <div class="slds-col homeMenu hideElementOnTablet hideElementsOnMobile"-->
+            <!--                 style="background-color: #525457;-->
+            <!--                        width:55px;-->
+            <!--                        height:55px;-->
+            <!--                        margin-top:-20px;-->
+            <!--                        z-index: 9000;-->
+            <!--                        ">-->
+            <!--                <a href="{!v.home}" title="Home" data-type="home" class="homeMenuIcon">-->
+            <!--                    <img src="{!$Resource.icHomeIcon}"-->
+            <!--                         style="display: inline-block;-->
+            <!--                                margin-top:-80px;-->
+            <!--                                margin-left:18px;-->
+            <!--                                height: auto;-->
+            <!--                                width: auto;-->
+            <!--                                max-width: 20px;-->
+            <!--                                max-height: 21px;-->
+            <!--                                "/>-->
+            <!--                </a>-->
+            <!--            </div>-->
+
+
+
+            <div id="locator" class="  navMenuPosition slds-float_right" style="background-color: transparent!important; height:65px;">
+                {!v.navBar}
+            </div>
+
+
+            <div class="slds-float--left slds-grid  logoBar hideElementsOnMobile"
+                 style="margin-top:10px;
+                        max-width:768px;
+                        margin-right:-25px;
+                        width:30%;
+                                        ">
+                <div class="slds-col"
+                     style="">
+
+                    <div class="logoMobile logoContainer" >
+                        <!-- <img src="{!$Resource.IKO_logo}"/> -->
+                    </div>
+
+
+                    <div class="  sloganType">
+                        <p style="font-weight: 600;
+                                  font-size: 12px;
+                                  margin-top:-33px;
+                                  letter-spacing: 3px;
+                                  display: block;
+                                  position: absolute;
+                                  ">
+
+                            <aura:unescapedHtml value="{!$Label.c.icCRCROOFPRO_TM_PROGRAM}" />
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mainContentArea " style="margin-top:25px;">
+            {!v.body}
+        </div>
+        <c:icCRCMedFooterR2 />
+
+    </div>
+
+
+
+</aura:component>

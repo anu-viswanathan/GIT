@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Plies_Base_Sheet__c</fullName>
+    <externalId>false</externalId>
+    <label>Number of Plies</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Base_Sheet_Field__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One</fullName>
+                <default>false</default>
+                <label>One</label>
+            </value>
+            <value>
+                <fullName>Two</fullName>
+                <default>false</default>
+                <label>Two</label>
+            </value>
+            <value>
+                <fullName>Three</fullName>
+                <default>false</default>
+                <label>Three</label>
+            </value>
+            <value>
+                <fullName>Four</fullName>
+                <default>false</default>
+                <label>Four</label>
+            </value>
+            <value>
+                <fullName>Five</fullName>
+                <default>false</default>
+                <label>Five</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <valueName>One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <valueName>Two</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <valueName>Three</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <valueName>Four</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IKO No. 15 Felt Perforated</controllingFieldValue>
+            <controllingFieldValue>IKO Type IV Glass Felt</controllingFieldValue>
+            <controllingFieldValue>IKO Type VI Glass Felt</controllingFieldValue>
+            <valueName>Five</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

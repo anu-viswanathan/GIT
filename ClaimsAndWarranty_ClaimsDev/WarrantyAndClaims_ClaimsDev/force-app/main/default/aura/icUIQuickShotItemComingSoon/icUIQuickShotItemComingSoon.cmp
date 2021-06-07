@@ -1,0 +1,64 @@
+<!--
+ - Created by admin on 7/16/2018.
+ -->
+
+<aura:component description="icUIQuickShotItem">
+
+    <aura:attribute name="label" type="String" default="Line 1" />
+    <aura:attribute name="label2" type="String" default="Line 2" />
+    <aura:attribute name="value" type="String" default="03" />
+    <aura:attribute name="valueDollarSign" type="String" default="" />
+    <aura:attribute name="redirectURL" type="String" />
+    
+    <div  class="slds-align_absolute-center image-fade "
+          style="display:block;
+
+                    ">
+
+        <div style="display: table;
+                    margin-bottom:10px;
+                    width: 100%;
+                    height:100%;
+                    vertical-align: middle;
+                    margin-top:65px;
+
+                    ">
+            <div class="slds-align_absolute-center comingSoonBlock"
+                 style="display: table-cell;
+                        vertical-align: middle; 
+                        text-align: center;
+                        heigh:140px;
+                        ">
+
+
+                <p class="ComingSoonText"
+                        style="text-transform: uppercase;
+                          color:white;
+                          font-weight: bold; 
+                          font-size:18px;
+                          line-height: 21px;
+                          letter-spacing: 1px;
+                          vertical-align: middle !important;
+                          margin-top:-7px;
+
+                          ">
+                    <aura:unescapedHtml value="{!v.label}" />
+                </p>
+
+                <p class="quickShotText"
+                   style="text-transform: uppercase;
+                          color:white;
+                          font-weight: bold;
+                          font-size:1em;
+                          letter-spacing: 1px;
+                          vertical-align: middle !important;
+                          margin-top:10px;
+                          ">
+                    {!v.label2}
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</aura:component>

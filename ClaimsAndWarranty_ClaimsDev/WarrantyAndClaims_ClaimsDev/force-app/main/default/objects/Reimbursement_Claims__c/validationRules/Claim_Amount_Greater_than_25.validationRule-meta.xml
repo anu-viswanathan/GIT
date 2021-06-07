@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Amount_Greater_than_25</fullName>
+    <active>true</active>
+    <errorConditionFormula>Claim_Amount__c &lt; 25</errorConditionFormula>
+    <errorDisplayField>Claim_Amount__c</errorDisplayField>
+    <errorMessage>Your Claim Amount should be greater than $25.</errorMessage>
+</ValidationRule>

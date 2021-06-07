@@ -1,0 +1,804 @@
+.THIS .content, .THIS body {
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+
+.THIS p {
+    font-family: Montserrat, 'Open Sans', 'sans-serif' !important;
+}
+
+.THIS .forceSearchInputDesktop .uiInput .uiInputTextForAutocomplete, .THIS .forceSearchInputDesktop .uiInput .uiInputTextForAutocomplete:focus{
+    background:white;
+}
+.THIS .inputWrapper.slds-grid.slds-grid--align-center.slds-grid--vertical-align-center.slds-size--1-of-1 {
+
+    background: white !important;
+}
+
+.THIS .slds-clearfix.mruDescription.slds-text-heading--label-normal.slds-show.slds-truncate, .THIS label.uiLabel-hidden.form-element__label.uiLabel {
+    color: grey !important;
+}
+
+.THIS lightning-icon.slds-icon-utility-chevrondown.slds-button__icon--right.slds-icon_container {
+    display: none;
+}
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak, .THIS .slds-text-color_default {
+    color: grey !important;
+}
+
+.THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+    background-color: white;
+    color: #595959;
+}
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak {
+    color: grey !important;
+}
+
+.THIS .forceCommunityGlobalNavigation, .THIS .slds-list__item a, .THIS .forceCommunityGlobalNavigation, .THIS.slds-list__item button {
+    font-size: 10px;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    line-height: normal;
+    padding: 8px 14px;
+    color:#525457;
+}
+.THIS button.slds-container_fluid.slds-button.slds-button--reset {
+    font-size: 11px;
+    /*color:deeppink;*/
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: darkgrey;
+    text-shadow: none;
+    /*text-shadow: 0 0 0px black;*/
+}
+
+.THIS .slds-border_top, .THIS .slds-border--top {
+    border-top: 1px solid #A9A9A9 !important;
+}
+.THIS .slds-border_bottom, .THIS .slds-border--bottom {
+    border-bottom: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_left, .THIS .slds-border--left {
+    border-left: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_right, .THIS .slds-border--right  {
+    border-right: 1px solid #A9A9A9 !important;
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.THIS span.profileName {
+    color: white;
+}
+.THIS span.triggerDownArrow.down-arrow {
+    color: white;
+}
+
+.THIS .forceCommunityGlobalNavigation {
+    background-color: white;
+}
+
+.THIS .slds-container_fluid {
+    padding: 8px 20px !important;
+}
+
+/* Selects every fourth element
+   among any group of siblings,
+   counting backwards from the last one */
+
+/*.THIS li:nth-last-child(9n+2) {
+  color: white;
+    background-color:#cc0000;
+    border-radius: 5px;
+
+}*/
+
+.THIS nav>ul>li:nth-of-type(6){
+    color: white;
+    background-color:#c62127;
+    border-radius: 5px;
+    margin-left:30px;
+
+}
+
+
+.THIS nav>ul>li>ul>li>a{
+    color: black;
+
+
+}
+
+
+
+/*.THIS .slds-button__icon--right{*/
+/*display: none;*/
+/*}*/
+
+.THIS .linkTileSize{
+    height:255px!important;
+}
+
+/*.THIS .linkTileSizeUI.cIcUILinkTile, .THIS .linkTileSizeUI.cIcUILinkTilesSmall{*/
+/*    !*border: 4px white solid;*!*/
+/*    border-right:5px white solid;*/
+/*    border-bottom:5px white solid;*/
+/*    overflow: hidden;*/
+/*    height:255px!important;*/
+/*}*/
+
+
+
+/*.THIS .linkTileSizeUI.cIcUILinkTileComingSoon{*/
+/*    !*border: 4px white solid;*!*/
+/*    overflow: hidden;*/
+/*    height:250px!important;*/
+/*    overflow:hidden;*/
+/*}*/
+
+.THIS .cIcMedLinkTilesR3 #horMaskLine1{
+    display:none;
+}
+
+
+.THIS .sloganType p{
+    margin-left:140px;
+}
+
+/*.THIS .cIcMedQuickShotTracker{*/
+/*    border-right: 5px white solid;*/
+/*}*/
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+    .THIS .content, .THIS body {
+        max-width: 479px !important;
+        margin: auto;
+    }
+
+    /* For MOBILE phones: */
+    .THIS .navTablet {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+    .THIS .navDesktopSmall {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+    .THIS .navDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+    .THIS .navDesktopLarge {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+    .THIS .hideElementsOnMobile {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .THIS .searchBarTablet, .THIS .hideMenu {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS .searchMenuPosition {
+
+
+    }
+
+    .THIS .searchRegion {
+        margin-top: -50px !important;
+        margin-right: 70px!important;
+        margin-bottom: 80px!important;
+        width: 80% !important;
+    }
+
+    .THIS .navMenuPosition {
+        margin-right: 32px!important;
+        margin-top:-125px;
+        width: 50px!important;
+        background-color: transparent !important;
+    }
+
+    .THIS #profileMenuPosition {
+        margin-top:-45px!important;
+        margin-right:20px!important;
+    }
+
+    .THIS .logoBar{
+        top:55px !important;
+        left:10px!important;
+        position:absolute!important;
+    }
+
+    .THIS .sloganType {
+        /*font-size: 6px!important;*/
+        /*color:red!important;*/
+    }
+
+    .THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+        background-color: transparent;
+        color: #595959;
+    }
+
+
+    .THIS nav>ul>li:nth-of-type(6){
+        margin-left:0px;
+
+    }
+
+    .THIS button.slds-container_fluid.slds-button.slds-button--reset {
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        font-size:14px !important;
+    }
+
+    .THIS nav>ul>li{
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        font-size: 16px !important;
+        /*color:purple!important;*/
+        /*margin-bottom:10px!important;*/
+    }
+
+    .THIS a.slds-container_fluid.slds-is-active, .THIS a{
+        /*color:red!important;*/
+        /*color:red!important;*/
+        font-size: 14px!important;
+    }
+
+    .THIS li.slds-list__item {
+
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .THIS .forceCommunityGlobalNavigation {
+
+        background-color: transparent !important;
+
+    }
+    .THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+
+        background-color: transparent !important;
+
+    }
+
+    .THIS .cIcMedAccountId .accountIdText{
+        left:0;
+    }
+
+
+    .THIS .menuContainer{
+        margin-top: 30px;
+    }
+
+    /*.THIS .mobileBottomMargin {*/
+    /*margin-bottom: 250px !important;*/
+    /*}*/
+
+}
+
+@media only screen and  (min-width: 480px) and (max-width: 767px) {
+
+    /* For TABLETs : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .THIS .hideElementOnTablet{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    /*.THIS .menuContainer {*/
+    /*!*background-color:pink!important;*!*/
+    /*height:110px!important;*/
+    /*}*/
+
+    .THIS .mainContentArea{
+        margin-top: -15px !important;
+    }
+
+    /*.THIS #locator{*/
+    /*height:55px !important;*/
+    /*}*/
+    .THIS .navigation{
+        height:50px!important;
+    }
+
+    .THIS .searchMenuPosition{
+    }
+    .THIS .searchRegion{
+        margin-top:13px !important;
+        margin-left:calc( -30px + 30%*2 );
+        width: calc( 8% + 13%*2 );
+    }
+
+    .THIS #profileMenuPosition {
+        margin-top:12px!important;
+        margin-right:-250px!important;
+    }
+
+    .THIS .navMenuPosition{
+        top:-16px!important;
+        position: absolute!important;
+        right:280px!important;
+        width:100px!important;
+        height:65px!important;
+        background-color: transparent!important;
+
+    }
+
+    .THIS span.slds-truncate {
+        font-size: 12px;
+    }
+
+    .THIS .logoBar{
+        top:-5px !important;
+        left:10px!important;
+        position:absolute!important;
+        width: calc( 180px + 12%*2 );
+    }
+    .THIS .forceCommunityGlobalNavigation {
+        background-color:transparent!important;
+    }
+
+
+
+    .THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+        background-color: transparent!important;
+    }
+    .THIS .slds-p-vertical--xx-small.slds-p-horizontal--small.slds-grid {
+        margin-top: 25px !important;
+        margin-left:300px!important;
+    }
+
+    .THIS a.slds-container_fluid.slds-is-active, .THIS a{
+        /*color:red!important;*/
+        /*color:red!important;*/
+        font-size: 12px!important;
+    }
+
+    .THIS body {
+        max-width:768px !important;
+    }
+
+    .THIS .cIcMedAccountId .accountIdText{
+        left:0;
+    }
+
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        /*width: 700px!important;*/
+        /*height: 55px!important;*/
+        background-color: #d3d4d8!important;
+        padding-top:14px!important;
+        padding-left:1%;
+    }
+
+    .THIS .searchRegion {
+        margin-right:20px!important;
+        margin-top:-7px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-right:-622px!important;
+        height: 55px!important;
+        background-color: #81858D!important;
+        padding-top:13px;
+    }
+
+    .THIS .profileMenuRegion {
+        background-color: #81858D;
+    }
+
+    .THIS .accountIdPosition{
+        position: relative;
+        left: 600px;
+        display: block;
+        border-left: 1px solid #d3d4d8;
+    }
+
+    .THIS .accountIdPosition .accountId{
+        margin-top:19px;
+        font-family: Montserrat, "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        color:#FFFFFF;
+    }
+
+    .THIS .homeMenu {
+        margin-left:973px!important;
+        margin-top:-18px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:10px !important;
+        /*margin-left:300px!important;*/
+        margin-right:-15px!important;
+    }
+
+    .THIS .navDesktop {
+        margin-left: -800px!important;
+    }
+
+    .THIS .logoBar.hideElementsOnMobile{
+        width:20%;
+    }
+    .THIS .logoBar.hideElementsOnMobile .logoMobile{
+        width:42%;
+        transform: scale(.8);
+        margin-left:-4px!important;
+    }
+
+    .THIS .slds-container_fluid{
+        padding: 8px 12px!important;
+    }
+    .THIS nav>ul>li:nth-of-type(6){
+        margin-left:15px;
+    }
+
+    .THIS .sloganType>p{
+        transform:scale(.8);
+        left:-46px;
+        letter-spacing: 2px!important;
+    }
+
+
+}
+@media only screen and (min-width:1024px) and (max-width:1500px){
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        /*width: 700px!important;*/
+        /*height: 55px!important;*/
+        background-color: #d3d4d8!important;
+        padding-top:14px!important;
+    }
+
+    .THIS .searchRegion {
+        margin-right:20px!important;
+        margin-top:-7px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-right:-622px!important;
+        /*margin-top:-18px!important;*/
+        /*margin-left:640px!important;*/
+        /*width:290px!important;*/
+        height: 55px!important;
+        /*background-color: red!important;*/
+        background-color: #81858D!important;
+        padding-top:13px;
+    }
+
+    .THIS .profileMenuRegion {
+        /*background-color: blue !important;*/
+        background-color:#81858D;
+    }
+
+    .THIS .accountIdPosition{
+        position: relative;
+        left: 61%;
+        display:block;
+    }
+
+    .THIS .accountIdPosition .accountId{
+        margin-top:19px;
+        font-family: Montserrat, "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        color:#ffffff;
+    }
+
+    .THIS .homeMenu {
+        margin-left:973px!important;
+        margin-top:-18px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:10px !important;
+        /*margin-left:300px!important;*/
+        margin-right:-15px!important;
+    }
+
+    .THIS .navDesktop {
+        margin-left: -800px!important;
+    }
+
+
+    /*.THIS .forceCommunityGlobalNavigation>* {*/
+    /*display: block!important;*/
+    /*margin: 0 auto!important;*/
+    /*margin-left: 165px !important;*/
+    /*}*/
+
+    /*.THIS .siteforceDesignTimeRegion {*/
+    /*margin-top: 11px !important;*/
+
+    /*}*/
+
+    /*.THIS .uiMenu.selfServiceUserProfileMenu {*/
+    /*margin-top:6px!important;*/
+    /*}*/
+
+    .THIS .mainContentArea .siteforceSldsOneColLayout .ui-widget{
+
+    }
+
+}
+
+/*@media only screen and  (min-width:999px) and (max-width: 1500px) {*/
+
+/*    !* For DESKTOP Small : *!*/
+/*    .THIS .navMobile {*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+
+/*    }*/
+/*    .THIS .navTablet {*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+
+/*    }*/
+/*    .THIS .navDesktopLarge {*/
+/*        display:none !important;*/
+/*        margin-left: auto!important;*/
+/*        margin-right: auto!important;*/
+
+/*    }*/
+/*    .THIS .hideElementOnDesktop {*/
+/*        display: none !important;*/
+/*        margin-left: auto !important;*/
+/*        margin-right: auto !important;*/
+/*    }*/
+
+/*    .THIS #searchMenuPosition {*/
+/*        !*margin-top: -55px!important;*!*/
+/*        !*margin-left: 100px;*!*/
+/*        width: 700px!important;*/
+/*        !*height: 55px!important;*!*/
+/*        background-color: #d3d4d8!important;*/
+/*        padding-top:17px!important;*/
+/*    }*/
+
+/*    .THIS .searchRegion {*/
+/*        margin-right:49px!important;*/
+/*        margin-top:-7px!important;*/
+/*    }*/
+/*    .THIS #profileMenuPosition {*/
+/*        margin-right:-622px!important;*/
+/*        margin-top:-18px!important;*/
+/*        !*margin-left:640px!important;*!*/
+/*        width:290px!important;*/
+/*        height: 55px!important;*/
+/*        !*background-color: red!important;*!*/
+/*        background-color: #81858D!important;*/
+/*        padding-top:13px;*/
+/*    }*/
+
+/*    .THIS .profileMenuRegion {*/
+/*        !*background-color: blue !important;*!*/
+/*    }*/
+
+/*    .THIS .homeMenu {*/
+/*        margin-left:973px!important;*/
+/*        margin-top:-18px!important;*/
+/*    }*/
+/*    .THIS .navMenuPosition{*/
+/*        margin-top:10px !important;*/
+/*        !*margin-left:300px!important;*!*/
+/*        margin-right:-15px!important;*/
+/*    }*/
+
+/*    .THIS .navDesktop {*/
+/*        margin-left: -800px!important;*/
+/*    }*/
+
+
+/*    !*.THIS .forceCommunityGlobalNavigation>* {*!*/
+/*    !*display: block!important;*!*/
+/*    !*margin: 0 auto!important;*!*/
+/*    !*margin-left: 165px !important;*!*/
+/*    !*}*!*/
+
+/*    !*.THIS .siteforceDesignTimeRegion {*!*/
+/*    !*margin-top: 11px !important;*!*/
+
+/*    !*}*!*/
+
+/*    !*.THIS .uiMenu.selfServiceUserProfileMenu {*!*/
+/*    !*margin-top:6px!important;*!*/
+/*    !*}*!*/
+
+/*    .THIS .mainContentArea .siteforceSldsOneColLayout .ui-widget{*/
+
+/*    }*/
+
+/*}*/
+
+@media only screen and (min-width: 1501px) {
+    /* For DESKTOP LARGE: */
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopSmall {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        /*width: 700px!important;*/
+        /*height: 55px!important;*/
+        background-color: #d3d4d8!important;
+        padding-top:14px!important;
+    }
+
+    .THIS .searchRegion {
+        margin-right:20px!important;
+        margin-top:-7px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-right:-622px!important;
+        /*margin-top:-18px!important;*/
+        /*margin-left:640px!important;*/
+        /*width:290px!important;*/
+        height: 55px!important;
+        /*background-color: red!important;*/
+        background-color: #81858D!important;
+        padding-top:13px;
+    }
+
+    .THIS .profileMenuRegion {
+        /*background-color: blue !important;*/
+        background-color:#81858D;
+    }
+
+    .THIS .accountIdPosition{
+        position: relative;
+        left: 61%;
+        display:block;
+    }
+
+    .THIS .accountIdPosition .accountId{
+        margin-top:19px;
+        font-family: Montserrat, "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        color:#ffffff;
+    }
+
+    .THIS .homeMenu {
+        margin-left:973px!important;
+        margin-top:-18px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:10px !important;
+        /*margin-left:300px!important;*/
+        margin-right:-15px;
+    }
+
+    .THIS .navDesktop {
+        margin-left: -800px!important;
+    }
+
+}

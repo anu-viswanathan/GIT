@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CA_Claims</fullName>
+    <columns>NAME</columns>
+    <columns>Contractor__c</columns>
+    <columns>Reimbursement_Items__c</columns>
+    <columns>Claim_Amount__c</columns>
+    <columns>Date_Submitted__c</columns>
+    <columns>Prior_Year_Claim__c</columns>
+    <columns>Internal_Status__c</columns>
+    <columns>Net_Claim_Amount__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contractor__c</field>
+        <operation>notContain</operation>
+        <value>Contractor TEST01</value>
+    </filters>
+    <filters>
+        <field>Country_Code__c</field>
+        <operation>equals</operation>
+        <value>CA</value>
+    </filters>
+    <label>All CA Claims</label>
+    <sharedTo>
+        <role>IKOPRO_Loyalty_Admin</role>
+    </sharedTo>
+</ListView>

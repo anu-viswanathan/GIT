@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Market_Analysis_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Market Analysis Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Step Distributor</fullName>
+                <default>false</default>
+                <label>1 Step Distributor</label>
+            </value>
+            <value>
+                <fullName>2 Step Distributor</fullName>
+                <default>false</default>
+                <label>2 Step Distributor</label>
+            </value>
+            <value>
+                <fullName>ERROR CODE</fullName>
+                <default>false</default>
+                <label>ERROR CODE</label>
+            </value>
+            <value>
+                <fullName>Intergroup</fullName>
+                <default>false</default>
+                <label>Intergroup</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>No Value</fullName>
+                <default>false</default>
+                <label>No Value</label>
+            </value>
+            <value>
+                <fullName>Paving</fullName>
+                <default>false</default>
+                <label>Paving</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Roofer</fullName>
+                <default>false</default>
+                <label>Roofer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,60 @@
+<!--
+ - Created by Francois Poirier on 2018-09-10.
+ -->
+
+<aura:component description="icGreenSkyLoanAgreement">
+    <aura:attribute name="loanAgreement" type="Object" />
+    <aura:attribute name="application" type="Object" />
+
+    <div class="slds-container--center slds-container--large slds-box slds-theme--default slds-text-align--left">
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-text-heading--medium slds-text-align--left slds-col slds-size--3-of-3">
+                {!$Label.c.icCongratulations} {!v.loanAgreement.applicantFullName}! {!$Label.c.icYou_have_been_approved}.<br/>
+            </div>
+            <div class="slds-col slds-size--1-of-3 slds-text-body--regular slds-text-align--left">
+                <b>{!$Label.c.icApplication_ID}</b>
+                <br/>
+                {!v.application.applicationId}
+                <br/><br/>
+                <b>{!$Label.c.icBorrower_Name}</b>
+                <br/>
+                {!v.loanAgreement.applicantFullName}
+                <br/><br/>
+                <b>{!$Label.c.icLender}</b>
+                <br/>
+                {!v.loanAgreement.lender}
+            </div>
+            <div class="slds-col slds-size--2-of-3">
+                <table>
+                    <tr>
+                        <th>{!$Label.c.icAmount_Financed}</th>
+                        <th>{!$Label.c.icPost_Promo_Term}</th>
+                        <th>{!$Label.c.icInterest_Rate}</th>
+                        <th>{!$Label.c.icPost_Promo_Monthly_Payment}</th>
+                    </tr>
+                    <tr>
+                        <td><lightning:formattedNumber value="{!v.loanAgreement.amountFinanced}" currencyDisplayAs="symbol" style="currency" currencyCode="USD"/> </td>
+                        <td>{!v.loanAgreement.term}&nbsp;{!$Label.c.icMonths}</td>
+                        <td>{!v.loanAgreement.apr}%</td>
+                        <td><lightning:formattedNumber value="{!v.loanAgreement.monthlyPayment}" currencyDisplayAs="symbol" style="currency" currencyCode="USD"/> </td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <table>
+                    <tr>
+                        <th>{!$Label.c.icPromotion_Details}</th>
+                    </tr>
+                    <tr>
+                        <td>{!v.loanAgreement.promotionDetails}</td>
+                    </tr>
+                    <tr>
+                        <td>{!$Label.c.icPlease_click} <a href="{! 'https://portal.greenskycredit.com/loanagreement?loanId=' + v.application.applicationId}">{!$Label.c.icView_Loan_Agreement}</a> {!$Label.c.ic_to_activate_your_account} </td>
+                    </tr>
+                </table>
+                <lightning:helptext content="{!$Label.c.icLoanAgreementHelpText}"/>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

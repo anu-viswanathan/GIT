@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_Prozone__c</fullName>
+    <description>Field used for Sync Fields functionality (API Call) with PROZONE (ROOFPRO).</description>
+    <externalId>false</externalId>
+    <formula>CASE(Present_Tier_Lookup__r.Name,
+&quot;Tier 1&quot;, &quot;ROOFPRO PREFERRED&quot;,
+&quot;Tier 2&quot;, &quot;ROOFPRO SELECT&quot;,
+&quot;Tier 3&quot;, &quot;ROOFPRO CRAFTSMAN PREMIER&quot;,
+&quot;Tier 0&quot;, &quot;Advantage&quot;,
+&quot;No Tier Chosen&quot;)
+
+/*Old Formula
+CASE(Present_Tier_Lookup__r.Name,
+&quot;Tier 1&quot;, &quot;ROOFPRO PREFERRED&quot;,
+&quot;Tier 2&quot;, &quot;ROOFPRO SELECT&quot;,
+&quot;Tier 3&quot;, &quot;ROOFPRO CRAFTSMAN PREMIER&quot;,
+&quot;No Tier Chosen&quot;)*/</formula>
+    <label>Tier (Prozone)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

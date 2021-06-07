@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Western_Canada_IKO_Office_Address__c</fullName>
+    <defaultValue>&quot;80 Stafford Drive, Brampton, Ontario L6W 1L4&quot;</defaultValue>
+    <description>West Canada IKO Office Address</description>
+    <externalId>false</externalId>
+    <label>Western Canada IKO Office Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

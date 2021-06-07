@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClaimsRepAssessmentStageException</fullName>
+    <active>false</active>
+    <description>Claims reps should be blocked from choosing the following sub-statuses: Assessment/Approved or Assessment/Declined. IWCN-549 (no longer needed because fixed properly.)</description>
+    <errorConditionFormula>AND( 
+    OR(
+        $Profile.Name = &apos;Commercial Claims Rep&apos;, 
+        $Profile.Name = &apos;Residential Claims Rep&apos;
+    ),
+        AND(
+			OR(
+            ISCHANGED(Claim_Stage__c),
+				ISCHANGED(Claim_Sub_Stage__c)
+			),
+            TEXT(Claim_Stage__c) == &apos;Assessment&apos;,
+            OR(
+                TEXT(Claim_Sub_Stage__c) = &apos;Approved&apos;,
+                TEXT(Claim_Sub_Stage__c) = &apos;Declined&apos;
+            )
+        )
+)</errorConditionFormula>
+    <errorDisplayField>Claim_Stage__c</errorDisplayField>
+    <errorMessage>You are not permitted to move to Assessment &amp; Approved/Declined</errorMessage>
+</ValidationRule>

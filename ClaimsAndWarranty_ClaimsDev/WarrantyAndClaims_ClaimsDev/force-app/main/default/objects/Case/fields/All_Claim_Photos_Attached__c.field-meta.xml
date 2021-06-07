@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Claim_Photos_Attached__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that all photos required for the Claim are attached</description>
+    <externalId>false</externalId>
+    <inlineHelpText>By checking this, you are confirming that all necessary photos for submitting this claim are attached to the Case</inlineHelpText>
+    <label>All Claim Photos Attached?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

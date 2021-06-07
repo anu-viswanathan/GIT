@@ -1,0 +1,67 @@
+<aura:component  controller="icCtrlWhatsHappening" description="icMedWhatsHappening" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="title" type="String" default="{!$Label.c.icWhat_s_Happening}" />
+    <aura:attribute name="listWhatsHappening" type="icDTOWhatsHappening[]"/>
+    <aura:attribute name="displayWhatsHappening" type="icDTOWhatsHappening[]"/>
+    <aura:attribute name="carouselInterval" type="Object" />
+    <aura:attribute name="carouselPage" type="Integer" default="0" />
+    <aura:attribute name="absCard" type="Integer" default="0" />
+    <aura:attribute name="displayCardCount" type="Integer" />
+    <aura:attribute name="PrevArrow" type="String" default="{!$Resource.icImgArrowPreviousSVG}" />
+    <aura:attribute name="NextArrow" type="String" default="{!$Resource.icImgArrowNextSVG}" />
+    <aura:attribute name="currentTheme" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+    <div>
+        <div class="sdls-col" style="margin-top:0px;max-width:1022px; margin-left:auto;margin-right:auto;">
+            <p class="slds-text-align--left"
+               style="postition: relative;
+               padding-top:50px;
+               padding-left:30px;
+               height:100px;
+               width:100%;
+               text-transform: uppercase;
+               font-weight:800;
+               font-size:12px;
+               letter-spacing:5px;
+               background-color:#f6f6f6;">
+                {!v.title}
+            </p>
+        </div>
+
+        <div style="text-align: right; background-color: #f6f6f6; margin-top:-35px; padding-bottom: 15px; max-width:1022px;
+            margin-left:auto; margin-right:auto;">
+            <a onclick="{! c.doPrev }"> <img src="{!v.PrevArrow}" style="width:20px; position: relative; top:-25px; left:-25px; " /></a>
+            <a onclick="{! c.doNext }"> <img src="{!v.NextArrow}" style="width:20px; position: relative;  top:-25px; margin-right:25px;" /></a>
+        </div>
+
+        <div class="slds-grid smallGridHeight"  style="max-width:1022px; margin-bottom:0px;
+         background-color: #f6f6f6; margin-left:auto; margin-right:auto;">
+            <aura:iteration items="{!v.displayWhatsHappening}" var="whatsHap">
+            <div class="slds-col slds-x-small-size--1-of-1 small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 slds-size--1-of-3" style="background-color: white;">
+<!--                <div class="slds-col slds-x-small-size&#45;&#45;1-of-1 small-size&#45;&#45;1-of-1 slds-small-size&#45;&#45;1-of-1 slds-medium-size&#45;&#45;1-of-3 slds-large-size&#45;&#45;1-of-3 slds-size&#45;&#45;1-of-3" style="background-color: white; height:100%;">-->
+                    <span>
+                        <c:icUIWhatsHappeningItem image="{!whatsHap.imageId}"
+                                    title="{!whatsHap.title}"
+                                    redirectURL="{!whatsHap.communityLink}"
+                                    description="{!whatsHap.description}"
+                                    linkType="{!whatsHap.linkType}"
+                                    linkLabel="{!whatsHap.linkLabel}"
+                                    externalLink="{!whatsHap.externalLink}"
+                                    internaldesktop="{!whatsHap.communityLink}"
+                                    internalmobile="{!whatsHap.mobileLink}"
+                                    emailTo="{!whatsHap.emailToLink}"
+                                    posAbs="{!v.absCard == _index}"
+                                    firstItem="{!and(_index == 0, displayCardCount != 1)}"
+                                    lastItem="{!and(_index == (v.displayCardCount-1), displayCardCount != 1)}"
+                                    singleItem="{!v.displayCardCount == 1}" 
+                                    currentTheme="{!v.currentTheme}" />
+                    </span>
+                </div>                
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>

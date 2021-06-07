@@ -1,0 +1,425 @@
+<aura:component  controller="icCTRLCommunityNavigation" description="icCRCMedLinkTileR3" implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="UsersTierLevel" type="String" default="" />
+
+    <aura:attribute name="TileTitle1" type="String" default="{!$Label.c.icMy_Dashboard}" />
+    <aura:attribute name="description1" type="String" default="{!$Label.c.icTrack_your_progress}" />
+    <aura:attribute name="ImageLink1" type="String" default="{!$Resource.crcMyDashboard}" />
+
+    <aura:attribute name="TileTitle2" type="String" default="{!$Label.c.icMy_Leads}" />
+    <aura:attribute name="description2" type="String" default="{!$Label.c.CRC_Manage_your_leads}"/>
+    <aura:attribute name="ImageLink2" type="String" default="{!$Resource.p02MyLeads800x460}" />
+
+
+    <aura:attribute name="TileTitle3" type="String" default="{!$Label.c.icMy_Rewards}" />
+    <aura:attribute name="description3" type="String" default="{!$Label.c.icROOFPRO_benefits_overview_CRC}" />
+    <aura:attribute name="ImageLink3" type="String" default="{!$Resource.crcMyReward}" />
+
+
+    <aura:attribute name="TileTitle4" type="String" default="{!$Label.c.icCRC_University}" />
+    <aura:attribute name="description4" type="String" default="{!$Label.c.icLearn_something_new}" />
+    <aura:attribute name="ImageLink4" type="String" default="{!$Resource.p04IKOUniversity800x460}" />
+
+
+    <aura:attribute name="TileTitle5" type="String" default="{!$Label.c.icProzone}" />
+    <aura:attribute name="description5" type="String" default="{!$Label.c.icBuy_CRC_merch_and_register_warranties}" />
+    <aura:attribute name="ImageLink5" type="String" default="{!$Resource.crcProzone}" />
+
+
+    <aura:attribute name="TileTitle6" type="String" default="{!$Label.c.CRCTheSummitBlog}" />
+    <aura:attribute name="ComingSoonType" type="String" default="{!$Label.c.icComingSoon}" />
+    <aura:attribute name="description6" type="String" default="{!$Label.c.icRead_Latest_CRC}" />
+    <aura:attribute name="ImageLink6" type="String" default="{!$Resource.icSummitBlog}" />
+
+
+    <aura:attribute name="currentTheme" type="String" default="aaa" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+
+    <div class="slds-x-small-show-only slds-text-align--center" style="margin-top:60px;">
+        <div  class="">
+            <div class="slds-col slds-x-small-size--1-of-1">
+                <!--            <div class="slds-col slds-border&#45;&#45;right slds-border_bottom">-->
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyDashboard}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink1}"  title="{!v.TileTitle1}"  />
+                    </a>
+                </span>
+            </div>
+
+            <div class="slds-col  slds-x-small-size--1-of-1">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyLeads}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink2}"  title="{!v.TileTitle2}"  />
+                    </a>
+                </span>
+            </div>
+
+        </div>
+        <div class="">
+
+            <div class="slds-col slds-x-small-size--1-of-1">
+                <!--            <div class="slds-col  slds-border&#45;&#45;right slds-border_bottom">-->
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyRewards}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink3}"  title="{!v.TileTitle3}"  />
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col slds-x-small-size--1-of-1">
+                                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToProzone}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink5}"  title="{!v.TileTitle5}"  />
+                    </a>
+                </span>
+
+            </div>
+
+        </div>
+        <!--        <div class="slds-grid" style="margin-top:1px;">-->
+        <div class="">
+
+            <div class="slds-col slds-x-small-size--1-of-1">
+ <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToIkoUniversity}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink4}" title="{!v.TileTitle4}"/>
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col slds-x-small-size--1-of-1" style="position: relative">
+                <span>
+
+                        <c:icUILinkTilesSmall image="{!v.ImageLink6}" title="{!v.TileTitle6}"/>
+                    <!--                        <c:icUILinkTileComingSoon image="{!v.ImageLink6}" title="{!v.TileTitle6}"/>-->
+
+                </span>
+                <span>
+                <p style="position:absolute; right:5px; left:6px; top:160px; font-size:1rem; color:white; line-height:18px; font-weight: 700;  "><aura:unescapedHtml value="{!$Label.c.icComingSoon}"/></p>
+                </span>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <div class="slds-small-show-only slds-text-align--center" style="margin-top:60px; margin-bottom:50px">
+        <div class="slds-grid">
+            <div class="slds-col" style="border-right: 10px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyDashboard}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink1}" title="{!v.TileTitle1}"/>
+                    </a>
+                </span>
+            </div>
+
+            <div class="slds-col" style="border-left: 10px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyLeads}">
+                      <c:icUILinkTilesSmall image="{!v.ImageLink2}" title="{!v.TileTitle2}"/>
+                    </a>
+                </span>
+            </div>
+
+        </div>
+        <div class="slds-grid" >
+            <!--        <div class="slds-grid" style="margin-top:0.5px;">-->
+
+            <div class="slds-col" style="border-right: 10px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyRewards}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink3}" title="{!v.TileTitle3}"/>
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col" style="border-left: 10px #fff solid;">
+                                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToProzone}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink5}" title="{!v.TileTitle5}"/>
+                    </a>
+                </span>
+
+            </div>
+
+        </div>
+        <div class="slds-grid">
+            <!--      <div class="slds-grid" style="margin-top:1px;">-->
+
+            <div class="slds-col" style="border-right: 10px #fff solid;">
+ <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToIkoUniversity}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink4}" title="{!v.TileTitle4}"/>
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col" style="border-left: 10px #fff solid;">
+                <span>
+
+                        <c:icUILinkTilesSmall image="{!v.ImageLink6}" title="{!v.TileTitle6}"/>
+                    <!--                        <c:icUILinkTileComingSoon image="{!v.ImageLink6}" title="{!v.TileTitle6}"/>-->
+
+                </span>
+                <span>
+                <p style="position:relative; right:5px; top:-8rem; font-size:1.5rem; color:white; line-height: 24px; font-weight: 700;  "><aura:unescapedHtml value="{!$Label.c.icComingSoon}"/></p>
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="slds-wrap slds-medium-show-only slds-text-align--center" style=" width:100%;  margin-left: auto; margin-right:auto; background-color:white; margin-top:45px;">
+        <div class="slds-grid" style="">
+            <div class="slds-col slds-size_1-of-3" style="border-right:4px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyDashboard}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink1}"  title="{!v.TileTitle1}"  />
+                    </a>
+                </span>
+
+            </div>
+            <div onclick="" class="slds-col slds-size_1-of-3" style="border-left:4px #fff solid; border-right:4px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyLeads}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink2}"  title="{!v.TileTitle2}" />
+                    </a>
+                </span>
+            </div>
+            <div  onclick="{!c.navToMyRewards}" class="slds-col slds-size_1-of-3" style="border-left:4px solid #fff;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToMyRewards}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink3}"  title="{!v.TileTitle3}"  />
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="slds-grid" style="">
+
+
+            <div class="slds-col slds-size_1-of-3" style="border-right:4px #fff solid;">
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToProzone}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink5}"  title="{!v.TileTitle5}" />
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col slds-size_1-of-3" style="border-left:4px #fff solid; border-right: 4px #fff solid;">
+
+                <span>
+                    <a href="javascript:void(0)"
+                       onclick="{!c.navToIkoUniversity}">
+                        <c:icUILinkTilesSmall image="{!v.ImageLink4}" title="{!v.TileTitle4}"  />
+                    </a>
+                </span>
+            </div>
+            <div class="slds-col slds-size_1-of-3" style="border-left:4px #fff solid;">
+                <a href="javascript:void(0)"
+                   onclick="{!c.navToIkoUniversity}">
+                    <c:icUILinkTilesSmall image="{!v.ImageLink6}"  title="{!v.TileTitle6}"  />
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="slds-max-medium-hide slds-text-align--center" style="max-height: 550px;margin-left:auto;margin-right:auto;width:100%; position:relative;  overflow: hidden; margin-top:50px;">
+        <div class="slds-grid slds-wrap" style="position:relative; left:calc(50% - 510px);">
+            <div class="slds-col slds-size_12-of-12" >
+
+
+                <div class="slds-grid mediaWidth"
+                     style="width:1022px; margin-bottom:5px;">
+
+                    <div class="slds-col " style="display:block;">
+
+                        <div  class="linkTileSize"
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+                            <a href="javascript:void(0)"
+                               onclick="{!c.navToMyDashboard}">
+
+                                <div id="myLeads-fade"
+                                     class="linkTileSize"
+                                     style="width:338px;
+                                             height:258px;
+                                             display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle1}" description="{!v.description1}" />
+
+                                </div>
+                            </a>
+                        </div>
+                        <!--t-->
+                        <div class="slds-col" style="height:257px;  z-index:9999; position:relative; top:-242px; width:3px; display:inline-block; background-color:white;">
+                            <p>&nbsp;</p>
+                        </div>
+                        <!--t-->
+                        <div  class="linkTileSize"
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+                            <a href="javascript:void(0)"
+                               onclick="{!c.navToMyLeads}">
+
+                                <div id="myLeads-fade2"
+                                     class="linkTileSize"
+                                     style="width:340px;
+                                            height:257px;
+                                            display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle2}" description="{!v.description2}" />
+
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slds-col" style="height:257px;  z-index:401;position:relative; top:-243px;width:4px; display:inline-block; background-color:white;">
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <div  class="linkTileSize"
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+                            <a href="javascript:void(0)"
+                               onclick="{!c.navToMyRewards}">
+
+                                <div id="myLeads-fade3"
+                                     class="linkTileSize"
+                                     style=" width:340px;
+                                             height:257px;
+                                             display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle3}" description="{!v.description3}" />
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="slds-grid mediaWidth"
+                     style="width:1022px;
+                     position:relative;
+                     top: -245px;
+                     height:0;
+                      ">
+
+                    <div class="slds-col">
+
+                        <div  class="linkTileSize "
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+
+                            <a href="javascript:void(0)"
+                               onclick="{!c.navToProzone}"
+                               target="_self"
+                            >
+
+                                <div id="myLeads-fade5"
+                                     style="width:338px;
+                                             height:257px;
+                                             display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle5}" description="{!v.description5}" />
+
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slds-col"
+                             style="height:257px;
+                                     z-index:401;
+                                     position:relative;
+                                     top:-243px;
+                                     width:4px;
+                                     display:inline-block;
+                                     background-color:white;">
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <div  class="linkTileSize "
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+                            <a href="javascript:void(0)"
+                               style="height:100%!important;
+                                        width:100%!important;
+                                        max-height:257px!important;"
+                               onclick="{!c.navToIkoUniversity}"
+                               target="_self"
+                            >
+
+                                <div id="myLeads-fade4"
+                                     style="width:338px;
+                                             height:255px;
+                                             display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle4}" description="{!v.description4}" />
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slds-col"
+                             style="height:257px;
+                                    z-index:9000; position:relative; top:-243px;width:4px; display:inline-block; background-color:white;">
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <div  class="linkTileSize "
+                              style="width:338px;
+                                     height:257px;
+                                     display:inline-block;">
+                            <a href="javascript:void(0)"
+                               style="height:100%!important;
+                                        width:100%!important;
+                                        max-height:257px!important;"
+                               onclick="{!c.navToForum}"
+                               target="_self"
+                            >
+
+                                <div id="myLeads-fade6"
+                                     style="width:338px;
+                                             height:255px;
+                                             display:inline-block;">
+                                    <c:icUILinkTile title="{!v.TileTitle6}" description="{!v.description6}" />
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--<a href="javascript:void(0)" onclick="{!c.navToForum}" style="text-decoration: none; width:340px;
+                                     height:0px; position:relative;float: right; right:-0px; top:-365px; font-size:24px; color:white; line-height: 24px; font-weight: 700;  "><aura:unescapedHtml value="BLOGS"/></a>
+                         {!$Label.c.icComingSoon} was hardcoded with BLOGS in order not to affect IKO labels -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BlockUpdateWhenCaseApproved</fullName>
+    <active>true</active>
+    <description>When the Case is already marked as approved, no further settlement conditions should be added / updated</description>
+    <errorConditionFormula>Case__r.ClaimApproved__c</errorConditionFormula>
+    <errorMessage>Settlement Conditions cannot be added/updated after a Claim Case is approved</errorMessage>
+</ValidationRule>

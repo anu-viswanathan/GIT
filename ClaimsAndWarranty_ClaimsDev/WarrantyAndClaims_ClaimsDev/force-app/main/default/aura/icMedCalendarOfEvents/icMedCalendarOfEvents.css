@@ -1,0 +1,233 @@
+/**
+ * Created by Francois Poirier on 2019-04-15.
+ */
+.THIS {
+    background: #FFFFFF;
+    border-bottom: #999999 1px dotted;
+    /*max-width:900px;*/
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.THIS .cIcUiCalendar .slds-button.slds-button_icon-bare{
+    color:#a1a2a3;
+}
+.THIS .cIcUiCalendar .slds-button:disabled{
+    color:rgb(217,219,221);
+}
+
+
+.THIS .cIcUiCalendar .calendarTextContainer{
+    padding-left:10px;
+    padding-top:34px;
+    padding-right:20px;
+    font-size:13px;
+    line-height:26px;
+    font-style: oblique;
+    color:#4b4b4b;
+    font-weight: 300;
+}
+
+.THIS .cIcUiCalendar .calendarTextContainer .calendarRedText{
+    font-size:13px;
+    line-height:26px;
+    /*font-weight:500;*/
+    font-style: normal;
+}
+.THIS .cIcUiCalendar .calendarTextContainer .calendarBlackBoldText{
+    font-size:13px;
+    line-height:26px;
+    font-weight:500;
+    font-style: normal;
+}
+
+
+.THIS .cIcUiCalendarCell .today.hasEvents .dayNumber{
+    color:#626670!important;
+}
+
+.THIS .borderDottedBottom{
+    border-bottom: #999999 1px dotted;
+}
+
+.THIS .eventDate {
+    font-weight: bold;
+}
+
+.THIS .headerText {
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size:12px;
+}
+
+
+.THIS .headerTextAlignment {
+    text-align: center;
+}
+
+.THIS .verticalSeperator {
+    border-right: none;
+}
+
+
+
+
+
+@media screen and (min-width: 1025px){
+    .THIS .verticalSeperator {
+        border-right: #EDEDED solid;
+    }
+
+    .THIS .borderDottedBottom{
+        width:100%;
+
+        padding-bottom: 2.4rem!important;
+        font-weight:800;
+        border-bottom: #999999 dotted 1px;
+    }
+
+    .THIS .headerTextAlignment {
+        text-align: left;
+    }
+
+    .THIS .tableSize.inApp{
+        width:60%;
+    }
+
+    .THIS .removePaddingInUi.inApp{
+        width:60%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .THIS .cIcUiCalendar .monthName{
+        font-size:10px;
+        letter-spacing: 2px;
+        font-weight:600;
+        display:block;
+        position: relative;
+        transform:scale(1.4);
+        font-family: Montserrat, Semi-Bold, 'Open Sans', 'sans-serif';
+        /*top:1px;*/
+
+    }
+    .THIS .cIcUiCalendar .dayName{
+        font-size:8px!important;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .THIS .inApp .cIcUiCalendarEventList{
+        height:100%;
+    }
+
+    .THIS .inApp .cIcUiCalendar{
+        display: inline-flex;
+    }
+
+    .THIS .inApp .cIcUiCalendar table{
+        width:60%;
+    }
+    .THIS .inApp .cIcUiCalendar .calendarTextContainer{
+        width:40%;
+    }
+}
+
+/*@media screen and (min-width: 900px) and (max-width: 1024px){*/
+/*    */
+/*}*/
+@media screen and (min-width: 768px) and (max-width:1024px){
+
+
+
+    .THIS .verticalSeperator {
+        border-right: #EDEDED solid;
+    }
+
+    .THIS .headerTextAlignment {
+        text-align: left;
+    }
+
+
+    .THIS .cIcUiCalendar .monthName{
+        font-size:10px;
+        transform: scale(1.2);
+        display: block;
+    }
+
+
+
+    .THIS .inApp .cIcUiCalendar{
+        /*width:80%!important;*/
+        /*position: relative;*/
+        /*left: calc( 50% - 280px);*/
+        display:inline-flex;
+    }
+
+    .THIS .borderDottedBottom{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom: 2.4rem!important;
+        font-weight:800;
+        border-bottom: #999999 dotted 1px;
+    }
+
+    .THIS .inApp .cIcUiCalendar table{
+        width:60%;
+    }
+
+    .THIS .inApp .cIcUiCalendar .calendarTextContainer{
+        width:40%;
+    }
+
+    .THIS .cIcUiCalendarEventList{
+        height:580px;
+        /*overflow:scroll;*/
+    }
+
+    .THIS .inApp .cIcUiCalendarEventList{
+        height:100%;
+        overflow:unset;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 767px){
+    .THIS .removePaddingInUi{
+        padding-right:0;
+        padding-left:0;
+    }
+
+    .THIS .borderDottedBottom{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom: 2.4rem!important;
+        font-weight:800;
+        border-bottom: #999999 dotted 1px;
+    }
+
+    .THIS .headerTextAlignment{
+        text-align:left;
+    }
+
+    .THIS .headerText{
+        font-size:16px!important;
+        color: #333333!important;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+
+    .THIS .tableSize{
+        padding: 30px 20px!important;
+    }
+}

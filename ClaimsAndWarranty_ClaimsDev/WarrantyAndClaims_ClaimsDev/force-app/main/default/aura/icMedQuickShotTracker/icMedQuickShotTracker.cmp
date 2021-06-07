@@ -1,0 +1,452 @@
+<aura:component controller="icCTRLQuickShot" description="icPage icUIQuickShotItem" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="info" type="icDTOQuickShotInfo" />
+    <aura:attribute name="title" type="String" default="{!$Label.c.icQUICK_TRACKER}" />
+    <aura:attribute name="yearNumber" type="String" default=""/>
+    <aura:attribute name="year2Number" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+    <div class="slds-grid slds-wrap center-div " style=" margin-top:-25px !important;">
+
+        <div class="slds-col slds-size--1-of-1 ">
+
+            <div class="slds-x-small-show-only slds-text-align--center"
+                 style="height:680px;  margin-bottom:215px; ">
+
+
+                <div style="width:100%;
+                            background-color:white;
+                            margin-top:-25px;
+                            margin-bottom:15px;
+                            ">
+
+                    <p class="slds-text-align--left"
+                       style="position: relative;
+                              padding-top:35px;
+                              margin-left:0px;
+                              height:75px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-size:16px;
+                              letter-spacing:5px;
+                              background-color:white;
+                               ">
+
+                        {!v.title}
+                    </p>
+
+                </div>
+
+
+                <div class="slds-grid"
+                     style="width:100%;
+                            height:265px;
+                            margin-bottom:100px;
+                            background-color:#f6f6f6;
+                            ">
+
+
+                    <div class="slds-col slds-size--1-of-2 "
+                         style="height:265px;
+                                padding-top:25px;
+                                border-top: 8px solid #FFFFFF;
+                                border-right: 8px solid #FFFFFF;
+                                border-bottom:  8px solid #FFFFFF;
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icNew_Leads}" label2=""  value="{!v.info.newLeads}"/>
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size--1-of-2"
+                         style="height:265px;
+                                padding-top:25px;
+                                background-color:#f6f6f6;
+                                border-left: 8px solid #FFFFFF;
+                                border-top: 8px solid #FFFFFF;
+                                border-bottom: 8px solid #FFFFFF;
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icCurrentOpportunities}" label2="" value="{!v.info.currentOpportunities}"/>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="slds-grid"
+                     style="width:100%;
+                             height:265px;
+                             margin-top:-100px;
+                             background-color:#f6f6f6;
+                            ">
+
+                    <div class="slds-col slds-size--1-of-2"
+                         style="height:265px;
+                                padding-top:25px;
+                                border-right: 8px solid #FFFFFF;
+                                border-top:8px solid #FFFFFF;
+                                border-bottom: 8px solid #FFFFFF;
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icSquaresYTD}" label2="" value="{!v.info.squaresYTD}"/>
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size--1-of-2"
+                         style="height:265px;
+                                padding-top:25px;
+                                border-left: 8px solid #FFFFFF;
+                                border-top: 8px solid #FFFFFF;
+                                border-bottom: 8px solid #FFFFFF;
+                                background-color:#f6f6f6;
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icPRO4_Rewards_YTD}" label2="" valueDollarSign="$" value="{!v.info.pro4Rewards}"/>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="slds-grid"
+                     style="width:100%;
+                             height:265px;
+                             margin-bottom:110px;
+                             background-color:#f6f6f6;
+                            ">
+                    <div class="slds-col slds-size--1-of-2"
+                         style="height:265px;
+                                padding-top:20px;
+                                border-top: 8px solid #FFFFFF;
+                                border-right: 8px solid #FFFFFF;
+                                border-bottom:  8px solid #FFFFFF;
+                                background-color:#f6f6f6;
+                                ">
+
+                        <span style="position: relative; top:25px;"><c:icUIQuickShotItem label="{!format($Label.c.icCO_OP_BR_Rewards, v.yearNumber)}" label2="" valueDollarSign="$"  value ="{!v.info.coopRewards}"/></span>
+
+                    </div>
+                    <div class="slds-col slds-size--1-of-2"
+                         style="height:265px;
+                                padding-top:20px;
+                                border-left: 8px solid #FFFFFF;
+                                border-top: 8px solid #FFFFFF;
+                                border-bottom: 8px solid #FFFFFF;
+                                background-color:#f6f6f6;">
+                        <span style="position: relative; top:25px;">
+                            <c:icUIQuickShotItem label="{!format($Label.c.icUpcomingCoopRewards, v.yearNumber+1)}" label2="" valueDollarSign="$"  value ="{!v.info.upcomingCoopRewards}"
+                                                 hideValue="{!v.info.hideUpcomingCoopRewards}"/>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" slds-small-show-only slds-text-align--center"
+                 style="margin-bottom:13px; height:100%;">
+
+                <div class=" slds-align_left"
+                     style="width:100%;
+                            background-color:red;
+                            margin-top:1px;
+                            margin-bottom:35px;
+                            ">
+
+                    <p class="slds-text-align--left"
+                       style="position: relative;
+                              padding-top:35px;
+                              margin-left:0px;
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-size:16px;
+                              letter-spacing:5px;
+                              background-color:white;
+                               ">
+
+                        {!v.title}
+                    </p>
+
+                </div>
+
+                <div class="slds-grid boxRow"
+                     style="width:100%;
+                            margin-bottom:100px;
+                            background-color:#f6f6f6;
+                            ">
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="
+                                border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-right: 10px #fff solid;
+                                background-color:#f6f6f6;">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icNew_Leads}" label2=""  value="{!v.info.newLeads}"/>
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="
+                                border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-left: 10px #fff solid;
+                                background-color:#f6f6f6;
+
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icCurrentOpportunities}" label2="" value="{!v.info.currentOpportunities}"/>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="slds-grid boxRow"
+                     style="width:100%;
+                             margin-top:-100px;
+                             background-color:#f6f6f6;
+                            ">
+
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="
+                                border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-right: 10px #fff solid;
+                                background-color:#f6f6f6;
+                                ">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icSquaresYTD}" label2="" value="{!v.info.squaresYTD}"/>
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="
+
+                                border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-left: 10px #fff solid;
+                                background-color:#f6f6f6;">
+                        <span>
+                            <c:icUIQuickShotItem label="{!$Label.c.icPRO4_Rewards_YTD}" label2="" valueDollarSign="$" value="{!v.info.pro4Rewards}"/>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="slds-grid boxRow"
+                     style="width:100%;
+
+                             margin-bottom:110px;
+                             background-color:#f6f6f6;
+                            ">
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-right: 10px #fff solid;
+                                background-color:#f6f6f6;
+                                ">
+
+
+                        <span style="position: relative; top:25px;"><c:icUIQuickShotItem label="{!format($Label.c.icCO_OP_BR_Rewards, v.yearNumber)}" label2="" valueDollarSign="$"  value ="{!v.info.coopRewards}" isRoundUp="true" /></span>
+
+                    </div>
+                    <div class="slds-col slds-size--1-of-2 QuickTrackerBox"
+                         style="border-top:10px #fff solid;
+                                border-bottom: 10px #fff solid;
+                                border-left: 10px #fff solid;
+                                background-color:#f6f6f6;">
+                        <span style="position: relative; top:25px;">
+                            <c:icUIQuickShotItem label="{!format($Label.c.icUpcomingCoopRewards, v.yearNumber+1)}" label2="" valueDollarSign="$"  value ="{!v.info.upcomingCoopRewards}" isRoundUp="true"
+                                        hideValue="{!v.info.hideUpcomingCoopRewards}" />
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slds-medium-show-only slds-text-align--center wrapperHeight slds-grid slds-container--large"
+                 style="
+                 margin-top:10px;
+                 margin-bottom:0px;
+                 ">
+
+                <div class="slds-align_left slds-col slds-size--1-of-1"
+                     style="float:left;
+                            width:100%;
+                            ">
+                    <p class="slds-text-align--left"
+                       style="position: relative;
+                              padding-top:10px;
+                              margin-left:0px;
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-family: Montserrat;
+                              font-size:12px;
+                              letter-spacing:5px;
+                              background-color:white;
+                               ">
+
+                        {!v.title}
+                    </p>
+
+                </div>
+
+
+
+
+
+                <div class="slds-col slds-size--1-of-1" style="width:100%;
+                            display: inline-flex;
+                            ">
+
+                        <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker" >
+                            <c:icUIQuickShotItem label="{!$Label.c.icNew_Leads}" label2=""  value="{!v.info.newLeads}"/>
+                        </div>
+
+                        <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker" >
+                            <c:icUIQuickShotItem label="{!$Label.c.icCurrentOpportunities}" label2="" value="{!v.info.currentOpportunities}"/>
+                        </div>
+                        <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker">
+                            <c:icUIQuickShotItem label="{!$Label.c.icSquaresYTD}" label2="" value="{!v.info.squaresYTD}"/>
+                        </div>
+
+                </div>
+
+                <div class="slds-col slds-size--1-of-1" style="width:100%;
+                        display: inline-flex;
+                        margin-top:8px;
+                        ">
+                        <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker" >
+                            <c:icUIQuickShotItem label="{!$Label.c.icPRO4_Rewards_YTD}" label2="" valueDollarSign="$" value="{!v.info.pro4Rewards}"/>
+                        </div>
+                        <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker" >
+                            <span style="position: relative; top:25px;"><c:icUIQuickShotItem label="{!format($Label.c.icCO_OP_BR_Rewards, v.yearNumber)}" label2="" valueDollarSign="$"  value ="{!v.info.coopRewards}" isRoundUp="true" /></span>
+
+                        </div>
+                    <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 boxQuickTracker" >
+                        <span style="position: relative; top:25px;">
+                             <c:icUIQuickShotItem label="{!format($Label.c.icUpcomingCoopRewards, v.yearNumber+1)}" label2="" valueDollarSign="$"  value ="{!v.info.upcomingCoopRewards}" isRoundUp="true"
+                                  hideValue="{!v.info.hideUpcomingCoopRewards}" />
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="slds-max-medium-hide slds-text-align--center slds-grid slds-wrap slds-container--large"
+                 style="
+                 margin-top:10px;
+                 margin-bottom:10px;
+                 margin-left:auto;
+                 margin-right:auto;
+
+                 ">
+                <div class="slds-align_left slds-col slds-size--1-of-1"
+                     style="float:left;
+                            width:100%;
+                            background-color:#f6f6f6;
+                            ">
+
+                    <p class="slds-text-align--left"
+                       style="position: relative;
+                              padding-top:10px;
+                              margin-left:0px;
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-family: Montserrat;
+                              font-size:12px;
+                              letter-spacing:5px;
+                              background-color:white;
+
+                               ">
+
+                        {!v.title}
+                    </p>
+
+                </div>
+
+
+
+                <div class="slds-col slds-size--1-of-1">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker" >
+                            <aura:if isTrue="{!v.info.tierLevel> 0}">
+                                <c:icUIQuickShotItem label="{!$Label.c.icNew_Leads}" label2=""  value="{!v.info.newLeads}" />
+                                    <aura:set attribute="else">
+                                        <c:icUIQuickShotItem label="{!$Label.c.icNew_Leads}" label2=""  value="{!v.info.newLeads}" hideValue="true"/>
+                                    </aura:set>
+                            </aura:if>
+                        </div>
+
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker" >
+                            <aura:if isTrue="{!v.info.tierLevel>0}">
+                            <c:icUIQuickShotItem label="{!$Label.c.icCurrentOpportunities}" label2=""
+                                                 value="{!v.info.currentOpportunities}"  />
+                                <aura:set attribute="else">
+                                    <c:icUIQuickShotItem label="{!$Label.c.icCurrentOpportunities}" label2=""
+                                                         value="{!v.info.currentOpportunities}" hideValue="true" />
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker" >
+                            <aura:if isTrue="{!v.info.tierLevel > 0}">
+                                <c:icUIQuickShotItem label="{!$Label.c.icSquaresYTD}" label2="" value="{!v.info.squaresYTD}" />
+                                    <aura:set attribute="else">
+                                        <c:icUIQuickShotItem label="{!$Label.c.icSquaresYTD}" label2=""
+                                                             value="{!v.info.squaresYTD}" hideValue="false"/>
+                                    </aura:set>
+                            </aura:if>
+                        </div>
+
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker" >
+                            <aura:if isTrue="{!v.info.tierLevel > 0}">
+                                <c:icUIQuickShotItem label="{!$Label.c.icPRO4_Rewards_YTD}" label2="" valueDollarSign="$"
+                                                     value="{!v.info.pro4Rewards}" />
+                                    <aura:set attribute="else">
+                                        <c:icUIQuickShotItem label="{!$Label.c.icPRO4_Rewards_YTD}" label2="" valueDollarSign="$"
+                                                             value="{!v.info.pro4Rewards}" hideValue="false"/>
+                                    </aura:set>
+                            </aura:if>
+                        </div>
+
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker">
+                            <aura:if isTrue="{!v.info.tierLevel> 0}">
+                                <c:icUIQuickShotItem label="{!format($Label.c.icCO_OP_BR_Rewards, v.yearNumber)}" label2=""
+                                                        valueDollarSign="$"  value ="{!v.info.coopRewards}"  />
+                                    <aura:set attribute="else">
+                                        <c:icUIQuickShotItem label="{!format($Label.c.icCO_OP_BR_Rewards, v.yearNumber)}" label2=""
+                                                                valueDollarSign="$" hideValue="true" value="{!v.info.coopRewards}" />
+                                    </aura:set>
+                            </aura:if>
+                        </div>
+
+                        <div class="slds-col slds-size--1-of-6 boxQuickTracker">
+                            <aura:if isTrue="{!v.info.tierLevel> 0}">
+                                <c:icUIQuickShotItem label="{!format($Label.c.icUpcomingCoopRewards, v.yearNumber+1)}"
+                                                        label2="" valueDollarSign="$"  value ="{!v.info.upcomingCoopRewards}"
+                                                        hideValue="{!v.info.hideUpcomingCoopRewards}" />
+                                    <aura:set attribute="else">
+                                        <c:icUIQuickShotItem label="{!format($Label.c.icUpcomingCoopRewards, v.yearNumber+1)}"
+                                                                label2="" valueDollarSign="$"  value ="{!v.info.upcomingCoopRewards}"
+                                                                hideValue="true" />
+                                    </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="slds-grid slds-container--large">
+        <div class="slds-col slds-size--1-of-1 noticeText">
+            <p>{!format($Label.c.ic2019_coop_balance_disclaimer, v.yearNumber, v.yearNumber-1, v.yearNumber )}<br/>
+            {!format($Label.c.icNewYear_coop_balance_disclaimer, v.yearNumber+1, v.yearNumber, v.yearNumber+1) }</p>
+        </div>
+    </div>
+
+
+</aura:component>

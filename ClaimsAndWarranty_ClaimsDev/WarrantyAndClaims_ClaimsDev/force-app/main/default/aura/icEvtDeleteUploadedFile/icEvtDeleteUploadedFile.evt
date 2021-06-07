@@ -1,0 +1,9 @@
+<!--
+ - Created by Francois Poirier on 2019-11-20.
+ -->
+
+<aura:event type="COMPONENT" description="icEvtDeleteUploadedFile">
+
+    <aura:attribute type="icCTRLinvoiceUpload" name="file" />
+
+</aura:event>

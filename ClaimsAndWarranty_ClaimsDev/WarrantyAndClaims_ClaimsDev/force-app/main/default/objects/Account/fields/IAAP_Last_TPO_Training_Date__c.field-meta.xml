@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAAP_Last_TPO_Training_Date__c</fullName>
+    <description>Contains the last IAAP TPO training date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contains the last IAAP TPO training date</inlineHelpText>
+    <label>IAAP Last TPO Training Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

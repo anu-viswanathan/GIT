@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_Offer_Made__c</fullName>
+    <description>It is true whenever the field &quot;Status Date: Offer Release Sent&quot; is populated</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(Status_Date_Offer_Release_Sent__c ), &quot;No&quot;, &quot;Yes&quot;)</formula>
+    <inlineHelpText>It is true whenever the field &quot;Status Date: Offer Release Sent&quot; is populated</inlineHelpText>
+    <label>Most Recent Offer Made</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

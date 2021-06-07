@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P_O_P_Attached__c</fullName>
+    <businessStatus>DeprecateCandidate</businessStatus>
+    <defaultValue>false</defaultValue>
+    <description>2019-07-31 CLAIMSV2-97 specifies that this field should be removed. It&apos;s been pulled from all layouts and workflow rules have been rewritten. Field can be deleted it testing shows everything is OK. Checkbox to indicate that the Proof of Purchase (or acceptable alternate documents) is attached</description>
+    <externalId>false</externalId>
+    <label>(deprecated) P.O.P. Attached?</label>
+    <securityClassification>Public</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

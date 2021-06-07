@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Lead_Queue_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked (via PB) when a queue is created for a IKO ROOFPRO Contractor account.</description>
+    <externalId>false</externalId>
+    <label>Partner Lead Queue Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

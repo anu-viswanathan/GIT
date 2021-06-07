@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plant_Feedback_Type__c</fullName>
+    <description>Allows a user to select multiple Feedback Topics - CLAIMSV2-64</description>
+    <externalId>false</externalId>
+    <label>Plant Feedback Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Algae</fullName>
+                <default>false</default>
+                <label>Algae</label>
+            </value>
+            <value>
+                <fullName>Asphalt bleedthrough</fullName>
+                <default>false</default>
+                <label>Asphalt bleedthrough</label>
+            </value>
+            <value>
+                <fullName>Asphalt on Face</fullName>
+                <default>false</default>
+                <label>Asphalt on Face</label>
+            </value>
+            <value>
+                <fullName>Blend</fullName>
+                <default>false</default>
+                <label>Blend</label>
+            </value>
+            <value>
+                <fullName>Blistering</fullName>
+                <default>false</default>
+                <label>Blistering</label>
+            </value>
+            <value>
+                <fullName>Blow-off</fullName>
+                <default>false</default>
+                <label>Blow-off</label>
+            </value>
+            <value>
+                <fullName>Brittle</fullName>
+                <default>false</default>
+                <label>Brittle</label>
+            </value>
+            <value>
+                <fullName>Buckling</fullName>
+                <default>false</default>
+                <label>Buckling</label>
+            </value>
+            <value>
+                <fullName>Clawing</fullName>
+                <default>false</default>
+                <label>Clawing</label>
+            </value>
+            <value>
+                <fullName>Colour Other</fullName>
+                <default>false</default>
+                <label>Colour Other</label>
+            </value>
+            <value>
+                <fullName>Cracking</fullName>
+                <default>false</default>
+                <label>Cracking</label>
+            </value>
+            <value>
+                <fullName>Cracking paper backing</fullName>
+                <default>false</default>
+                <label>Cracking paper backing</label>
+            </value>
+            <value>
+                <fullName>Curling</fullName>
+                <default>false</default>
+                <label>Curling</label>
+            </value>
+            <value>
+                <fullName>Delamination</fullName>
+                <default>false</default>
+                <label>Delamination</label>
+            </value>
+            <value>
+                <fullName>Dimension</fullName>
+                <default>false</default>
+                <label>Dimension</label>
+            </value>
+            <value>
+                <fullName>Expired Date</fullName>
+                <default>false</default>
+                <label>Expired Date</label>
+            </value>
+            <value>
+                <fullName>Fishmouthing</fullName>
+                <default>false</default>
+                <label>Fishmouthing</label>
+            </value>
+            <value>
+                <fullName>Fissures</fullName>
+                <default>false</default>
+                <label>Fissures</label>
+            </value>
+            <value>
+                <fullName>Goodwill</fullName>
+                <default>false</default>
+                <label>Goodwill</label>
+            </value>
+            <value>
+                <fullName>Granule Loss</fullName>
+                <default>false</default>
+                <label>Granule Loss</label>
+            </value>
+            <value>
+                <fullName>HitchHikers</fullName>
+                <default>false</default>
+                <label>HitchHikers</label>
+            </value>
+            <value>
+                <fullName>Hooking</fullName>
+                <default>false</default>
+                <label>Hooking</label>
+            </value>
+            <value>
+                <fullName>Impressions</fullName>
+                <default>false</default>
+                <label>Impressions</label>
+            </value>
+            <value>
+                <fullName>Loose/Missing AZ tape</fullName>
+                <default>false</default>
+                <label>Loose/Missing AZ tape</label>
+            </value>
+            <value>
+                <fullName>Loose/Missing release tape</fullName>
+                <default>false</default>
+                <label>Loose/Missing release tape</label>
+            </value>
+            <value>
+                <fullName>Low weight</fullName>
+                <default>false</default>
+                <label>Low weight</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Nail Line</fullName>
+                <default>false</default>
+                <label>Nail Line</label>
+            </value>
+            <value>
+                <fullName>Non Seal</fullName>
+                <default>false</default>
+                <label>Non Seal</label>
+            </value>
+            <value>
+                <fullName>Not IKO</fullName>
+                <default>false</default>
+                <label>Not IKO</label>
+            </value>
+            <value>
+                <fullName>Not Sticky</fullName>
+                <default>false</default>
+                <label>Not Sticky</label>
+            </value>
+            <value>
+                <fullName>Overpress</fullName>
+                <default>false</default>
+                <label>Overpress</label>
+            </value>
+            <value>
+                <fullName>Patterning</fullName>
+                <default>false</default>
+                <label>Patterning</label>
+            </value>
+            <value>
+                <fullName>Second Nail Line</fullName>
+                <default>false</default>
+                <label>Second Nail Line</label>
+            </value>
+            <value>
+                <fullName>Shading</fullName>
+                <default>false</default>
+                <label>Shading</label>
+            </value>
+            <value>
+                <fullName>Shim Misalignment</fullName>
+                <default>false</default>
+                <label>Shim Misalignment</label>
+            </value>
+            <value>
+                <fullName>Slipping</fullName>
+                <default>false</default>
+                <label>Slipping</label>
+            </value>
+            <value>
+                <fullName>Spalling</fullName>
+                <default>false</default>
+                <label>Spalling</label>
+            </value>
+            <value>
+                <fullName>Splice</fullName>
+                <default>false</default>
+                <label>Splice</label>
+            </value>
+            <value>
+                <fullName>Staining</fullName>
+                <default>false</default>
+                <label>Staining</label>
+            </value>
+            <value>
+                <fullName>Sticking</fullName>
+                <default>false</default>
+                <label>Sticking</label>
+            </value>
+            <value>
+                <fullName>Tears</fullName>
+                <default>false</default>
+                <label>Tears</label>
+            </value>
+            <value>
+                <fullName>Undersaturation</fullName>
+                <default>false</default>
+                <label>Undersaturation</label>
+            </value>
+            <value>
+                <fullName>Warping (Dimensional stability)</fullName>
+                <default>false</default>
+                <label>Warping (Dimensional stability)</label>
+            </value>
+            <value>
+                <fullName>Wavy</fullName>
+                <default>false</default>
+                <label>Wavy</label>
+            </value>
+            <value>
+                <fullName>Wrapper</fullName>
+                <default>false</default>
+                <label>Wrapper</label>
+            </value>
+            <value>
+                <fullName>Wrinkling</fullName>
+                <default>false</default>
+                <label>Wrinkling</label>
+            </value>
+            <value>
+                <fullName>Non Seal Blow-off</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non Seal Blow-off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

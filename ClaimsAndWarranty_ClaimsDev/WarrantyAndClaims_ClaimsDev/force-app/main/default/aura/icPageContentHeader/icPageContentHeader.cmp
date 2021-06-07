@@ -1,0 +1,30 @@
+<aura:component  description="Page Content Header" implements="forceCommunity:availableForAllPageTypes" access="global">
+        
+   
+       
+            <br/><br></br>
+
+<div class="slds-grid center-div "
+     style="float:left;
+">
+
+    <div class="slds-col  ">
+        <div class="contentTopMobile slds-x-small-show-only slds-text-align--center">
+            <img src="{!$Resource.pHeaderMobile}"/>
+        </div>
+        <div class="contentTopMobile slds-small-show-only slds-text-align--center">
+            <img src="{!$Resource.pHeaderMobile}"/>
+        </div>
+        <div class="contentTopTablet slds-medium-show-only slds-text-align--center">
+            <img src="{!$Resource.pHeaderTablet}"/>
+        </div>
+        <div class="contentTopDesktop slds-max-medium-hide slds-text-align--center" style=" width:1900px;">
+            <img src="{!$Resource.pHeaderDesktop}"/>
+        </div>
+    </div>
+
+</div>
+
+
+   
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapics_ERP_ID_Cannot_Change</fullName>
+    <active>true</active>
+    <description>Doesn&apos;t allow the Mapics ERP ID to be changed, for safety reasons.</description>
+    <errorConditionFormula>AND(NOT(OR(
+$Profile.Name = &apos;System Administrator&apos;,
+$Profile.Name = &apos;IKO Power User&apos;)),
+!ISBLANK(PRIORVALUE(Mapics_ERP_ID__c))
+ &amp;&amp; ISCHANGED(Mapics_ERP_ID__c))</errorConditionFormula>
+    <errorDisplayField>Mapics_ERP_ID__c</errorDisplayField>
+    <errorMessage>You cannot change the account&apos;s Mapics ERP Id</errorMessage>
+</ValidationRule>

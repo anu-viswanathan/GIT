@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Toll_Free_Number__c</fullName>
+    <description>This field indicates the Province Toll Free Number that a claimant should use.
+If the Case Owner&apos;s Country is &quot;US&quot;, the corresponding phone number is 1-800-433-2811. If the Case Owner&apos;s Country is in Canada, it checks if the Province is West or East. If it&apos;s West, the phone number is 1-800-521-8484. Otherwise, they should call 1-800-361-5836 for East.(Added decra in the formula field CLAIMSV2-880)</description>
+    <externalId>false</externalId>
+    <formula>CASE(Conga_Service_Region__c,
+&apos;US&apos;, $Setup.Warranty_Claims_Defaults__c.US_Toll_Free__c,
+&apos;Western Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Western_Canada_Toll_Free__c,
+&apos;Eastern Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Eastern_Canada_Toll_Free__c,
+&apos;Decra&apos;, $Setup.Warranty_Claims_Defaults__c.Decra_Toll_Free__c,
+null)
+
+/* IF(
+  ISPICKVAL(Sector__c, &quot;Decra&quot;), 
+  &apos;Decra&apos;,
+IF(
+    OR(
+        ISPICKVAL(Account.BillingCountryCode , &quot;US&quot;),
+        ISPICKVAL(Sector__c, &quot;US&quot;) 
+    ),
+     $Setup.Warranty_Claims_Defaults__c.US_Toll_Free__c ,
+    IF(AND(
+        ISPICKVAL(Account.BillingCountryCode , &quot;CA&quot;),
+        OR
+        (
+        ISPICKVAL(Account.BillingStateCode, &quot;AB&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;BC&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;SK&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;NT&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;YT&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;NU&quot;),
+        ISPICKVAL(Account.BillingStateCode, &quot;MB&quot;)
+        )
+           ),
+      ,
+     $Setup.Warranty_Claims_Defaults__c.Eastern_Canada_Toll_Free__c 
+)
+)
+) */</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Conga Toll Free Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

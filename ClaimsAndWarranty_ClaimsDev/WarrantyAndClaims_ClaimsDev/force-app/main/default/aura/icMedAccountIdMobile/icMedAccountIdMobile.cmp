@@ -1,0 +1,27 @@
+<!--
+ - Created by Francois Poirier on 2019-05-16.
+ -->
+
+<!--<aura:component description="icMedAccountIdMobile" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">-->
+
+<!--    <div class="slds-grid accountIdPosition">-->
+<!--        <div class="slds-col slds-size&#45;&#45;1-of-1 ">-->
+<!--            <c:icMedAccountId />-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</aura:component>-->
+
+
+
+<aura:component description="icMedAccountIdMobile" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+<!--    <aura:attribute name="accountId" type="String" default="Not Found" />-->
+<!--    <aura:handler name="init" value="{!this}"  />-->
+    <div>
+        <div class="accountIdText">
+            <span><c:icMedAccountId /></span>
+<!--            <span>{!$Label.c.icROOFPRO_ID} : {!v.accountId}</span>-->
+            <!--        <span style="width: 100%; display: inline-block;">{!$Label.c.icROOFPRO_ID} : {!v.accountId}</span>-->
+
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,77 @@
+<!--
+ - Created by sinan.bunni on 2019-08-05.
+ -->
+<aura:component description="lightningFileUploadChildModal"
+                controller="FileDataTableAuraController">
+
+    <!-- Files Data Table attributes - populated by the Parent Component -->
+    <aura:attribute name="currentData" type="Object"/> <!-- currentData: current files in the data table -->
+    <aura:attribute name="recordId" type="String" /> <!-- recordId: the record Id where Files are uploaded -->
+    <aura:attribute name="objectName" type="String" /> <!-- objectName: the object name where Files are uploaded -->
+
+    <aura:attribute name="fileOptions" type="Map" /> <!-- fileOptions: the IKO File Types available to view -->
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="fileUploadFinished" type="c:updateFilesDataTableEvent"/>
+
+    <!-- Modal view -->
+    <div class="dialog">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal Header -->
+                <header class="slds-modal__header">
+                    <h2>Modify the File Type</h2>
+                </header>
+                <!-- Main Body of Modal -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <!-- Files Data Table -->
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                        <!-- Data Table Headers -->
+                        <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate"
+                                     title="Title">
+                                    Title
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate"
+                                     title="IKOFileType">
+                                    IKO File Type
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <!-- Data Table Rows -->
+                        <tbody>
+                        <aura:iteration items="{! v.currentData}" var="row">
+                            <tr>
+                                <th scope="row" data-label="Title">
+                                    <div class="slds-truncate" title="title">
+                                        <div class="slds-truncate" title="{!row.name}">{!row.name}</div>
+                                    </div>
+                                </th>
+                                <th scope="row" data-label="IKO_File_Type__c">
+                                    <lightning:select name="{! row.documentId}" label="" onchange="{!c.updateFile}"> <!-- used the name as file Id instead of passing a non valid HTML attribute -->
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{! v.fileOptions}" var="item">
+                                            <option text="{! item.key}" value="{! item.value}" />
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </th>
+                            </tr>
+                        </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Footer of Modal -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="brand" label="Submit" title="Submit" onclick="{! c.closeModal }" />
+                    <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.closeModal }" />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

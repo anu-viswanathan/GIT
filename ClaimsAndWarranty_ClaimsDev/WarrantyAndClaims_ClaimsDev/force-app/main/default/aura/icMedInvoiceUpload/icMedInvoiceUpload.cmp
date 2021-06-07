@@ -1,0 +1,152 @@
+<!--
+ - Created by Francois Poirier on 2019-11-15.
+ -->
+<aura:component description="icMedInvoiceUpload" controller="icCTRLinvoiceUpload" implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:attribute type="String" name="selectedRebateProgram" default="" />
+    <aura:attribute type="String" name="contractorInvoiceId" />
+    <aura:attribute type="List" name="allFiles" />
+    <aura:attribute type="List" name="rebatePrograms" default="[{'label': 'Program A', 'value': 'A'}, {'label': 'Program B', 'value': 'B'},{'label': 'Program C', 'value': 'C'}]" />
+    <aura:attribute type="icDtoUploadedFile[]" name="files" />
+    <aura:attribute type="icDtoUploadedFile[]" name="newFiles" />
+    <aura:attribute type="Boolean" name="uploadCompleted" default="false" />
+    <aura:attribute type="Boolean" name="disableFileUpload" default="false" />
+    <aura:attribute name="accept" type="List" default="{!$Label.c.Invoice_Upload_Accepted_File_Types}"/>
+    <aura:attribute type="Contractor_Invoice__c" name="contractorInvoice" default="{}"/>
+    <aura:attribute type="icDtoInvoiceCreation[]" name="DtoInvoices"/>
+    <aura:attribute type="icDtoInvoiceCreation[]" name="newDtoInvoices"/>
+    <aura:attribute type="Boolean" name="isSend" default="false" />
+    <aura:attribute type="Integer" name="percentDone" default="0"/>
+    <aura:attribute type="Boolean" name="sendBtnIsDisabled" default="true" />
+    <aura:attribute type="Boolean" name="nextBtnIsDisabled" default="true" />
+    <aura:attribute type="string" name="invoiceNumber" />
+    <aura:attribute type="date" name="invoiceDate"/> 
+    <aura:attribute type="Boolean" name="isValid" default="true"/>
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.pdf','.JPEG', '.jpeg']" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute type="Boolean" name="fileOverSize" default="false" />
+    <aura:attribute type="Boolean" name="isCompleted" default="false" />
+    <aura:attribute type="Integer" name="fileNumber" default="0"/>
+    <aura:attribute type="Integer" name="currentFileNumber" default="0"/>
+    <aura:attribute type="List" name="allUploadedFiles" default="[]"/>
+    <aura:attribute type="Boolean" name="Spinner" default="false" />
+    <aura:attribute type="Boolean" name="SpinnerLoad" default="true" />
+    <aura:attribute type="Boolean" name="cancelBtnDisabled" default="false" />
+    <aura:attribute type="String" name="maximumErrorMsg" default="{!$Label.c.icUpload_MaxFile}"/>
+    <aura:attribute type="Boolean" name="hasFullFile" default="false" />
+    <aura:attribute type="Boolean" name="uploadDisabled" default="false" />
+    <aura:attribute type="Boolean" name="calledFromQuickAction" default="false" />
+    <aura:attribute type="Date" name="getToday"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="deleteUploadedFile" event="c:icEvtDeleteUploadedFile" action="{!c.handleDeleteUploadedFile}" />
+    
+    <div class="slds-grid slds-wrap slds-form--compound slds-box--border">
+        <div class="slds-col_padded slds-p-around--small">
+
+           <div class="hiddeContent" aura:id="firstScreen">
+
+                <lightning:combobox name="rebateProgram" label="{!$Label.c.Select_Rebate_Program + ':'}" value="{!v.selectedRebateProgram}"  required="true"
+                                    placeholder="{!$Label.c.Select_promotion}" options="{!v.rebatePrograms}" onchange="{!c.onHandleChangeProgram}" />
+
+               <br />
+               <lightning:input label="{!$Label.c.job_reference}" type="text" name="jobNumber" required="true"
+                                value="{!v.contractorInvoice.Invoice_Number__c}" aura:id="referenceNumber" onchange="{!c.onHandleValidationJobNumber}" disabled="{!v.isCompleted}"/>
+
+               <br />
+               <div class="slds-text-align--right">
+                   <lightning:button class="slds-button--neutral" name="toNext" label="{!$Label.c.icToNext}"
+                                     onclick="{!c.onToNext}" disabled="{!v.nextBtnIsDisabled}"/>
+               </div>
+            </div>
+            <div class="hiddeContent" aura:id="secondScreen">
+                <aura:if isTrue="{! v.SpinnerLoad }">
+                    <div class="slds-size--3-of-4 marginBottom">
+                        <label for="rebatProgram" style="font-size:13px; letter-spacing: 1px;">{!$Label.c.Promotion}</label>
+                        <p style="padding-left:10px; font-size:12px; font-weight: bold;">{!v.selectedRebateProgram}</p>
+                    </div>
+
+                    <div class="slds-size--3-of-4 marginBottom">
+                        <label for="referenceNumber" style="font-size:13px; letter-spacing: 1px;">{!$Label.c.job_reference}</label>
+                        <p style="padding-left:10px; font-size:12px; font-weight: bold;">{!v.contractorInvoice.Invoice_Number__c}</p>
+                    </div>
+
+                    <div class="slds-size--3-of-4">
+                        <label for="invoiceDate" style="font-size:13px; letter-spacing: 1px;">{!$Label.c.icUpload_Date}:</label>
+                        <span style="margin-left:5px; letter-spacing: 1px; font-size:12px; font-weight: bold;">{!v.getToday}</span>
+                    </div><br/>
+                    
+                    <span>
+                        <label for="Instructions" style="font-size:13px; letter-spacing: 1px; margin-bottom: 5px;"><u>Instructions:</u></label>
+                        <ul>
+                            <li style="margin-bottom:5px; display:inline-flex;"><b>&bull;&ensp;</b><span style="display:block;"><aura:unescapedHtml value="{!$Label.c.Attach_all_invoices}" /></span></li>
+                            <li style="margin-bottom:5px; display:inline-flex;"><b>&bull;&ensp;</b><span style="display:block;"><aura:unescapedHtml value="{!$Label.c.Invoice_Upload_Accepted_File_Types_Text}" /></span></li>
+                            <li style="margin-bottom:5px; display:inline-flex;"><b>&bull;&ensp;</b><span style="display:block;"><aura:unescapedHtml value="{!$Label.c.icMaxFileSize}" /></span></li>
+                            <li style="margin-bottom:5px; display:inline-flex;"><b>&bull;&ensp;</b><span style="display:block;"><aura:unescapedHtml value="{!$Label.c.Max_File_attached}" /></span></li>
+                            <li style="margin-bottom:5px; display:inline-flex;"><b>&bull;&ensp;</b><span style="display:block;"><aura:unescapedHtml value="{!$Label.c.submit_entry}" /></span></li>
+                        </ul>
+                    </span> <br/>
+
+                    <span aura:id="showFIleNumberLabel" class="{!10 - v.fileNumber == 0 ? 'hiddeContent' : ''}"><aura:unescapedHtml value="{!format($Label.c.icToUploadFiles, 10 - v.fileNumber)}" /></span>
+                    <span aura:id="showFullLabel" class="{!10 - v.fileNumber == 0 ? '' : 'hiddeContent'}">{!$Label.c.icUploadFileFull}</span>
+
+
+
+                    <br />
+
+                    <div>
+                        <lightning:fileUpload label="Attach files"
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .jpg, .JPEG, .jpeg "
+                                              recordId="{!v.contractorInvoiceId}"
+                                              onuploadfinished="{!c.handleUploadFinished}"
+                                              disabled="{!v.uploadDisabled}"
+                        />
+                    </div>
+                    <br/> 
+                    <div class="slds-size--1-of-1">
+                        
+                        <aura:if isTrue="{!v.uploadCompleted}" >
+                            <span style="margin-bottom:4px; font-weight:500;">{!$Label.c.icFilesUploaded}</span>
+                        </aura:if>
+                        
+                        <aura:iteration items="{!v.files}" var="file" indexVar="index">
+
+                            <c:icUiFileUploadItem file="{!file}" files="{!v.files}" fileId="{!file.documentId}" isSend="{!v.isSend}" index="{!index}"
+                                                  percentDone="{!v.percentDone}" sendBtnIsDisabled="{!v.sendBtnIsDisabled}"
+                                                  isCompleted="{!v.isCompleted}" fileNumber="{!v.fileNumber}" fileOverSize="{!v.fileOverSize}" uploadDisabled="{!v.uploadDisabled}"/>
+                        </aura:iteration>                                                                      
+                    </div>
+                    <br/>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-size--2-of-5 slds-text-align--center">
+                            <lightning:button class="slds-button--destructive" name="cancel" label="{! (v.calledFromQuickAction == true ? $Label.c.InvoiceUpload_Delete_Button_Label : $Label.c.icInvoiceUpload_CancelBtn)}"
+                                              onclick="{!c.onHandleCancel}" disabled="{!v.cancelBtnDisabled}"/>
+                        </div> 
+                        <div class="slds-size--3-of-5 slds-text-align--center">
+                            <lightning:button class="slds-button--neutral" name="send" label="{!$Label.c.icSubmit_Invoice}"
+                                              onclick="{!c.onHandleSendClick}" disabled="{!v.sendBtnIsDisabled}"/>
+                        </div>
+                    </div>
+                    
+                    <aura:set attribute="else">
+                        <div class="spinnerSet">
+                            <lightning:spinner alternativeText="Loading" />
+                        </div>
+                        
+                    </aura:set>
+                </aura:if>
+            </div>
+            
+        </div>
+    </div>
+  <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

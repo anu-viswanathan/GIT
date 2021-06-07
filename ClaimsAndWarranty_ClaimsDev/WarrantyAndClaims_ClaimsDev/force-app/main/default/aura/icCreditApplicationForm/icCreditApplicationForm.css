@@ -1,0 +1,10 @@
+/**
+ * Created by Francois Poirier on 2018-09-19.
+ */
+.THIS {
+}
+.THIS .popover {
+    position: relative;
+    top: -45px;
+    left: 255px;
+}

@@ -1,0 +1,11 @@
+<!--
+ - Created by Dongliang Zhang on 2019-10-04.
+ -->
+
+<aura:documentation>
+    <aura:description>Documentation for icMainHeaderPhoto_icwelcomFR</aura:description>
+    <aura:example name="icMainHeaderPhoto_icwelcomFR" ref="icMainHeaderPhoto_icwelcomFR"
+                  label="icMainHeaderPhoto_icwelcomFR">
+        Example for icMainHeaderPhoto_icwelcomFR
+    </aura:example>
+</aura:documentation>

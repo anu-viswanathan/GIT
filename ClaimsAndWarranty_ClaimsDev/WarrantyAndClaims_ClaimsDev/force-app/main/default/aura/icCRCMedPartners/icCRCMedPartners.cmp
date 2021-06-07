@@ -1,0 +1,222 @@
+<!--
+ - Created by yvesasselin on 2018-08-12.
+ -->
+
+<aura:component  description="ic Partner Program" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="UsersTierLevel" type="String" default="" />
+    <aura:attribute name="homeAdvisorLink" type="String" default="http://www.homeadvisor.com/servlet/ServiceProfessionalRegistrationServlet?entry_point_id=33043248&amp;m=spbdiko&amp;brandingId=3" />
+    <aura:attribute name="homeStarsLink" type="String" default="https://homestars.com/pro/" />
+    <aura:attribute name="eagleViewLink" type="String" default="https://www.eagleview.com/" />
+    <aura:attribute name="greenSkyLink" type="String" default="https://www.greensky.com/sponsor/iko" />
+    <aura:attribute name="guildQualityLink" type="String" default="https://www.guildquality.com/" />
+    <aura:attribute name="financeItLink" type="String" default="https://www.financeit.io" />
+    <aura:attribute name="hailTraceLink" type="String" default="https://hailtrace.com/" />
+    <aura:attribute name="hoverLink" type="String" default="https://hover.to/" />
+    <aura:attribute name="title" type="String" default="{!$Label.c.icTeam_ROOFPRO}" />
+    <aura:attribute name="subTitle" type="String" default="{!$Label.c.icOur_strategic_program_partners_are_on_deck_to_give_your_business_an_edge}" />
+
+
+    <div class="slds-grid center-div " style="max-width:1022px; background-color:white; margin-left:auto; margin-right:auto;">
+
+        <div class="slds-col ">
+
+            <div class="slds-x-small-show-only slds-text-align--center">
+                <div class="slds-align_left" style="margin-top:50px; margin-bottom:50px;">
+                    <p style="text-transform: uppercase;
+                    text-align: left;
+                    font-weight:700;
+                    font-size:16px;
+                    letter-spacing:5px;
+                    
+
+                    ">
+                        {!v.title}<br/>
+                        <span style="text-transform: initial;
+                                         letter-spacing:normal;
+                                         font-weight:300;
+                                         line:15px;
+                                         font-size: 0.8em;
+                                         font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+                                         ">
+                                {!v.subTitle}
+                        </span>
+                    </p>
+                </div>
+
+
+                <!--<div class="slds-col slds-size_1-of-1" style="width:100%;">
+                    <a href="{!v.homeAdvisorLink}" alt="Home Advisor" target="_blank"><img src="{!$Resource.LogoHomeAdvisor}" alt="Home Advisor" style="width:150px;" /></a>
+                </div>-->
+                <div class="slds-col  slds-size_1-of-1" style="width:100%;">
+                    <a href="{!v.homeStarsLink}" alt="HomeStars" target="_blank"><img src="{!$Resource.LogoHomeStars}" alt="Home Stars" style="width:150px;" /></a>
+                </div>
+                <!--<div class="slds-col  slds-size_1-of-1" style="width:100%;">
+                   <a href="{!v.eagleViewLink}" alt="EagleView" target="_blank"><img src="{!$Resource.LogoEagleView}" alt="EagleView" style="width:150px;" /></a>
+               </div>-->
+               <!--<div class="slds-col  slds-size_1-of-1" style="width:100%;">
+                   <a href="{!v.greenSkyLink}" alt="GreenSky" target="_blank"><img src="{!$Resource.LogoGreenSky}" alt="GreenSky" style="width:150px;"/></a>
+               </div>-->
+                <div class="slds-col  slds-size_1-of-1" style="width:95%; margin-left: auto; margin-right: auto; margin-top:-50px;">
+                    <a href="{!v.guildQualityLink}" alt="Guild Quality" target="_blank"><img src="{!$Resource.LogoGuildQuality}" alt="Guild Quality" style=" margin-top:-45px;width:250px;" /></a>
+                </div>
+                <!--<div class="slds-col  slds-size_1-of-1" style="width:100%; margin-top:-60px;">-->
+                    <!--<a href="{!v.financeItLInk}" alt="FinanceIt" target="_blank"><img src="{!$Resource.LogoFinanceIt}" alt="FinanceIt" style=" margin-top:-30px; margin-bottom:30px; width:150px;" /></a>-->
+                <!--</div>-->
+                <div class="slds-col  slds-size_1-of-1" style="width:100%; margin-top:-50px;">
+                    <a href="{!v.hoverLink}" alt="Hover" target="_blank"><img src="{!$Resource.LogoHover}" alt="Hover" style="width:150px;" /></a>
+                </div>
+            </div>
+
+            <div class="slds-small-show-only slds-text-align--center hideForSmall">
+
+
+                <div>
+                    <div class="sdls-col"
+                         style="margin-top:50px;
+                            width:100%;
+                            ">
+
+                        <p class="slds-text-align--left"
+                           style="position: relative;
+                              padding-top:10px;
+
+                              margin-bottom: 75px;
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-size:16px;
+                              letter-spacing:5px;
+                              background-color:white;
+                               ">
+                            {!v.title}<br/>
+                            <span style="text-transform: initial;
+                                         letter-spacing:normal;
+                                         font-weight:300;
+                                         font-size: 0.8em;
+                                         ">
+                                {!v.subTitle}
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="slds-grid " >
+                    <div class="slds-col slds-size_1-of-1  slds-text-align--center" style="display:inline-block; margin-right: auto; margin-left:auto;">
+                        <!--<a href="{!v.homeAdvisorLink}"  target="_blank">
+                            <img src="{!$Resource.LogoHomeAdvisor}" alt="Home Advisor" style="width:80px; margin-left:20px; margin-right:30px; margin-top:-10px;" />
+                        </a>-->
+                        <a href="{!v.homeStarsLink}" target="_blank">
+                            <img src="{!$Resource.LogoHomeStars}" alt="Home Stars" style="width:105px; margin-right: 40px;" />
+                        </a>
+                        <!-- <a href="{!v.eagleViewLink}" target="_blank">
+                             <img src="{!$Resource.LogoEagleView}" alt="EagleView" style=" width:90px; margin-right: 40px;" />
+                         </a> -->
+                         <!-- <a href="{!v.greenSkyLink}" target="_blank">
+                             <img src="{!$Resource.LogoGreenSky}" alt="GreenSky" style="width:120px;  margin-right: 20px;"/>
+                         </a> -->
+                        <a href="{!v.guildQualityLink}"  target="_blank">
+                            <img src="{!$Resource.LogoGuildQuality}" alt="Guild Quality" style="width:140px; margin-left:-20px; margin-right: 30px;" />
+                        </a>
+                        <!--<a href="{!v.financeItLink}" alt="FinanceIt" target="_blank">-->
+                            <!--<img src="{!$Resource.LogoFinanceIt}" alt="FinanceIt" style="width:130px;  margin-right: 40px;" />-->
+                        <!--</a>-->
+                        <a href="{!v.hoverLink}" alt="Hover" target="_blank">
+                            <img src="{!$Resource.LogoHover}" alt="Hover" style="width:110px; " />
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="slds-medium-show slds-text-align--left" style="margin-bottom:50px;">
+
+
+                <div>
+                    <div class="sdls-col"
+                         style="margin-top:50px;
+                            width:100%;
+                            ">
+
+                        <p class="slds-text-align--left"
+                           style="position: relative;
+                              margin-bottom:25px;
+
+                              height:50px;
+                              width:100%;
+                              text-transform: uppercase;
+                              font-weight:700;
+                              font-family: Montserrat;
+                              font-size:12px;
+                              letter-spacing:5px;
+                              background-color:white;
+
+                               ">
+                            {!v.title}<br/>
+                            <span style="text-transform: initial;
+                                         letter-spacing:normal;
+                                         font-weight:300;
+                                         line-height:15px;
+                                         font-size: 13px;
+                                         font-family: Montserrat;
+                                         ">
+                                {!v.subTitle}
+                            </span>
+
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="slds-grid " >
+                    <div class="slds-col slds-size_1-of-1  slds-text-align--center" style="display:inline-flex; margin-right: auto; margin-left:auto;">
+                     
+                        <div class="slds-col slds-size--1-of-6 slds-x-small-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-6 slds-large-size--1-of-6 slds-x-large-size--1-of-6 slds-text-align--center">
+                            <a href="{!v.homeStarsLink}" alt="Home Stars" target="_blank">
+                                <img src="{!$Resource.LogoHomeStars}" style="width:105px;" />
+                            </a>
+                        </div>
+
+                        <!--<div class="slds-col slds-size&#45;&#45;1-of-6 slds-x-small-size&#45;&#45;1-of-1 slds-small-size&#45;&#45;1-of-3 slds-medium-size&#45;&#45;1-of-6 slds-large-size&#45;&#45;1-of-6 slds-x-large-size&#45;&#45;1-of-6 slds-text-align&#45;&#45;center">
+                            <a href="{!v.eagleViewLink}" alt="EagleView" target="_blank">
+                                <img src="{!$Resource.LogoEagleView}"  style=" width:105px; padding-top:45px;" />
+                            </a>
+                        </div> -->
+
+                        <div class="slds-col slds-size--1-of-6 slds-x-small-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-6 slds-large-size--1-of-6 slds-x-large-size--1-of-6 slds-text-align--center">
+                            <a href="{!v.hailTraceLink}" alt="HailTrace" target="_blank">
+                                <img src="{!$Resource.LogoHailTrace}" style="width:105px; filter: grayscale(100%);"/>
+                            </a>
+                        </div> 
+
+                        <div class="slds-col slds-size--1-of-6 slds-x-small-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-6 slds-large-size--1-of-6 slds-x-large-size--1-of-6 slds-text-align--center">
+                            <a href="{!v.guildQualityLink}" alt="Guild Quality" target="_blank">
+                                <img src="{!$Resource.LogoGuildQuality}"  style="width:105px;" />
+                            </a>
+                        </div>
+
+                        <!--<a href="{!v.financeItLink}" alt="FinanceIt" target="_blank">-->
+                            <!--<img src="{!$Resource.LogoFinanceIt}"  style="width:130px; margin-right: 20px;" />-->
+                        <!--</a>-->
+                        <div class="slds-col slds-size--1-of-6 slds-x-small-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-6 slds-large-size--1-of-6 slds-x-large-size--1-of-6 slds-text-align--center">
+                            <a href="{!v.hoverLink}" alt="Hover" target="_blank">
+                                <img src="{!$Resource.LogoHover}" style="width:105px; " />
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+
+
+</div>
+</aura:component>

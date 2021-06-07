@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publish_in__c</fullName>
+    <description>This field is use to filter the calendar event shown in the Calendar , Calendar list Lighning compoments  on communities portal of the logued user.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please Select in which community you want to publish your calendar event. Multi selection is alowed.</inlineHelpText>
+    <label>Publish in</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CommunityName</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

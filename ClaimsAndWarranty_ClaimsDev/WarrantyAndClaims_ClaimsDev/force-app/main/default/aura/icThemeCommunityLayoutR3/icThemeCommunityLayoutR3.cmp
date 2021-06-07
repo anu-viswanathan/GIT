@@ -1,0 +1,194 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="thisYear" type="String"/>
+    <aura:attribute name="langPicker" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="home" type="String" default="/IKOROOFPRO/s/" />
+
+    <aura:attribute name="width" type="String"/>
+
+
+
+    <aura:attribute name="dashboards" type="Aura.Component[]" required="false"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+
+
+    <div class="container" style="max-width:1024px; margin: auto;">
+
+        <div class="navDesktopGreyBack hideElementOnTablet "
+             style="width:3000px;
+                    margin-bottom:-55px;
+                    height:55px;
+                    margin-left:-600px !important;
+                    background-color: #d3d4d8;
+                   /* background-color: red;*/
+
+                    ">
+        </div>
+
+
+
+
+        <div class="navMobile mobileSearchBar hideElementOnTablet"
+             style="width:100%;
+                    height:65px;
+                    /*background-color: red;*/
+                    background-color: #d3d4d8;
+
+                    ">
+        </div>
+
+        <div id="searchMenuPosition">
+            <div class="searchRegion" style="background-color: white; width: 300px; ">
+                {!v.search}
+            </div>
+        </div>
+
+        <!--<div id="searchMenuPosition slds-float_right"   >-->
+            <!--<div class="searchRegion" style="background-color: white; margin-top: 25px; width: 300px; ">-->
+                <!--{!v.search}-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+
+        <div id="profileMenuPosition" class="profileMenuRegion hideElementOnTablet hideElementsOnMobile" style="padding-top:10px;">
+            {!v.profileMenu}
+        </div>
+
+
+        <div class="slds-col homeMenu hideElementOnTablet hideElementsOnMobile"
+             style="background-color: #525457;
+                    width:55px !important;
+                    height:55px!important;
+                    min-width: 55px !important;
+                    ">
+            <a href="{!v.home}" title="Home" data-type="home" class="">
+                    <img src="{!$Resource.icHomeIcon}"
+                         style="display: inline-block;
+                                margin-top:17px;
+                                margin-bottom:auto;
+                                margin-left:18px !important;
+                                height: auto;
+                                width: auto;
+                                max-width: 20px;
+                                max-height: 21px;
+                                "/>
+                </a>
+            </div>
+
+
+
+
+        <div class=" slds-grid hideElementOnTablet hideElementOnDesktop mobileBottomMargin "
+             style="margin-top:-65px;
+                            max-width:1024px;
+                            margin-right:-25px;
+                            ">
+
+
+
+            <div class="slds-col"
+                 style="display:block;">
+
+                <div class="logoMobile" style="  display:inline-block;
+        											width: 100px;
+    												height: 50px;
+    												margin-left: 10px;
+                                                  	margin-top: 10px;
+                                                       ">
+                    <img src="{!$Resource.IKO_logo}"/>
+                </div>
+
+
+                <div class="hideElementOnTablet hideElementOnDesktop sloganMobile">
+                    <p style="font-weight: 600;
+                                      font-size:10px;
+                                      margin-top:-45px;
+                                      margin-left:115px;
+                                        ">
+                        ROOFPRO<sup style="font-size:5px; vertical-align: super; ">TM</sup> PROGRAM</p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <div class="navigation slds-clearfix navMenuPosition">
+            <div class="slds-clearfix">
+                <div class="slds-float_right ">
+                    {!v.navBar}
+                </div>
+            </div>
+        </div>
+
+        <!--<div id="locator" class=" navigation navMenuPosition">-->
+            <!--{!v.navBar}-->
+        <!--</div>-->
+
+        <div class="slds-grid  logoBar"
+             style="float:left;
+
+                    margin-top:-50px;
+                    max-width:1024px;
+                    margin-right:-25px;
+
+                                    ">
+            <div class="slds-col"
+                 style="display:block;">
+
+                <div class="logoMobile hideElementsOnMobile" style="  display:inline-block;
+                                                            width: 125px;
+                                                            height: 50px;
+                                                            margin-left: 10px;
+                                                            margin-top: 10px;
+                                                               ">
+                    <img src="{!$Resource.IKO_logo}"/>
+                </div>
+
+
+                <div class="sloganMobile hideElementsOnMobile">
+                    <p style="font-weight: 600;
+                                              font-size: 14px;
+                                              margin-top:-40px;
+                                              margin-left:135px;
+                                                ">
+                        ROOFPRO<sup style="font-size:5px; vertical-align: super; ">TM</sup> PROGRAM</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--    <aura:if isTrue="{!$Browser.formFactor == 'DESKTOP'}">-->
+            <!--     You are using a DESKTOP-->
+            <!--        ( <lightning:icon iconName="utility:desktop" size="x-small" alternativeText="Indicates approval"/> )-->
+            <!--        Browser device-->
+            <!--    </aura:if>-->
+
+        <!--<lightning:flexipageRegionInfo width="{!v.width}"/>-->
+
+
+
+
+
+
+
+        <div class="mainContentArea">
+            {!v.body}
+        </div>
+    </div>
+
+
+</aura:component>

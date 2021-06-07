@@ -1,0 +1,20 @@
+<!--
+    Created by Anil Mannem (Incloud) on 03-Aug-2020
+-->
+<aura:component controller="icUSSalesGeneratePDF_Email" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="msg" type="String" default="Generating Quote ..."/>
+    <aura:attribute name="displaySpinner" type="boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-is-relative slds-grid_vertical-align-center" >
+
+    <aura:if isTrue="{!v.msg}">
+        {!v.msg}
+    </aura:if>
+    <aura:if isTrue="{!v.displaySpinner}">
+		
+        <lightning:spinner aura:id="spinner" variant="brand" size="Large" style="top: 100px;"/>
+    
+    </aura:if>
+    
+</div>
+</aura:component>

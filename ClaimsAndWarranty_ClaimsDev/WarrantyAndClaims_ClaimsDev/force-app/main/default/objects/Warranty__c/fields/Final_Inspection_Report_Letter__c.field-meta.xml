@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Inspection_Report_Letter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Final inspection report or a letter from the inspector confirming that the roof was inspected periodically  during the installation process and was installed according to good roofing practices</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Final inspection report or a letter from the inspector confirming that the roof was inspected periodically  during the installation process and was installed according to good roofing practices</inlineHelpText>
+    <label>Final Inspection Report/Letter?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

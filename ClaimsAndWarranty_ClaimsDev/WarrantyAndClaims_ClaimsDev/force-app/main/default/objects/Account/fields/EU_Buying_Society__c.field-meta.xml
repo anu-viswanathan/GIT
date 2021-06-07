@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Buying_Society__c</fullName>
+    <externalId>false</externalId>
+    <label>Buying Group (Society)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nmbs</fullName>
+                <default>false</default>
+                <label>Nmbs</label>
+            </value>
+            <value>
+                <fullName>Unimer</fullName>
+                <default>false</default>
+                <label>Unimer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

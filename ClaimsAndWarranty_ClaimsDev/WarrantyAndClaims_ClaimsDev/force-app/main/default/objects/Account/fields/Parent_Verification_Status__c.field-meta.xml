@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Verification_Status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True, if the Account Parent Id has been modified, otherwise, false
+            True: Not verified, False: verified
+            Claims Manager will be able to edit the field to verify the Account Parent Id manually.</description>
+    <externalId>false</externalId>
+    <label>(deprecated) Parent Not Verified</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

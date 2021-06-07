@@ -1,0 +1,52 @@
+<aura:component controller="icCtrlSelfRegistration" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="resultMessages" type="String[]" default="[]" />
+	
+<aura:attribute name="userId" type="String" />
+	<aura:attribute name="firstName" type="String" />
+	<aura:attribute name="lastName" type="String" />
+    <aura:attribute name="email" type="String" />
+   	<aura:attribute name="password" type="String" />
+	<aura:attribute name="confPassword" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+<div class="slds-form centerPanel">
+	<div class="{!if(v.resultMessages.length == 0, 'hideError','showError')}">
+		<aura:iteration items="{!v.resultMessages}" var="resultMessage">
+			 <aura:if isTrue="{!_index > 0}">
+			 	<br />			 	
+			</aura:if>
+			{!resultMessage}
+		</aura:iteration>		
+	</div>
+	<div class="inputContainer">
+		<lightning:icon class="inputIcon" iconName="utility:user" size="xx-small" title="" />
+		<ui:inputText class="inputBox" placeholder="{!$Label.c.icFirst_Name}" value="{!v.firstName}" />
+	</div>
+	
+	<div class="inputContainer">
+		<lightning:icon class="inputIcon" iconName="utility:user" size="xx-small" title="" />
+		<ui:inputText class="inputBox" placeholder="{!$Label.c.icLast_Name}" value="{!v.lastName}" />
+	</div>
+	
+	<div class="inputContainer">
+		<lightning:icon class="inputIcon" iconName="utility:email" size="xx-small" title="" />
+        <ui:inputText class="inputBox" placeholder="{!$Label.c.icEmailUser}" value="{!v.email}" />
+	</div>
+	
+	<div class="inputContainer">
+		<lightning:icon class="inputIcon" iconName="utility:lock" size="xx-small" title="" />
+		<ui:inputSecret class="inputBox" placeholder="{!$Label.c.icCreatePassword}" value="{!v.password}" />
+	</div>
+	
+	<div class="inputContainer">
+		<lightning:icon class="inputIcon" iconName="utility:lock" size="xx-small" title="" />
+		<ui:inputSecret class="inputBox" placeholder="{!$Label.c.icConfirmPassword}" value="{!v.confPassword}" />
+	</div>
+	<div>
+		<lightning:button variant="brand" class="formButton" label="{!$Label.c.icSignUp}" title="{!$Label.c.icSignUp}" onclick="{!c.doClick}"/>
+	</div>
+</div>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_Cover_Limited_Warranty_Application__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>A complete Re-cover Limited Warranty Application has been received?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A complete Re-cover Limited Warranty Application has been received?</inlineHelpText>
+    <label>Re-Cover Limited Warranty Application?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

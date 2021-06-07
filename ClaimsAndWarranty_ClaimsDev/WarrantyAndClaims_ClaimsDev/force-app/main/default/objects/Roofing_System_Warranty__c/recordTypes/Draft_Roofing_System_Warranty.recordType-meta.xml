@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Draft_Roofing_System_Warranty</fullName>
+    <active>true</active>
+    <label>Draft Roofing System &amp; Warranty</label>
+    <picklistValues>
+        <picklist>Ancillary_Items__c</picklist>
+        <values>
+            <fullName>AquaBarrier Mastic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ArmourReflect White Coat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS Detail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex Roof Tape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TorchTape 180-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-250-Cap 5%2E0</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Auxiliary_Board_Application__c</picklist>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Auxiliary_Leveling_Board__c</picklist>
+        <values>
+            <fullName>Cement Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypsum Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral Wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Field_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Field Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive LVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Flashing_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Flashing Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive LVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Insulation_Application__c</picklist>
+        <values>
+            <fullName>Loose laid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Insulation__c</picklist>
+        <values>
+            <fullName>EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral Wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Sheet_Field__c</picklist>
+        <values>
+            <fullName>ArmourStick HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast n Stick 180 Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast n Stick HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO No%2E 15 Felt Perforated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type IV Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type VI Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MF-95-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-FF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-SF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-FF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-SF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-HD-FF Base</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Sheet_Flashing__c</picklist>
+        <values>
+            <fullName>ArmourStick HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-FF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-SF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-HD-FF Base</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cap_Sheet_Field_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Field Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peel %26 Stick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cap_Sheet_Field__c</picklist>
+        <values>
+            <fullName>ArmourStick HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourcool TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Classic %285%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Granular APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO No%2E 15 Felt Perforated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type 6 Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type IV Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Armourcool Granular HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Modiflex MP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Modiflex MP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Torchflex TP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Torchflex TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-250 Cap %285%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cap_Sheet_Flashing_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Flashing Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peel %26 Stick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cap_Sheet_Flashing__c</picklist>
+        <values>
+            <fullName>ArmourStick HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourcool Granular TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Granular APP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Granular Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourplast Granular Classic %285%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Armourcool Granular HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Modiflex MP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Modiflex MP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Torchflex TP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrevENt Torchflex TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-250 Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-250 Cap %285%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-HD Cap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Coverboard_Application__c</picklist>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Coverboard__c</picklist>
+        <values>
+            <fullName>CoverShield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibreboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gypsum Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral Wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProtectoBase 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard 1%2F2%22 %2812%2E7mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard 1%2F4%22 %286%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard 1%2F8%22 %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectoboard 3%2F16%22 %284%2E8mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofkraft Base F%2FR 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofkraft Base F%2FR 95</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ShieldBase 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ShieldBase Sand</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Flood_Coat_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Field Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Flood_Coat__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pea Gravel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intermediate_Ply_Application__c</picklist>
+        <values>
+            <fullName>Cold Gold Field Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modi-Melt SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive LVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intermediate_Ply__c</picklist>
+        <values>
+            <fullName>Armourbond 180</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourvent HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast n Stick 180 Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast n Stick HD Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO No%2E 15 Felt Perforated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type 6 Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Type IV Glass Felt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MF-95-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-FS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base %283%2E0mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-FS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-HD-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-FF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-SF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-FF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-SF Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-HD-FF Base</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Plies_Base_Sheet__c</picklist>
+        <values>
+            <fullName>Five</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Four</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Three</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Two</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Plies_Cap_Sheet__c</picklist>
+        <values>
+            <fullName>Five</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Four</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Three</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Two</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primers__c</picklist>
+        <values>
+            <fullName>IKO Mod Bit Primer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Spray Primer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Standard Asphalt Primer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Insulation_Application__c</picklist>
+        <values>
+            <fullName>Loose laid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modi-Melt SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Insulation__c</picklist>
+        <values>
+            <fullName>EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral Wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Sloped_Insulation_Application__c</picklist>
+        <values>
+            <fullName>Mechanically Attached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millennium Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Sloped_Insulation__c</picklist>
+        <values>
+            <fullName>EPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III - 25psi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm III Tapered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKOTherm Tapered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral Wool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Slope_Percentage__c</picklist>
+        <values>
+            <fullName>1%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E5%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TYPE_OF_SYSTEM__c</picklist>
+        <values>
+            <fullName>BUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INVERTED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SINGLE PLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TWO-PLY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vapour_Retarder_Application__c</picklist>
+        <values>
+            <fullName>Kraft Paper Cold Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM Adhesive LVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEBS Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torch Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type II Asphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type III Asphalt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vapour_Retarder__c</picklist>
+        <values>
+            <fullName>Armourbond Flash Sand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourbond Flash Sand HD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armourgard Ice %26 Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kraft Paper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MVP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MVP Sand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MF-95-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modiflex MP-180-SS Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No%2E 15 Felt Perforated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-FF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TF-95-SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-SF 3%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torchflex TP-180-SF Base</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Term_2__c</picklist>
+        <values>
+            <fullName>10 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Term__c</picklist>
+        <values>
+            <fullName>10 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Type_2__c</picklist>
+        <values>
+            <fullName>DiamondShield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labour %26 Materials %28L%26M%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Manfacturer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provincial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Cover</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Warranty_Type__c</picklist>
+        <values>
+            <fullName>DiamondShield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labour %26 Materials %28L%26M%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provincial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Cover</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

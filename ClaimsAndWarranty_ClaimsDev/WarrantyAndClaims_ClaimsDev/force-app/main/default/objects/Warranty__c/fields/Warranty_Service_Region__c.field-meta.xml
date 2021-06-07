@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Service_Region__c</fullName>
+    <description>The service region. Same formula as defined in the Case, more less, but there&apos;s no sector. This drives what addresses get put on templates, contact, etc.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+        ISPICKVAL(Building__r.BillingCountryCode , &quot;US&quot;),&apos;US&apos; ,
+
+    IF(AND(
+        ISPICKVAL(Building__r.BillingCountryCode , &quot;CA&quot;),
+        OR
+        (
+        ISPICKVAL(Building__r.BillingStateCode, &quot;AB&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;BC&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;SK&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;NT&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;YT&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;NU&quot;),
+        ISPICKVAL(Building__r.BillingStateCode, &quot;MB&quot;)
+        )
+           ),
+     &apos;Western Canada&apos; ,
+     &apos;Eastern Canada&apos; 
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The region the customer&apos;s Warranty is run out of.</inlineHelpText>
+    <label>Warranty Service Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

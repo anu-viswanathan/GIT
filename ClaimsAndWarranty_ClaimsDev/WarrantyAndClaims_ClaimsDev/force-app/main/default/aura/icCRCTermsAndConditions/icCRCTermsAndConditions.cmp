@@ -1,0 +1,20 @@
+<aura:component implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                description="icCRCTermsAndConditions"
+                access="global"
+                controller="icHTMLTextController">
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="htmlCode" type="String" default=""/>
+    <aura:attribute name="fileName" type="String" access="global"/>
+
+    <div >
+        <div class="slds-scrollable_y" style=" border: 1px solid black; height: 300px; width: 100%; ">
+            <div class="slds-text-longform" style="width:90%; margin:auto;">
+                <aura:unescapedHtml value="{!v.htmlCode}"/>
+
+            </div>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component controller="icCtrlShortUrl" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="displaySpinner" type="boolean" default="false" />
+	<aura:attribute name="shortURL" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<div style="text-align:left">
+		<aura:if isTrue="{!v.displaySpinner}">			
+				<lightning:spinner aura:id="spinner" variant="brand" size="large" />			
+		</aura:if>
+		<aura:if isTrue="{!v.shortURL == 'n/a'}">
+			<lightning:button variant="neutral" label="{!$Label.c.Short_URL_Button}" onclick="{!c.doFetchShortURL}" />			
+		</aura:if>
+		<aura:if isTrue="{!and(v.shortURL != 'n/a', v.shortURL != null)}">
+			{!$Label.c.Short_URL_Label}&nbsp;<a href="{!v.shortURL}" style="font-weight:bold">{!v.shortURL}</a>
+		</aura:if>
+	</div>
+
+</aura:component>

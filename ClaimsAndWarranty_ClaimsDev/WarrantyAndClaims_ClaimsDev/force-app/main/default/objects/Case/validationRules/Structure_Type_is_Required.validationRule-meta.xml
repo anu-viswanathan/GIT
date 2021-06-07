@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Structure_Type_is_Required</fullName>
+    <active>true</active>
+    <description>Type of Structure must be selected prior to Submitting a Claim.</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos; 
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+ISBLANK(TEXT(Type_of_Structure__c)),
+TEXT( Claim_Stage__c ) = &apos;Submitted&apos;
+)</errorConditionFormula>
+    <errorMessage>Please select Type of Structure prior to submitting the Claim.</errorMessage>
+</ValidationRule>

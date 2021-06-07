@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_IKO_Office_Phone__c</fullName>
+    <description>IKO Office Phone referring to the Toll Free Number Warranty Claims Defaults . This is based on the conga service regioin set. Refer to https://ikoussfsc.atlassian.net/browse/CLAIMSV2-323 for details.
+CLAIMSV2-880 -(21-5-2020)</description>
+    <externalId>false</externalId>
+    <formula>CASE(Conga_Service_Region__c, 
+&apos;US&apos;, $Setup.Warranty_Claims_Defaults__c.US_Toll_Free__c, 
+&apos;Western Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Western_Canada_Toll_Free__c, 
+&apos;Eastern Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Eastern_Canada_Toll_Free__c,
+&apos;Decra&apos;, $Setup.Warranty_Claims_Defaults__c.Decra_Toll_Free__c,
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Conga: IKO Office Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

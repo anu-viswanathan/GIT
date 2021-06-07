@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClaimsRepInLabChange</fullName>
+    <active>true</active>
+    <description>Claims Rep cannot move the Case from the &quot;In Lab&quot; Claim Stage</description>
+    <errorConditionFormula>AND( 
+    CONTAINS($Profile.Name, &apos;Claims Rep&apos;),
+    ISCHANGED(Claim_Stage__c),
+    TEXT(PRIORVALUE(Claim_Stage__c)) = &apos;In Lab&apos;
+)</errorConditionFormula>
+    <errorMessage>You are not permitted to move from &quot;In Lab&quot;</errorMessage>
+</ValidationRule>

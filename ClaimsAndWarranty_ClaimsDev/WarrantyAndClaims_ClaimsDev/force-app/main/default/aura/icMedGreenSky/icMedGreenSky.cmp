@@ -1,0 +1,183 @@
+<!--
+ - Created by Francois Poirier on 2018-08-01.
+ -->
+
+<aura:component description="icMedGreenSky" controller="icCTRLGreenSky" implements="force:lightningQuickAction,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+
+    <ltng:require styles="{!$Resource.quickActionCSS}" />
+
+    <aura:attribute name="isCustomerSubscribed" type="Boolean" />
+    <aura:attribute name="currentStep" type="String" default="init" />
+    <aura:attribute name="previousStep" type="String" />
+    <aura:attribute name="merchantValidation" type="Object" />
+    <aura:attribute name="application" type="Object" />
+    <aura:attribute name="applicationState" type="Object" />
+    <aura:attribute name="decision" type="Object" />
+    <aura:attribute name="offer" type="Object" />
+    <aura:attribute name="loanAgreement" type="Object" />
+    <aura:attribute name="emailNotSent" type="Boolean" default="true" />
+    <aura:attribute name="error" type="Object" />
+    <aura:attribute name="AsyncSubmitForm" type="icDTOLoanForm"/>
+    <aura:attribute name="requiredFieldsFormFilled" type="boolean"/>
+    <aura:attribute name="hasError" type="Boolean" default="false" />
+    <aura:attribute name="showCredentialsForm" type="Boolean" default="false" />
+    <aura:attribute name="credentialsForm" type="icDTOGreenSkySubscription"  />
+
+
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.isCustomerSubscribed}">
+        <div style="text-align:center">
+            <aura:if isTrue="{!v.hasError}">
+                <div class="slds-text-color--error slds-text-align_left slds-box slds-theme--default slds-container--large slds-container--center">
+                    <div class="slds-text-heading--medium">Error</div>
+                    <div class="slds-text-body--small">{!v.error.message}</div>
+                </div>
+                <br/>
+            </aura:if>
+            <div style="{!if(v.isCustomerSubscribed, 'display:block', 'display:none')}">
+                <aura:if isTrue="{!v.currentStep == 'init'}">
+                    <button class="slds-button slds-button_neutral" onclick="{!c.doMerchantValidation}">{!$Label.c.icGreenSky_Loan_Application}</button>
+                    <aura:set attribute="else">
+                        <div class="slds-text-heading--medium">
+                            {!$Label.c.icGreenSky_Loan_Application}<br/><br/>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'asynchSubmit'}">
+             <!--       <span>Merchant Validated! form will be here</span><br/>
+                    is Valid: {!v.merchantValidation.isValid}<br/>
+                    merchant token: {!v.merchantValidation.token}<br/>-->
+                    <!--As per 2018 Q4 update the next line is to be removed -->
+                    <!--<span>Only U.S. Residents 18 years and older (19 years or older in Alabama and Nebraska) may apply.</span>-->
+                    <c:icCreditApplicationForm aura:id="applicationF"
+                                               merchantValidation="{!v.merchantValidation}"
+                                               loanForm="{!v.AsyncSubmitForm}"
+                                               requiredFieldsFilledIn="{!v.requiredFieldsFormFilled}"
+                                               opportunityId="{!v.recordId}"
+                    />
+                    <div class="slds-text-body--small slds-text-align--left slds-container--large slds-container--center">{!$Label.c.icBySubmittingThisLoanApplication}</div>
+                    <br/>
+                    <button class="slds-button slds-button--neutral"
+                            disabled="{!(!v.AsyncSubmitForm.coApplicantIndicator &amp;&amp;(!v.AsyncSubmitForm.applicantAgree1 || !v.AsyncSubmitForm.applicantAgree2))
+                            || (v.AsyncSubmitForm.coApplicantIndicator &amp;&amp;(!v.AsyncSubmitForm.applicantAgree1 || !v.AsyncSubmitForm.applicantAgree2 || !v.AsyncSubmitForm.coApplicantAgree1 || !v.AsyncSubmitForm.coApplicantAgree2))}"
+                            onclick="{!c.doAsynchronousSubmit}">{!$Label.c.icSubmit}</button>
+                    <!--<button class="slds-button&#45;&#45;neutral slds-button" onclick="{!c.cancelApplication}">Cancel</button>-->
+                   <br/>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'State'}">
+                    <div class="slds-box slds-container--large slds-container--center">
+                        <div class="slds-text-heading--medium">{!$Label.c.icApplication_submitted}!</div><br/>
+                        <div class="slds-text-body--small">{!$Label.c.icApplication_ID} : {!v.application.applicationId}</div><br/>
+                    </div>
+                    <!--Token : {!v.application.token}-->
+                    <button class="slds-button slds-button&#45;&#45;neutral" onclick="{!c.doState}">{!$Label.c.icVerify_Application_State}</button>
+                   <!-- <button class="slds-button&#45;&#45;neutral slds-button" onclick="{!c.cancelApplication}">Cancel</button>-->
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'nextState'}">
+                    <c:icApplicationState applicationState="{!v.applicationState}" AsyncSubmitFormDTO="{!v.AsyncSubmitForm}" application="{!v.application}"/>
+                    <button class="slds-button slds-button&#45;&#45;neutral" onclick="{!c.doState}">{!$Label.c.icRe_Verify_Application_State}</button>
+                    <!--<button class="slds-button&#45;&#45;neutral slds-button" onclick="{!c.cancelApplication}">Cancel</button>-->
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'Decision'}">
+                    <c:icApplicationState applicationState="{!v.applicationState}" AsyncSubmitFormDTO="{!v.AsyncSubmitForm}" application="{!v.application}"/>
+                    <button class="slds-button slds-button&#45;&#45;neutral" onclick="{!c.doDecision}">{!$Label.c.icRe_Verify_Application_State_Decision}</button>
+                   <!-- <button class="slds-button&#45;&#45;neutral slds-button" onclick="{!c.cancelApplication}">Cancel</button>-->
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'Offer'}">
+                    <div class="slds-container--medium slds-container--center">
+                        <table style="border-collapse: separate; border-spacing: 5px;">
+                            <tr>
+                                <td class="slds-text-align--right"><b>{!$Label.c.icApplication_ID}</b></td>
+                                <td class="slds-text-align--left">{!v.application.applicationId}</td>
+                            </tr>
+                            <tr>
+                                <td class="slds-text-align_right"><b>{!$Label.c.icApplicant}</b></td>
+                                <td class="slds-text-align_left">{!v.AsyncSubmitForm.applicantFirstName}&nbsp;{!v.AsyncSubmitForm.applicantMiddleInitial}&nbsp;{!v.AsyncSubmitForm.applicantLastName}</td>
+                            </tr>
+                        </table><br/>
+                    </div>
+                    <aura:if isTrue="{!v.applicationState.applicationState == 'Declined'}">
+
+                        <div class="slds-container--center slds-container--large slds-box slds-text-heading--medium slds-text-color--error">{!$Label.c.icWeAreUnableToApprove}</div>
+                        <aura:set attribute="else">
+                            <span>{!$Label.c.icCurrent_State}: {!v.applicationState.applicationState}</span><br/>
+                            {!$Label.c.icApplication_Status}: {!v.applicationState.applicationStatus}<br/>
+                            {!$Label.c.icNext_State}: {!v.applicationState.nextState}
+                            <button class="slds-button slds-button&#45;&#45;neutral" onclick="{!c.doOffer}">{!$Label.c.icGet_Offer_s}</button>
+                            <!--<button class="slds-button&#45;&#45;neutral slds-button" onclick="{!c.cancelApplication}">Cancel</button>-->
+                        </aura:set>
+                    </aura:if>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'Loan Agreement'}">
+                    <div class="slds-text-body--small slds-container--center slds-container--large slds-box">
+                        {!$Label.c.icCurrent_State}: {!v.applicationState.applicationState}<br/>
+                        {!$Label.c.icApplication_Status}: {!v.applicationState.applicationStatus}<br/>
+                        {!$Label.c.icNext_State}: {!v.applicationState.nextState}
+                    </div>
+                    <button class="slds-button slds-button&#45;&#45;neutral" onclick="{!c.doLoanAgreement}">{!$Label.c.icView_Loan_Agreement}</button>
+                    <button class="slds-button--neutral slds-button" onclick="{!c.cancelApplication}">{!$Label.c.icCancel}</button>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'Create'}">
+                        <c:icGreenSkyOffer offer="{!v.offer}" application="{!v.application}"></c:icGreenSkyOffer>
+                    <br/>
+                    <button class="slds-button slds-button--neutral" onclick="{!c.doCreate}" disabled="{!v.offer.applicationStatus != 'Authorized'}">{!$Label.c.icAccept_Offer}</button>
+                    <button class="slds-button--neutral slds-button" onclick="{!c.cancelApplication}">{!$Label.c.icCancel}</button>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'showDecision'}">
+                    <span>{!$Label.c.icYour_loan_application_is} {!v.decision.status}</span>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep == 'showLoanAgreement'}">
+                    <c:icGreenSkyLoanAgreement loanAgreement="{!v.loanAgreement}" application="{!v.application}" />
+                    <button class="slds-button--neutral slds-button" onclick="{!c.cancelApplication}">{!$Label.c.icClose}</button>
+                    <button class="slds-button slds-button--neutral" onclick="{!c.doEmail}">{!$Label.c.icRe_Send_by_email}</button>
+                    <aura:if isTrue="{!v.emailNotSent}">
+                        <aura:set attribute="else">
+                            <span> {!$Label.c.icEmail_Sent}!</span>
+                        </aura:set>
+                    </aura:if>
+                </aura:if>
+
+
+
+            </div>
+      <!--      <div style="{!if(not(v.isCustomerSubscribed), 'display:block', 'display:none')}">
+                &lt;!&ndash; <a href="{!v.subscribeLink}" class="slds-button slds-button_neutral">Subscribe to EagleView</a> &ndash;&gt;
+                <button class="slds-button slds-button_neutral" onclick="{!c.doSubscribe}">Subscribe to GreenSky</button>
+            </div>-->
+        </div>
+        <aura:set attribute="else">
+
+            <div class="slds-container_center slds-container_medium slds-box slds-text-align_center" >
+                <aura:if isTrue="{!v.showCredentialsForm == false}">
+                    <div>
+                        <!-- <a href="{!v.subscribeLink}" class="slds-button slds-button_neutral">Subscribe to EagleView</a> -->
+                        <a href="https://portal.greenskycredit.com/gs_merchantapplication" target="_blank">
+                        <button class="slds-button slds-button_neutral">{!$Label.c.icRegister_for_GreenSky_credentials}</button>
+                        </a>
+                    </div><br/><br/>
+                    <div>
+                        <!-- <a href="{!v.subscribeLink}" class="slds-button slds-button_neutral">Subscribe to EagleView</a> -->
+                        <button class="slds-button slds-button_neutral" onclick="{!c.doEnterCredentials}">{!$Label.c.icEnter_my_GreenSky_credentials}</button>
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="slds-text-heading--medium slds-text-align_center">{!$Label.c.icPlease_enter_your_GreenSky_Merchant_Id}</div><br/>
+                        <div class="slds-text-align_left">
+                            <lightning:input type="text" label="{!$Label.c.icMerchant_Id}" name="merchantId" aura:id="merchantId" value="{!v.credentialsForm.merchantId}" onblur="{!c.test}" />
+                            <!--<lightning:input type="text" label="Username" name="userName" aura:id="userName" value="{!v.credentialsForm.userName}" />
+                            <lightning:input type="password" label="Password" name="password" aura:id="password" value="{!v.credentialsForm.password}" />
+                            <lightning:input type="text" label="API Key" name="apiKey" aura:id="apiKey" value="{!v.credentialsForm.apiKey}" />-->
+                        <br/><br/>
+                        </div>
+                        <button class="slds-button slds-button--neutral" onclick="{!c.doCreateCredentials}">{!$Label.c.icSave}</button>
+                    </aura:set>
+                </aura:if>
+            </div>
+
+        </aura:set>
+    </aura:if>
+    <lightning:spinner  class="slds-hide" aura:id="mySpinner"/>
+
+</aura:component>

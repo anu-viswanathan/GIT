@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trimmed_Postal_Code_IKOROOFPRO_formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(TEXT(BillingCountryCode) = &quot;US&quot;, OR(RecordTypeId = &quot;01236000001I3BV&quot;,RecordTypeId = &quot;01236000001M2TW&quot;, RecordTypeId = &quot;01236000001M2TX&quot;)),
+LEFT( TRIM( BillingPostalCode ) , 5),
+
+IF(
+AND(TEXT(BillingCountryCode) = &quot;CA&quot;, OR(AND(RecordTypeId = &quot;01236000000OmxQ&quot;, TEXT(Type) = &apos;Roofer&apos;),RecordTypeId = &quot;01236000001M2TW&quot;, RecordTypeId = &quot;01236000001M2TX&quot;)),
+LEFT( TRIM( BillingPostalCode ) , 3),
+
+NULL)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Trimmed Postal Code formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

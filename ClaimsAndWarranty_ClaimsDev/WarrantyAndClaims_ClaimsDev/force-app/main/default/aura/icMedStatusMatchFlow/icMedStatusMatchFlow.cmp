@@ -1,0 +1,108 @@
+<aura:component controller="icCTRLStatusMatchFlow" implements="lightning:availableForFlowScreens,force:hasRecordId,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+
+    <!-- attributes for FLOW navigation -->
+    <aura:attribute name="canBack" type="Boolean" />
+    <aura:attribute name="canNext" type="Boolean" />
+    <aura:attribute name="tierChoice" type="String"/>
+    <aura:attribute name="isStatusMatch" type="Boolean" />
+    
+    <!-- attributes for showing static text -->
+    <aura:attribute name="statusMatchText" type="String" />
+
+    <!-- attributes for MAIN CHECKBOX -->
+    <aura:attribute name="liststatusmatch" type="List" default="[]"/>
+    <aura:attribute name="valuestatusmatch" type="List"/>
+
+    <!-- attributes for RADIO GROUPS -->
+    <aura:attribute name="tier1RadioValue" type="List" default="[]"/>
+    <aura:attribute name="tier1RadioLabel" type="String" />
+    <aura:attribute name="tier2RadioValue" type="List" default="[]"/>
+    <aura:attribute name="tier2RadioLabel" type="String" />
+    <aura:attribute name="tier3RadioValue" type="List" default="[]"/>
+    <aura:attribute name="tier3RadioLabel" type="String" />
+    <aura:attribute name="valueradiogroup" type="String" default=""/>
+    
+    
+    <!-- Attributes for Previous/Next Buttons -->
+    <aura:attribute name="previousLabel" type="String" />
+    <aura:attribute name="nextLabel" type="String" />
+
+    <!-- HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <!-- COMPONENT START -->
+    <lightning:checkboxGroup aura:id="checkboxTrigger" name="checkboxStatusMatch"
+        label=""
+        options="{! v.liststatusmatch}"
+        value="{! v.valuestatusmatch }"
+        onchange="{! c.toggleCheckboxDisclaimer}"
+		/>
+	<!--  IKO-349 Added help text as Custom Labels-->
+    <div class="checkboxDisclaimerBEFORE" style="display: block;">
+        {!$Label.c.icStatusMatchUnChecked}
+    </div>
+    <div class="checkboxDisclaimerAFTER" style="display: none;">
+        {!$Label.c.icStatusMatchChecked}
+    </div>
+    <br/>
+  
+    <lightning:formattedRichText value="{!v.statusMatchText}"/>
+                
+    <!-- IKO-349
+         By Anil Mannem on (15-Sep-2020)
+         Changed UI as to display Radio Button and Label in different lines -->
+	<br/><br/>
+    <lightning:radioGroup aura:id="thirdchoice"
+                          name="radio3"
+                          label="{!$Label.c.icROOFPRORadioButtonLabel}"
+                          options="{!v.tier3RadioValue }"
+                          value="{!v.valueradiogroup }"
+                          disabled="true"
+                          onchange="{!c.higherTierChoiceTrigger }"
+                          type="radio"
+                          />
+    <lightning:formattedRichText value="{!v.tier3RadioLabel}"/>
+    <br/>
+    <lightning:radioGroup aura:id="secondchoice"
+                          name="radio2"
+                          label=""
+                          options="{!v.tier2RadioValue }"
+                          value="{!v.valueradiogroup }"
+                          disabled="true"
+                          onchange="{!c.higherTierChoiceTrigger }"
+                          type="radio"
+                          />
+    <lightning:formattedRichText value="{!v.tier2RadioLabel}"/>
+    <br/>
+    <lightning:radioGroup aura:id="firstchoice"
+                          name="radio1"
+                          label=""
+                          options="{!v.tier1RadioValue }"
+                          value="{!v.valueradiogroup }"
+                          onchange="{!c.firstChoiceTrigger }"
+                          type="radio"
+                          />
+    <lightning:formattedRichText value="{!v.tier1RadioLabel}"/>
+    <br/>
+    <!-- FLOW NAVIGATION CONTROLS -->
+    <div aura:id="actionButtonBar" class="slds-clearfix slds-p-top_medium">
+        <!-- If Previous is available, display to the left -->
+        <div class="slds-float_left">
+            <aura:if isTrue="{!v.canBack}">
+                <lightning:button aura:id="BACK"
+                                  label="{!v.previousLabel}"
+                                  variant="neutral"
+                                  onclick="{!c.onButtonPressed}" />
+            </aura:if>
+        </div>
+        <div class="slds-float_right">
+            <!-- If Pause, Next, or Finish are available, display to the right -->
+            <aura:if isTrue="{!v.canNext}">
+                <lightning:button aura:id="NEXT"
+                                  label="{!v.nextLabel}" 
+                                  variant="brand"
+                                  onclick="{!c.onButtonPressed}" />
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

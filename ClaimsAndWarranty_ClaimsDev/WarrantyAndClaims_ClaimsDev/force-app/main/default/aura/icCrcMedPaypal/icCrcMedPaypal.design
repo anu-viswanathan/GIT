@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="accountPaymentId" label="Account Payment Id" />
+    <design:attribute name="contactId" label="Contact Id" />
+</design:component>

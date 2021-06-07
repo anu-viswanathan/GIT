@@ -1,0 +1,63 @@
+/*@media screen and (max-width: 768px) {*/
+    /*.THIS .contentTopMobile {*/
+        /*background-image: url('../resource/pHeaderMobile768x820');*/
+        /*!*background-image: t('url(' + brandLogoImage  + ')');*!*/
+
+        /*background-repeat:no-repeat;*/
+
+        /*!*width: 154px;*!*/
+        /*!*height: 50px;*!*/
+        /*!*max-width: 154px;*!*/
+        /*!*max-height: 32px;*!*/
+        /*display: inline-block;*/
+    /*}*/
+
+
+/*}*/
+/*@media only screen and (max-width: 1023px) and (min-width: 769px)  {*/
+
+    /*.THIS .contentTopTablet {*/
+        /*background-image: url('../resource/pHeaderTablet');*/
+        /*!*background-image: t('url(' + brandLogoImage  + ')');*!*/
+
+        /*background-repeat:no-repeat;*/
+
+        /*!*width: 154px;*!*/
+        /*!*height: 50px;*!*/
+        /*!*max-width: 154px;*!*/
+        /*!*max-height: 32px;*!*/
+        /*display: inline-block;*/
+    /*}*/
+
+/*}*/
+
+/*!*FOR LARGE SCREENS ONLY*!*/
+/*@media screen and (min-width: 1024px) {*/
+
+    /*.THIS .contentTopDesktop {*/
+        /*background-image: url('../resource/pHeaderDesktop');*/
+        /*!*background-image: t('url(' + brandLogoImage  + ')');*!*/
+
+        /*background-repeat:no-repeat;*/
+
+        /*width: 100%;*/
+        /*!*height: 50px;*!*/
+        /*!*max-width: 154px;*!*/
+        /*!*max-height: 32px;*!*/
+        /*display: inline-block;*/
+    /*}*/
+
+/*}*/
+
+.THIS .header-content {
+    position: relative;
+    max-width: 1380px;
+    margin: 0 auto;
+    min-height: 64px;
+}
+
+.THIS .nav-content {
+    position: relative;
+    max-width: 1380px;
+    margin: 0 auto;
+}

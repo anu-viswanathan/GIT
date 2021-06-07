@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Claims_Response_Time__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-63
+measure the total time from the HOIS Received Date OR the first time it enters File Prep/Data Entry to the First Time Case is Closed after the HOIS Received Date OR the first time it enters File Prep/Data Entry less the time it was waiting with the customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Measure total time from HOIS Received Date OR first time it enters File Prep/Data Entry to First Time Case is Closed after HOIS Received Date OR first time it enters File Prep/Data Entry less time it was waiting with the customer</inlineHelpText>
+    <label>Completed Claims Response Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

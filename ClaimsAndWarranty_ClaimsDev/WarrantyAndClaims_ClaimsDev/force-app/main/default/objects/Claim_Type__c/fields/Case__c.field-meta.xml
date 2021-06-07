@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case__c</fullName>
+    <description>Related Claim Case</description>
+    <externalId>false</externalId>
+    <label>Case</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Related Case must be a Residential or Commercial Claim</errorMessage>
+        <filterItems>
+            <field>Case.RecordType.Name</field>
+            <operation>contains</operation>
+            <value>Claim</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Claim Types</relationshipLabel>
+    <relationshipName>Claim_Types</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

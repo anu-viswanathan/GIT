@@ -1,0 +1,26 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false" standardStylesheets="false"  lightningStylesheets="false" >
+<apex:form >   
+<style>
+      .sample 
+        {
+           color: #707273;
+           font-family:Montserrat;
+           font-size: 18px;          
+           background-color: #EDF1F2; 
+        }
+        
+</style>
+
+
+
+<p></p>
+
+        <apex:outputpanel styleClass="sample"> 
+             <apex:outputText value="{!$Label.AVAILABLE_COOP_FUNDS}: " />
+             <apex:outputField value="{!Account.Available_Co_Op_Funds_Formula__c}" />                
+             <p></p>
+             <apex:outputText value="{!$Label.AVAILABLE_PREMIUM_CAP}: "/>
+             <apex:outputField value="{!Account.Available_Premium_Cap_Swag_Formula__c}" />
+        </apex:outputpanel>
+ </apex:form>
+</apex:page>

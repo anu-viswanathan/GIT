@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(Status__c), 
+&quot;1&quot;, &quot;Created&quot;,
+&quot;2&quot;, &quot;In Process&quot;,
+&quot;3&quot;, &quot;Pending&quot;,
+&quot;4&quot;, &quot;Closed&quot;,
+&quot;5&quot;, &quot;Completed&quot;,
+&quot;No Status, yet&quot;
+)</formula>
+    <label>Latest Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

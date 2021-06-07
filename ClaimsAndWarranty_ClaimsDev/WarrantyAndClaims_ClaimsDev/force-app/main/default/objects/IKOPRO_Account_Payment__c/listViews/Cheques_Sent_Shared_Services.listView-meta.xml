@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cheques_Sent_Shared_Services</fullName>
+    <columns>Contractor__c</columns>
+    <columns>Payment_Type__c</columns>
+    <columns>Net_Membership_Fee__c</columns>
+    <columns>Check_Nr__c</columns>
+    <columns>Year__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Paid_Amount__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Paid_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Check_Nr__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Cheques Sent (Renewals)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Loyalty_Team</group>
+    </sharedTo>
+</ListView>

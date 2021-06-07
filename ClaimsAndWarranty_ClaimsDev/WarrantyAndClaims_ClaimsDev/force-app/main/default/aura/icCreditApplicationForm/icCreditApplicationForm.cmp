@@ -1,0 +1,629 @@
+<aura:component controller="icCTRLCreditApplicationForm">
+
+    <aura:attribute name="showCoApplicant" type="Boolean" default="false" />
+    <aura:attribute name="WIstatechosen" type="Boolean" default="false"/>
+    <aura:attribute name="WIstatechosenCoApplicant" type="Boolean" default="false"/>
+    <aura:attribute name="dateValidationError" type="boolean" />
+    <aura:attribute name="dateValidationErrorALNE" type="boolean" />
+    <aura:attribute name="dateCoValidationError" type="boolean" />
+    <aura:attribute name="dateCoValidationErrorALNE" type="boolean" />
+    <aura:attribute name="requiredFieldsFilledIn" type="boolean" />
+    <aura:attribute name="merchantValidation" type="Object" />
+    <aura:attribute name="applicantIsMarriedToCoApplicant" type="Boolean" default="false" />
+    <aura:attribute name="initiated" type="Boolean" default="false" />
+    <aura:attribute name="opportunityId" type="String" />
+
+    <aura:attribute name="loanForm" type="icDTOLoanForm"/>
+
+    <aura:attribute name="options" type="List" default="[
+                    {'label': 'English', 'value': 'English'},
+                    {'label': 'Spanish', 'value': 'Spanish'},
+                    ]"/>
+
+    <aura:attribute name="yesno" type="List" default="[
+                    {'label': 'Yes', 'value': 'Yes'},
+                    {'label': 'No', 'value': 'No'},
+                    ]"/>
+
+    <aura:attribute name="statesArray" type="String[]" />
+    <aura:attribute name="typeid" type="String[]" />
+    <aura:attribute name="youare" type="String[]" />
+
+    <aura:method name="handleValidation" action="{!c.handleValidation}" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+
+
+
+
+
+
+
+    <div aria-labelledby="loandetails">
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--Left">
+            <legend id="newexpenseform" class="slds-text-heading--small
+          slds-p-vertical--medium">
+                Loan Details
+            </legend>
+
+            <!-- NEW LOAN DETAILS FORM -->
+            <form class="slds-form--stacked" style="width: 80%;margin-left:  auto;margin-right:  auto;" aura:id="formLoanDiv">
+                <div class="slds-text-align--left">
+
+                <lightning:combobox required="true" aura:id="coApplicantFlag" name="progress" label="{!$Label.c.icCo_Applicant + '? '}" options="{! v.yesno }" onchange="{!c.showCoApplicant}"/>
+
+                <lightning:combobox required="true" aura:id="languageChosen" name="progress" label="{!$Label.c.icLanguage}" placeholder="{!$Label.c.icSelect_loan_documents_language}" options="{! v.options }" onchange="{!c.languageToggle}"/>
+
+                <lightning:input type="number" label="{!$Label.c.icRequest_Loan_Amount}"
+                                 name="loanamount"
+                                 id="loanamount"
+                                 value="{!v.loanForm.requestedLoanAmount}"
+                                 min="0.50"
+                                 formatter="currency"
+                                 step="0.50"
+                                 messageWhenRangeUnderflow="{!$Label.c.icEnter_an_amount_that_s_at_least_0_10}"/>
+
+                <lightning:combobox name="progress" aura:id="youareid" label="{!$Label.c.icYou_Are}" value="{!$Label.c.icYou_Are}" placeholder="{!$Label.c.icYou_Are}" options="{!v.youare}" onchange="{!c.toggleYouAre}"/>
+                </div>
+
+            </form>
+
+        </fieldset>
+    </div>
+
+
+    <div aria-labelledby="applicantDetails">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+            <legend id="newexpenseform" class="slds-text-heading--small
+          slds-p-vertical--medium">
+                {!$Label.c.icApplicant_Details}
+            </legend>
+
+            <!-- CREATE NEW EXPENSE FORM -->
+            <form class="slds-form--stacked" style="width: 80%; margin-left:auto; margin-right:  auto;">
+<div class="slds-text-align--left">
+                <lightning:input aura:id="firstname" label="{!$Label.c.icFirst_Name}"
+                                 placeholder="{!$Label.c.icFirst_Name}"
+                                 name="firstname"
+                                 required="true" value="{!v.loanForm.applicantFirstName}"/>
+
+                <lightning:input aura:id="middleinitial" label="{!$Label.c.icMiddle_Initial}" placeholder="{!$Label.c.icMiddle_Initial}"
+                                 name="firstname" value="{!v.loanForm.applicantMiddleInitial}"/>
+
+                <lightning:input aura:id="lastname" label="{!$Label.c.icLast_Name}" placeholder="{!$Label.c.icLast_Name}"
+                                 name="lastname"
+                                 required="true" value="{!v.loanForm.applicantLastName}"/>
+
+                 <lightning:input aura:id="streetnumber" label="{!$Label.c.icNumber}" placeholder="{!$Label.c.icStreet_Number}"
+                                 name="streetaddress" value="{!v.loanForm.applicantStreetNumber}"
+                                 onblur="{!c.handleAddressBlur}" required="true"/>
+
+                <lightning:input aura:id="streetName" label="{!$Label.c.icStreet}" placeholder="{!$Label.c.icStreet_Name}"
+                                 name="streetName" value="{!v.loanForm.applicantStreetName}"
+                                 onblur="{!c.handleAddressBlur}" required="true"/>
+
+                <lightning:input aura:id="streetaddress" label="{!$Label.c.icStreet_Address}" placeholder="{!$Label.c.icStreet_Address}"
+                                 name="streetaddress"
+                                 readonly="true"  value="{!v.loanForm.applicantStreetAddress}"/>
+
+                <lightning:input aura:id="otheraddress" label="{!$Label.c.icOther_Address}" placeholder="{!$Label.c.icOther_Address}"
+                                 name="otheraddress" value="{!v.loanForm.applicantOtherAddress}" onblur="{!c.OtherAddressAppBlur}" onfocus="{!c.otherAddressAppFocus}"/>
+
+                <lightning:input aura:id="city" label="{!$Label.c.icCity}" placeholder="{!$Label.c.icCity}"
+                                 name="city"
+                                 required="true" value="{!v.loanForm.applicantCity}"/>
+
+                <lightning:combobox required="true" name="statechosen" aura:id="statechosen" label="{!$Label.c.icState}" placeholder="{!$Label.c.icState}" options="{!v.statesArray}" onchange="{!c.checkState}"/>
+
+                <lightning:input aura:id="zipcode" label="{!$Label.c.icZIP_Code}"
+                                 name="ZIP Code" required="true" pattern="[0-9]*" value="{!v.loanForm.applicantZipCode}"
+                                 onblur="{!c.handleZipCodeBlur}" />
+
+                <!-- as per Q4 2018 update the applicant phone number is no longer a required field -->
+                <lightning:input aura:id="phone" label="{!$Label.c.icPhone_Number}" type="tel"
+                                 name="Phone Number" required="false"  placeholder="###-###-####" value="{!v.loanForm.applicantPhoneNumber}" />
+                <!-- as per Q4 2018 update the applicant phone number is no longer to display a disclaimer -->
+                <!--<lightning:helptext content="By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359." class="popover"/>-->
+
+                <!-- as per Q4 2018 update the applicant cell phone number is now a required field -->
+                <lightning:input aura:id="cellphone" label="{!$Label.c.icCell_Phone_Number}" type="tel"
+                                 name="Cell Phone Number" required="true"  placeholder="###-###-####" value="{!v.loanForm.applicantCellPhoneNumber}"/>
+                <lightning:input aura:id="" type="checkbox" required="true" label="{!$Label.c.icApplicantMobileOptIn}" checked="{!v.loanForm.applicantMobileOptIn}"  />
+                <!--<lightning:helptext content="By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359." class="popover"/>-->
+
+<!--                <aura:if isTrue="{!v.loanForm.applicantCellPhoneNumber  != '' &amp;&amp; v.loanForm.applicantCellPhoneNumber != null }">
+                    <div class="slds-text-align&#45;&#45;left slds-text-body&#45;&#45;small">By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359.</div>
+                </aura:if>-->
+
+                <lightning:input type="email" label="{!$Label.c.icEmail}" aura:id="email" name="email" required="true" value="{!v.loanForm.applicantEmailAddress}"/>
+                <!--<lightning:helptext content="The email address must belong to the Applicant completing this section. If you provide an email address, we, and/or your merchant/provider, may use it to contact you about our products, services, special offers, and other promotions." class="popover"/>-->
+
+                <aura:if isTrue="{!v.loanForm.applicantEmailAddress != '' &amp;&amp; v.loanForm.applicantEmailAddress != null}">
+                    <div class="slds-text-body&#45;&#45;small slds-text-align&#45;&#45;left">{!$Label.c.icEmailDisclosure}</div>
+                </aura:if>
+
+                <lightning:input required="true" type="text" label="{!$Label.c.icSSN}" name="SSN" aura:id="ssn" value="{!v.loanForm.applicantSSN}"/>
+
+                <lightning:input class="{! v.dateValidationError ? 'slds-has-error' : ''}" type="date" label="{!$Label.c.icDate_of_Birth}" name="Date Of Birth" aura:id="birthdate" required="true" onchange="{!c.checkBirthdayApplicant}"/>
+                <aura:if isTrue="{!v.dateValidationError}">
+                    <div class="slds-text-color_error slds-p-left_x-small">
+                        {!$Label.c.icYou_must_be_at_least_18_years_old_to_request_a_loan}
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.dateValidationErrorALNE}">
+                    <div class="slds-text-color_error slds-p-left_x-small">
+                        {!$Label.c.icYou_must_be_at_least_19_years_old_to_request_a_loan}
+                    </div>
+                </aura:if>
+
+
+
+
+                <aura:if isTrue="{!$Browser.formFactor == 'DESKTOP'}">
+
+                    <div class=" slds-nubbin_bottom" id="hidedivinfo"
+                         style="text-align:left;
+                                margin-left: 95px;
+                                margin-bottom: -22px;
+                                ">
+                        <span ><lightning:helptext aura:id="idTestChecker" content="{!$Label.c.icGrossIncomeExample}"
+                        /></span>
+                    </div>
+
+                    <lightning:input type="number" label="Gross Income"
+                                     name="grossincome"
+                                     aura:id="grossincome"
+                                     min="0.50"
+                                     required="true"
+                                     formatter="currency"
+                                     step="0.50"
+                                     messageWhenRangeUnderflow="Enter an amount that's at least $0.10."
+                                     value="{!v.loanForm.applicantGrossIncome}"/>
+
+
+
+                    <aura:set attribute="else">
+                        <span class=" "
+                              id="moveInfoIconMobile"
+                              style="position:relative;
+                                     left:105px;
+                                     top:13px;
+                                        ">
+
+                        <lightning:buttonIcon aura:id="grossincomeIcon"
+                                              iconName="utility:info"
+                                              variant="bare" onclick="{! c.hideHelpText }"
+                                              alternativeText="Settings" />
+                        </span>
+                        <lightning:input type="number" label="Gross Income"
+                                         name="grossincome"
+                                         aura:id="grossincome"
+                                         min="0.50"
+                                         required="true"
+                                         formatter="currency"
+                                         step="0.50"
+                                         messageWhenRangeUnderflow="Enter an amount that's at least $0.10."
+                                         value="{!v.loanForm.applicantGrossIncome}"/>
+                    </aura:set>
+
+
+
+                </aura:if>
+
+
+
+
+
+
+
+
+
+
+                <!--  <lightning:input type="number" label="{!$Label.c.icGross_Income}"
+                                   name="grossincome"
+                                   aura:id="grossincome"
+                                   min="0.50"
+                                   required="true"
+                                   formatter="currency"
+                                   step="0.50"
+                                   messageWhenRangeUnderflow="{!$Label.c.icEnter_an_amount_that_s_at_least_0_10}" value="{!v.loanForm.applicantGrossIncome}"/>
+                  <lightning:helptext content="{!$Label.c.icGrossIncomeExample}" />-->
+
+
+              <!--  <aura:if isTrue="{!v.loanForm.applicantGrossIncome != '' &amp;&amp; v.loanForm.applicantGrossIncome != null}">
+                    <div class="slds-text-body&#45;&#45;small slds-text-align&#45;&#45;left">
+                        <p><b>Examples:</b> Annual salary (before taxes), alimony, child support, investment income, social security, etc.<br/>
+                        <b>NOTE:</b> Alimony, child support, or separate maintenance payments need not be revealed if you do not wish to have them considered as a basis for repaying the loan.
+                        Married Wisconsin Residents: Combine spouse and your income information once.</p>
+                    </div>
+                </aura:if>-->
+
+                <lightning:input aura:id="nameonid" label="{!$Label.c.icName_On_ID}" placeholder="{!$Label.c.icName_On_ID}"
+                                 name="nameonid" value="{!v.loanForm.applicantNameOnId}"/>
+
+                <lightning:input aura:id="idnumber" label="{!$Label.c.icApplicant_ID_Number}" type="text"
+                                 name="idnumber" value="{!v.loanForm.applicantIDNumber}"/>
+
+                <lightning:combobox name="progress" aura:id="typeofidchosen" label="{!$Label.c.icType_of_ID}" value="{!$Label.c.icType_of_ID}" placeholder="{!$Label.c.icType_of_ID}" options="{!v.typeid}" onchange="{!c.toggleTypeID}"/>
+
+                <lightning:combobox name="progress" aura:id="stateonidchosen" label="{!$Label.c.icState_on_ID}" value="{!$Label.c.icState_on_ID}" placeholder="{!$Label.c.icState_on_ID}" options="{!v.statesArray}" onchange="{!c.toggleStateID}"/>
+
+                <lightning:input type="date" label="Expiry Date" name="{!$Label.c.icExpiry_Date}" aura:id="expirydate" value="{!v.loanForm.applicantIDExpiryDate}"/>
+
+                <br/>
+
+                <aura:if isTrue="{!v.WIstatechosen}">
+
+                    <lightning:combobox required="true" aura:id="marriedflag" name="progress" label="{!$Label.c.icMarried + '?'}" options="{! v.yesno }" onchange="{!c.toggleMarried}"/>
+
+                </aura:if>
+
+                <aura:if isTrue="{!(v.loanForm.applicantMarried)  &amp;&amp; (v.loanForm.coApplicantIndicator)}">
+
+                    <lightning:combobox required="true" aura:id="marriedToCoAppflag" name="progress" label="{!$Label.c.icAre_you_married_to_co_applicant + ' '}"
+                                        options="{! v.yesno }" onchange="{!c.toggleMarriedToCoApp}"/>
+
+                </aura:if>
+</div>
+            </form>
+        </fieldset>
+
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+            <legend class="slds-text-heading--small slds-p-vertical--medium">{!$Label.c.icApplicant_Disclosure}</legend>
+            <form class="slds-form--stacked" style="width: 100%;margin-left:  auto;margin-right:  auto;">
+                <div class="slds-text-align--left">
+                    <!--<iframe contenOnly="true" src="https://www.greenskycredit.com/disclosures" width="100%" height="500px"
+                            sandbox="allow-same-origin allow-scripts allow-forms"
+                            scrolling="auto"/>-->
+
+                    <iframe src="{!$Resource.GreenSkyDisclosure}"  width="100%" /><br/><br/>
+
+                    <a href="https://www.greenskycredit.com/disclosures" target="_blank">{!$Label.c.icClick_here_for_complete_Disclosures}</a><br/><br/>
+
+                   <p>{!$Label.c.icApplicantDisclosure1}
+                        {!$Label.c.icApplicantDisclosure2} <a href="https://www.greenskycredit.com/privacy-policy" target="_blank">{!$Label.c.icPrivacy_Policy}</a>
+                        {!$Label.c.icApplicantDisclosure3} <a href="https://www.greenskycredit.com/information" target="_blank">{!$Label.c.icApplicantDisclosure4} </a>
+                        {!$Label.c.icApplicantDisclosure5}</p><br/>
+                    <lightning:input type="checkbox" label="{!$Label.c.icI_agree}" checked="{!v.loanForm.applicantAgree1}" onchange="{!c.handleAppAgree}"/>
+                    <br/><br/>
+                    <p>{!$Label.c.icApplicantDisclosure6}</p><br/>
+                     <lightning:input type="checkbox" label="{!$Label.c.icI_agree}" checked="{!v.loanForm.applicantAgree2}" onchange="{!c.handleAppAgree}" />
+                </div>
+            </form>
+        </fieldset>
+
+    </div>
+
+
+    <aura:if isTrue="{!v.showCoApplicant}">
+    <div aria-labelledby="COapplicantDetails">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+            <legend id="newexpenseform" class="slds-text-heading--small
+          slds-p-vertical--medium">
+                {!$Label.c.icCo_Applicant_Details}
+            </legend>
+
+            <!-- CREATE NEW EXPENSE FORM -->
+            <form class="slds-form--stacked" style="width: 80%;margin-left:  auto;margin-right:  auto;">
+                <div class="slds-text-align--left">
+
+                <lightning:input aura:id="firstnameCO" label="{!$Label.c.icFirst_Name}"
+                                 placeholder="{!$Label.c.icFirst_Name}"
+                                 name="firstnameCO"
+                                 required="true" value="{!v.loanForm.coApplicantFirstName}"/>
+
+                <lightning:input aura:id="middleinitialCO" label="{!$Label.c.icMiddle_Initial}" placeholder="{!$Label.c.icMiddle_Initial}"
+                                 name="firstnameCO" value="{!v.loanForm.coApplicantMiddleIntial}"/>
+
+                <lightning:input aura:id="lastnameCO" label="{!$Label.c.icLast_Name}" placeholder="{!$Label.c.icLast_Name}"
+                                 name="lastnameCO"
+                                 required="true" value="{!v.loanForm.coApplicantLastName}"/>
+
+
+                <lightning:input aura:id="streetnumberCO" label="{!$Label.c.icStreet_Number}" placeholder="{!$Label.c.icStreet_Number}"
+                                 name="streetaddressCO" value="{!v.loanForm.coApplicantStreetNumber}"
+                                 onblur="{!c.handleCoAddressBlur}" required="true"/>
+
+                <lightning:input aura:id="streetNameCo" label="{!$Label.c.icStreet}" placeholder="{!$Label.c.icStreet_Name}"
+                                 name="streetName" value="{!v.loanForm.coApplicantStreetName}"
+                                 onblur="{!c.handleCoAddressBlur}" required="true"/>
+
+                <lightning:input aura:id="streetaddressCO" label="{!$Label.c.icStreet_Address}" placeholder="{!$Label.c.icStreet_Address}"
+                                 name="streetaddressCO"
+                                 readonly="true" value="{!v.loanForm.coApplicantStreetAddress}"/>
+
+                <lightning:input aura:id="otheraddressCO" label="{!$Label.c.icOther_Address}" placeholder="{!$Label.c.icOther_Address}"
+                                 name="otheraddressCO" value="{!v.loanForm.coApplicantOtherAddress}"/>
+
+                <lightning:input aura:id="cityCO" label="{!$Label.c.icCity}" placeholder="{!$Label.c.icCity}"
+                                 name="cityCO"
+                                 required="true" value="{!v.loanForm.coApplicantCity}"/>
+
+                <lightning:combobox name="statechosenCO" aura:id="statechosenCO" label="{!$Label.c.icState}" placeholder="{!$Label.c.icState}" options="{!v.statesArray}" onchange="{!c.checkStateCoApplicant}"/>
+
+                <lightning:input aura:id="zipcodeCO" label="{!$Label.c.icZIP_Code}"
+                                 name="ZIP Code" required="true" pattern="[0-9]*" value="{!v.loanForm.coApplicantZipCode}"
+                                 onblur="{!c.handleCoZipCodeBlur}"/>
+
+               <!-- <lightning:input aura:id="zipcode4CO" label="ZIP Code 4"
+                                 name="ZIP Code 4" required="true" pattern="[0-9][0-9][0-9][0-9]" placeholder="Last 4 digits of the applicant’s 9 digit US Postal/ZIP Code" value="{!v.loanForm.coApplicantZipCode4}"/>
+-->
+                <!-- as per Q4 2018 update the co applicant phone number is no longer a required field -->
+                <lightning:input aura:id="phoneCO" label="{!$Label.c.icPhone_Number}" type="tel"
+                                 name="Phone Number" required="false"  placeholder="###-###-####" value="{!v.loanForm.coApplicantPhoneNumber}"/>
+                <!-- as per Q4 2018 update the co applicant phone number is no longer to display a disclaimer -->
+                <!--<lightning:helptext content="By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359." class="popover"/>-->
+<!--
+
+                <aura:if isTrue="{!v.loanForm.coApplicantPhoneNumber  != '' &amp;&amp; v.loanForm.coApplicantPhoneNumber != null }">
+                    <div class="slds-text-align&#45;&#45;left slds-text-body&#45;&#45;small">By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359.</div>
+                </aura:if>-->
+                <!-- as per Q4 2018 update the co applicant cell phone number is now a required field -->
+                <lightning:input aura:id="cellphoneCO" label="{!$Label.c.icCell_Phone_Number}" type="tel"
+                                 name="Cell Phone Number" required="true"  placeholder="###-###-####" value="{!v.loanForm.coApplicantCellPhoneNumber}"/>
+                <!--<lightning:helptext content="By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359." class="popover"/>-->
+                <lightning:input aura:id="mobileOptInCo" type="checkbox" required="true"  label="{!$Label.c.icApplicantMobileOptIn}" checked="{!v.loanForm.coApplicantMobileOptIn}"/>
+
+<!--
+                <aura:if isTrue="{!v.loanForm.coApplicantCellPhoneNumber  != '' &amp;&amp; v.loanForm.coApplicantCellPhoneNumber != null }">
+                    <div class="slds-text-align&#45;&#45;left slds-text-body&#45;&#45;small">By providing your mobile phone number, you authorize any financial institution that makes a GreenSky® loan to you and its agents, contractors, successors, assigns, or service providers to contact you at this mobile number, and any future number that you provide for your cellular telephone or other wireless device, by phone or text message using automated telephone dialing system or artificial or prerecorded voice messages, for any legal purpose, including, but not limited to, servicing a loan. You may revoke your consent at any time by contacting us at 1-866-936-0602 or P.O. Box 24929, Atlanta, GA 30359.</div>
+                </aura:if>
+-->
+
+                <lightning:input type="email" label="{!$Label.c.icEmail}" aura:id="emailCO" name="email" value="{!v.loanForm.coApplicantEmailAddress}"/>
+                <!--<lightning:helptext content="The email address must belong to the Co-Applicant completing this section. If you provide an email address, we, and/or your merchant/provider, may use it to contact you about our products, services, special offers, and other promotions." class="popover"/>-->
+
+                <aura:if isTrue="{!v.loanForm.coApplicantEmailAddress != '' &amp;&amp; v.loanForm.coApplicantEmailAddress != null}">
+                    <div class="slds-text-align&#45;&#45;left slds-text-body&#45;&#45;small">{!$Label.c.icEmailDisclosure}</div>
+                </aura:if>
+
+                <lightning:input type="text" label="{!$Label.c.icSSN}" name="SSN" aura:id="ssnCO" value="{!v.loanForm.coApplicantSSN}"/>
+
+                <lightning:input type="date" label="{!$Label.c.icDate_of_Birth}" name="Date Of Birth" aura:id="birthdateCO" value="{!v.loanForm.coApplicantDateOfBirth}" onchange="{!c.checkBirthdayCoApplicant}"/>
+                <aura:if isTrue="{!v.dateCoValidationError}">
+                    <div class="slds-text-color_error slds-p-left_x-small">
+                        {!$Label.c.icCo_applicant_must_be_18_year_or_older}
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.dateCoValidationErrorALNE}">
+                    <div class="slds-text-color_error slds-p-left_x-small">
+                        {!$Label.c.icCo_applicant_must_be_19_year_or_older}
+                    </div>
+                </aura:if>
+
+
+
+
+                <aura:if isTrue="{!$Browser.formFactor == 'DESKTOP'}">
+
+                    <div class=" slds-nubbin_bottom" id="hidedivinfo"
+                         style="text-align:left;
+                                margin-left: 95px;
+                                margin-bottom: -22px;
+                                ">
+                        <span ><lightning:helptext aura:id="idTestChecker" content="{!$Label.c.icGrossIncomeExample}"
+                            /></span>
+                    </div>
+
+                    <lightning:input type="number" label="Gross Income"
+                                     name="grossincome"
+                                     aura:id="grossincomeCO"
+                                     min="0.50"
+                                     required="true"
+                                     formatter="currency"
+                                     step="0.50"
+                                     messageWhenRangeUnderflow="Enter an amount that's at least $0.10."
+                                     value="{!v.loanForm.applicantGrossIncome}"/>
+
+
+
+                    <aura:set attribute="else">
+                        <span class=" "
+                              id="moveInfoIconMobile"
+                              style="position:relative;
+                                     left:105px;
+                                     top:13px;
+                                        ">
+
+                        <lightning:buttonIcon aura:id="grossincomeIcon"
+                                              iconName="utility:info"
+                                              variant="bare" onclick="{! c.hideHelpText }"
+                                              alternativeText="Settings" />
+                        </span>
+                        <lightning:input type="number" label="Gross Income"
+                                         name="grossincome"
+                                         aura:id="grossincomeCO"
+                                         min="0.50"
+                                         required="true"
+                                         formatter="currency"
+                                         step="0.50"
+                                         messageWhenRangeUnderflow="Enter an amount that's at least $0.10."
+                                         value="{!v.loanForm.applicantGrossIncome}"/>
+                    </aura:set>
+
+
+
+                </aura:if>
+
+
+
+
+
+
+                <!--<lightning:input type="number" label="{!$Label.c.icGross_Income}"-->
+                                 <!--name="grossincome"-->
+                                 <!--aura:id="grossincomeCO"-->
+                                 <!--min="0.50"-->
+                                 <!--formatter="currency"-->
+                                 <!--step="0.50"-->
+                                 <!--messageWhenRangeUnderflow="{!$Label.c.icEnter_an_amount_that_s_at_least_0_10}"  value="{!v.loanForm.coApplicantGrossIncome}"/>-->
+                <!--<lightning:helptext content="{!$Label.c.icGrossIncomeExample}" class="popover"/>-->
+
+<!--
+                <aura:if isTrue="{!v.loanForm.coApplicantGrossIncome != '' &amp;&amp; v.loanForm.coApplicantGrossIncome != null}">
+                    <div class="slds-text-body&#45;&#45;small slds-text-align&#45;&#45;left">
+                        <p><b>Examples:</b> Annual salary (before taxes), alimony, child support, investment income, social security, etc.<br/>
+                            <b>NOTE:</b> Alimony, child support, or separate maintenance payments need not be revealed if you do not wish to have them considered as a basis for repaying the loan.
+                            Married Wisconsin Residents: Combine spouse and your income information once.</p>
+                    </div>
+                </aura:if>
+-->
+
+                <lightning:input aura:id="nameonidCO" label="{!$Label.c.icName_On_ID}" placeholder="{!$Label.c.icName_On_ID}"
+                                 name="nameonid" value="{!v.loanForm.coApplicantNameOnId}"/>
+
+                <lightning:input aura:id="idnumberCO" label="{!$Label.c.icApplicant_ID_Number}" type="number"
+                                 name="idnumber" value="{!v.loanForm.coApplicantIDNumber}"/>
+
+                <lightning:combobox name="progress" aura:id="typeofidchosenCO" label="{!$Label.c.icType_of_ID}" value="{!$Label.c.icType_of_ID}" placeholder="{!$Label.c.icType_of_ID}" options="{!v.typeid}" onchange="{!c.toggleCOstateID}"/>
+
+                <lightning:combobox name="progress" aura:id="stateonidchosenCO" label="{!$Label.c.icState_on_ID}" value="{!$Label.c.icState_on_ID}" placeholder="{!$Label.c.icState_on_ID}" options="{!v.statesArray}" onchange="{!c.toggleCOstate}"/>
+
+                <lightning:input type="date" label="{!$Label.c.icExpiry_Date}" name="Expiry Date" aura:id="expirydateCO" value="{!v.loanForm.coApplicantIDExpiryDate}"/>
+
+                <aura:if isTrue="{!v.WIstatechosenCoApplicant}">
+
+                    <lightning:combobox required="true" aura:id="marriedflagCO" name="progress" label="{!$Label.c.icMarried + '? '}" options="{! v.yesno }" onchange="{!c.toggleMarriedCO}"/>
+
+                </aura:if>
+
+                </div>
+            </form>
+        </fieldset>
+
+        <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+            <legend class="slds-text-heading--small slds-p-vertical--medium">{!$Label.c.icCo_Applicant_Disclosure}</legend>
+
+            <form class="slds-form--stacked" style="width: 100%;margin-left:  auto;margin-right:  auto;">
+
+                <div class="slds-text-align--left">
+                    <!--<iframe src="{!$Resource.GreenSkyDisclosure}"   /><br/><br/>-->
+                    <a href="https://www.greenskycredit.com/disclosures" target="_blank" >{!$Label.c.icClick_here_for_complete_Disclosures}</a><br/><br/>
+                    <p>{!$Label.c.icCoApplicantDisclosure1}
+                        {!$Label.c.icCoApplicantDisclosure2} <a href="https://www.greenskycredit.com/privacy-policy" target="_blank">{!$Label.c.icPrivacy_Policy}</a>
+                        {!$Label.c.icApplicantDisclosure3} <a href="https://www.greenskycredit.com/information" target="_blank">{!$Label.c.icApplicantDisclosure4} </a>
+                        {!$Label.c.icApplicantDisclosure5}</p><br/>
+                    <lightning:input type="checkbox" label="{!$Label.c.icI_agree}" checked="{!v.loanForm.coApplicantAgree1}" onchange="{!c.handleAppAgree}"/>
+                    <br/>
+                    <p>{!$Label.c.icCoApplicantDisclosure3}</p><br/>
+                    <lightning:input type="checkbox" label="{!$Label.c.icI_agree}" checked="{!v.loanForm.coApplicantAgree2}" onchange="{!c.handleAppAgree}" />
+                </div>
+            </form>
+            <!-- / CREATE NEW EXPENSE FORM -->
+
+        </fieldset>
+        <!-- / BOXED AREA -->
+    </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.loanForm.applicantMarried)  &amp;&amp; ((!v.loanForm.coApplicantIndicator) || (!v.applicantIsMarriedToCoApplicant))}">
+        <div aria-labelledby="ApplicantSpouse">
+            <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+                <legend id="applicantSpouse" class="slds-text-heading--small slds-p-vertical--medium">
+                    {!$Label.c.icApplicant_Spouse}
+                </legend>
+                <form class="slds-form--stacked" style="width: 80%;margin-left:  auto;margin-right:  auto;">
+                    <div class="slds-text-align--left">
+
+                    <lightning:input type="text" name="applicantSpouseFirstName" label="{!$Label.c.icApplicant_Spouse_First_Name}"
+                                     value="{!v.loanForm.applicantSpouseFirstName}" required="true" />
+
+                    <lightning:input type="text" name="applicantSpouseMiddleInitial" label="{!$Label.c.icApplicant_Spouse_Middle_Name_or_Initial}"
+                                     value="{!v.loanForm.applicantSpouseMiddleInitial}"  />
+
+                    <lightning:input type="text" name="applicantSpouseLastName" label="{!$Label.c.icApplicant_Spouse_Last_Name}"
+                                     value="{!v.loanForm.applicantSpouseLastName}" required="true" />
+
+                    <lightning:input aura:id="applicantSpouseStreetNumber" label="{!$Label.c.icApplicant_Spouse_Street_Number}" placeholder="{!$Label.c.icApplicant_Spouse_Street_Number}"
+                                     name="applicantSpouseStreetNumber" value="{!v.loanForm.applicantSpouseStreetNumber}"
+                                     onblur="{!c.handleAppSpouseAddressBlur}" required="true"/>
+
+                    <lightning:input aura:id="applicantSpouseStreetName" label="{!$Label.c.icApplicant_Spouse_Street_Name}" placeholder="{!$Label.c.icApplicant_Spouse_Street_Name}"
+                                     name="applicantSpouseStreetName" value="{!v.loanForm.applicantSpouseStreetName}"
+                                     onblur="{!c.handleAppSpouseAddressBlur}" required="true" />
+
+                    <lightning:input aura:id="applicantSpouseStreetAddress" label="{!$Label.c.icApplicant_Spouse_Street_Address}" placeholder="{!$Label.c.icApplicant_Spouse_Street_Address}"
+                                     name="applicantSpouseStreetAddress"
+                                     readonly="true"  value="{!v.loanForm.applicantSpouseStreetAddress}"/>
+
+                    <lightning:input aura:id="applicantSpouseOtherAddress" label="{!$Label.c.icApplicant_Spouse_Other_Address}" placeholder="{!$Label.c.icApplicant_Spouse_Other_Address}"
+                                     name="applicantSpouseOtherAddress" value="{!v.loanForm.applicantSpouseOtherAddress}"/>
+
+                    <lightning:input aura:id="applicantSpouseCity" label="{!$Label.c.icApplicant_Spouse_City}" placeholder="{!$Label.c.icApplicant_Spouse_City}"
+                                     name="applicantSpouseCity"
+                                     required="true" value="{!v.loanForm.applicantSpouseCity}"/>
+
+                    <lightning:combobox required="true" name="applicantSpouseState" aura:id="applicantSpouseState" label="{!$Label.c.icApplicant_Spouse_State}"
+                                        placeholder="{!$Label.c.icApplicant_Spouse_State}" options="{!v.statesArray}" onchange="{!c.checkStateAppSpouse}"/>
+
+                    <lightning:input aura:id="applicantSpouseZipCode" label="{!$Label.c.icApplicant_Spouse_ZIP_Code}"
+                                     name="applicantSpouseZipCode" required="true" pattern="[0-9]*" value="{!v.loanForm.applicantSpouseZipCode}"
+                                     onblur="{!c.handleAppSpouseZipCodeBlur}" />
+
+                 <!--   <lightning:input aura:id="applicantSpouseZipCode4" label="Applicant Spouse ZIP Code 4"
+                                     name="applicantSpouseZipCode4" pattern="[0-9][0-9][0-9][0-9]" placeholder="Last 4 digits of the applicant’s spouse 9 digit US Postal/ZIP Code"
+                                     value="{!v.loanForm.applicantSpouseZipCode4}"/>-->
+                    </div>
+                </form>
+
+            </fieldset>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!(v.loanForm.coApplicantMarried)  &amp;&amp; (!v.applicantIsMarriedToCoApplicant)}">
+        <div aria-labelledby="ApplicantSpouse">
+            <fieldset class="slds-box slds-theme--default slds-container--large slds-container--left">
+                <legend id="applicantSpouse" class="slds-text-heading--small slds-p-vertical--medium">
+                    {!$Label.c.icCo_Applicant_Spouse}
+                </legend>
+                <form class="slds-form--stacked" style="width: 80%;margin-left:  auto;margin-right:  auto;">
+                    <div class="slds-text-align--left">
+
+                    <lightning:input type="text" name="coApplicantSpouseFirstName" label="{!$Label.c.icCo_Applicant_Spouse_First_Name}"
+                                     value="{!v.loanForm.coApplicantSpouseFirstName}" required="true" />
+
+                    <lightning:input type="text" name="coApplicantSpouseMiddleInitial" label="{!$Label.c.icCo_Applicant_Spouse_Middle_Name_or_Initial}"
+                                     value="{!v.loanForm.coApplicantSpouseMiddleInitial}"  />
+
+                    <lightning:input type="text" name="coApplicantSpouseLastName" label="{!$Label.c.icCo_Applicant_Spouse_Last_Name}"
+                                     value="{!v.loanForm.coApplicantSpouseLastName}" required="true" />
+
+                    <lightning:input aura:id="coApplicantSpouseStreetNumber" label="{!$Label.c.icCo_Applicant_Spouse_Street_Number}" placeholder="{!$Label.c.icCo_Applicant_Spouse_Street_Number}"
+                                     name="coApplicantSpouseStreetNumber" value="{!v.loanForm.coApplicantSpouseStreetNumber}"
+                                     onblur="{!c.handleCoAppSpouseAddressBlur}" required="true"/>
+
+                    <lightning:input aura:id="coApplicantSpouseStreetName" label="{!$Label.c.icCo_Applicant_Spouse_Street}" placeholder="{!$Label.c.icCo_Applicant_Spouse_Street}"
+                                     name="coApplicantSpouseStreetName" value="{!v.loanForm.coApplicantSpouseStreetName}"
+                                     onblur="{!c.handleCoAppSpouseAddressBlur}" required="true" />
+
+                    <lightning:input aura:id="coApplicantSpouseStreetAddress" label="{!$Label.c.icCo_Applicant_Spouse_Street_Address}" placeholder="{!$Label.c.icCo_Applicant_Spouse_Street_Address}"
+                                     name="coApplicantSpouseStreetAddress"
+                                     readonly="true"  value="{!v.loanForm.coApplicantSpouseStreetAddress}"/>
+
+                    <lightning:input aura:id="coApplicantSpouseOtherAddress" label="{!$Label.c.icCo_Applicant_Spouse_Other_Address}" placeholder="{!$Label.c.icCo_Applicant_Spouse_Other_Address}"
+                                     name="coApplicantSpouseOtherAddress" value="{!v.loanForm.coApplicantSpouseOtherAddress}"/>
+
+                    <lightning:input aura:id="coApplicantSpouseCity" label="{!$Label.c.icCo_Applicant_Spouse_City}" placeholder="{!$Label.c.icCo_Applicant_Spouse_City}"
+                                     name="coApplicantSpouseCity"
+                                     required="true" value="{!v.loanForm.coApplicantSpouseCity}"/>
+
+                    <lightning:combobox required="true" name="coApplicantSpouseState" aura:id="coApplicantSpouseState" label="{!$Label.c.icCo_Applicant_Spouse_State}"
+                                        placeholder="{!$Label.c.icCo_Applicant_Spouse_State}" options="{!v.statesArray}" onchange="{!c.checkStateCoAppSpouse}"/>
+
+                    <lightning:input aura:id="coApplicantSpouseZipCode" label="{!$Label.c.icCo_Applicant_Spouse_ZIP_Code}"
+                                     name="coApplicantSpouseZipCode" required="true" pattern="[0-9]*" value="{!v.loanForm.coApplicantSpouseZipCode}"
+                                     onblur="{!c.handleCoAppSpouseZipCodeBlur}" />
+
+                  <!--  <lightning:input aura:id="coApplicantSpouseZipCode4" label="Co-Applicant Spouse ZIP Code 4"
+                                     name="coApplicantSpouseZipCode4" pattern="[0-9][0-9][0-9][0-9]" placeholder="Last 4 digits of the co-applicant’s spouse 9 digit US Postal/ZIP Code"
+                                     value="{!v.loanForm.coApplicantSpouseZipCode4}"/>-->
+                    </div>
+                </form>
+
+            </fieldset>
+        </div>
+    </aura:if>
+    <br/>
+</aura:component>

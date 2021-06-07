@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CanadianBillingPostalCode</fullName>
+    <active>false</active>
+    <description>Validates that the account Billing Zip/Postal Code is in the correct format if Billing Country is Canada. 2019-10-22 Shutting this off. This causes massive failures with batch classes due to be old data, and cannot be deploy as is. Also: out of scope.</description>
+    <errorConditionFormula>AND(
+BillingCountry = &quot;Canada&quot;,
+NOT(REGEX(BillingPostalCode, &quot;((?i)[ABCEGHJKLMNPRSTVXY]\\d[A-Z]?\\s?\\d[A-Z]\\d)?&quot;)),
+NOT(SYS_IsNewClaimCaseAccount__c)				
+)</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Postal Code is not in the correct format for Canadian addresses</errorMessage>
+</ValidationRule>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <img src="/resource/IKO_logo" width="auto"/>
+</aura:component>

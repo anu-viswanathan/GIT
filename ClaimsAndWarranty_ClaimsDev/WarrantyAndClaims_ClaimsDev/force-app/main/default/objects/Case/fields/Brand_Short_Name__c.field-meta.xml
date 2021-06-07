@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Short_Name__c</fullName>
+    <description>Converts full brand name to shorter version for printing in documents.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Brand__c, 
+&quot;CRCI&quot;, &quot;CRC&quot;,
+&quot;IKOL&quot;, &quot;IKO&quot;,
+&quot;IKOI&quot;, &quot;IKO&quot;,
+&quot;IKOM&quot;, &quot;IKO&quot;,
+&quot;BLAIRI&quot;,&quot;Blair&quot;, 
+&quot;HYLOADI&quot;,&quot;Hyload&quot;, 
+&quot;DECRA&quot;,&quot;Decra&quot;, 
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Brand Short Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

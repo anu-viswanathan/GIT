@@ -1,0 +1,201 @@
+.THIS {
+}
+.THIS .slds-x-small-show-only{
+    display: none;
+}
+.THIS .slds-x-small-show-only img{
+    width:100%;
+}
+
+.THIS .slds-small-show-only{
+    display:none;
+}
+.THIS .slds-small-show-only img{
+    width:100%;
+}
+
+.THIS .slds-medium-show-only{
+    display:none;
+}
+.THIS .slds-medium-show-only img{
+    width:100%;
+}
+
+.THIS .slds-show_large{
+    display:none;
+}
+.THIS .slds-show_large img{
+    width:100%;
+}
+
+.THIS .slds-show_x-large{
+    display:none;
+}
+.THIS .slds-show_x-large img{
+    width:100%;
+}
+
+
+.THIS .welcomeMain{
+}
+
+/*@media only screen and (max-width: 480px){*/
+/*    .THIS .icMedCommunityWelcome .welcomeMain{*/
+/*        height:100%;*/
+/*    }*/
+
+/*    .THIS .icMedCommunityWelcome .iko-tile-wrapper:not(:last-child){*/
+/*        border-right: unset;*/
+/*        border-bottom: 1px black dashed;*/
+/*    }*/
+
+/*    .THIS .icMedCommunityWelcome .content-wrapper{*/
+/*        display: unset;*/
+/*    }*/
+/*}*/
+
+
+@media screen and (min-width: 320px) and (max-width:550px){
+    .THIS {
+    }
+    .THIS .slds-x-small-show-only{
+        display: unset;
+    }
+    .THIS .slds-small-show-only{
+        display:none;
+    }
+    .THIS .slds-medium-show-only{
+        display:none;
+    }
+    .THIS .slds-show_large{
+        display:none;
+    }
+    .THIS .slds-show_x-large{
+        display:none;
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper{
+        padding-top:40px;
+        padding-bottom:40px;
+        transform:scale(2);
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper:not(:last-child){
+        border-right: unset;
+        border-bottom: 1px black dashed;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px){
+    .THIS {
+    }
+    .THIS .slds-x-small-show-only{
+        display:none;
+    }
+    .THIS .slds-small-show-only{
+        display:unset;
+    }
+    .THIS .slds-medium-show-only{
+        display:none;
+    }
+    .THIS .slds-show_large{
+        display:none;
+    }
+    .THIS .slds-show_x-large{
+        display:none;
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper{
+        padding-top:40px;
+        padding-bottom:40px;
+        transform:scale(1.5);
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper:not(:last-child){
+        border-right: unset;
+        border-bottom: 1px black dashed;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1024px){
+    .THIS {
+    }
+    .THIS .slds-x-small-show-only{
+        display:none;
+    }
+    .THIS .slds-small-show-only{
+        display:none;
+    }
+    .THIS .slds-medium-show-only{
+        display:unset;
+    }
+    .THIS .slds-show_large{
+        display:none;
+    }
+    .THIS .slds-show_x-large{
+        display:none;
+    }
+
+    .THIS .cIcMedCommunityWelcome .content-wrapper{
+        display:unset;
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper{
+        padding-top:40px;
+        padding-bottom:40px;
+
+    }
+
+    .THIS .cIcMedCommunityWelcome .iko-tile-wrapper:not(:last-child){
+        border-right: unset;
+        border-bottom: 1px black dashed;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1500px){
+    .THIS {
+    }
+    .THIS .slds-x-small-show-only{
+        display:none;
+    }
+    .THIS .slds-small-show-only{
+        display:none;
+    }
+    .THIS .slds-medium-show-only{
+        display:none;
+    }
+    .THIS .slds-show_large{
+        display:unset;
+    }
+    .THIS .slds-show_x-large{
+        display:none;
+    }
+
+    .THIS .cIcMedCommunityWelcome .content-wrapper{
+        display:inline-flex;
+    }
+}
+
+@media screen and (min-width: 1501px){
+    .THIS {
+    }
+    .THIS .slds-x-small-show-only{
+        display:none;
+    }
+    .THIS .slds-small-show-only{
+        display:none;
+    }
+    .THIS .slds-medium-show-only{
+        display:none;
+    }
+    .THIS .slds-show_large{
+        display:none;
+    }
+    .THIS .slds-show_x-large{
+        display:unset;
+    }
+
+    .THIS .cIcMedCommunityWelcome .content-wrapper{
+        display:inline-flex;
+    }
+}

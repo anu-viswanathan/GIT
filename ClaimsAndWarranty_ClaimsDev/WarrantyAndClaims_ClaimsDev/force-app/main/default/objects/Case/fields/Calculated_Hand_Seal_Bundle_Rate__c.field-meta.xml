@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculated_Hand_Seal_Bundle_Rate__c</fullName>
+    <description>Calculated hand seal bundle rate, if Bundle Rate Hand Seal is blank, then use Hand Seal Bundle Rate, otherwise, use Bundle Rate Hand Seal</description>
+    <externalId>false</externalId>
+    <formula>BLANKVALUE(Bundle_Rate_Hand_Seal__c, Hand_Seal_Bundle_Rate__c)</formula>
+    <inlineHelpText>Calculated hand seal bundle rate, if Bundle Rate Hand Seal is blank, then use Hand Seal Bundle Rate, otherwise, use Bundle Rate Hand Seal</inlineHelpText>
+    <label>Calculated Hand Seal Bundle Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

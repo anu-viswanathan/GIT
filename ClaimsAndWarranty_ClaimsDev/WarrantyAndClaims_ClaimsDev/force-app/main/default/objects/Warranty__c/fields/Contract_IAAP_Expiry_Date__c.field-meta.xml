@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_IAAP_Expiry_Date__c</fullName>
+    <description>From the contractor record.</description>
+    <externalId>false</externalId>
+    <formula>Contractor__r.IAP_Registration_Expiry_Date__c</formula>
+    <label>Contractor IAAP Expiry Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

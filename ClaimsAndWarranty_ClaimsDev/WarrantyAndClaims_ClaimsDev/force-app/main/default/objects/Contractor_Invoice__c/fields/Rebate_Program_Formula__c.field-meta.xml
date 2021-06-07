@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebate_Program_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISBLANK(TEXT(Rebate_Program_CA__c))), TEXT(Rebate_Program_CA__c),
+IF(NOT(ISBLANK(TEXT(Rebate_Program_US__c))), TEXT(Rebate_Program_US__c),
+IF(NOT(ISBLANK(TEXT(Rebate_Program_CRC_c__c))), TEXT( Rebate_Program_CRC_c__c), NULL)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Rebate Program</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

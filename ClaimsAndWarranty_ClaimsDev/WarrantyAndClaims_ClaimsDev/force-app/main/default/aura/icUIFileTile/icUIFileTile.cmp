@@ -1,0 +1,47 @@
+<aura:component>
+
+	<aura:attribute name="relatedFile" type="ContentVersion" />
+	<aura:attribute name="fileTypeIcon" type="String" />
+	<aura:attribute name="lastModifiedDate" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<li class="slds-var-p-horizontal_medium slds-var-p-vertical_xx-small forceContentVirtualRelatedListStencil forceRecordLayout">
+		<a onclick="{!c.doPreview}" class="" role="" href="javascript:void(0)" title="{!v.relatedFile.Title}" data-Id="{!v.relatedFile.ContentDocumentId}">
+			<div class="filerow">
+				<div class="slds-size_12-of-12 slds-grid">
+					<div class="slds-show_inline-block slds-float_left slds-align-middle thumbnailImg medium" data-refid="divId" data-divid="{!'AttachedContentDocument-file-badge-' + v.relatedFile.ContentDocumentId}">
+						<div class="forceContentContentThumbnail">
+							<div class="thumbnailContainer">
+								<!-- <img src="{!'/sfc/servlet.shepherd/version/renditionDownload?rendition=thumb120by90&amp;versionId=' + v.relatedFile.ContentDocumentId + '&amp;operationContext=CHATTER&amp;contentId=' + v.relatedFile.Id + '&amp;page=0'}" class="thumbnailImg medium" /> -->
+								<lightning:icon class="inputIcon" iconName="{!'doctype:' + v.fileTypeIcon}" />
+							</div>
+						</div>
+					</div>
+					<div class="slds-show_inline-block slds-float_left slds-p-left--x-small slds-truncate slds-m-right_x-small">
+						<span class="itemTitle slds-text-color--default slds-text-body--regulardesktop uiOutputText" title="{!v.relatedFile.Title}">
+							{!v.relatedFile.Title}
+						</span>
+						<p class="slds-m-around--none secondaryFields slds-text-body--small slds-truncate">
+							<span class="uiOutputDateTime">
+								{!v.lastModifiedDate}
+							</span>
+							<span>
+								<span class="fileSizeAmount uiOutputNumber">
+									<ui:outputNumber format="#0" value="{!v.relatedFile.ContentSize/1024}"/>
+								</span>
+								<span class="fileSizeUnits uiOutputText">
+									KB
+								</span>
+							</span>
+							<span class="itemLabel slds-truncate uiOutputText">
+								{!v.relatedFile.FileExtension}
+							</span>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</a>
+	</li>
+</aura:component>

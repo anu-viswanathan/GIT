@@ -1,0 +1,5 @@
+<aura:component controller="icCTRLCommunityNavigation" implements="force:lightningQuickAction,forceCommunity:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="fullLanguageCode" type="String" default="{!$Locale.language}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+</aura:component>

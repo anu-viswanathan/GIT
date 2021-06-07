@@ -1,0 +1,36 @@
+/**
+ * Created by Yves Asselin on 2018-08-13.
+ */
+.THIS{
+    /*border: 4px white solid;*/
+
+    /*height:255px!important;*/
+}
+
+@media only screen and  (min-width: 320px) and (max-width:479px){
+    .THIS .image-fade.linkTileSizeUI img{
+        height: unset!important;
+    }
+
+    .THIS .topBlackBar .slds-align_absolute-center{
+        font-size:18px!important;
+        font-weight:700;
+        letter-spacing: 6px!important;
+        height:80px!important;
+    }
+}
+
+@media only screen and (min-width:490px) and (max-width:768px){
+    .THIS .image-fade.linkTileSizeUI img{
+        height: unset!important;
+    }
+
+    .THIS .topBlackBar .slds-align_absolute-center{
+        /*font-size:18px!important;*/
+        font-weight:700;
+        letter-spacing: 6px!important;
+        /*height:80px!important;*/
+    }
+
+
+}

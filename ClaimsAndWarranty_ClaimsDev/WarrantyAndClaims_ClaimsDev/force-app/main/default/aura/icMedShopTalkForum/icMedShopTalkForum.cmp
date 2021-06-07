@@ -1,0 +1,123 @@
+<!--
+ - Created by yvesasselin on 2018-08-11.
+ -->
+
+<aura:component description="icMedShopTalkForum" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="title" type="String" default="My Title" />
+    <aura:attribute name="description" type="String" default="Some Description for this Tile" />
+    <aura:attribute name="redirectURL" type="String" />
+    <aura:attribute name="image" type="String" />
+
+
+    <div class="slds-grid slds-wrap" style="margin-top:0px;">
+        <div class="slds-col slds-size_12-of-12">
+            <span>
+                    <div class="sdls-col"
+                         style="margin-top:0px;
+                                        width:100%;
+                                        ">
+
+                        <p class="slds-text-align--left"
+                           style="postition: relative;
+                                          padding-top:10px;
+                                          margin-left:0px;
+                                          height:50px;
+                                          width:100%;
+                                          text-transform: uppercase;
+                                          font-weight:800;
+                                          font-size:10px;
+                                          letter-spacing:5px;
+                                          background-color:white;
+                                           ">
+
+                            Shop Talk Forum
+                        </p>
+
+                    </div>
+                </span>
+        </div>
+    </div>
+
+
+
+
+<div class="slds-grid slds-wrap">
+
+    <div class="slds-col slds-size_1-of-2 slds-border--right"
+         style="background-color: white;
+                height:370px;
+                "
+                >
+
+
+         <span>
+            <c:icUIShopTalkMainStory   title="Connect, talk shop, swap success
+                                                stories, pics and trade secrets
+                                                with your Roof Pro pals."
+                                        redirectURL="http://google.com"/>
+
+        </span>
+
+    </div>
+
+
+
+    <div class="slds-col slds-size_1-of-2 ">
+        <span>
+
+            <p style="font-weight:600;  margin-top:0px; margin-left:55px; font-size:12px; margin-bottom:0px;">
+                TRENDING
+            </p>
+
+        </span>
+
+        <div class="slds-col slds-border--bottom"
+             style="height: 160px;
+                    margin-top: 25px;
+                    margin-right: 25px;
+                    margin-left:55px;
+                    margin-bottom:50px;">
+         <span >
+            <c:icUIShopTalkItem   author="John Doe"
+                                  company="Acme Roofing"
+                                  city="Hometown, MN"
+                                  publishedDate="June 10, 2018"
+                                  title="Not Enough Time To Get It All Done!"
+                                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                do eiusmod tempor dunt ut labore et dolore magna aliqua
+                                                labore et dolore magna aliqua tempor dunt. "
+                                  redirectURL="http://google.com"/>
+
+
+        </span>
+
+        </div>
+
+        <div class="slds-col "
+             style="margin-right: 25px;
+             margin-left:55px;
+             margin-top:-35px;">
+
+            <span>
+            <c:icUIShopTalkItem   author="Jimmy john Doe"
+                                  company="JJ Roofing"
+                                  city="Hometown, NY"
+                                  publishedDate="June 2, 2018"
+                                  title="Not Enough Time To Get It All Done!"
+                                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                do eiusmod tempor dunt ut labore et dolore magna aliqua
+                                                labore et dolore magna aliqua tempor dunt. "
+                                  redirectURL="http://google.com"/>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</aura:component>

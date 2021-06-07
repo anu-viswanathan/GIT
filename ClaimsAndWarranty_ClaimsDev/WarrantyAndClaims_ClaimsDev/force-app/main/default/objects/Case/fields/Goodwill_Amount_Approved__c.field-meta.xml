@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goodwill_Amount_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>The claim&apos;s Goodwill Amount has been approved. This does not mean the _claim_ has been fully approved. Check the Claim Approved checkbox status for that.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The goodwill amount requested has been approved.</inlineHelpText>
+    <label>Goodwill Amount Approved?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

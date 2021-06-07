@@ -1,0 +1,94 @@
+<!--
+ - Created by admin on 7/16/2018.
+ -->
+
+<aura:component description="icUIQuickShotItem">
+
+    <aura:attribute name="isRoundUp" type="Boolean" default="false" />
+    <aura:attribute name="label" type="String" default="Line 1" />
+    <aura:attribute name="label2" type="String" default="Line 2" />
+    <aura:attribute name="value" type="String" default="03" />
+    <aura:attribute name="formattedValue" type="String"/>
+    <aura:attribute name="valueDollarSign" type="String" default="" />
+    <aura:attribute name="redirectURL" type="String" />
+    <aura:attribute name="hideValue" type="Boolean" default="false" />
+
+
+    <aura:handler name="change" value="{!v.value}" action="{!c.doInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+    <div  class="slds-align_absolute-center image-fade "
+          style="display:block;
+                    ">
+
+        <div style="display: table;
+                    margin-bottom:10px;
+                    width: 100%;
+                    height:100%;
+                    vertical-align: middle;
+
+                    ">
+            <div class="slds-align_absolute-center"  
+                 style="display: table-cell;
+                        vertical-align: middle; 
+                        text-align: center;
+">
+
+
+                <p class="quickShotTextNumbers"
+                        style="text-transform: uppercase;
+                          color:#3D3F3E; 
+                          font-weight: 700;
+                          font-size:2em;
+                          vertical-align: middle !important;
+                          letter-spacing: normal;
+                          ">
+
+                    <aura:if isTrue="{!v.hideValue}">
+                        {!$Label.c.Quick_Tracker_Upcoming_Coop_hidden_text}
+                        <aura:set attribute="else">
+                            <sup style="font-size:0.6em;
+                                font-weight: 700;
+                                postion:relative;
+                                top:-.45em;
+                                ">
+<!--                        {!v.valueDollarSign}</sup>3960.72-->
+<!--                        {!v.valueDollarSign}</sup>{!v.formattedValue}-->
+                            {!v.valueDollarSign}</sup>{!v.formattedValue}
+                        </aura:set>
+                    </aura:if>
+
+                </p>
+                <!---->
+                <!--<p class="" id="dashLine" -->
+                   <!--style="  width:30px;-->
+                            <!--height:2px; "></p>-->
+                <span style="border-top: 2px dotted #999ca3;
+                             width:65%;
+                             display: block;
+                             height:0px;
+                             margin-left:auto;
+                             margin-right:auto;
+                             margin-bottom:22px;
+                            "></span>
+
+                <p class="quickShotText"
+                        style="text-transform: uppercase;
+                          color:#950D16;
+                          font-weight: 700;
+                          font-size:0.8em;
+                          letter-spacing: 1px;
+                          vertical-align: middle !important;
+                          margin-top:5px;
+                          ">
+                    <aura:unescapedHtml value="{!v.label}"/>
+                </p>
+
+
+            </div>
+        </div>
+
+    </div>
+</aura:component>

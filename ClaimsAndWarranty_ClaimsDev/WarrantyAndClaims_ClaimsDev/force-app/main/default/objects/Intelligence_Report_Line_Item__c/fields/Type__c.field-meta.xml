@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Overview</fullName>
+                <default>false</default>
+                <label>Sales Overview</label>
+            </value>
+            <value>
+                <fullName>New Customer Activity</fullName>
+                <default>false</default>
+                <label>New Customer Activity</label>
+            </value>
+            <value>
+                <fullName>Competitive Activity</fullName>
+                <default>false</default>
+                <label>Competitive Activity</label>
+            </value>
+            <value>
+                <fullName>Design Community Activity</fullName>
+                <default>false</default>
+                <label>Design Community Activity</label>
+            </value>
+            <value>
+                <fullName>Contractor Activity</fullName>
+                <default>false</default>
+                <label>Contractor Activity</label>
+            </value>
+            <value>
+                <fullName>Competitive Market Activity</fullName>
+                <default>false</default>
+                <label>Competitive Market Activity</label>
+            </value>
+            <value>
+                <fullName>Competitors Product Evaluation</fullName>
+                <default>false</default>
+                <label>Competitors Product Evaluation</label>
+            </value>
+            <value>
+                <fullName>Target Account Info (Dealer/Roofer)</fullName>
+                <default>false</default>
+                <label>Target Account Info (Dealer/Roofer)</label>
+            </value>
+            <value>
+                <fullName>Roofer Intel</fullName>
+                <default>false</default>
+                <label>Roofer Intel</label>
+            </value>
+            <value>
+                <fullName>Dealer Intel</fullName>
+                <default>false</default>
+                <label>Dealer Intel</label>
+            </value>
+            <value>
+                <fullName>IKO Product Intel</fullName>
+                <default>false</default>
+                <label>IKO Product Intel</label>
+            </value>
+            <value>
+                <fullName>Competitor Product Intel</fullName>
+                <default>false</default>
+                <label>Competitor Product Intel</label>
+            </value>
+            <value>
+                <fullName>Recommendations</fullName>
+                <default>false</default>
+                <label>Recommendations</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Competitors Product Information</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Competitors Product Information</label>
+            </value>
+            <value>
+                <fullName>Product Quality Information</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Product Quality Information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,23 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" language="fr">
+    <apex:includeLightning />
+    <apex:slds />
+
+<div> 
+    <div id="appPlaceholder" />
+</div>
+
+    <script>
+        $Lightning.use("c:icAppCommunityWelcome", function() {
+            $Lightning.createComponent(
+                "c:icCRCMedCommunityWelcome",
+                {},
+                "appPlaceholder",
+                function(cmp) {
+                    // do some stuff
+                    // console.log("Welcome page was created successful!")
+                }
+            );
+        });
+    </script>
+
+</apex:page>

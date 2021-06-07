@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Rate__c</fullName>
+    <description>Secondary Rate, which may be based on the State/Province or the Secondary Location</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Secondary Rate</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <type>Percent</type>
+</CustomField>

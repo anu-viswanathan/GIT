@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ic_Commercial_Roofing_Business__c</fullName>
+    <description>ic_US Commercial</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What % of roofing business is commercial?</inlineHelpText>
+    <label>Commercial Roofing Business %</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>US_Commercial_Values</valueSetName>
+    </valueSet>
+</CustomField>

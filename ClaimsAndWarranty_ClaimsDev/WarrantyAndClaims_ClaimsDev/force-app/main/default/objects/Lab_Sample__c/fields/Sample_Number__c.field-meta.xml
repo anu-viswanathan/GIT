@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Number__c</fullName>
+    <description>Used for the Lab team to track Sample in Storage. Samples for US organic claims will be stored by claim # at Kankokee; samples stored in Canada use a sequence number that will reset annually</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Sample Number format is: {CountryCode}{SectorCode}-{Sequence Number}-{YY}, e.g.
+• CARES-1005-19
+• USRES-1004-19
+• CACOM-1002-19
+The sequence numbers reset annually to 0001</inlineHelpText>
+    <label>Sample Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

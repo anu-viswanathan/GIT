@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseInLegal__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-87
+Indicates whether the Case is In Litigation or not</description>
+    <externalId>false</externalId>
+    <formula>Case__r.Legal__c &amp;&amp; (
+$Profile.Name != &apos;Claims Manager&apos; &amp;&amp;
+$Profile.Name != &apos;Commercial Claims Rep&apos; &amp;&amp;
+$Profile.Name != &apos;Residential Claims Rep&apos; &amp;&amp;
+$Profile.Name != &apos;Lab Manager&apos; &amp;&amp;
+$Profile.Name != &apos;Lab Technician&apos; &amp;&amp;
+$Profile.Name != &apos;System Administrator&apos; &amp;&amp;
+$Profile.Name != &apos;Plant Manager&apos; &amp;&amp;
+$Profile.Name != &apos;Iko Plants&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicates whether the Case is In Litigation or not</inlineHelpText>
+    <label>CaseInLegal</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

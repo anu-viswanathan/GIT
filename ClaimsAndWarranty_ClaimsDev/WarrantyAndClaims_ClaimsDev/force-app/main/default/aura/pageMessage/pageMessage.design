@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="message" label="Message" description="Message you want displayed in the component" />
+    <design:attribute name="messageType" label="Message Type" description="Type of message - warning, error, success" />
+    <design:attribute name="background" label="Background Type" description="warning, error, success" />
+</design:component>

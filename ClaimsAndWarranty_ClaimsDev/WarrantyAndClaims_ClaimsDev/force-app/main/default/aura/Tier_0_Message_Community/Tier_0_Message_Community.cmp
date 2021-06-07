@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global" >
+	
+    <aura:attribute name="Tier0Msg" type="String"/>
+    
+    <div class="slds-form-element__control">                   
+      {!$Label.c.Tier_0_Message_Community} 
+    </div>   
+    
+</aura:component>

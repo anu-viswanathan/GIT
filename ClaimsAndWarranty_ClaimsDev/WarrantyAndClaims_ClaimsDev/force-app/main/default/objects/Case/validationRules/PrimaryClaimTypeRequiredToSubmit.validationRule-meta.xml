@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryClaimTypeRequiredToSubmit</fullName>
+    <active>true</active>
+    <description>One Claim Type with &quot;Is Primary&quot; flagged is required to move out of draft</description>
+    <errorConditionFormula>AND(
+    OR(
+        RecordType.Name = &apos;Commercial Claim&apos;,
+        RecordType.Name = &apos;Residential Claim&apos; 
+    ),
+    Num_Primary_Claim_Types__c &lt; 1,
+    TEXT(Claim_Stage__c) = &apos;Submitted&apos;
+)</errorConditionFormula>
+    <errorMessage>At least one primary Claim Type is required to submit a Case</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<!--
+ - Created by Francois Poirier on 2019-03-25.
+ -->
+
+<design:component>
+    <design:attribute name="accountPaymentId" label="Account Payment Id" />
+</design:component>

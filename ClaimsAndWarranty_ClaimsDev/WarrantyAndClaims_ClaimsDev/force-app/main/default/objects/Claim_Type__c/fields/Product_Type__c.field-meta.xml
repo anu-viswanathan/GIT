@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(none)</fullName>
+                <default>false</default>
+                <label>(none)</label>
+            </value>
+            <value>
+                <fullName>A Organic</fullName>
+                <default>false</default>
+                <label>A Organic</label>
+            </value>
+            <value>
+                <fullName>B Glass</fullName>
+                <default>false</default>
+                <label>B Glass</label>
+            </value>
+            <value>
+                <fullName>C Lam/Org</fullName>
+                <default>false</default>
+                <label>C Lam/Org</label>
+            </value>
+            <value>
+                <fullName>D Lam/Glass</fullName>
+                <default>false</default>
+                <label>D Lam/Glass</label>
+            </value>
+            <value>
+                <fullName>E Coated Rolls</fullName>
+                <default>false</default>
+                <label>E Coated Rolls</label>
+            </value>
+            <value>
+                <fullName>F Mod Bit</fullName>
+                <default>false</default>
+                <label>F Mod Bit</label>
+            </value>
+            <value>
+                <fullName>G Felt</fullName>
+                <default>false</default>
+                <label>G Felt</label>
+            </value>
+            <value>
+                <fullName>H Asphalt</fullName>
+                <default>false</default>
+                <label>H Asphalt</label>
+            </value>
+            <value>
+                <fullName>I Fibrebrd</fullName>
+                <default>false</default>
+                <label>I Fibrebrd</label>
+            </value>
+            <value>
+                <fullName>J Total</fullName>
+                <default>false</default>
+                <label>J Total</label>
+            </value>
+            <value>
+                <fullName>K Lock</fullName>
+                <default>false</default>
+                <label>K Lock</label>
+            </value>
+            <value>
+                <fullName>L ArmourGd</fullName>
+                <default>false</default>
+                <label>L ArmourGd</label>
+            </value>
+            <value>
+                <fullName>M Protecbrd</fullName>
+                <default>false</default>
+                <label>M Protecbrd</label>
+            </value>
+            <value>
+                <fullName>N Poly ISO</fullName>
+                <default>false</default>
+                <label>N Poly ISO</label>
+            </value>
+            <value>
+                <fullName>P Roof-Fast</fullName>
+                <default>false</default>
+                <label>P Roof-Fast</label>
+            </value>
+            <value>
+                <fullName>Q Gold Shield</fullName>
+                <default>false</default>
+                <label>Q Gold Shield</label>
+            </value>
+            <value>
+                <fullName>R Adhs/Ctgs</fullName>
+                <default>false</default>
+                <label>R Adhs/Ctgs</label>
+            </value>
+            <value>
+                <fullName>Z Not IKO</fullName>
+                <default>false</default>
+                <label>Z Not IKO</label>
+            </value>
+            <value>
+                <fullName>Valley Cap</fullName>
+                <default>false</default>
+                <label>Valley Cap</label>
+            </value>
+            <value>
+                <fullName>Panels</fullName>
+                <default>false</default>
+                <label>Panels</label>
+            </value>
+            <value>
+                <fullName>Hip &amp; Ridge</fullName>
+                <default>false</default>
+                <label>Hip &amp; Ridge</label>
+            </value>
+            <value>
+                <fullName>Valley</fullName>
+                <default>false</default>
+                <label>Valley</label>
+            </value>
+            <value>
+                <fullName>Touch up kit</fullName>
+                <default>false</default>
+                <label>Touch up kit</label>
+            </value>
+            <value>
+                <fullName>Screws</fullName>
+                <default>false</default>
+                <label>Screws</label>
+            </value>
+            <value>
+                <fullName>Starter w drip</fullName>
+                <default>false</default>
+                <label>Starter w drip</label>
+            </value>
+            <value>
+                <fullName>Side</fullName>
+                <default>false</default>
+                <label>Side</label>
+            </value>
+            <value>
+                <fullName>Rake</fullName>
+                <default>false</default>
+                <label>Rake</label>
+            </value>
+            <value>
+                <fullName>XD Channel</fullName>
+                <default>false</default>
+                <label>XD Channel</label>
+            </value>
+            <value>
+                <fullName>Debris guard</fullName>
+                <default>false</default>
+                <label>Debris guard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

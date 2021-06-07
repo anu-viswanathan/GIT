@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Summary_Last_Month_Qty__c</fullName>
+    <description>The sum of the quantities on orders from the month prior to the current month&apos;s data upload. Note that that on the 1st of May this would still show data for MARCH since the APRIL upload would not be received until a few days into the month.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The sum of the quantities on orders from the month prior to the current month&apos;s data upload. Note that that on the 1st of May this would still show data for MARCH since the APRIL upload would not be received until a few days into the month.</inlineHelpText>
+    <label>Order Summary - Last Month Qty</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

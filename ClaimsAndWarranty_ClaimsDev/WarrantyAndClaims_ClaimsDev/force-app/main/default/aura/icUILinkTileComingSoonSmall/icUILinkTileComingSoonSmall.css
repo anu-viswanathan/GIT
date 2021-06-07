@@ -1,0 +1,48 @@
+.THIS #hoverText p {
+     /*position:relative;*/
+     /*bottom:30px;*/
+     /*left:0px;*/
+     visibility:hidden !important;
+ }
+
+.THIS #hoverText:hover p {
+    visibility:visible !important;
+    /*background-image: url('https://iko--lp--c.cs20.visual.force.com/resource/1532100464000/p02over?isdtp=p1');*/
+
+
+}
+
+.THIS a {
+    color:white;
+}
+
+@media only screen and  (min-width: 480px) and (max-width: 768px) {
+
+    /* For TABLETS : */
+
+
+
+    .THIS .mediaWidth {
+        width:767px !important;
+    }
+
+
+    .THIS .linkTileSizeUI {
+        width:256px !important;
+        height:199px !important;
+
+    }
+
+    .THIS .topBlackBar {
+        width:256px !important;
+        height:47px !important;
+        margin-bottom:-20px !important;
+
+    }
+
+
+
+
+
+
+}

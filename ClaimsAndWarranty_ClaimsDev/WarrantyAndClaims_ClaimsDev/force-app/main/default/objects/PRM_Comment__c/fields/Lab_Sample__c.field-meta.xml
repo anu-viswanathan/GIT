@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lab_Sample__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-66
+Master Details Relationship with Lab Sample</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link PRM Comment to Lab Sample</inlineHelpText>
+    <label>Lab Sample</label>
+    <referenceTo>Lab_Sample__c</referenceTo>
+    <relationshipLabel>PRM Comments</relationshipLabel>
+    <relationshipName>PRM_Comments</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

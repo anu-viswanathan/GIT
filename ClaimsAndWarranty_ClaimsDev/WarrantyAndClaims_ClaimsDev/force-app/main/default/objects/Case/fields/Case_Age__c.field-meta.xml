@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Age__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-74
+The difference between Today&apos;s date and Status Date Claim Open</description>
+    <externalId>false</externalId>
+    <formula>if ((if(ISNULL(Re_Open_Date_Time__c), (if(ISNULL(ClosedDate), TODAY(), DATEVALUE(ClosedDate))) - DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)), (if(ISNULL(ClosedDate), TODAY(), DATEVALUE(ClosedDate))) - 
+if(DATEVALUE(Re_Open_Date_Time__c) &gt; DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)) ,DATEVALUE(Re_Open_Date_Time__c), DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)) )
+)) = 0, 1, if(ISNULL(Re_Open_Date_Time__c), (if(ISNULL(ClosedDate), TODAY(), DATEVALUE(ClosedDate))) - DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)), (if(ISNULL(ClosedDate), TODAY(), DATEVALUE(ClosedDate))) - 
+if(DATEVALUE(Re_Open_Date_Time__c) &gt; DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)) ,DATEVALUE(Re_Open_Date_Time__c), DATEVALUE(DATETIMEVALUE(Status_Date_Claim_Open__c)) )
+))</formula>
+    <inlineHelpText>The difference between Today&apos;s date and Status Date Claim Open</inlineHelpText>
+    <label>Case Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

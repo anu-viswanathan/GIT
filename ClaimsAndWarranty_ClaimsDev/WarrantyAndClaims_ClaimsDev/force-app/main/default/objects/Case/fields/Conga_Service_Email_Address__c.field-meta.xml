@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Service_Email_Address__c</fullName>
+    <description>The customer service email based on the Service Region the case originates from.
+CLAIMSV2-880 -(21-5-2020)</description>
+    <externalId>false</externalId>
+    <formula>CASE(Conga_Service_Region__c,
+&apos;US&apos;, $Setup.Warranty_Claims_Defaults__c.US_Email__c,
+&apos;Western Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Western_Canada_Email__c,
+&apos;Eastern Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Eastern_Canada_Email__c,
+&apos;Decra&apos;, $Setup.Warranty_Claims_Defaults__c.Decra_Email__c,
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The customer service email based on the Service Region the case originates from.</inlineHelpText>
+    <label>Conga: Service Email Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

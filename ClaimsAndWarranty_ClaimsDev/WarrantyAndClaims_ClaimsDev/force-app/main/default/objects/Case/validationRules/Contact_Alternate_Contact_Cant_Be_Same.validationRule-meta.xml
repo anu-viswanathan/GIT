@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Alternate_Contact_Cant_Be_Same</fullName>
+    <active>true</active>
+    <description>The Contact and the Alternate Contact can&apos;t be the same person. This validation rule only applies to Commercial and Residential Claims.</description>
+    <errorConditionFormula>!ISBLANK(ContactId)
+&amp;&amp; !ISBLANK(Alternate_Contact__c)
+&amp;&amp; ContactId = Alternate_Contact__c
+&amp;&amp; (RecordType.DeveloperName = &apos;Commercial_Claim&apos; ||
+RecordType.DeveloperName = &apos;Residential_Claim&apos;)</errorConditionFormula>
+    <errorDisplayField>Alternate_Contact__c</errorDisplayField>
+    <errorMessage>The Contact and the Alternate Contact can&apos;t be the same person.</errorMessage>
+</ValidationRule>

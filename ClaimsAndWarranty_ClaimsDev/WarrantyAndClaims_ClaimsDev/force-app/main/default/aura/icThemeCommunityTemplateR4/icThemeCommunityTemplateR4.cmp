@@ -1,0 +1,199 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="icThemeCommunityTemplateR4">
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="thisYear" type="String"/>
+    <aura:attribute name="langPicker" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="home" type="String" default="/IKOROOFPRO/s/" />
+
+     <aura:attribute name="logoutURL" type="String" default="https://lp-iko.cs20.force.com/servlet/networks/switch?startURL=%2Fsecur%2Flogout.jsp" />
+
+
+
+
+     <aura:attribute name="dashboards" type="Aura.Component[]" required="false"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+
+
+    <div class="container" style="max-width:1024px; margin: auto;">
+
+        <div class="menuContainer" style="height: 75px;">
+
+            <div class="navDesktop hideElementOnTablet hideElementsOnMobile"
+                 style="width:3000px;
+                        margin-bottom:-55px;
+                        height:55px;
+
+                        /*background-color: red;*/
+                        background-color: #d3d4d8;
+                        ">
+            </div>
+
+
+            <div class="navMobile mobileSearchBar
+                        hideElementOnTablet"
+                 style="width:100%;
+                        height:55px;
+                        /*background-color: red;*/
+                        background-color: #d3d4d8;
+
+                        ">
+            </div>
+
+            <div id="searchMenuPosition"   >
+                <div class="searchRegion slds-float_right"
+                     style="height:35px;
+                            width: 300px;
+                            margin-right:25px;">
+                   <span style="background-color: white; ">
+                       {!v.search}
+                   </span>
+                </div>
+            </div>
+
+            <div id="profileMenuPosition"
+                 class="profileMenuRegion
+
+                        slds-float_right"
+                    >
+                <span style="">
+
+                    {!v.profileMenu}
+                </span>
+            </div>
+
+            <div class="slds-col homeMenu hideElementOnTablet hideElementsOnMobile"
+                 style="background-color: #525457;
+                        width:55px;
+                        height:55px;
+                        margin-top:-20px;
+                        ">
+                <a href="{!v.home}" title="Home" data-type="home" class="homeMenuIcon">
+                    <img src="{!$Resource.icHomeIcon}"
+                         style="display: inline-block;
+                                margin-top:-80px;
+                                margin-left:18px;
+                                height: auto;
+                                width: auto;
+                                max-width: 20px;
+                                max-height: 21px;
+                                "/>
+                </a>
+            </div>
+
+
+
+            <div class="smallLogoAndSlogan slds-grid slds-float--left  hideElementOnTablet hideElementOnDesktop mobileBottomMargin"
+                 style="margin-top:-65px;
+                        max-width:1024px;
+                        margin-right:-25px;
+                        ">
+
+                <div class=" "
+                     style="">
+
+                    <div class="logoMobile " style="  display:inline-block;
+                                                        width: 100px;
+                                                        height: 50px;
+                                                        margin-left: 10px;
+                                                        margin-top: 10px;
+                                                           ">
+                        <img src="{!$Resource.IKO_logo}"/>
+                    </div>
+
+
+                    <div class="  hideElementOnDesktop sloganMobile">
+                        <p style="font-weight: 600;
+                                  font-size: 12px;
+                                  margin-top:-45px;
+                                  margin-left:115px;
+                                    ">
+                            ROOFPRO<sup style="font-size:5px; vertical-align: super; ">TM</sup> PROGRAM</p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <div id="locator" class=" navigation navMenuPosition slds-float_right" style="">
+                {!v.navBar}
+            </div>
+
+
+
+
+
+
+
+            <!--<div class="slds-float_right " style="margin-top: -43px;">-->
+
+                    <!--<ui:button label="Logout" press="{!c.logout}"/>-->
+
+            <!--</div>-->
+
+            <!--<div class="slds-float_right">-->
+                <!--<a href=""-->
+                   <!--style="color: black;-->
+                                  <!--font-size:11px;-->
+                                  <!--margin-bottom:35px;-->
+                                  <!--">-->
+                    <!--LOGOUT 1-->
+                <!--</a>-->
+            <!--</div>-->
+
+
+
+
+
+
+            <div class="slds-float--left slds-grid  logoBar"
+                 style="margin-top:10px;
+                        max-width:768px;
+                        margin-right:-25px;
+
+                                        ">
+                <div class="slds-col"
+                     style="">
+
+                    <div class="logoMobile hideElementsOnMobile " style="  display:inline-block;
+                                                                width: 125px;
+                                                                height: 50px;
+                                                                margin-left: 10px;
+                                                                margin-top: 10px;
+                                                                   ">
+                        <img src="{!$Resource.IKO_logo}"/>
+                    </div>
+
+
+                    <div class=" hideElementsOnMobile sloganType">
+                        <p style="font-weight: 600;
+                                  font-size: 14px;
+                                  margin-top:-47px;
+                                  margin-left:145px;
+                                  ">
+                            ROOFPRO<sup style="font-size:5px; vertical-align: super; ">TM</sup> PROGRAM
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mainContentArea" style="margin-top:35px;">
+            {!v.body}
+        </div>
+    </div>
+
+
+</aura:component>

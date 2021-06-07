@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Date_Claim_Open__c</fullName>
+    <description>The date the claim is open from Iko&apos;s perspective. While the _case_ may be open earlier than this, the claim isn&apos;t open from IKO&apos;s perspective until the HOIS has been received, if needed.) In future this date may be set automatically by any number of actions. Jira Ticket: IWCN-823</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the Claim was opened from IKO&apos;s perspective. Generally the date the HOIS was received.</inlineHelpText>
+    <label>Status Date: Claim Open</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

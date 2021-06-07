@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseStatusCannotBeModifedLabMangAndTech</fullName>
+    <active>true</active>
+    <description>UAT Sprint - IWCN 145 - Case Status can not be modified by Lab Manager and Lab Technician profiles</description>
+    <errorConditionFormula>OR(
+AND(
+TEXT(Claim_Stage__c) != &apos;In Lab&apos;,
+ISCHANGED(Status),
+$Profile.Name = &apos;Lab Manager&apos;
+),
+AND(
+TEXT(Claim_Stage__c) != &apos;In Lab&apos;,
+ISCHANGED(Status),
+$Profile.Name = &apos;Lab Technician&apos;
+)
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Case Status can not be modified</errorMessage>
+</ValidationRule>

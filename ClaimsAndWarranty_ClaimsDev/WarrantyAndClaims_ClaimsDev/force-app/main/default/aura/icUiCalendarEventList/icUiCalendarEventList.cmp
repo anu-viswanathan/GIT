@@ -1,0 +1,32 @@
+<!--
+ - Created by Francois Poirier on 2019-04-15.
+ -->
+
+<aura:component description="icUiCalendarEventList" access="global">
+    <aura:attribute name="eventsToDisplay" type="Object[]" default="[]" />
+    <aura:attribute name="currentTheme" type="String" default=""/>
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+
+<!--    <iframe src="https://developer.salesforce.com/docs/component-library/bundle/ui:scrollerWrapper/documentation" class="heightIframe"></iframe>-->
+
+<!--    <ui:scrollerWrapper class="scrollerSize">-->
+    <div class="slds-grid slds-wrap slds-scrollable_y">
+<!-- v2   <div class="slds-grid slds-col&#45;&#45;padded slds-wrap slds-p-left&#45;&#45;medium&#45;&#45;medium slds-p-right&#45;&#45;medium slds-scrollable_y">-->
+<!-- v1   <div class="slds-grid slds-col&#45;&#45;padded slds-wrap slds-p-left&#45;&#45;medium&#45;&#45;medium slds-p-right&#45;&#45;medium slds-scrollable_y" style="max-height: available">-->
+        <aura:iteration items="{!v.eventsToDisplay}" var="event" >
+            <c:icUiCalendarEventItem event="{!event}" currentTheme="{!v.currentTheme}" />
+<!--           <div class="{!if(!event.majorEvent, 'majorEventBackground', '') + ' slds-p-left&#45;&#45;large slds-p-right&#45;&#45;large slds-col slds-size&#45;&#45;1-of-1 slds-border&#45;&#45;bottom'}">-->
+<!--                <div class="{!if(event.majorEvent, 'majorEventDate', 'todayEventDate') + ' slds-p-around&#45;&#45;medium'}">{!event.dateToDisplay}</div>-->
+<!--                <div class="{!if(event.majorEvent, 'majorEventTitle', 'todayEventTitle') + ' slds-p-around&#45;&#45;medium'}">{!event.Title}</div>-->
+<!--                <div class="slds-p-left&#45;&#45;medium slds-p-right&#45;&#45;medium slds-p-bottom&#45;&#45;medium eventDescription">{!event.Description}</div>-->
+<!--                <div class="{!if(event.majorEvent, 'majorEventIcon', 'todayEventIcon') + ' slds-p-around&#45;&#45;medium'}">-->
+<!--                    <lightning:icon iconName="utility:chevronright" variant="error" size="xx-small"/><span>{!event.dateToDisplay}</span>-->
+<!--                   <span style="color:#950D16; font-weight:bolder;"> &gt; </span> <span>{!event.dateToDisplay}</span>&ndash;&gt;-->
+<!--                </div>-->
+
+        </aura:iteration>
+    </div>
+<!--    </ui:scrollerWrapper>-->
+<!--    </div>-->
+</aura:component>

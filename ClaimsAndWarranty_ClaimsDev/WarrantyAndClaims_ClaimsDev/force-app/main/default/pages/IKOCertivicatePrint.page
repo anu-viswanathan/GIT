@@ -1,0 +1,65 @@
+<apex:page controller="IKOCertivicatePrintController" 
+           				renderAs="pdf"  action="{!init}" applyBodyTag="false" applyHtmlTag="false" showHeader="false" >
+    <head>
+        <style>
+            @page{
+                size: 1350px 1060px;
+            },
+            @font-face {
+                font-family: Panton;
+            	src: url({!URLFOR($Resource.PantonFont, 'Panton-regular.otf')});
+            }     
+        </style>
+    </head>
+    <body style="width: 1255px; height: 940px;">
+        <apex:outputPanel >
+
+            <apex:variable var="background" value="{!backgroundImage}"/> 
+            <apex:image url="{!URLFOR($Resource.AntiTrustBackgrounds, background)}" width="1255" height="940" style="position:absolute; z-index: -1;"/> 
+    
+            <div>
+
+                <div style="margin-top: 370px; font-family: 'Panton'; font-size: 30px; color: #515050;" align="center">
+                    {!user.Name}
+                </div>
+
+                <div style="margin-top: 90px; font-family: 'PantonMS'; font-size: 36px; font-weight: bold; color: #515050;" align="center">
+                    {!achievement.Name}
+                </div>
+                
+                <div style="margin-top: 160px; margin-left: 255px">               
+                    <table width="760px" >
+                        <tr>
+                            <td width="355px" align="center" valign="bottom">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-family: 'Panton'; font-size: 24px;">
+                                                <apex:outputText value=" Carol Perkins" rendered="{!isIKOCertification}" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: 'Panton'; font-size: 14px;">
+                                                <apex:outputText value="Director Marketing" rendered="{!isIKOCertification}" />
+                                            </td>
+                                        </tr>       
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td width="50px"></td>
+                            <td width="355px" align="center" valign="bottom">    
+                                <apex:outputText value="{0, date, MMMM d','  yyyy}" style="font-size: 24px; 
+                                                                                    font-family: Panton;
+                                                                                    ">
+                                    <apex:param value="{!acquiredDate}"/>
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </table>   
+                </div> 
+
+            </div>
+
+        </apex:outputPanel>
+    </body>
+</apex:page>

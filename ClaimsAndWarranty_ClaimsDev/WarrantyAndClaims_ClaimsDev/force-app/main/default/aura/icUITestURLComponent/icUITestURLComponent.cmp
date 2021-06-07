@@ -1,0 +1,117 @@
+<aura:component controller="icCTRLProzone" description="icUITestURLComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="currentURL" type="String" default="aaa" />
+    <aura:attribute name="currentTheme" type="String" default="aaa" />
+    <!--<aura:attribute name="baseUrl" type="String" default="aaa" />-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+<br />
+   <h2 style="margin-top: 50px; margin-bottom: 50px; ">:: TEST COMPONENT ::</h2>
+
+    Current URL : {!v.currentURL}
+        <br />
+    Current Theme Code: {!v.currentTheme}
+    <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    <!--https://lp-iko.cs20.force.com/IKOROOFPRO/s/-->
+    <!--https://lp-iko.cs20.force.com/IKOROOFPROm-->
+
+
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="HOME RELATIVE URL 5" press="{!c.navToHomeRelativeURL}" />
+        </div>
+
+        <br/>
+
+    </div>
+
+<br/>
+<br/>
+<br/>
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="HOME DEV 3" press="{!c.navToHomeDev2}" />
+        </div>
+    </div>
+
+        <br/>
+
+        <br/>
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="icTestAppPage 2" press="{!c.navToTestAppPage}" />
+        </div>
+    </div>
+
+        <br/>
+        <br/>
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="Prozone NEW 5" press="{!c.navToProzone}" />
+        </div>
+    </div>
+        <br/>
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="MyToolbox 3" press="{!c.navToMyToolbox}" />
+        </div>
+    </div>
+
+    <div id="aura-page" style="display:block; margin:auto;">
+        <div class="container" >
+            <ui:button label="ComingSoon" press="{!c.navToComingSoon}" />
+        </div>
+    </div>
+        <br/>
+        <br/>
+        <br/>
+
+    <div id="aura-page" style="display:block;margin:auto;">
+        <div class="container" >
+            <ui:button label="NAV TO COMPONENT 3" press="{!c.NavigatetoC2}" />
+        </div>
+    </div>
+    
+        <!--<aura:if isTrue="{!AND($Browser.isTablet, $Browser.isPhone)}">-->
+            <!--True-->
+            <!--<aura:set attribute="else">-->
+                <!--False-->
+            <!--</aura:set>-->
+        <!--</aura:if>-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+     <aura:if isTrue="{!$Browser.isTablet}">
+             You are using a tablet device
+                ( <lightning:icon iconName="utility:tablet_portrait" size="x-small" alternativeText="Indicates approval"/> ).
+            </aura:if>
+        <aura:if isTrue="{!$Browser.isPhone}">
+                You are using a phone
+                ( <lightning:icon iconName="utility:phone_portrait" size="x-small" alternativeText="Indicates approval"/> ).
+                This message is rendered using isPhone <br />
+            </aura:if>
+        <aura:if isTrue="{!$Browser.isIPhone}">
+                You are using an IPhone, If it is IPhone X, _/\_ <br />
+            </aura:if>
+        <aura:if isTrue="{!$Browser.formFactor == 'DESKTOP'}">
+             You are using a DESKTOP
+                ( <lightning:icon iconName="utility:desktop" size="x-small" alternativeText="Indicates approval"/> )
+                Browser device
+            </aura:if>
+        <aura:if isTrue="{!$Browser.formFactor == 'PHONE'}">
+             You are using a Phone, This message is rendered using formFactor
+            </aura:if>
+        <aura:if isTrue="{!$Browser.formFactor == 'TABLET'}">
+             You are using a Table device
+            </aura:if>
+
+</aura:component>

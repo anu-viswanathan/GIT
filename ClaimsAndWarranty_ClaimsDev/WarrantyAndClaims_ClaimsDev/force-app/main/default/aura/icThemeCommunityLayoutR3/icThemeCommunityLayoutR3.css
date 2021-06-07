@@ -1,0 +1,630 @@
+.THIS .eachField.narrowRegion{
+    width:100%;
+}
+.THIS .eachField{
+    width:50%;
+    display:inline-block;
+}
+
+
+
+
+
+
+.THIS .content, .THIS body {
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+
+
+.THIS .slds-clearfix.mruDescription.slds-text-heading--label-normal.slds-show.slds-truncate, .THIS label.uiLabel-hidden.form-element__label.uiLabel {
+    color: grey !important;
+}
+
+
+
+
+.THIS lightning-icon.slds-icon-utility-chevrondown.slds-button__icon--right.slds-icon_container {
+    display: none;
+}
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak, .THIS .slds-text-color_default {
+    color: grey !important;
+}
+
+
+
+.THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+    background-color: white !important;
+    color: #595959;
+}
+
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak {
+    color: grey !important;
+}
+
+
+.THIS .forceCommunityGlobalNavigation, .THIS .slds-list__item a, .THIS .forceCommunityGlobalNavigation, .THIS.slds-list__item button {
+    font-size: 11px !important;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    line-height: normal;
+    color:#525457;
+}
+.THIS button.slds-container_fluid.slds-button.slds-button--reset {
+    font-size: 11px;
+}
+
+
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: darkgrey;
+    text-shadow: none;
+    /*text-shadow: 0 0 0px black;*/
+}
+
+
+
+.THIS .slds-border_top, .THIS .slds-border--top {
+    border-top: 1px solid #A9A9A9 !important;
+}
+.THIS .slds-border_bottom, .THIS .slds-border--bottom {
+    border-bottom: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_left, .THIS .slds-border--left {
+    border-left: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_right, .THIS .slds-border--right  {
+    border-right: 1px solid #A9A9A9 !important;
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.THIS span.profileName {
+    color: white;
+}
+.THIS span.triggerDownArrow.down-arrow {
+    color: white;
+}
+
+/*.THIS .forceCommunityGlobalNavigation .slds-list__item a .forceCommunityGlobalNavigation .slds-list__item button {*/
+    /*font-weight: 400!important;*/
+    /*font-size: 10px!important;*/
+    /*font-family: Montserrat!important;*/
+    /*line-height: normal!important;*/
+    /*padding: 8px 14px!important;*/
+    /*padding-top: 8px!important;*/
+    /*padding-right: 14px!important;*/
+    /*padding-bottom: 8px!important;*/
+    /*padding-left: 2px !important;*/
+/*}*/
+
+.THIS .forceCommunityGlobalNavigation {
+    background-color: white;
+}
+
+
+.THIS .slds-container_fluid {
+    padding: 8px 20px !important;
+}
+
+
+
+/* Selects every fourth element
+   among any group of siblings,
+   counting backwards from the last one */
+
+/*.THIS li:nth-last-child(9n+2) {
+  color: white;
+    background-color:#cc0000;
+    border-radius: 5px;
+
+}*/
+
+.THIS nav>ul>li:nth-of-type(6){
+    color: white;
+    background-color:#c62127;
+    border-radius: 5px;
+    margin-left:30px;
+
+}
+
+
+.THIS nav>ul>li>ul>li>a{
+    color: black;
+
+
+}
+
+
+
+/*.THIS .slds-button__icon--right{*/
+/*display: none;*/
+/*}*/
+
+
+
+
+
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+    .THIS .content, .THIS body {
+        max-width: 479px;
+        margin: auto;
+    }
+
+    /* For MOBILE phones: */
+    .THIS .navTablet {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .THIS .navDesktopSmall {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .THIS .navDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .THIS .navDesktopLarge {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+    }
+
+    .THIS .hideElementsOnMobile {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+
+    .THIS .searchBarTablet, .THIS .hideMenu {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS .searchMenuPosition {
+    }
+
+    .THIS .searchRegion {
+        margin-top: -50px !important;
+        margin-left: 10px;
+        margin-bottom: 80px;
+        width: 95% !important;
+    }
+
+    .THIS .navMenuPosition {
+        float:right !important;
+        right: 50px!important;
+        margin-bottom: -5px;
+        margin-top:-25px;
+        width: 50px!important;
+    }
+
+    .THIS body {
+        max-width: 479px !important;
+    }
+
+    .THIS .logoBar {
+        margin-top: -225px !important;
+    }
+
+    .THIS nav>ul>li:nth-of-type(6){
+        margin-left:0px;
+
+    }
+
+    .THIS button.slds-container_fluid.slds-button.slds-button--reset {
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        font-size:14px !important;
+    }
+
+    .THIS nav>ul>li{
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        font-size: 16px !important;
+
+
+    }
+
+    .THIS li.slds-list__item {
+
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    /*.THIS .mobileBottomMargin {*/
+        /*margin-bottom: 250px !important;*/
+    /*}*/
+
+}
+
+@media only screen and  (min-width: 480px) and (max-width: 767px) {
+
+    /* For TABLETs : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .searchBarMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS .hideElementOnTablet{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS #searchMenuPosition{
+        width :100px!important;
+
+    }
+    .THIS .searchRegion{
+        margin-top: 25px !important;
+        margin-left:310px;
+        margin-bottom: 21px;
+
+    }
+
+    .THIS .navMenuPosition{
+        margin-left:550px!important;
+        margin-top: -40px;
+
+    }
+
+
+    .THIS body {
+        max-width:768px !important;
+    }
+
+
+    .THIS .logoBar{
+        margin-top: -90px !important;
+        margin-bottom:20px !important;
+    }
+
+    .THIS .slds-p-vertical--xx-small.slds-p-horizontal--small.slds-grid {
+        margin-top: 25px !important;
+    }
+
+
+}
+
+@media only screen and  (min-width: 768px) and (max-width: 999px) {
+
+    /* For between TABLET and DESKTOP Small : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .searchBarMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementOnTablet{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        width: 300px;
+        height: 55px!important;
+        padding-top:15px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-top:-55px!important;
+        margin-left: 750px!important;
+        width:290px!important;
+        height: 55px!important;
+        padding-top:15px;
+        /*background-color: red!important;*/
+        background-color: #81858D!important;
+    }
+
+    .THIS .profileMenuRegion {
+        background-color: blue !important;
+        padding-top: 8px !important;
+    }
+    .THIS .searchRegion {
+        margin-left:450px!important;
+        /*margin-top:-10px!important;*/
+    }
+    .THIS .homeMenu {
+        margin-left:975px!important;
+        margin-top:-55px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:25px !important;
+        /*width: 768px !important;*/
+        margin-left: 150px!important;
+
+    }
+    .THIS .forceCommunityGlobalNavigation>* {
+        display: block!important;
+        margin: 0 auto!important;
+    }
+
+    .THIS .siteforceDesignTimeRegion {
+        margin-top: 11px !important;
+
+    }
+
+    .THIS .uiMenu.selfServiceUserProfileMenu {
+        margin-top:6px!important;
+    }
+
+
+    .THIS .logoBar{
+        margin-top: -105px !important;
+    }
+
+
+    .THIS body {
+        max-width:768px;
+    }
+
+}
+
+@media only screen and  (min-width:999px) and (max-width: 1500px) {
+
+    /* For DESKTOP Small : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        width: 700px!important;
+        height: 55px!important;
+        background-color: #d3d4d8!important;
+        padding-top:15px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-top:-55px!important;
+        margin-left: 700px!important;
+        width:290px!important;
+        height: 55px!important;
+        padding-top:15px;
+        /*background-color: red!important;*/
+        background-color: #81858D!important;
+    }
+
+    .THIS .profileMenuRegion {
+        background-color: blue !important;
+        padding-top: 8px !important;
+    }
+    .THIS .searchRegion {
+        margin-left:375px!important;
+        margin-top:-7px!important;
+    }
+    .THIS .homeMenu {
+        margin-left:975px!important;
+        margin-top:-55px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:20px !important;
+        /*margin-left:250px!important;*/
+    }
+    .THIS .forceCommunityGlobalNavigation>* {
+        display: block!important;
+        margin: 0 auto!important;
+        margin-left: 165px !important;
+    }
+
+    .THIS .siteforceDesignTimeRegion {
+        margin-top: 11px !important;
+
+    }
+
+    .THIS .uiMenu.selfServiceUserProfileMenu {
+        margin-top:6px!important;
+    }
+
+    .THIS .navDesktop {
+        width: 3000px!important;
+        margin-right: -600px!important;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 1501px) {
+    /* For DESKTOP LARGE: */
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopSmall {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementOnDesktop {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .THIS #searchMenuPosition {
+        /*margin-top: -55px!important;*/
+        /*margin-left: 100px;*/
+        width: 700px!important;
+        height: 55px!important;
+        background-color: #d3d4d8!important;
+        padding-top:15px!important;
+    }
+    .THIS #profileMenuPosition {
+        margin-top:-55px!important;
+        margin-left: 700px!important;
+        width:290px!important;
+        height: 55px!important;
+        padding-top:15px;
+        /*background-color: red!important;*/
+        background-color: #81858D!important;
+    }
+
+    .THIS .profileMenuRegion {
+        background-color: blue !important;
+        padding-top: 8px !important;
+    }
+    .THIS .searchRegion {
+        margin-left:375px!important;
+        margin-top:-7px!important;
+    }
+    .THIS .homeMenu {
+        margin-left:975px!important;
+        margin-top:-55px!important;
+    }
+    .THIS .navMenuPosition{
+        margin-top:20px !important;
+        margin-right:-10px!important;
+    }
+    /*.THIS .forceCommunityGlobalNavigation>* {*/
+        /*display: block!important;*/
+        /*margin: 0 auto!important;*/
+        /*margin-left: 165px !important;*/
+    /*}*/
+
+    /*.THIS .siteforceDesignTimeRegion {*/
+        /*margin-top: 11px !important;*/
+
+    /*}*/
+
+
+    .THIS .uiMenu.selfServiceUserProfileMenu {
+        margin-top:6px!important;
+    }
+
+    .THIS .navDesktopGreyBack {
+        width: 3000px!important;
+        margin-right: -600px!important;
+    }
+}

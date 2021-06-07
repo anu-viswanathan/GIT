@@ -1,0 +1,33 @@
+<!--
+ - Created by Francois Poirier on 2019-11-18.
+ -->
+
+<aura:component description="icUiFileUploadItem" controller="icCTRLinvoiceUpload">
+    <aura:attribute name="file" type="object" />
+    <aura:attribute name="fileName" type="String" />
+    <aura:attribute name="fileId" type="String" />
+    <aura:attribute name="invoiceId" type="String" />
+    <aura:attribute name="index" type="String"/>
+    <aura:attribute name="files" type="list"  />
+    <aura:attribute name="isSend" type="boolean"  />
+    <aura:attribute name="percentDone" type="Integer" />
+    <aura:attribute name="sendBtnIsDisabled" type="Boolean" />
+    <aura:attribute type="Boolean" name="fileOverSize"/>
+    <aura:attribute name="fileNumber" type="Integer" />
+    <aura:attribute name="uploadDisabled" type="Boolean" />
+    <aura:attribute name="isCompleted" type="Boolean" />
+
+    <aura:registerEvent name="deleteUploadedFile" type="c:icEvtDeleteUploadedFile" />
+    <div class="slds-grid slds-wrap slds-box" style="padding:8px 12px;" id="{!index}">
+        <div class="slds-size--7-of-8">
+            <span style="word-break: break-all;">{!v.file.name}</span><br/> 
+
+            <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" role="progressbar" style="margin-top:5px;">
+              <span class="{!v.isSend ? 'slds-progress-bar__value progressBar slds-progress-bar__value_success' : 'slds-progress-bar__value'}" style="{!'width:' + v.percentDone + '%'}"></span>
+            </div>
+        </div>
+        <div class="slds-size--1-of-8" style="margin-top:4px; padding-left:14px;">
+            <lightning:buttonIcon alternativeText="Delete" iconName="utility:delete" onclick="{!c.handleDeleteClick}" disabled="{!v.isCompleted}"/>
+        </div>
+    </div>
+</aura:component>

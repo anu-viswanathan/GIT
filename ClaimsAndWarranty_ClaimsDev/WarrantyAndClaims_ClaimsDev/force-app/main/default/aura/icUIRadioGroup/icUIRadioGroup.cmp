@@ -1,0 +1,16 @@
+<aura:component>
+	
+	<aura:attribute name="label" type="String" />
+	<aura:attribute name="selectedValue" type="String" />
+    <aura:attribute name="options" type="List" />
+
+    <legend class="slds-form-element__legend slds-form-element__label">{!v.label}</legend>
+	<div class="slds-form-element__control">
+		<div class="slds-radio_button-group">
+			<aura:iteration items="{!v.options}" var="option">
+                <c:icUIRadioButton label="{!option.label}" value="{!option.value}" selected="{!v.selectedValue}" />
+            </aura:iteration>
+		</div>
+	</div>
+
+</aura:component>

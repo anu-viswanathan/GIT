@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Contact_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Account.ParentId)),
+	(
+        Account.Parent.BillingStreet &amp; BR() 
+        &amp; Account.Parent.BillingCity &amp; &quot;, &quot;
+        &amp; TEXT(Account.Parent.BillingStateCode) &amp; &quot; &quot;
+        &amp; Account.Parent.BillingPostalCode
+	),
+	IF(
+		NOT(ISBLANK(Contact.MailingStreet)),
+		(
+			Contact.MailingStreet &amp; BR() 
+			&amp; Contact.MailingCity &amp; &quot;, &quot; 
+			&amp; TEXT(Contact.MailingStateCode) &amp; &quot; &quot;
+			&amp; Contact.MailingPostalCode
+		),
+		(
+			Account.BillingStreet &amp; BR() 
+			&amp; Account.BillingCity &amp; &quot;, &quot; 
+			&amp; TEXT(Account.BillingStateCode) &amp; &quot; &quot;
+			&amp; Account.BillingPostalCode
+		)
+	)
+)</formula>
+    <inlineHelpText>Renders the address for conga templates based on the following priority: Case.Account.Parent&apos;s address; Case.Contact&apos;s address; Case.Account&apos;s address</inlineHelpText>
+    <label>Conga Contact Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

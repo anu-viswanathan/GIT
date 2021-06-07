@@ -1,0 +1,15 @@
+.THIS {
+}
+
+.THIS .iko-button-wrapper {
+	padding-bottom: 0.2em;
+}
+
+.THIS .iko-button {
+	background: white;
+	width: 100%;
+}
+
+.THIS .iko-button span {
+	color: 		#B22222;
+}

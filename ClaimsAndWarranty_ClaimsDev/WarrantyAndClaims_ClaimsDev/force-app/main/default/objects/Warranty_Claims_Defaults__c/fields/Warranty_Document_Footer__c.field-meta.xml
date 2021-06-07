@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_Document_Footer__c</fullName>
+    <defaultValue>&quot;235 W. SOUTH TEC DR. • KANKAKEE, IL 60901-8426 • (800) 433-2811 or (815) 802-3182 • FAX (815) 937-5695&quot;</defaultValue>
+    <description>Document Footer for warranty services department. Used in the Warranty Conga Templates</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Document Footer for warranty services department. Used in the Warranty Conga Templates</inlineHelpText>
+    <label>Warranty Document Footer</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

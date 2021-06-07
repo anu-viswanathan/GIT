@@ -1,0 +1,34 @@
+<apex:page controller="icCTRLUploadAttachment">
+    <script type="text/javascript">
+        function alertFilesize(){
+            if(window.ActiveXObject){
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var filepath = document.getElementById('j_id0:j_id2:fileInput').value;
+                var thefile = fso.getFile(filepath);
+                var sizeinbytes = thefile.size;
+            }else{
+                var sizeinbytes = document.getElementById('j_id0:j_id2:fileInput').files[0].size;
+            }
+        
+            var fSExt = new Array('Bytes', 'KB', 'MB', 'GB');
+            fSize = sizeinbytes; i=0;while(fSize>900){fSize/=1024;i++;}
+            
+            alert(' File Size should be less than 10 MB. Your current file size is ' + (Math.round(fSize*100)/100)+' '+fSExt[i]);
+        }
+    </script>
+    <apex:form >
+        <apex:pageMessages id="msg"></apex:pageMessages>
+        
+        <div style="display:block; width: 10%; float:left; margin-bottom: 10px;">
+            Choose a file 
+        </div>
+        <div style="display:block; width: 90%; float:left; margin-bottom: 10px;">
+            <apex:inputFile id="fileInput" onchange="alertFilesize();" value="{!attBody}" fileName="{!fileName}" fileSize="{!fileSize}" contentType="{!contentType}"></apex:inputFile>
+        </div>
+        <div style="display:block; width: 10%; float:left; margin-bottom: 10px;">
+        </div>
+        <div style="display:block; width: 90%; float:left; margin-bottom: 10px;">    
+            <apex:commandButton action="{!uploadFile}" value="Upload File"/>
+        </div>
+    </apex:form>
+</apex:page>

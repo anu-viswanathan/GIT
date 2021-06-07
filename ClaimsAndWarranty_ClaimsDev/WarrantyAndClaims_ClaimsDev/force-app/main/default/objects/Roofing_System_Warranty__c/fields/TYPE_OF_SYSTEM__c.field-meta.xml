@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TYPE_OF_SYSTEM__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Of System</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SINGLE PLY</fullName>
+                <default>false</default>
+                <label>SINGLE PLY</label>
+            </value>
+            <value>
+                <fullName>TWO-PLY</fullName>
+                <default>false</default>
+                <label>TWO-PLY</label>
+            </value>
+            <value>
+                <fullName>BUR</fullName>
+                <default>false</default>
+                <label>BUR</label>
+            </value>
+            <value>
+                <fullName>INVERTED</fullName>
+                <default>false</default>
+                <label>INVERTED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

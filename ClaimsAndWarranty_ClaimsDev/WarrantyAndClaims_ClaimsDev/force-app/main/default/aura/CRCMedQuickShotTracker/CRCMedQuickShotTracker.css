@@ -1,0 +1,229 @@
+.THIS {
+    background-color: white;
+}
+
+.THIS .noticeText {
+    position:relative;
+    /*margin-top: 30px;*/
+    margin-bottom: -40px;
+
+
+    text-align: center;
+    height: auto;
+    /*padding-top: 19px;*/
+    /*padding-left: 5px;*/
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    font-size: 9pt;
+    color: #FFFFFF;
+    line-height: 13pt;
+}
+
+.THIS .noticeText p{
+    /*vertical-align: middle;*/
+    background-color: #999ca3;
+    padding-top: 43px;
+    padding-bottom:47px;
+    padding-right:68px;
+    padding-left:68px;
+    font-size:15px;
+    line-height: 24px;
+}
+.THIS .boxQuickTracker:nth-child(-n+2){
+    opacity: 0.5;
+}
+
+.THIS .boxQuickTracker:nth-child(n+5){
+    opacity: 0.5;
+}
+
+.THIS .boxQuickTracker:nth-child(-n+2) > div.slds-align_absolute-center.image-fade.cCRCUIQuickShotItem > div > div.slds-align_absolute-center > p.quickShotTextNumbers {
+    font-size: 1.65em;
+    padding-bottom: 4px;
+    margin-top: 3px;
+}
+
+.THIS .boxQuickTracker:nth-child(n+5) > div.slds-align_absolute-center.image-fade.cCRCUIQuickShotItem > div > div.slds-align_absolute-center > p.quickShotTextNumbers {
+    font-size: 1.65em;
+    padding-bottom: 4px;
+    margin-top: 3px;
+}
+
+.THIS .boxQuickTracker{
+    height:220px!important;
+    padding-top:45px;
+    background-color: #f6f6f6;
+    /*border-bottom: 8px solid white;*/
+    /*border-top:8px solid white;*/
+}
+
+.THIS .boxQuickTracker:not(:last-child){
+    border-right: 8px solid white;
+}
+
+
+.THIS .boxRow{
+    height:295px;
+}
+
+
+.THIS .QuickTrackerBox{
+    height:295px;
+    padding-top:50px;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .THIS .noticeText {
+        margin-top:8px;
+        /*margin-bottom: -10px;*/
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .THIS .noticeText {
+        margin-top:4px;
+        /*margin-bottom: -10px;*/
+    }
+
+    .THIS .noticeText p{
+        padding:15px;
+        font-size: 13px;
+    }
+}
+
+.THIS .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.THIS .active .collapsible:hover {
+    background-color: #555;
+}
+
+.THIS .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.THIS .slds-icon-text-default {
+    /*fill:red !important;*/
+    margin-top:18px;
+    margin-right:100px;
+}
+
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+    /* For TABLETS : */
+
+
+    .THIS .ComingSoonText {
+        font-size:22px !important;
+        margin-top: -30px!important;
+        color:white!important;
+        /*background-color:blue !important;*/
+    }
+
+    .THIS .noticeText{
+        /*margin-top:30px;*/
+        /*margin-bottom:-35px!important;*/
+    }
+
+    .THIS .noticeText p{
+        font-size: 13px;
+        line-height:20px;
+        padding-top:32px;
+        padding-bottom: 35px;
+        padding-right: 58px;
+        padding-left: 58px;
+        letter-spacing: 1px;
+    }
+
+
+
+}
+
+
+@media only screen and  (min-width: 480px) and (max-width: 767px) {
+
+    /* For TABLETS : */
+    .THIS .ComingSoonText {
+        font-size:22px !important;
+        margin-top: -30px!important;
+        color:white!important;
+        /*background-color:blue !important;*/
+    }
+
+    .THIS .quickShotText{
+        font-size:1em!important;
+    }
+
+    .THIS .noticeText{
+        margin-bottom: -46px;
+    }
+
+}
+
+
+@media only screen and  (min-width: 768px) and (max-width: 1023px) {
+
+
+
+    .THIS .boxQuickTracker{
+        height:200px!important;
+        padding-top:10px;
+        background-color: #f6f6f6;
+    }
+    /*.THIS .boxQuickTracker:not(:last-child){*/
+    /*    border-right: 5px solid white;*/
+    /*}*/
+
+    /*.THIS .quickShotText{*/
+    /*    font-size:0.6em!important;*/
+    /*}*/
+
+    /* For between TABLET and DESKTOP Small : */
+    .THIS .navTablet{
+
+    }
+
+    .THIS .quickShotText{
+        font-size: 1em!important;
+    }
+    .THIS .quickShotTextNumbers {
+        /*color:red !important;*/
+        /*background-color:blue !important;*/
+    }
+
+}
+
+@media only screen and  (min-width: 1024px) and (max-width: 1900px) {
+
+    /* For between TABLET and DESKTOP Small : */
+    .THIS{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .THIS .boxQuickTracker{
+        height:195px!important;
+        padding-top:25px;
+        background-color: #f6f6f6;
+    }
+    .THIS .boxQuickTracker:not(:last-child){
+        border-right: 5px solid white;
+        /*border-bottom:5px solid white;*/
+    }
+
+
+}

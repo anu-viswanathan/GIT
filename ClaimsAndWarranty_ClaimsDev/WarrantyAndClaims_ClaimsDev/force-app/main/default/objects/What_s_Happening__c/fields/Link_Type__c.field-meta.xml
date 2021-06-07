@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Link Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External</label>
+            </value>
+            <value>
+                <fullName>Email To</fullName>
+                <default>false</default>
+                <label>Email To</label>
+            </value>
+            <value>
+                <fullName>No Link</fullName>
+                <default>false</default>
+                <label>No Link</label>
+            </value>
+            <value>
+                <fullName>Document</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Document</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

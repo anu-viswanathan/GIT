@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPO_PVC_EPDM_should_be_100</fullName>
+    <active>false</active>
+    <errorConditionFormula>(RecordType.Name == &apos;Contractor&apos; || RecordType.Name == &apos;Designer&apos;) 
+&amp;&amp;
+(ISPICKVAL( TPO__c , &apos;&apos;) || ISPICKVAL( PVC__c , &apos;&apos;) || ISPICKVAL( EPDM__c , &apos;&apos;) 
+||
+(VALUE(SUBSTITUTE(TEXT( TPO__c ), &apos;%&apos;, &apos;&apos;)) + VALUE(SUBSTITUTE(TEXT( PVC__c ), &apos;%&apos;, &apos;&apos;)) + VALUE(SUBSTITUTE(TEXT( EPDM__c ), &apos;%&apos;, &apos;&apos;)) != 100))</errorConditionFormula>
+    <errorMessage>TPO% + PVC% + EPDM% must equal 100%</errorMessage>
+</ValidationRule>

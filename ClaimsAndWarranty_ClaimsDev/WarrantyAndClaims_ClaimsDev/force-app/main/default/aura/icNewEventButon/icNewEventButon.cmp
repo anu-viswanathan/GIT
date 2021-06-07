@@ -1,0 +1,7 @@
+<!--
+ - Created by Francois Poirier on 2018-10-04.
+ -->
+
+<aura:component description="icNewEventButon" implements="force:lightningQuickAction,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+    <button class="slds-button slds-button_neutral" onclick="{!c.newEvent}">{!$Label.c.icNew_Event}</button>
+</aura:component>

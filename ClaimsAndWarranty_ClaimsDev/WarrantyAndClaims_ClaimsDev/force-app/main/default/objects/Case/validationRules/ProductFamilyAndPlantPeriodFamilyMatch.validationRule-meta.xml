@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductFamilyAndPlantPeriodFamilyMatch</fullName>
+    <active>true</active>
+    <description>Enforce that the Case.Product__r.Iko_Product_Family__c matches the Case.Plant_Period__r.Product_Family__c value
+This validation rule only applies to Commercial and Residential claims.</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Product__c)),
+    NOT(ISBLANK(Plant_Period__c)),
+    Plant_Period__r.Product_Family__c &lt;&gt;  
+    Product__r.Iko_Product_Family__c ,
+OR(
+RecordType.DeveloperName = &apos;Commercial_Claim&apos;,
+RecordType.DeveloperName = &apos;Residential_Claim&apos;
+),
+NOT ($Profile.Name = &quot;System Administrator&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Plant_Period__c</errorDisplayField>
+    <errorMessage>The Product&apos;s Iko Product Family must match the Plant Period&apos;s Product Family</errorMessage>
+</ValidationRule>

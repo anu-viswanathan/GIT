@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verb__c</fullName>
+    <externalId>false</externalId>
+    <label>Verb</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Doing the robot (literally)</fullName>
+                <default>false</default>
+                <label>Doing the robot (literally)</label>
+            </value>
+            <value>
+                <fullName>Moonwalking</fullName>
+                <default>false</default>
+                <label>Moonwalking</label>
+            </value>
+            <value>
+                <fullName>Red-dirt rolling</fullName>
+                <default>false</default>
+                <label>Red-dirt rolling</label>
+            </value>
+            <value>
+                <fullName>Shimmy-Shammying</fullName>
+                <default>false</default>
+                <label>Shimmy-Shammying</label>
+            </value>
+            <value>
+                <fullName>Two-Stepping</fullName>
+                <default>false</default>
+                <label>Two-Stepping</label>
+            </value>
+            <value>
+                <fullName>Whirling</fullName>
+                <default>false</default>
+                <label>Whirling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

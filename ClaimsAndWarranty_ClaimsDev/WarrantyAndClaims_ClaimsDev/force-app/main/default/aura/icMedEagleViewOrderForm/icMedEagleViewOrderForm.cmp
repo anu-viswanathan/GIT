@@ -1,0 +1,145 @@
+<!--
+ - Created by Francois Poirier on 2018-06-19.
+ -->
+
+<aura:component description="icMedEagleView" controller="icCTRLEagleview" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="recordId" type="String" access="global" />
+
+    <aura:attribute name="isInCommunity" type="Boolean"/>
+    <aura:attribute name="displaySpinner" type="boolean" />
+
+    <aura:attribute name="orderDetails" type="icDTOEagleViewOrderForm" />
+    
+    <aura:attribute name="propertyTypes" type="List" default="[
+        {'label':'Residential', 'value':1}
+        ,{'label':'Commercial', 'value':2}
+        ,{'label':'MultiFamily', 'value':3}]" />
+
+    <aura:attribute name="availableProducts" type="icDTOEagleViewProduct[]" />
+    <aura:attribute name="filteredProducts" type="icDTOEagleViewProduct[]" />
+
+    <aura:attribute name="deliveryProducts" type="icDTOEagleViewProduct[]" />
+    <aura:attribute name="optionalProducts" type="icDTOEagleViewProduct[]" />
+    <aura:attribute name="measurementTypes" type="List" />
+
+    <aura:attribute name="selectedProductId" type="Integer" />
+    <aura:attribute name="selectedDeliveryProductId" type="Integer" />
+    <aura:attribute name="selectedOptionalProductIds" type="Integer[]" />    
+    
+    <aura:attribute name="specialInstructions" type="String" />
+    <aura:attribute name="changesInLast4Years" type="Boolean" default="false" />
+
+    <aura:attribute name="placeOrderResponse" type="Object" />
+    <aura:attribute name="resultMessage" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:spinner aura:id="objSpinner" variant="brand" size="large" alternativeText="Loading" />
+
+        <ui:scrollerWrapper class="scrollerSize">
+
+            <div class="slds-grid slds-grid_vertical">
+
+                <div class="slds-col" >
+                    <div class="slds-text-heading_medium slds-align_center slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" style="{!if(v.resultMessage == null, 'display:none','display:block')}">
+                        {!v.resultMessage}
+                    </div>
+
+                    <aura:if isTrue="{!v.placeOrderResponse == null}">
+
+                        <div class="slds-grid slds-container--center slds-size--large slds-form--stacked">
+                            <div class="slds-col slds-size_1-of-1" style="height:1500px; background-color: white;">
+                                <br />
+                                <br />
+                                <a style="font-size:14px;text-decoration: underline;" target="_blank" href="https://www.eagleview.com/pricing/">{!$Label.c.icEagleView_Pricing}</a>
+                                <br />
+                                <br />
+                                <lightning:input aura:id="field" label="{!$Label.c.icAddress_street}" type="text" name="address" value="{!v.orderDetails.streetAddress}" maxlength="50" required="true" />
+                                <lightning:input aura:id="field" label="{!$Label.c.icCity}" type="text" name="city" value="{!v.orderDetails.city}" maxlength="50" required="true" />
+                                <lightning:input aura:id="field" label="{!$Label.c.icState_Province}" type="text" name="state" value="{!v.orderDetails.state}" maxlength="50" required="true" />
+                                <lightning:input aura:id="field" label="{!$Label.c.icZip_Postal_Code}" type="text" name="zip" value="{!v.orderDetails.postalCode}" maxlength="50" required="true" />
+                                <lightning:input aura:id="field" label="{!$Label.c.icCountry}" type="text" name="county" value="{!v.orderDetails.country}" maxlength="50" required="true" />
+
+                                <lightning:radioGroup aura:id="validateProprtyType" name="Property Type" label="{!$Label.c.icProperty_Type}" options="{!v.propertyTypes}" value="{!v.orderDetails.propertyType}" required="true" onchange="{!c.doChangePropertyType}" />
+
+                                <aura:if isTrue="{!and(v.orderDetails.propertyType != null, v.orderDetails.propertyType != 0)}">
+
+                                    <lightning:select aura:id="field"  label="{!$Label.c.icProduct}" name="product" value="{!v.selectedProductId}" onchange="{!c.handleProductChange}" required="true">
+                                        <option value="">{!$Label.c.icPlease_select_a_product}</option>
+                                        <aura:iteration items="{!v.filteredProducts}" var="product">
+                                            <option value="{!product.productID}" selected="">{!product.name} ({!product.priceMin} - {!product.priceMax})</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+
+                                    <lightning:select aura:id="field" label="{!$Label.c.icDelivery_Product}" name="deliveryProduct" value="{!v.selectedDeliveryProductId}" onchange="{!c.handleDeliveryProductChange}" required="true">
+                                        <option value="">{!$Label.c.icPlease_select_a_delivery_product}</option>
+                                        <aura:iteration items="{!v.deliveryProducts}" var="deliveryProduct">
+                                            <option value="{!deliveryProduct.productID}" selected="">{!deliveryProduct.name} ({!deliveryProduct.priceMin} - {!deliveryProduct.priceMax})</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+
+                                    <aura:iteration items="{!v.optionalProducts}" var="optionalProduct">
+                                        {!$Label.c.icAdd_on_Products}: <br />
+                                        <lightning:input type="checkbox" label="{!optionalProduct.name + ' (' + optionalProduct.priceMin + ' - ' + optionalProduct.priceMax + ')'}" name="{!optionalProduct.name}" />
+                                    </aura:iteration>
+
+                                    <lightning:select aura:id="field" label="{!$Label.c.icMeasurement_type}" name="measurementType" value="{!v.orderDetails.measurementType}" required="true">
+                                        <option value="">{!$Label.c.icPlease_select_a_measurement_type}</option>
+                                        <aura:iteration items="{!v.measurementTypes}" var="option">
+                                            <option value="{!option.value}" selected="">{!option.label}</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+
+                                    <lightning:textarea label="{!$Label.c.icSpecial_Instructions}" value="{!v.orderDetails.specialInstructions}" maxlength="512"/>
+
+                                    <lightning:input type="checkbox" label="{!$Label.c.icChanges_at_this_address_in_the_last_4_years}" value="{!v.orderDetails.changesInLast4Years}" />
+
+                                    <lightning:button name="sendOrder" label="{!$Label.c.icPlace_Order}" onclick="{!c.handleSendOrderClick}" />
+                                </aura:if>
+                                <lightning:button name="resetOrder" label="{!$Label.c.icReset_Order}" onclick="{!c.handleResetOrderClick}" />
+                                <lightning:button name="cancelOrder" label="{!$Label.c.icCancel_Order}" onclick="{!c.handleBackToOpportunityClick}" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="slds-text-heading_medium slds-align_center slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" style="{!if(v.resultMessage == null, 'display:none','display:block')}">
+                            {!v.resultMessage}
+                        </div>
+
+                        <aura:set attribute="else">
+                            <div class="slds-grid slds-container--center slds-size--large slds-form--stacked">
+                                <div class="slds-col slds-size_1-of-1" style="margin:10px; width:90%;">
+                                    <span style="margin-bottom:50px;">{!v.placeOrderResponse.message}</span>
+                                    <br />
+
+                                    
+                                    <span style="margin-top:15px;"> 
+                                        <aura:if isTrue="{!v.placeOrderResponse.OrderId == null}">
+                                            <lightning:button name="backToOrder" label="{!$Label.c.icBack_to_Order_Form}" onclick="{!c.handleBackToOrderClick}" />
+                                            <aura:set attribute="else">
+                                                <lightning:button name="backToOpportunity" label="{!$Label.c.icBack_to_Opportunity}" onclick="{!c.handleBackToOpportunityClick}" />
+                                            </aura:set>
+                                        </aura:if>
+                                    </span>
+                                </div>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+
+                    <div class="slds-col" style="height:500px; background-color: transparent;">
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+
+            </div>
+        </ui:scrollerWrapper>
+
+
+
+
+
+
+
+
+
+</aura:component>

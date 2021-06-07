@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Required_Documents_to_Upload__c</fullName>
+    <externalId>false</externalId>
+    <formula>Benefit__r.Benefit__r.Required_Documents__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Please tick the &apos;Document&apos;-checkboxes each time you upload a required document. Otherwise you will not be able to submit this application for approval.</inlineHelpText>
+    <label>Number of Required Documents to Upload</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

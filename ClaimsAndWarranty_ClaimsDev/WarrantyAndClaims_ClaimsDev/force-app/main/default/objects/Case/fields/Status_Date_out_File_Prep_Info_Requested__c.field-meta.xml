@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Date_out_File_Prep_Info_Requested__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-71
+Record the Status Date when the Claim Stage is moved out of File Preparation and Claim Sub Stage is moved out of Info Requested</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Record the Status Date when the Claim Stage is moved out of File Preparation and Claim Sub Stage is moved out of Info Requested</inlineHelpText>
+    <label>Status Date out File Prep/Info Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

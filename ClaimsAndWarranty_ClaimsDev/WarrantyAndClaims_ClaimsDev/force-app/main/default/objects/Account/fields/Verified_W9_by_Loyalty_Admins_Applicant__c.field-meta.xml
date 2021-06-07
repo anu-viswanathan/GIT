@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verified_W9_by_Loyalty_Admins_Applicant__c</fullName>
+    <externalId>false</externalId>
+    <formula>Applicant_Information__r.Verified_W9_by_Loyalty_Admins__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Verified W9 by LA(Applicant)</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Certification_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Certification Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>EU_Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IKO Concept Partner</fullName>
+                <default>false</default>
+                <label>IKO Concept Partner</label>
+            </value>
+            <value>
+                <fullName>IKO Trade Partner</fullName>
+                <default>false</default>
+                <label>IKO Trade Partner</label>
+            </value>
+            <value>
+                <fullName>Liquid contractor</fullName>
+                <default>false</default>
+                <label>Liquid contractor</label>
+            </value>
+            <value>
+                <fullName>Goldseal</fullName>
+                <default>false</default>
+                <label>Goldseal</label>
+            </value>
+            <value>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+                <label>Guardian</label>
+            </value>
+            <value>
+                <fullName>Mach One</fullName>
+                <default>false</default>
+                <label>Mach One</label>
+            </value>
+            <value>
+                <fullName>Permapark</fullName>
+                <default>false</default>
+                <label>Permapark</label>
+            </value>
+            <value>
+                <fullName>Permaphalt</fullName>
+                <default>false</default>
+                <label>Permaphalt</label>
+            </value>
+            <value>
+                <fullName>PermaTEC</fullName>
+                <default>false</default>
+                <label>PermaTEC</label>
+            </value>
+            <value>
+                <fullName>Polimar EC/UV</fullName>
+                <default>false</default>
+                <label>Polimar EC/UV</label>
+            </value>
+            <value>
+                <fullName>Polimar FCS</fullName>
+                <default>false</default>
+                <label>Polimar FCS</label>
+            </value>
+            <value>
+                <fullName>Polimar FCS (Car Park)</fullName>
+                <default>false</default>
+                <label>Polimar FCS (Car Park)</label>
+            </value>
+            <value>
+                <fullName>Polimar WG</fullName>
+                <default>false</default>
+                <label>Polimar WG</label>
+            </value>
+            <value>
+                <fullName>Safestick</fullName>
+                <default>false</default>
+                <label>Safestick</label>
+            </value>
+            <value>
+                <fullName>Superflex</fullName>
+                <default>false</default>
+                <label>Superflex</label>
+            </value>
+            <value>
+                <fullName>Ultra Prevent</fullName>
+                <default>false</default>
+                <label>Ultra Prevent</label>
+            </value>
+            <value>
+                <fullName>IKO Certified Roofing Contractor</fullName>
+                <default>false</default>
+                <label>IKO Certified Roofing Contractor</label>
+            </value>
+            <value>
+                <fullName>IKO Roof club member</fullName>
+                <default>false</default>
+                <label>IKO Roof club member</label>
+            </value>
+            <value>
+                <fullName>IKO Certified Liquid Contractor</fullName>
+                <default>false</default>
+                <label>IKO Certified Liquid Contractor</label>
+            </value>
+            <value>
+                <fullName>Pilot Dealer</fullName>
+                <default>false</default>
+                <label>Pilot Dealer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NL</controllingFieldValue>
+            <valueName>IKO Concept Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NL</controllingFieldValue>
+            <valueName>IKO Trade Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NL</controllingFieldValue>
+            <valueName>Liquid contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Goldseal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Guardian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Mach One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Permapark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Permaphalt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>PermaTEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Polimar EC/UV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Polimar FCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Polimar FCS (Car Park)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Polimar WG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Safestick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Superflex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Ultra Prevent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BE</controllingFieldValue>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <controllingFieldValue>DE</controllingFieldValue>
+            <controllingFieldValue>HU</controllingFieldValue>
+            <controllingFieldValue>IT</controllingFieldValue>
+            <controllingFieldValue>PL</controllingFieldValue>
+            <controllingFieldValue>RO</controllingFieldValue>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>IKO Certified Roofing Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BE</controllingFieldValue>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <controllingFieldValue>DE</controllingFieldValue>
+            <controllingFieldValue>HU</controllingFieldValue>
+            <controllingFieldValue>IT</controllingFieldValue>
+            <controllingFieldValue>PL</controllingFieldValue>
+            <controllingFieldValue>RO</controllingFieldValue>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>IKO Roof club member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BE</controllingFieldValue>
+            <valueName>IKO Certified Liquid Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BE</controllingFieldValue>
+            <valueName>Pilot Dealer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

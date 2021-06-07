@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>A link to the Claim this lab sample is related to. Lab Samples with no links to a Claim have been received but not properly connected to a cliam.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Claim this Lab Sample relates to.</inlineHelpText>
+    <label>Case</label>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Lab Samples</relationshipLabel>
+    <relationshipName>Lab_Samples</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

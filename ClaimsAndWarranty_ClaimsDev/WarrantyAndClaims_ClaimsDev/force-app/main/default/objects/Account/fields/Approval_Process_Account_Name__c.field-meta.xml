@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Process_Account_Name__c</fullName>
+    <description>Formula hyperlink field that displays the Account associated with the Approval Process</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/&quot;&amp;Id, Name, &quot;_blank&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula hyperlink field that displays the Account associated with the Approval Process</inlineHelpText>
+    <label>Approval Process Account Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

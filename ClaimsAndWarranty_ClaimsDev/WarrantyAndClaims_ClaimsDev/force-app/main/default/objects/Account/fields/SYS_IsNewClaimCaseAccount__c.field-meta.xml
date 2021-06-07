@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SYS_IsNewClaimCaseAccount__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field will not be visible to anyone. The purpose of this field is to identify if an Account has been created from the Account tab or as a part of the New Claim Case from the lightning page. It will be used in Validation rules that check for Postal code format during account creation.</description>
+    <externalId>false</externalId>
+    <label>SYS_IsNewClaimCaseAccount</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

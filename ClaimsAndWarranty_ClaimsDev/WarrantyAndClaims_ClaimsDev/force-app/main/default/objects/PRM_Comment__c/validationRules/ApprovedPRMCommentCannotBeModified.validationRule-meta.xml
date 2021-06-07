@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovedPRMCommentCannotBeModified</fullName>
+    <active>true</active>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-66
+Prevent all users (except System Administrator and Lab Manager profiles) from modifying approved PRM Comment records</description>
+    <errorConditionFormula>$Profile.Name != &apos;System Administrator&apos; &amp;&amp; $Profile.Name != &apos;Lab Manager&apos; &amp;&amp;  PRM_Approved__c</errorConditionFormula>
+    <errorMessage>Can not modify approved PRM Comment.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition_Template__c</fullName>
+    <description>Used to select default text of condition</description>
+    <externalId>false</externalId>
+    <label>Condition Template</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1. Ventilation must be upgraded....</fullName>
+                <default>false</default>
+                <label>1. Ventilation must be upgraded....</label>
+            </value>
+            <value>
+                <fullName>2. Extended downspouts to direct....</fullName>
+                <default>false</default>
+                <label>2. Extended downspouts to direct....</label>
+            </value>
+            <value>
+                <fullName>3. Soffit ventilation must be cleared...</fullName>
+                <default>false</default>
+                <label>3. Soffit ventilation must be cleared...</label>
+            </value>
+            <value>
+                <fullName>4. Deck must be repaired...</fullName>
+                <default>false</default>
+                <label>4. Deck must be repaired...</label>
+            </value>
+            <value>
+                <fullName>5. New shingles must be installed ...</fullName>
+                <default>false</default>
+                <label>5. New shingles must be installed ...</label>
+            </value>
+            <value>
+                <fullName>Free entry</fullName>
+                <default>false</default>
+                <label>Free entry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnlyAllowTestGenerationOnce</fullName>
+    <active>true</active>
+    <description>Only allow the Generate Tests functionality to fire once, to prevent endless tests being added</description>
+    <errorConditionFormula>AND(
+    Generate_Tests__c,
+    NOT(ISBLANK(Test_Generation_Date__c))
+)</errorConditionFormula>
+    <errorMessage>The default tests for this Lab Sample were previously generated; if additional tests are required, please add manually</errorMessage>
+</ValidationRule>

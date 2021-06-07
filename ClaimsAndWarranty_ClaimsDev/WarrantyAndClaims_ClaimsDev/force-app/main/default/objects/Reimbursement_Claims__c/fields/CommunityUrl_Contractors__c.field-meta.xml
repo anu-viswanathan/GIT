@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommunityUrl_Contractors__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;https://www.ikoroofpro.com/s/reimbursement-claims/&quot;+Id+&quot;/&quot;+Name
+
+
+/*
+
+Community link for L4 : https://l4-iko.cs142.force.com/s/
+
+Community link for LQA4 : https://lqa4-iko.cs142.force.com/s/
+
+Community link for FULL: https://full-iko.cs148.force.com/s/
+
+Community link for PRODUCTION: https://www.ikoroofpro.com/s/
+
+*/</formula>
+    <label>CommunityUrl_Contractors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

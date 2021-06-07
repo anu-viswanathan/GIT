@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kankakee_Received_Date_Not_in_Future</fullName>
+    <active>true</active>
+    <description>The received date in Kankakee cannot be set to a date in the future.</description>
+    <errorConditionFormula>Received_Date_Kankakee__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Received_Date_Kankakee__c</errorDisplayField>
+    <errorMessage>You can&apos;t set the Received Date to a date in the future.</errorMessage>
+</ValidationRule>

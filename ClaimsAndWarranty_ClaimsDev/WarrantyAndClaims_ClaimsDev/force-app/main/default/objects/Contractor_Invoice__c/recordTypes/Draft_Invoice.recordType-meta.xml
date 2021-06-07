@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Draft_Invoice</fullName>
+    <active>true</active>
+    <label>Draft Invoice</label>
+    <picklistValues>
+        <picklist>Rebate_Program_CA__c</picklist>
+        <values>
+            <fullName>REWARDSELEVATEDCA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rebate_Program_CRC_c__c</picklist>
+        <values>
+            <fullName>CRCREWARDELEVATEDCA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rebate_Program_US__c</picklist>
+        <values>
+            <fullName>2021BONUSREWARDS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

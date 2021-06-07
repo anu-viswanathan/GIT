@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intel_Report_Account__c</fullName>
+    <externalId>false</externalId>
+    <label>Intel Report Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Intel Reports</relationshipLabel>
+    <relationshipName>Intel_Report_Accounts</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

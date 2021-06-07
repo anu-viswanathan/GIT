@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRM__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-294
+Indicates whether the Lab Sample should be reviewed by the Plant.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether the Lab Sample should be reviewed by the Plant.</inlineHelpText>
+    <label>PRM</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

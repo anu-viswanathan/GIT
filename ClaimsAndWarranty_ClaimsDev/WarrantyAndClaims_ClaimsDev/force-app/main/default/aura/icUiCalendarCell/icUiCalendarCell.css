@@ -1,0 +1,77 @@
+/**
+ * Created by Francois Poirier on 2019-03-28.
+ */
+.THIS {
+
+}
+
+.THIS .isClicked {
+    background: #950D16;
+    color: white;
+}
+
+.THIS .hasEvents {
+    background: #A0A1A2;
+
+}
+.THIS .hasEvents .dayNumber{
+    color:#eeeeee!important;
+    font-family: Montserrat, 'Open Sans', 'sans-serif', 'Semi-Bold';
+    font-weight: 600;
+}
+.THIS .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.THIS .weekend {
+    /*background: #FAFAFA;*/
+}
+
+.THIS .weekday {
+    background: #FFFFFF;
+}
+
+.THIS .dayNumber {
+    font-family: Montserrat, 'Open Sans', 'sans-serif', 'Med';
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #626670;
+    font-weight: 500;
+}
+
+.THIS .today {
+    background-color: #EFEFEF;
+}
+
+
+
+@media screen and (max-width: 48em) {
+    .THIS .dayNumber {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .THIS .dayName{
+        font-size:2vw;
+    }
+}
+
+.THIS .pointer {
+    cursor: pointer;
+}

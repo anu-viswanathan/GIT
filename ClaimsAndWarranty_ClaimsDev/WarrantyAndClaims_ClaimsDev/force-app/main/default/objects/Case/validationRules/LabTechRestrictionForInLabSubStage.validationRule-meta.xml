@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LabTechRestrictionForInLabSubStage</fullName>
+    <active>true</active>
+    <description>Lab tech cannot set the Claim Sub Stage to &quot;Approved&quot;</description>
+    <errorConditionFormula>AND( 
+    $Profile.Name = &apos;Lab Technician&apos;,
+    TEXT(Claim_Stage__c) = &apos;In Lab&apos;,
+    ISCHANGED(Claim_Sub_Stage__c),
+    TEXT(Claim_Sub_Stage__c) = &apos;Approved&apos;
+)</errorConditionFormula>
+    <errorMessage>You are not permitted to move to change the Claim Sub Stage to &quot;Approved&quot;</errorMessage>
+</ValidationRule>

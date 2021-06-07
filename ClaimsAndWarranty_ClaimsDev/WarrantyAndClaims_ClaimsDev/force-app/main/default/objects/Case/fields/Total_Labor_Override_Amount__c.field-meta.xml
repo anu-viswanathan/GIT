@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Labor_Override_Amount__c</fullName>
+    <description>CLAIMSV2- 77. This field is used to override the total labour of the settlement and will exclude any calculations for the labour portion for the settlement above.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to override the total labour of the settlement and will exclude any calculations for the labour portion for the settlement above.</inlineHelpText>
+    <label>Total Labor Override Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

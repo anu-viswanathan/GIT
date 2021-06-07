@@ -1,0 +1,94 @@
+<!--
+ - Created by Francois Poirier on 2018-08-22.
+ -->
+
+<aura:component description="icGreenSkyOffer">
+
+    <aura:attribute name="offer" type="Object" />
+    <aura:attribute name="application" type="Object" />
+
+    <div class="slds-container--center slds-container--large slds-box slds-theme--default slds-text-align--left">
+        <aura:if isTrue="{!v.offer.applicationStatus == 'Authorized'}">
+            <div class="slds-text-heading--medium">{!$Label.c.icApproved}!</div>
+            <div class="slds-text-body--regular">
+                <p>{!$Label.c.icCongratulations_your_application_has_been_approved_for_a_Credit_Limit_of} <lightning:formattedNumber style="currency" value="{!v.offer.offers[0].loanAmount}" currencyCode="USD" currencyDisplayAs="symbol"/>. {!$Label.c.icPlease_print_this_page_record_or_Application_ID_You_will_need_this_information}</p>
+                <p>{!$Label.c.icIfYouWishToIncreaseYourCreditLimit}</p>
+                <br/>
+                <div class="slds-container--small slds-container--center">
+                    <table style="border-collapse: separate; border-spacing: 5px;">
+                        <tr>
+                            <td class="slds-text-align--right"><b>{!$Label.c.icApplication_ID}</b></td>
+                            <td class="slds-text-align--left">{!v.application.applicationId}</td>
+                        </tr>
+                        <tr>
+                            <td class="slds-text-align--right"><b>{!$Label.c.icApplicant}</b></td>
+                            <td class="slds-text-align--left">{!v.offer.applicantFullName}</td>
+                        </tr>
+                        <tr>
+                            <td class="slds-text-align_right"><b>{!$Label.c.icDate}</b></td>
+                            <td class="slds-text-align_left">{!v.offer.submissionDate}</td>
+                        </tr>
+                    </table>
+                    <br/>
+                </div>
+            </div>
+            <div class="slds-text-heading--medium">
+                <p>{!$Label.c.icASummaryOfYourOfferIsBelow}</p>
+            </div>
+            <br/>
+            <div class="slds-text-body--regular slds-text-align--center">
+                <table class="slds-text-align--center">
+                    <tr>
+                        <th>{!$Label.c.icLoan_Amount}</th>
+                        <th>{!$Label.c.icPost_Promo_Term}</th>
+                        <th>{!$Label.c.icInterest_Rate}</th>
+                        <th>{!$Label.c.icPost_Promo_Monthly_Payment}</th>
+                    </tr>
+                    <aura:iteration items="{!v.offer.offers}" var="myOffer">
+                        <tr>
+                            <td><lightning:formattedNumber style="currency" value="{!myOffer.loanAmount}" currencyCode="USD" currencyDisplayAs="symbol"/></td>
+                            <td>{!myOffer.term} {!$Label.c.icMonths}</td>
+                            <td>{!myOffer.apr}%</td>
+                            <td><lightning:formattedNumber value="{!myOffer.monthlyPayment}" style="currency" currencyCode="USD" currencyDisplayAs="symbol"/> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" bgcolor="#C1B8AF">
+                                <div class="slds-text-align--left">
+                                    {!myOffer.promotionDetails}
+                                </div>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </table>
+            </div>
+
+            <aura:set attribute="else">
+                <div class="slds-container--small slds-container--center">
+                    <table style="border-collapse: separate; border-spacing: 5px;">
+                        <tr>
+                            <td class="slds-text-align--right"><b>{!$Label.c.icApplication_ID}</b></td>
+                            <td class="slds-text-align--left">{!v.application.applicationId}</td>
+                        </tr>
+                        <tr>
+                            <td class="slds-text-align--right"><b>{!$Label.c.icApplicant}</b></td>
+                            <td class="slds-text-align--left">{!v.offer.applicantFullName}</td>
+                        </tr>
+                        <tr>
+                            <td class="slds-text-align_right"><b>{!$Label.c.icDate}</b></td>
+                            <td class="slds-text-align_left">{!v.offer.submissionDate}</td>
+                        </tr>
+                    </table>
+                    <br/>
+                </div>
+
+                <div class="slds-text-color--error slds-text-heading--medium">
+                    <p>{!$Label.c.icThankYouForChoosingGreensky}</p>
+                </div>
+            </aura:set>
+        </aura:if>
+
+    </div>
+
+
+
+</aura:component>

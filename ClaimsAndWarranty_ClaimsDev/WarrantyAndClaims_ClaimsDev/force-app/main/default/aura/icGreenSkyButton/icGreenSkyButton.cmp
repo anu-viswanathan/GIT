@@ -1,0 +1,24 @@
+<!--
+ - Created by Francois Poirier on 2018-09-14.
+ -->
+
+<aura:component description="icGreenSkyButton" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="isCustomerSubscribed" type="Boolean" />
+    <div style="text-align:center">
+
+        <aura:if isTrue="{!v.isCustomerSubscribed}">
+            <button class="slds-button slds-button_neutral" onclick="{!c.handleNewApplication}">{!$Label.c.icNew_GreenSky_Credit_Application}</button>
+            <aura:set attribute="else">
+                <div>
+                    <!-- <a href="{!v.subscribeLink}" class="slds-button slds-button_neutral">Subscribe to EagleView</a> -->
+                    <a href="{!$Label.c.icGreenSky_Merchant_application_URL}" target="_blank">
+                        <button class="slds-button slds-button--brand">{!$Label.c.icRegister_for_GreenSky_credentials}</button>
+                    </a>
+                </div>
+            </aura:set>
+        </aura:if>
+
+    </div>
+
+</aura:component>

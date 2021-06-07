@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Cheque_And_Material__c</fullName>
+    <description>Determines if both material and cash is being issued in the settlement</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        OR(
+            TEXT(Settlement_Type__c) = &apos;Default&apos;,
+            TEXT(Settlement_Type__c) = &apos;Goodwill&apos;
+        ),
+        OR(
+             Actual_Labour_Settlement__c &gt; 0,
+             AND(
+                 ISBLANK(Actual_Labour_Settlement__c),
+                 OR (Suggested_Labour_Settlement__c &gt; 0, Settlement_Amount__c &gt; 0)
+             )
+        ),
+        OR(
+             Num_of_Bundles_for_Settlement__c &gt; 0,
+             AND(
+                 ISBLANK(Num_of_Bundles_for_Settlement__c ),
+                 Suggested_Bundles_for_Settlement__c &gt; 0
+             )
+        )
+    ),
+    true,
+    false
+)</formula>
+    <label>Is Cheque And Material?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

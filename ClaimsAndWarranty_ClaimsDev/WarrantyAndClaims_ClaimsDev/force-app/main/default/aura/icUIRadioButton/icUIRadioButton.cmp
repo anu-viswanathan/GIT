@@ -1,0 +1,14 @@
+<aura:component>
+	
+	<aura:attribute name="label" type="String" />
+	<aura:attribute name="value" type="String" />
+	<aura:attribute name="selected" type="String" />
+
+	<span class="slds-button slds-radio_button">
+		<ui:inputRadio value="{!v.value}" click="{!c.doClick}"/>
+		<label class="slds-radio_button__label">
+			<span class="slds-radio_faux">{!v.label}</span>
+		</label>
+	</span>
+
+</aura:component>

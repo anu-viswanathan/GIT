@@ -1,0 +1,66 @@
+<aura:component controller="icCTRLCommunityNavigation" description="icPage icCRCUiCommunityWelcomeItem" implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="currentTheme" type="String" default="aaa" />
+    <aura:attribute name="fullLanguageCode" type="String" default="en"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+
+    <div>
+
+        <div aura:id='VersionEN' class="welcomeMain VersionEN" >
+            <div>
+                <span class="tabEN">
+                <c:icCRCMainHeaderPhoto_icwelcome />
+                </span>
+            </div>
+            <div class="content-wrapper slds-grid slds-wrap tabEN">
+                <!--                <div class="center-wrap">-->
+                <div class="slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 iko-tile-wrapper">
+                    <div class="text-wrapper">
+                        <span class="{!if(v.fullLanguageCode == 'fr','labelFontSizeFR','')}">
+                            <c:icUiCommunityWelcomeItem label="{!$Label.c.icCRCWelMemberTilesCotentText}" />
+                        </span>
+                    </div>
+                    <div class="iko-tile-button">
+                        <a href="javascript:void(0)" onclick="{!c.navTo1}">
+                            <div class="{!if(v.fullLanguageCode == 'fr','iko-tile btnFontSizeFR','iko-tile')}">{!$Label.c.icWelcomeMemberBtn}</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 iko-tile-wrapper">
+                    <div class="text-wrapper">
+                        <span class="{!if(v.fullLanguageCode == 'fr','labelFontSizeFR','')}">
+                            <c:icUiCommunityWelcomeItem label="{!$Label.c.icCRCWelStartAppTilesContentText}" />
+                        </span>
+                    </div>
+                    <div class="iko-tile-button">
+                        <a href="javascript:void(0)" onclick="{!c.navTo2}">
+                            <div class="{!if(v.fullLanguageCode == 'fr','iko-tile btnFontSizeFR','iko-tile')}">{!$Label.c.icWelStartAppBtn}</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 iko-tile-wrapper">
+                    <div class="text-wrapper">
+                        <span class="{!if(v.fullLanguageCode == 'fr','labelFontSizeFR','')}">
+                            <c:icUiCommunityWelcomeItem label="{!$Label.c.icCRCWelContinueAppTilesContentText}" />
+                        </span>
+                    </div>
+                    <div class="iko-tile-button">
+                        <a href="javascript:void(0)" onclick="{!c.navTo3}">
+                            <div class="{!if(v.fullLanguageCode == 'fr','iko-tile btnFontSizeFR','iko-tile')}">{!$Label.c.icWelContinueAppBtn}</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</aura:component>

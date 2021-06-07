@@ -1,0 +1,61 @@
+<aura:component description="icUILinkTilesSmall">
+
+
+        <aura:attribute name="title" type="String" default="My Title" />
+        <!--<aura:attribute name="redirectURL" type="String" default="" />-->
+        <aura:attribute name="image" type="String" />
+        <ltng:require styles="{!$Resource.FontCss}" />
+
+        <div  class="slds-align_absolute-center linkTileSizeUI" style="max-width:800px; display:block; ">
+
+            <!--- Top Section : Black Bar with title-->
+<!--            <div	class="topBlackBar slds-border_bottom"-->
+            <div	class="topBlackBar"
+                    style=" width:100%;
+                            display: table;
+                            font-family: Montserrat, 'Open Sans', 'sans-serif' !important;">
+                <!--<a href="{!v.redirectURL}" target="_self" alt="{!v.title}">-->
+
+                <div class="slds-align_absolute-center"
+                     style="text-transform: uppercase;
+							 text-align: center;
+							 font-size:12px;
+							 height:60px;
+							 letter-spacing: 3px;
+							color: white;
+							 font-family: Montserrat, 'Open Sans', 'sans-serif' !important;
+							 width:100%;
+							 background-color: black;
+						">
+                    {!v.title}
+
+                </div>
+                <!--</a>-->
+            </div>
+
+            <!--- Image Section : Image rollovertext-->
+
+            <div class="image-fade linkTileSizeUI"
+                 style=" display: table;
+                         width: 100%;
+                         height: 100%;
+                        ">
+
+
+                <!--{!v.image}-->
+                <!--<img src="{!$Resource.p01MyDashboard800x460}" style="width:100%;" />-->
+                <!--<a href="{!v.redirectURL}" target="_self" alt="{!v.title}">-->
+                 <img src="{!v.image}" style="width:100%; height:100%;" />
+                <!--</a>-->
+
+
+                </div>
+
+
+        </div>
+
+
+
+
+
+    </aura:component>

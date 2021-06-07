@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available_Co_Op_Funds_For_Reporting__c</fullName>
+    <description>This field is to be used in report filter to track if any contractor has negative Coop balance.</description>
+    <externalId>false</externalId>
+    <formula>COOP_Funds_Credit__c - COOP_Funds_Debit__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Available Co-Op Funds - For Reporting</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

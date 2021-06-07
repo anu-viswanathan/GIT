@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_HomeAdvisor_for_Tier_1</fullName>
+    <active>false</active>
+    <description>Tier 1 ROOFPRO Accounts cannot sign up for HomeAdvisor. This validation rule blocks partner users from creating a HomeAdvisor subscription record when trying so save after clicking the &apos;Setup HomeAdvisor&apos; Account Action.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(HomeAdvisor_Account_Name__c)),
+Contractor_Account__r.Present_Tier_Lookup__r.Tier_Label__c = &quot;1&quot;
+)</errorConditionFormula>
+    <errorMessage>Your Tier (Tier 1 - ROOFPRO Preferred) does not allow you to sign up for HomeAdvisor. This is reserved for Tier 2 (ROOFPRO Select) and Tier 3 (ROOFPRO Craftsman Premier) Contractors.</errorMessage>
+</ValidationRule>

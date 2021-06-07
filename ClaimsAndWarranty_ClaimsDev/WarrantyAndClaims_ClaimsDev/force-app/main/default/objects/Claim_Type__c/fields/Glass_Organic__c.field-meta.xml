@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Glass_Organic__c</fullName>
+    <description>Sets the claim type based on the product type. This is used to roll up to the Claim, so that we can choose the right templates.</description>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(TEXT(Product_Type__c), &quot;Glass&quot;), &quot;GLASS&quot;, &quot;ORGANIC&quot;)</formula>
+    <label>Glass/Organic</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

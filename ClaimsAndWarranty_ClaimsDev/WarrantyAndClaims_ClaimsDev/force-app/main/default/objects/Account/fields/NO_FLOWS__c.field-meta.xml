@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NO_FLOWS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When ticked, Process builder processes will be ignored for this record.
+(Only valid when the PB contains this condition)</description>
+    <externalId>false</externalId>
+    <label>NO FLOWS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

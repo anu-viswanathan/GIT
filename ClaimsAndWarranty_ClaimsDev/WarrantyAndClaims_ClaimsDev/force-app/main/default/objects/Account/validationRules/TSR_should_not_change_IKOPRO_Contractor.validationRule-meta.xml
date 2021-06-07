@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSR_should_not_change_IKOPRO_Contractor</fullName>
+    <active>true</active>
+    <description>nor Homeowner.</description>
+    <errorConditionFormula>AND( 
+ISCHANGED( Name ), 
+AND(NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),NOT(CONTAINS($Profile.Name, &quot;IKO Power User&quot;))),
+OR(
+CONTAINS(RecordType.Name, &quot;IKOPRO Contractor&quot;), 
+CONTAINS(RecordType.Name, &quot;IKOPRO Contractor HA OK&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change any fields on this page.</errorMessage>
+</ValidationRule>

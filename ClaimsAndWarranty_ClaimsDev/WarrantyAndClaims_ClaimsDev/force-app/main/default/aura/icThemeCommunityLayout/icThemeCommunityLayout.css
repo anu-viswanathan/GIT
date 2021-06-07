@@ -1,0 +1,570 @@
+.THIS .content, .THIS body {
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+.THIS .slds-clearfix.mruDescription.slds-text-heading--label-normal.slds-show.slds-truncate, .THIS label.uiLabel-hidden.form-element__label.uiLabel {
+    color: grey !important;
+}
+
+
+
+
+.THIS lightning-icon.slds-icon-utility-chevrondown.slds-button__icon--right.slds-icon_container {
+    display: none;
+}
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak, .THIS .slds-text-color_default {
+    color: grey !important;
+}
+
+
+.THIS .slds-grid.slds-grid_vertical-align-center.slds-p-horizontal--x-small {
+    background-color: white !important;
+    color: #595959;
+}
+
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak {
+    color: grey !important;
+}
+
+
+
+.THIS button.slds-container_fluid.slds-button.slds-button--reset {
+    font-size: 11px;
+}
+
+
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: darkgrey;
+    text-shadow: none;
+    /*text-shadow: 0 0 0px black;*/
+}
+
+/*.THIS .profileMenuItems{*/
+/*float: right !important;*/
+/*margin-top: 30px;*/
+/*}*/
+
+.THIS .slds-border_top, .THIS .slds-border--top {
+    border-top: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_left, .THIS .slds-border--left {
+    border-left: 1px solid #A9A9A9 !important;
+}
+
+.THIS .slds-border_right, .THIS .slds-border--right  {
+    border-right: 1px solid #A9A9A9 !important;
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.THIS span.profileName {
+    color: white;
+}
+.THIS span.triggerDownArrow.down-arrow {
+    color: white;
+}
+
+.THIS .forceCommunityGlobalNavigation .THIS .slds-list__item a .THIS .forceCommunityGlobalNavigation .THIS .slds-list__item button {
+    font-weight: 400;
+    font-size: 10px;
+    font-family: Montserrat, 'Open Sans', 'sans-serif'  !important;
+;
+    line-height: normal;
+    padding: 8px 14px;
+    padding-top: 8px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    padding-left: 2px !important;
+}
+
+
+.THIS .forceCommunityGlobalNavigation {
+    background-color: white;
+}
+
+.THIS .forceCommunityGlobalNavigation>* {
+    max-width: 1024px;
+    display: block;
+    float:right !important;
+}
+
+.THIS .slds-container_fluid {
+    padding: 8px 20px !important;
+}
+
+
+
+/* Selects every fourth element
+   among any group of siblings,
+   counting backwards from the last one */
+
+/*.THIS li:nth-last-child(9n+2) {
+  color: white;
+    background-color:#cc0000;
+    border-radius: 5px;
+    
+}*/
+
+.THIS nav>ul>li:nth-of-type(6){
+    color: white;
+    background-color:#c62127;
+    border-radius: 5px;
+    margin-left:30px;
+
+}
+
+
+
+.THIS nav>ul>li>ul>li>a{
+    color: black;
+
+
+}
+
+
+
+/*.THIS .slds-button__icon--right{*/
+/*display: none;*/
+/*}*/
+
+
+
+
+
+
+@media only screen and  (min-width: 320px) and (max-width:479px) {
+
+
+    .THIS .content, .THIS body {
+        max-width: 478px;
+        margin: auto;
+    }
+    /* For MOBILE phones: */
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementsOnMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .searchBarTablet,.THIS .hideMenu {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+
+    .THIS .logoMobile{
+        display:inline-block!important;
+        width: 80px!important;
+        float:left !important;
+        height:40px!important;
+        margin-left:15px !important;
+        margin-top: 100px !important;
+    }
+
+    .THIS .sloganMobile {
+
+        float:left !important;
+        font-weight: 600 !important;
+        margin-top:142px !important;
+        margin-left:-137px !important;
+        color:black !important;
+        /*color:red;*/
+    }
+
+
+    .THIS .navMenuPosition{
+        margin-top:-300px !important;
+        /*margin-left:60px !important;*/
+    }
+
+    .THIS .moveSearch {
+        position:absolute!important;
+        top:20px!important;
+        left:12px!important;
+        width:90% !important;
+        border-radius: 3px;
+        z-index:10;
+
+        /*height:35px !important;*/
+        /*background-color:transparent !important;*/
+
+    }
+    .THIS .searchMenuMobile{
+        background: transparent !important;
+    }
+
+    .THIS .navWidth {
+        width:479px !important;
+    }
+
+    .THIS .mobileSearchBar {
+        height:75px!important;
+        background: #d3d4d8 !important;
+
+    }
+
+    .THIS nav>ul>li:nth-of-type(6){
+        margin-left:0px;
+
+    }
+
+    .THIS button.slds-container_fluid.slds-button.slds-button--reset {
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        font-size:14px !important;
+    }
+
+    .THIS nav>ul>li{
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        font-size: 16px !important;
+
+
+    }
+
+    .THIS li.slds-list__item {
+
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    /*.THIS .searchMobile {*/
+    /*height:45px !important;*/
+
+    /*}*/
+}
+
+
+
+@media only screen and  (min-width: 480px) and (max-width: 768px) {
+
+    /* For TABLETs : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .searchBarMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .searchBarTablet {
+        background-color:white !important;
+    }
+
+
+    .THIS .hideElementOnTablet{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+
+    .THIS .navMenuPosition{
+        display: block;
+        float:right !important;
+        margin-top:-555px !important;
+        margin-right: 8px !important;
+    }
+
+    .THIS .moveSearch {
+        display: block;
+        float:right !important;
+        margin-top:-540px !important;
+        margin-right: 470px !important;
+        z-index:10;
+        /*width: 325px !important;*/
+
+    }
+
+    /*.THIS .IKOLogoMedDesktop {*/
+    /*float:left !important;*/
+    /*position:relative;*/
+    /*margin-left:-10px !important;*/
+    /*top: 30px !important;*/
+
+    /*}*/
+
+    .THIS .logoPosition{
+        margin-left: 20px !important;
+        margin-top:-20px;
+
+    }
+    .THIS .logoSlogan{
+        margin-left: 120px !important;
+
+    }
+
+
+    /*.THIS .sloganMedDesketop {*/
+    /*position:relative;*/
+    /*top:45px !important;*/
+    /*font-weight: 600 !important;*/
+    /*font-size: 4px !important;*/
+    /*margin-left:-45px !important;*/
+    /*color:black !important;*/
+    /*z-index:9999;*/
+    /*!*color:red;*!*/
+    /*}*/
+
+
+
+
+    /*.THIS .navWidthTablet {*/
+    /*width:767px !important;*/
+    /*}*/
+
+    .THIS nav>ul>li:nth-of-type(6){
+        margin-left:0px;
+
+
+    }
+    /*.THIS button.slds-container_fluid.slds-button.slds-button--reset {*/
+    /*padding-bottom: 25px !important;*/
+    /*padding-top: 25px !important;*/
+    /*font-size:16px !important;*/
+
+    /*}*/
+
+    /*.THIS nav>ul>li{*/
+    /*padding-top: 15px !important;*/
+    /*padding-bottom: 15px !important;*/
+
+    /*}*/
+
+    /*.THIS li.slds-list__item {*/
+
+    /*padding-top: 15px !important;*/
+    /*padding-bottom: 15px !important;*/
+    /*font-size: 16px !important;*/
+    /*}*/
+
+
+}
+
+
+
+
+
+
+@media only screen and  (min-width: 769px) and (max-width: 1024px) {
+    /* For between TABLET and DESKTOP Small : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktop {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .navDesktopSmall{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .searchBarMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .hideElementOnTablet{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+
+    .THIS .removeBackground {
+        background-color:red !important;
+    }
+
+    .THIS .moveSearch {
+        float:right !important;
+        margin-top:-535px !important;
+        margin-right:482px !important;
+        /*width: 305px !important;*/
+
+    }
+
+    .THIS .navMenuPosition{
+        margin-top:-555px!important;
+        margin-right:20px !important;
+
+    }
+
+    .THIS .IKOLogoMedDesktop{
+        float:left !important;
+        position:relative;
+        margin-left:20px !important;
+        top: 20px !important;
+
+    }
+
+    .THIS .sloganMedDesketop {
+        position:relative;
+        top:45px !important;
+        font-weight: 600 !important;
+        font-size: 4px !important;
+        margin-left:-45px !important;
+        color:black !important;
+        z-index:9999;
+        /*color:red;*/
+    }
+
+
+
+    .THIS body {
+        max-width:1023px;
+    }
+
+}
+
+
+@media only screen and  (min-width: 1025px) and (max-width: 1500px) {
+
+    /* For DESKTOP Small : */
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopLarge {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navMenuPosition{
+        margin-top:-278px !important;
+        margin-right:-8px;
+    }
+
+    .THIS .forceCommunityGlobalNavigation, .THIS .slds-list__item a, .THIS .forceCommunityGlobalNavigation, .THIS.slds-list__item button {
+        font-size: 11px !important;
+        /*font-family: Lato;*/
+        /*line-height: normal;*/
+        /*padding: 8px 14px;*/
+    }
+
+
+}
+
+@media only screen and (min-width: 1501px) {
+    /* For DESKTOP LARGE: */
+    .THIS .navTablet {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navMobile {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navDesktopSmall {
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+
+    }
+    .THIS .navWidth{
+        width:1024px !important;
+    }
+
+    .THIS .navMenuPosition{
+        margin-top:-278px !important;
+        margin-right:-10px!important;
+    }
+
+    .THIS .forceCommunityGlobalNavigation, .THIS .slds-list__item a, .THIS .forceCommunityGlobalNavigation, .THIS.slds-list__item button {
+        font-size: 11px !important;
+        /*font-family: Lato;*/
+        /*line-height: normal;*/
+        /*padding: 8px 14px;*/
+    }
+}

@@ -1,0 +1,61 @@
+<template>
+    <template if:false={isLoadedData}>
+        <lightning-spinner class="spins" size="large"></lightning-spinner>
+    </template>
+    <div if:true={isLoadedData} style="max-width: 720px;" class="slds-m-around_large">
+        <template if:false={contractor.isCompletedPlan}>
+            <div>
+                <h1 class="headerText">
+                    {label.HEADINGTEXT} -
+                </h1>
+                <h1 class="headerText">
+                    {contractor.learningPlanName}
+                </h1>
+            </div>
+            <div class="slds-m-top_large">
+                <p class="bodyText">
+                    {label.BODYTEXT_P1} {contractor.learningPlanName} {label.BODYTEXT_P2}
+                </p>
+            </div>
+            <div class="slds-m-top_large">
+                <p>{label.SWORN} &nbsp;
+                    <lightning-formatted-date-time year="numeric" month="long" day="2-digit" value={dateNow}>
+                    </lightning-formatted-date-time>
+                </p>
+            </div>
+            <div class="slds-m-top_large">
+                <lightning-input class="slds-p-bottom_small" required type="text" label={label.NAME}
+                    data-field={fieldName.Name} onchange={handleChange} value="">
+                </lightning-input>
+                <lightning-input class="slds-p-bottom_small" data-field={fieldName.Esignatue} onblur={validationName}
+                    onchange={handleChange} required type="text" label={label.ESIGNATURE} value="">
+                </lightning-input>
+                <lightning-input class="slds-p-bottom_small" data-field={fieldName.Title} onchange={handleChange}
+                    required type="text" label={label.TITLE} value="">
+                </lightning-input>
+                <lightning-input class="slds-p-bottom_small" disabled required type="text"
+                    value={contractor.companyName} placeholder={contractor.companyName} label={label.NAME_CONTRACTOR}>
+                </lightning-input>
+                <lightning-input class="slds-p-bottom_small" disabled required type="text"
+                    placeholder={contractor.contractorId} label={label.CONTRACTOR_ID_NO}
+                    value={contractor.contractorId}></lightning-input>
+            </div>
+            <div class="slds-m-top_large" style="text-align: right;">
+                <lightning-button variant="brand" label={label.BUTTON_SUBMIT} title={label.BUTTON_SUBMIT} onclick={handleClick} class="">
+                </lightning-button>
+            </div>
+        </template>
+        <template if:true={contractor.isCompletedPlan}>
+            <div>
+                <h1 class="headerText">
+                    {label.HEADINGTEXT_COMPLETED}
+                </h1>
+            </div>
+            <div class="slds-m-top_large">
+                <h2>
+                    {label.BODYTEXT_COMPLETED}
+                </h2>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRM_COOP_Cannot_be_Greater_than_COOP</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(ISBLANK(Parent_Transaction__c),Text(Transaction_Type__c)=&quot;Credit&quot;,
+Text(Currency_Used__c)=&quot;Premium Co-op $&quot;, ISBLANK( Reimbursement_Claim__c),
+Amount__c&gt;Account_ID__r.Available_Coop__c)</errorConditionFormula>
+    <errorMessage>Premium Co-op $ cannot be greater than CO-Op funds.</errorMessage>
+</ValidationRule>

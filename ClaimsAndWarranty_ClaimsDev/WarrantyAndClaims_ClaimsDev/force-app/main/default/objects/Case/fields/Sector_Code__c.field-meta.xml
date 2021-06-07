@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector_Code__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Sector__c,
+&quot;CA&quot;, &quot;CA&quot;,
+&quot;Commercial&quot;, &quot;COM&quot;,
+&quot;US&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Maps the sector to a two digit code.</inlineHelpText>
+    <label>Sector Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

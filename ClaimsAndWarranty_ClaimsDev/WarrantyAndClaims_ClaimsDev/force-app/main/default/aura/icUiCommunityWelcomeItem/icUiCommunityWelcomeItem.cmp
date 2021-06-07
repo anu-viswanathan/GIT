@@ -1,0 +1,17 @@
+<!--
+ - Created by Dongliang Zhang on 2019-10-03.
+ -->
+
+<aura:component description="icUiCommunityWelcomeItem">
+
+    <aura:attribute name="label" type="String" default="Line 1" />
+
+
+    <div style="display:block;">
+        <p>
+            <aura:unescapedHtml value="{!v.label}"/>
+        </p>
+    </div>
+
+
+</aura:component>

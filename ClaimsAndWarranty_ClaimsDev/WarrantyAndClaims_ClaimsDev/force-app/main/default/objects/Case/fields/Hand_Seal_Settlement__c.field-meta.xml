@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hand_Seal_Settlement__c</fullName>
+    <description>Hand Seal settlements include a flat rate that is hard coded at $100. Settlements are often quoted without this amount...so this field only adds the $100 in.</description>
+    <externalId>false</externalId>
+    <formula>Hand_Seal_Flat_Rate__c  +  Hand_Seal_Settlement_Bundles_Only__c</formula>
+    <inlineHelpText>Includes the $100 flat rate that is added to hand seal settlements.</inlineHelpText>
+    <label>Hand Seal Settlement</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

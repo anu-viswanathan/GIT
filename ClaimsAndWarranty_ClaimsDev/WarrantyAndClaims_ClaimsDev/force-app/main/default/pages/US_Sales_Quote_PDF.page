@@ -1,0 +1,171 @@
+<!--
+    Created by Anil Mannem (Incloud) on 03-Aug-2020
+-->
+<apex:page standardController="Bidder__c" extensions="icUSSalesQuotePDFController" renderAs="pdf">
+
+    <table style="width: 100%; border-collapse:collapse; font-family: sans-serif;">
+        <tr>
+            <td colspan="2"></td>
+            <td style= "text-align: center;
+                        background-color: gray;
+                        font-weight: bold;
+                        font-size: 14px;
+                        height: 30px;
+                        padding: 8px;
+                        color: white;"
+                colspan="2">
+                JOB QUOTE
+            </td>
+        </tr>
+        <tr style="background-color: black; height: 15px">
+            <td colspan="4"></td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td style="width:20%; text-align:right; padding:3px;">Distributor :</td>
+            <td style="width:30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Distributor_Account__r.Name}"/></td>
+            <td style="width:20%; text-align:right; padding:3px;">Job Type :</td>
+            <td style="width:30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Type}"/></td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td style="width:20%; text-align:right; padding:3px;">IKO Term # :</td>
+            <td style="width:30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Unique_Reference_No__c}"/></td>
+            <td style="width:20%; text-align:right; padding:3px;">Quote Type :</td>
+            <td style="width:30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Type_of_Project__c}"/></td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td colspan="4" style="padding:6px;"></td>
+        </tr>
+        <tr style="background-color: gray; color: white;">
+            <td style="text-align: center;
+                       padding: 6px;
+                       font-weight: bold;
+                       font-size: 14px;"
+                colspan="4">CONFIDENTIAL CUSTOMER INFORMATION</td>
+        </tr>
+        <tr style="background-color:black; color: white;">
+            <td style="text-align: center;
+                       padding: 6px;
+                       font-weight: bold;
+                       font-size: 14px;"
+                colspan="4">Job Details</td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td style="width: 20%; text-align:right; padding:3px;">Job Name :</td>
+            <td style="width: 30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Name}"/></td>
+            <td style="width: 20%; text-align:right; padding:3px;">Start Date :</td>
+            <td style="width: 30%; text-align:left; padding:3px;">
+                <!--<apex:outputText value="{0,date,dd/MM/yyyy}" >-->
+                <apex:outputText value="{0, date, MMMM d',' yyyy}">
+                    <apex:param value="{!bidder.Opportunity__r.Est_Project_Start_Date__c}"/>
+                </apex:outputText>
+            </td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td style="width: 20%; text-align:right; padding:3px;">Location :</td>
+            <td style="width: 30%; text-align:left; padding:3px;">
+                <apex:outputText value="{!bidder.Opportunity__r.Account.BillingStreet}, {!bidder.Opportunity__r.Account.BillingCity}, {!bidder.Opportunity__r.Account.BillingState}, {!bidder.Opportunity__r.Account.BillingPostalCode}, {!bidder.Opportunity__r.Account.BillingCountry}"/>
+            </td>
+            <td style="width: 20%; text-align:right; padding:3px;">Estimated End Date :</td>
+            <td style="width: 30%; text-align:left; padding:3px;">
+                <apex:outputText value="{0, date, MMMM d',' yyyy}">
+                    <apex:param value="{!bidder.Opportunity__r.Est_Project_Completion__c}"/>
+                </apex:outputText>
+            </td>
+        </tr>
+        <tr style="font-size: 12px;">
+            <td style="width: 20%; text-align:right; padding:3px;">Contractor :</td>
+            <td style="width: 30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Contractor_Account__r.Name}"/></td>
+            <td style="width: 20%; text-align:right; padding:3px;">Estimated Squares :</td>
+            <td style="width: 30%; text-align:left; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Estimated_Project_Size__c}"/></td>
+        </tr>
+    </table>
+    <br/>
+    <table style="width: 100%; border-collapse: collapse; font-family: sans-serif;" border ="1px solid black">
+        <tr style="background-color:black; color: white; text-align: center; font-size: 14px; padding:3px;">
+            <th colspan="6">Product Details</th>
+        </tr>
+        <tr style="font-size: 12px; text-align:center;">
+            <th>Product Name</th>
+            <th>Colour</th>
+            <th>Unit of Measure</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <apex:repeat value="{!opportunityLineItemList}" var="product">
+            <tr style="font-size: 12px;">
+                <td style="width: 40%;"><apex:outputText value="{!product.Product2.Name}"/></td>
+                <td style="width: 20%;"><apex:outputText value="{!product.Product2.Colour__c}"/></td>
+                <td style="width: 10%;text-align: center;"><apex:outputText value="{!product.Unit_of_Measure__c}"/></td>
+                <td style=" text-align: right;"><apex:outputText value="{!product.UnitPrice}"/></td>
+                <td style=" text-align: right;"><apex:outputText value="{!product.Quantity}"/></td>
+                <td style=" text-align: right;"><apex:outputText value="{!product.TotalPrice}"/></td>
+            </tr>
+        </apex:repeat>
+        </table>
+        <table style="width: 100%; border-collapse: collapse; font-family: sans-serif;">
+        <tr>
+            <td style="width: 60%"></td>
+            <td style="width: 20%; text-align:right; padding:3px; font-size: 14px; font-weight:bold;">Total Price:</td>
+            <td style="width: 20%; text-align:right; padding:3px;"><apex:outputText value="{!bidder.Opportunity__r.Amount}"/> </td>
+        </tr>
+    </table>
+    <div style="font-family: sans-serif; font-size: 10px">
+        <p>
+            <b>Program Terms &amp; Conditions</b>
+            <br/>* Builder Credit Back is credited on a quarterly basis and after buy aftershipment credits are credited to customer.
+            <br/>* IKO reserves the right to request invoice samples to verify sales.
+            <br/>
+            <br/><b>For Job Site Direct Quotes</b>
+            <br/>* All orders must include exact product and color specifications
+            <br/>* All orders shipping directly to the job site should be placed with the IKO Order Center and identified by the Job Name at the top of this program
+            <br/>* A $50 direct to job site shipment fee will apply in addition to the regular freight surcharge
+	        <br/>
+            <br/><b>For Jobs out of Warehouse Quotes</b>
+            <br/>IKO uses middle net price that is billed to the customer during the period of the Job Quote term.
+            	If no customer purchases occurred during the Job Quote period, IKO uses the customer's most recent
+            	purchases prior to the Job Quote period to cover the quantity of product that the Job Quote covers.
+            <br/>
+            <br/>The net price that IKO uses is the middle net product price reduced by any on or off invoice incentives,
+            	such as, volume buys, block buys, truckload allowances, etc that are included on and off the invoice and
+            	any available cash discounts in excess of 1%, such as those associated with IKO Winter Booking. 
+            	A percentage of the previous quarter's volume buy credit back value will be used to reduce the current
+            	middle net price. The percentage represents the product purchased by the customer during a volume buy
+                divided by the total shipped in the quarter. If there is no volume buy in the previous quarter, or the
+                customer did not qualify, then there is no reduction. The formula is as follows:
+		    <br/><br/><b>Credit = Middle Net - Previous Qtr Buy*(Buy QTY/Total Shipped in QTR) - Excess Discount - Block Buys
+        	    - Job Quote</b>
+            <br/><br/>All orders will be subject to IKO standard terms and conditions of sale
+            		<a href="http://www.iko.com/residential/homeowner/usa-terms-conditions-of-sale/">http://www.iko.com/residential/homeowner/usa-terms-conditions-of-sale/</a>
+            <br/><br/>This program may be modified or cancelled at any time due to any force majeure. 
+                Force Majeure: IKO shall not be liable nor deemed to be in default for any delay or 
+                failure to perform under this Agreement deemed to result, directly or indirectly, 
+                from any cause beyond the reasonable control of IKO, including, without limitation, 
+                acts of civil or military authority or public enemy, civil disturbance, terrorism, 
+                acts of God such as fires, floods, tornados, hurricanes or earthquakes, strikes, 
+                lockout or actions of labor unions, inability to reasonably procure labor, equipment, 
+                materials or supplies in the open market, failure of transportation, mechanical breakdown, 
+                or regulatory delay or restraint.
+            <br/> <br/>This program applies only to purchases of product in the United States
+        </p>
+    </div>
+    <div>
+        <br/><br/><br/>
+        <table style="width:100%; font-family: sans-serif; font-size: 12px">
+            <tr style="vertical-align: top;">
+                 <td style="text-align: center; width:33%;">
+                    <hr style="width:80%"/>
+                    CUSTOMER SIGNATURE
+                </td>
+                <td style="text-align: center; width:34%;">
+                    <hr style="width:80%"/>
+                    IKO REPRESENTATIVE SIGNATURE
+                </td>
+                <td style="text-align: center; width:33%;">
+                    <hr style="width:80%"/>
+                    DATE
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:page>

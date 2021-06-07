@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set manually by the Claims agent if the claim is determined to fit the criteria for the Organic Class Action settlement. This is also used to drive which template gets selected.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked if the claim is determined by the Claim agent to fit the criteria of IKO&apos;s Organic shingle Class Action settlement.</inlineHelpText>
+    <label>Qualified</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

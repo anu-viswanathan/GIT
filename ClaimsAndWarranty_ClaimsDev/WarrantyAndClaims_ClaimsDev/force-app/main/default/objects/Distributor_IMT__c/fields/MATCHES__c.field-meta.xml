@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MATCHES__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ONLY used to select matching Distributors within the Invoice Upload flow.</description>
+    <externalId>false</externalId>
+    <label>MATCHES</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

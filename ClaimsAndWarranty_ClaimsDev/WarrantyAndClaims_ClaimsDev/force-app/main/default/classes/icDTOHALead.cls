@@ -1,0 +1,29 @@
+global with sharing class icDTOHALead {
+	global String name {get;set;}
+	global String firstName {get;set;}
+	global String lastName {get;set;}
+	global String address {get;set;}
+	global String city {get;set;}
+	global String stateProvince {get;set;}
+	global String postalCode {get;set;}
+	global String primaryPhone {get;set;}
+	global String phoneExt {get;set;}
+	global String secondaryPhone {get;set;}
+	global String secondaryPhoneExt {get;set;}
+	global String email {get;set;}
+	global Integer srOid {get;set;}
+	global Integer leadOid {get;set;}
+	global Integer taskOid {get;set;}
+	global String taskName {get;set;}
+	global String spPartnerId {get;set;}
+	global String crmKey {get;set;}
+	global String comments {get;set;}
+	//global List<icDTOHAQuestion> interview {get;set;}
+	global String interview {get;set;}
+	global String matchType {get;set;}
+	global String leadDescription {get;set;}
+	global Integer spEntityId {get;set;}
+	global String spCompanyName {get;set;}
+	//global icDTOHAAppointment appointment {get;set;}
+	global String appointment {get;set;}
+}

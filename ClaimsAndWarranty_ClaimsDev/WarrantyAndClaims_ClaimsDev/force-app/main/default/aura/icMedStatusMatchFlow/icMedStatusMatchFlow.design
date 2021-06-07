@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="tierChoice" Label="Tier Chosen"/>
+    <design:attribute name="isStatusMatch" Label="Status Match"/>
+</design:component>

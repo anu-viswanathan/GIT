@@ -1,0 +1,43 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" controller="ContentVersionService"> 
+    <aura:attribute name="recordNotes" type="ContentVersionService.LightningNote[]" />
+	
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<div class="flexipageComponent" >
+		<article class="slds-card slds-card_boundary forceBaseCard forceCard flexipageCard" >
+			<div class="slds-media slds-card__header slds-grid">
+				<div class="slds-media__figure">
+					<span class="slds-icon_container" title="Notes">
+						<lightning:icon iconName="standard:note" size="small" />
+					</span>
+				</div>
+				<div class="slds-media__body">
+					<h3 class="slds-section__title">
+						<span class="slds-truncate" title="Notes">Notes</span>
+					</h3>
+				</div>
+			</div>
+
+			<div class="slds-section">
+				<div aria-hidden="false" >
+					<div>
+						<ul class="slds-has-dividers_around-space">
+							<aura:iteration var="m" items="{!v.recordNotes}">
+								<li class="slds-item">
+									<article class="slds-tile slds-tile_board">
+										<h3 class="slds-tile__title slds-truncate" title="{!m.title}"> <ui:outputDateTime value="{!m.timestamp}"/> by <a href="{! '/' + m.createdById}">{!m.createdBy}</a></h3>
+										<div class="slds-tile__detail">
+											<p><aura:unescapedHtml value="{!m.noteText}" /></p>
+										</div>
+									</article>
+								</li>
+							</aura:iteration>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+
+
+</aura:component>

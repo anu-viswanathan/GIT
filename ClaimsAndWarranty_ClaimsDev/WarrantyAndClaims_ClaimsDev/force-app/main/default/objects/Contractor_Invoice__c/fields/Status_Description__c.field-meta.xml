@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT( Status__c ), &quot;DO NOT PAY&quot;, IF( TEXT(Owner:User.ROOFPRO_Portal_Language__c)= &quot;Quebec French&quot; , &quot;a été refusée. Vous recevrez prochainement les informations d’Integrated Marketing Technologies&quot;, &quot;was declined. You will receive information from Integrated Marketing Technologies shortly.&quot;), 
+TEXT( Status__c ))</formula>
+    <label>Status Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

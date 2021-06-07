@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Sample_Numbers</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Case__c</columns>
+    <columns>Sample_Number__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Sequence_Number__c</columns>
+    <columns>Sequence_Prefix__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sample_Number__c</field>
+        <operation>equals</operation>
+        <value>CARES-00054-20</value>
+    </filters>
+    <filters>
+        <field>Sample_Number__c</field>
+        <operation>equals</operation>
+        <value>CARES-00062-20</value>
+    </filters>
+    <label>Duplicate Sample Numbers CLAIMSV2-863</label>
+    <sharedTo>
+        <role>Lab_Manager</role>
+        <role>Lab_Tech</role>
+    </sharedTo>
+</ListView>

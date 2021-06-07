@@ -1,0 +1,47 @@
+<!--
+ - Created by Francois Poirier on 2019-06-03.
+ -->
+
+<aura:component description="icUiCalendarEventItem">
+
+    <aura:attribute name="currentTheme" type="String" />
+    <aura:attribute name="event" type="Object" />
+
+
+    <div class="slds-p-left--large slds-p-right--large slds-col slds-size--1-of-1 slds-border--bottom">
+        <div class="eventDate slds-p-around--medium">{!v.event.dateToDisplay}</div>
+        <div class="eventTitle slds-p-around--medium">{!v.event.Title}</div>
+        <div class="slds-p-left--medium slds-p-right--medium slds-p-bottom--medium eventDescription">{!v.event.Description}</div>
+
+        <aura:if isTrue="{!v.event.linkType == 'No Link' || v.event.linkType == '' || v.event.linkType == null}">
+            <aura:set attribute="else">
+                <div class="todayEventIcon slds-p-around--medium">
+                    <lightning:icon iconName="utility:chevronright" variant="error" size="xx-small"/>
+                    <span>
+                        <aura:if isTrue="{!v.event.linkType =='External'}">
+                            <a href="javascript:void(0)" onclick="{!c.navToExternal}" >
+                                {!v.event.LinkLabel}
+                            </a>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.event.linkType =='Internal'}">
+                            <a href="javascript:void(0)" onclick="{!c.navToInternal}" >
+                                {!v.event.LinkLabel}
+                            </a>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.event.linkType == 'Email To'}">
+                            <a href="{!'mailto:' + v.event.EmailRecipient}">
+                                {!v.event.LinkLabel}
+                            </a>
+                        </aura:if>
+
+                    </span>
+
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+
+    
+</aura:component>

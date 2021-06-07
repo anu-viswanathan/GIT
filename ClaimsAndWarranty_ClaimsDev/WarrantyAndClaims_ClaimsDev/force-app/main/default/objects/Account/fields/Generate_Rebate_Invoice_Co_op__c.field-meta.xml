@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Rebate_Invoice_Co_op__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is getting used in process builder &quot;Actions from Account&quot; to trigger the Rebate Invoice for Contractors. This field will get auto UNCHECK to avoid triggering more coop funds allocation. Another field &quot;REBATE INVOICE Co-op $ Generated ?&quot; will get an auto check when Rebate Invoice fund is allocated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will get auto UNCHECK to avoid triggering more coop funds allocation. Another field &quot;REBATE INVOICE Co-op $ Generated ?&quot; will get an auto check when Rebate Invoice fund is allocated.</inlineHelpText>
+    <label>Generate REBATE INVOICE Co-Op $</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

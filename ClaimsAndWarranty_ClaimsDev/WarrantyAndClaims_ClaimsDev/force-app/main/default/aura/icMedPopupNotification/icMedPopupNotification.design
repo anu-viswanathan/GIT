@@ -1,0 +1,7 @@
+<!--
+ - Created by Francois Poirier on 2019-12-20.
+ -->
+
+<design:component>
+    <design:attribute name="tag" label="Message Tag" />
+</design:component>

@@ -1,0 +1,10 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" controller="intelReportEmailController" action="{!getEmailBodyPreview}">
+    <apex:slds />
+    
+    <head>
+        
+    </head>
+    <body class="slds-scope">
+        <apex:outputText value="{! emailVisualForce}" escape="false"></apex:outputText>
+    </body>
+</apex:page>

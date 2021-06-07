@@ -1,0 +1,19 @@
+<!--
+ - Created by Francois Poirier on 2019-11-01.
+ -->
+
+<aura:component controller="icCtrlMembershipRenewal" description="icMedMembershipRenewal" implements="lightning:availableForFlowScreens,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="contractorId" type="String" />
+    <aura:attribute name="accountPaymentId" type="String" />
+    <aura:attribute name="languageCode" type="String" default="en" />
+    <aura:attribute name="membershipRenewalInfo" type="icDTOMembershipRenewal" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div>
+       <a href="{!format($Label.c.Membership_Renewal_Url, v.membershipRenewalInfo.remoteAuth.accountId, v.membershipRenewalInfo.accountPaymentId, v.membershipRenewalInfo.remoteAuth.sessionId, v.languageCode)}">
+           <ui:button label="{!$Label.c.Membership_Renewal_Button}" class="slds-button slds-button--neutral" />
+       </a>
+    </div>
+
+</aura:component>

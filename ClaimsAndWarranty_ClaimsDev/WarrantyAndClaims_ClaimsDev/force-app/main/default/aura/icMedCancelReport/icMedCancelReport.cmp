@@ -1,0 +1,17 @@
+<aura:component controller="icCTRLEagleview" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+
+	<aura:attribute name="displaySpinner" type="boolean" default="false" />
+	<aura:attribute name="resultMessage" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<aura:if isTrue="{!v.displaySpinner}">
+		<div class="slds-align--absolute-center">
+			<lightning:spinner aura:id="spinner" variant="brand" size="large" />
+		</div>
+	</aura:if>
+
+	<div class="slds-text-heading_medium slds-align_center slds-notify slds-notify--alert slds-theme--success slds-theme--alert-texture" style="{!if(v.resultMessage == null, 'display:none','display:block')}">
+			{!v.resultMessage}
+	</div>
+</aura:component>

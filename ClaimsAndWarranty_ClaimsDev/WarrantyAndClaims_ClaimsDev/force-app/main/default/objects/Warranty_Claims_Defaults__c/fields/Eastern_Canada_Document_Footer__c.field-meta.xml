@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eastern_Canada_Document_Footer__c</fullName>
+    <defaultValue>&quot;80 Stafford Drive, Brampton, Ontario  L6W 1L4 • Fax: (905) 457-3196&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Eastern Canada Document Footer</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

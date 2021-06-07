@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Site_Report_Number__c</fullName>
+    <externalId>true</externalId>
+    <inlineHelpText>Number generated/issued by the Sales team to their clients before the &quot;primary&quot; claim number was created. Only for historic claims from WCMS</inlineHelpText>
+    <label>Legacy Site Report Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

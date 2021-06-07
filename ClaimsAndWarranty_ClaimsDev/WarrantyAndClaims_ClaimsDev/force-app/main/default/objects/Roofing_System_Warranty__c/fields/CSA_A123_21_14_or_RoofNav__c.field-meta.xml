@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSA_A123_21_14_or_RoofNav__c</fullName>
+    <description>CSA A123.21-14 Assembly number of FM RoofNav number (if applicable)</description>
+    <externalId>false</externalId>
+    <label>CSA A123.21-14 or RoofNav</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

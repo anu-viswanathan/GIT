@@ -1,0 +1,67 @@
+<aura:component description="icMedIntroSection" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="title" type="String" default="{!$Label.c.icCRCIKO_ROOFPRO_Contractor_Program_Portal_is_your_gateway_to_success}" />
+    <aura:attribute name="title2" type="String" default="{!$Label.c.icCRCThe_IKO_ROOFPRO_Contractor_Program_Portal_is_your_gateway_to_success}" />
+    <aura:attribute name="description" type="String" default="{!$Label.c.icCRCYour_IKO_square_purchases_and_educational}" />
+
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+
+    <div class="slds-grid slds-wrap IntroSectionContainer customFont"
+         style=" margin-bottom:10px;
+                background-color: white;
+                width:100%;
+                ">
+        <div class="
+                    slds-x-small-size--1-of-1
+                    slds-small-size--1-of-1
+                    slds-medium-size--3-of-7
+                    slds-large-size--3-of-7
+                    "
+             style="display:block;
+                    background-color: white;
+                    margin-top:50px;
+                    ">
+                 <span>
+                    <p class="IntroSectionHeader customFont"
+                       style="
+                              font-weight: 300;
+                              font-size:18px;
+                              text-align: right;
+
+                              ">
+                        <aura:unescapedHtml value="{!v.title2}" />
+                    </p>
+                </span>
+        </div>
+
+        <div class="slds-size--4-of-7 slds-x-small-size--1-of-1 slds-medium-size--4-of-7 slds-large-size--4-of-7" style="background-color: white;">
+
+            <div class="slds-col IntroSectionDescriptionBlock "
+                 style="height: 160px;
+                        margin-top: 50px;
+                        color:#626670;
+
+                        ">
+                <span>
+                    <p class="IntroSectionDescription customFont"
+                       style="margin-right: 75px;
+                              margin-left:55px;
+                              font-weight: 300;
+                              font-size:15px;
+
+                              ">
+                              <aura:unescapedHtml value="{!v.description}" />
+
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</aura:component>

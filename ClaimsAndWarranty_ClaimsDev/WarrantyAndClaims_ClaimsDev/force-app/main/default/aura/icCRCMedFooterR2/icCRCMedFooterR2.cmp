@@ -1,0 +1,862 @@
+<aura:component controller="icCTRLProzone"
+                description="icCRCMedFooterR2"
+                implements="forceCommunity:layout,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                access="global">
+
+    <aura:attribute name="currentTheme" type="String" default="" />
+    <aura:attribute name="ikoNorthAmericaSiteLinkName" type="String" default="{!$Label.c.icIKO_North_America}" />
+    <aura:attribute name="ikoNorthAmericaSiteLinkURL" type="String" default="https://www.iko.com/na/" />
+    <aura:attribute name="ikoGlobalSiteLinkName" type="String" default="{!$Label.c.icIKO_Global}" />
+    <aura:attribute name="ikoGlobalSiteLinkURL" type="String" default="https://www.iko.com" />
+    <aura:attribute name="privacyPolicyLinkName" type="String" default="{!$Label.c.icPrivacy_Policy}" />
+    <aura:attribute name="termsAndConditionsName" type="String" default="{!$Label.c.icTerms_amp_Conditions}" />
+    <aura:attribute name="cookiePolicyLinkName" type="String" default="{!$Label.c.icCookie_Policy}" />
+    <aura:attribute name="ikoContactUsLinkName" type="String" default="{!$Label.c.icContact_Us}" />
+    <aura:attribute name="gotQuestionsLine1OneLine" type="String" default="{!$Label.c.icGotQuestionsAboutCRC}" />
+    <aura:attribute name="gotQuestionsLine2OneLine" type="String" default="{!$Label.c.icYou_may_also_contact_your_IKO_territory_sales_rep_directly}"/>
+    <aura:attribute name="gotQuestionsLine1" type="String" default="{!$Label.c.icCRCGotQuestionsAboutIKO2}" />
+    <aura:attribute name="gotQuestionsLine1b" type="String" default="{!$Label.c.icCRCGotQuestionsAboutIKO3}" />
+    <aura:attribute name="gotQuestionsLine3" type="String" default="{!$Label.c.icCRCYou_may_also_contact_your_CRC}" />
+    <aura:attribute name="gotQuestionsLine4" type="String" default="{!$Label.c.icCRC_territory_sales_rep_directly}" />
+    <aura:attribute name="followUs" type="String" default="{!$Label.c.icFollow_Us +':'}" />
+    <aura:attribute name="socialFacebookCommercialTitle" type="String" default="CRC Commercial" />
+    <aura:attribute name="socialFacebookCommercialURL" type="String" default="https://www.facebook.com/IKOCommercial/" />
+    <aura:attribute name="socialFacebookCommercialIcon" type="String" default="{!$Resource.icSocialFacebook2}" />
+    <aura:attribute name="socialFacebookResidentialTitle" type="String" default="CRC Residential" />
+    <aura:attribute name="socialFacebookResidentialURL" type="String" default="https://www.facebook.com/ikoroofing/" />
+    <aura:attribute name="socialFacebookResidentialIcon" type="String" default="{!$Resource.icSocialFacebook2}" />
+    <aura:attribute name="socialTwitterURL" type="String" default="https://twitter.com/IKORoofing" />
+    <aura:attribute name="socialTwitterIcon" type="String" default="{!$Resource.icSocialTwitter2}" />
+    <aura:attribute name="socialLinkedInURL" type="String" default="https://www.linkedin.com/company/iko-industries/" />
+    <aura:attribute name="socialLinkedInIcon" type="String" default="{!$Resource.icSocialLinkedIn2}" />
+    <aura:attribute name="socialInstagramURL" type="String" default="https://www.instagram.com/ikoroofing/" />
+    <aura:attribute name="socialInstagramIcon" type="String" default="{!$Resource.icSocialInstagram2}" />
+    <aura:attribute name="socialYoutubeURL" type="String" default="https://www.youtube.com/channel/UC1MKhXqYGG_tX77KyBSRwEg" />
+    <aura:attribute name="socialYoutubeIcon" type="String" default="{!$Resource.icSocialYouTube2}" />
+    <aura:attribute name="socialPinterestURL" type="String" default="https://www.pinterest.ca/IKORoofing/pins/" />
+    <aura:attribute name="socialPinterestIcon" type="String" default="{!$Resource.icSocialPinterest2}" />
+    <aura:attribute name="socialHouzzURL" type="String" default="https://www.houzz.com/pro/iko-roofing/iko-roofing" />
+    <aura:attribute name="socialHouzzIcon" type="String" default="{!$Resource.icSocialHouzz2}" />
+
+
+    <aura:attribute name="thisYear" type="String"/>
+    <aura:attribute name="copyrightType" type="String" default="Canroof Corporation Inc. and its affiliates. All rights reserved."/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <ltng:require styles="{!$Resource.FontCss}" />
+
+
+
+
+    <div class="slds-grid center-div bottomGrid" id="smallFooterHeightdjustment" style=" width:100%; margin-top:50px;  ">
+            <div class="slds-col " >
+
+
+                <div class="slds-x-small-show-only slds-text-align--center"
+
+                     style="position: relative;
+                             left: 0px;
+                             height:940px!important;
+                             width:100%;
+                             /*margin-bottom:10px;*/
+                             ">
+
+                    <div class="slds-grid center-div slds-text-align--center backgroundColorMarker"
+                         style="height:100%;
+                                background-color:#0C3D4C;
+                                color:white;
+                                width:100%;
+                                ">
+                        <div class="slds-col"
+                             style="margin-top:50px;
+                                            width:100%;
+                                            ">
+                            <div  style="">
+
+                                <p style="line-height: 30px;">
+                                <!--a href="{!v.ikoNorthAmericaSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                                          font-size:11px;
+                                          margin-bottom:35px;
+                                          ">
+                                    <span class="legalTextLarge">{!v.ikoNorthAmericaSiteLinkName}</span>
+                                </a>
+
+
+                                <br/>
+
+
+                                <a href="{!v.ikoGlobalSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                                               font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoGlobalSiteLinkName}</span>
+                                </a>
+
+                                <br/-->
+
+                                <a href="javascript:void(0)"
+                                       onclick="{!c.navToTermsConditions}"
+                                       style="line-height:25px;">
+                                        <span class="legalTextLarge">{!v.termsAndConditionsName}</span>
+                                </a>
+
+                                <br/>
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToPrivacyPolicy}"
+                                   style="line-height:25px;">
+                                    <span class="legalTextLarge">{!v.privacyPolicyLinkName}</span>
+                                </a>
+
+                                <br/>
+
+
+                                <!--<a href="javascript:void(0)"-->
+                                   <!--onclick="{!c.navToCookiePolicy}"-->
+                                   <!--style="color: white;-->
+                                               <!--font-size:11px;">-->
+                                    <!--<span class="legalTextLarge">{!v.cookiePolicyLinkName}</span>-->
+                                <!--</a>-->
+
+                                <!--<br/>-->
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToContactUs}"
+                                   style="color: white;
+                                               font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoContactUsLinkName}</span>
+                                </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center"
+                         style="width:100%;
+                                margin-top: -575px;
+                                display:block;
+                                " >
+                        <div class="slds-col center-div slds-text-align--center">
+                            <p class="gotQuestionBlock"
+                               style="font-size: 12px;
+                                      font-weight: 400;
+                                      color: white;
+                                      margin-bottom:50px;
+                                      letter-spacing: 1.5px;
+                                     ">
+
+                                <aura:unescapedHtml value="{!v.gotQuestionsLine1}" />
+                                <br/>
+                                <aura:unescapedHtml value="{!v.gotQuestionsLine1b}" />
+                                <br/>
+                                <aura:unescapedHtml value="{!v.gotQuestionsLine3}" />
+                                <br/>
+                                <aura:unescapedHtml value="{!v.gotQuestionsLine4}" />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center"
+                         style="width:100%;
+                            margin-top: 75px;
+                            display:block;
+                            " >
+                        <div class="slds-col center-div slds-text-align--center">
+
+                            <p class="followUsType" style="color:white;
+                                          text-transform: uppercase;
+                                          letter-spacing: 1.5px;
+                                          font-size:8px;
+                                          margin-bottom:18px;
+                                          ">
+                                {!v.followUs}
+                            </p>
+
+                            <p class="ikoResidentialType"
+                               style="display: inline-block;
+                                          color:white;
+                                          text-transform: none;
+                                          letter-spacing: 1.5px;
+                                          font-size:6px;
+                                          margin-right: 10px;
+                                          ">
+                                {!v.socialFacebookResidentialTitle}
+                            </p>
+                            <div style="margin-left:15px;
+                                        margin-right:auto;">
+                                <a href="{!v.socialFacebookResidentialURL}"  target="_blank"   >
+                                    <img src="{!v.socialFacebookResidentialIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 22px; " />
+                                </a>
+                                <a href="{!v.socialTwitterURL}" target="_blank">
+                                    <img src="{!v.socialTwitterIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 22px; " />
+                                </a>
+                                <a href="{!v.socialLinkedInURL}" target="_blank">
+                                    <img src="{!v.socialLinkedInIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 22px; " />
+                                </a>
+                                <a href="{!v.socialInstagramURL}" target="_blank">
+                                    <img src="{!v.socialInstagramIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 22px; " />
+                                </a>
+                                <a href="{!v.socialYoutubelURL}" target="_blank">
+                                    <img src="{!v.socialYoutubeIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 25px; " />
+                                </a>
+                                <a href="{!v.socialPinterestURL}" target="_blank">
+                                    <img src="{!v.socialPinterestIcon}"
+                                         style="margin-right: 13px;
+                                                 width: 22px; " />
+                                </a>
+                                <a href="{!v.socialHouzzURL}" target="_blank">
+                                    <img src="{!v.socialHouzzIcon}"
+                                         style="margin-right: 13px;
+                                                 width: 20px; " />
+                                </a>
+                            </div>
+                            <div style="margin-left:-13px;">
+                                <div style="width: 75px;
+                                            display:block;
+                                            margin-left:auto;
+                                            margin-right:auto;
+                                            border-bottom: 1px solid white;
+                                            margin-top:25px;
+                                            margin-bottom:25px;
+                                            ">
+                                    &nbsp;
+                                </div>
+
+
+
+                                <p class="ikoCommercialType"
+                                   style="display: block;
+                                              margin-left:auto;
+                                              margin-right:auto;
+                                              color:white;
+                                              text-transform: none;
+                                              letter-spacing: 1.5px;
+                                              font-size:6px;
+                                              ">
+                                    {!v.socialFacebookCommercialTitle}
+                                </p>
+
+                                <div>
+                                    <a href="{!v.socialFacebookCommercialURL}"
+                                       target="_blank" >
+                                        <img src="{!v.socialFacebookCommercialIcon}"
+                                             style="margin-left:0px;
+                                                        width: 30px; " />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slds-small-show-only slds-text-align--center" style=" height:750px; width:100%;  margin-bottom:-50px;">
+
+                    <div class="slds-grid center-div slds-text-align--center backgroundColorMarker"
+                            style=" height:100%;
+                                background-color:#0C3D4C;
+                                color:white;
+                                ">
+
+                            <div class="slds-col"
+                                    style="margin-top:75px;
+                                        width:100%;
+                                        ">
+                                <p  style="margin-bottom:50px">
+
+                                    <!--a href="{!v.ikoNorthAmericaSiteLinkURL}"
+                                        target="_blank"
+                                        style="color: white;
+                                                font-size:11px;">
+                                        <span class="legalTextLarge">{!v.ikoNorthAmericaSiteLinkName}</span>
+                                    </a>
+
+
+                                    <span class="legalTextLargeLine" >|</span>
+
+                                    <a href="{!v.ikoGlobalSiteLinkURL}"
+                                        target="_blank"
+                                        style="color: white;
+                                            font-size:11px;">
+                                        <span class="legalTextLarge">{!v.ikoGlobalSiteLinkName}</span>
+                                    </a>
+
+                                    <br/-->
+
+                                    <a href="javascript:void(0)"
+                                        onclick="{!c.navToTermsConditions}"
+                                        style="line-height:25px;">
+                                        <span class="legalTextLarge">{!v.termsAndConditionsName}</span>
+                                    </a>
+
+                                    <span class="legalTextLargeLine">|</span>
+
+                                    <a href="javascript:void(0)"
+                                        onclick="{!c.navToPrivacyPolicy}"
+                                        style="line-height:25px;">
+                                        <span class="legalTextLarge">{!v.privacyPolicyLinkName}</span>
+                                    </a>
+                                    <span class="legalTextLargeLine">|</span>
+
+
+                                    <!--<a href="javascript:void(0)"-->
+                                        <!--onclick="{!c.navToCookiePolicy}"-->
+                                        <!--style="color: white;-->
+                                            <!--font-size:11px;">-->
+                                        <!--<span class="legalTextLarge">{!v.cookiePolicyLinkName}</span>-->
+                                    <!--</a>-->
+                                    <!--<span class="legalTextLargeLine">|</span>-->
+
+                                    <a href="javascript:void(0)"
+                                        onclick="{!c.navToContactUs}"
+                                        style="color: white;
+                                            font-size:11px;">
+                                        <span class="legalTextLarge">{!v.ikoContactUsLinkName}</span>
+                                    </a>
+                                </p>
+                            </div>
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center"
+                         style="width:100%;
+                            margin-top: -550px;
+                            display:block;
+                            " >
+                            <div class="slds-col center-div slds-text-align--center">
+                                <p class="gotQuestionBlock"
+                                   style="font-size: 20px;
+                                          font-weight: 400;
+                                          color: white;
+                                          margin-bottom:50px;
+                                          letter-spacing: 1.5px;
+                                         ">
+                                    <aura:unescapedHtml value="{!v.gotQuestionsLine1OneLine}" />
+                                    <br/>
+                                    {!v.gotQuestionsLine3}
+                                    <br/>
+                                    {!v.gotQuestionsLine4}
+                                </p>
+                            </div>
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center"
+                         style="width:100%;
+                            margin-top: 75px;
+                            display:block;
+                            " >
+                        <div class="slds-col center-div slds-text-align--center">
+
+                            <p class="followUsType" style="color:white;
+                                          text-transform: uppercase;
+                                          letter-spacing: 1.5px;
+                                          font-size:8px;
+                                          margin-bottom:18px;
+                                          ">
+                                {!v.followUs}
+                            </p>
+
+                            <p class="ikoResidentialType"
+                               style="display: inline-block;
+                                          color:white;
+                                          text-transform: none;
+                                          letter-spacing: 1.5px;
+                                          font-size:6px;
+                                          margin-right: 10px;
+                                          ">
+                                {!v.socialFacebookResidentialTitle}
+                            </p>
+                            <div>
+                                <a href="{!v.socialFacebookResidentialURL}"  target="_blank"   >
+                                    <img src="{!v.socialFacebookResidentialIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 30px; " />
+                                </a>
+                                <a href="{!v.socialTwitterURL}" target="_blank">
+                                    <img src="{!v.socialTwitterIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 30px; " />
+                                </a>
+                                <a href="{!v.socialLinkedInURL}" target="_blank">
+                                    <img src="{!v.socialLinkedInIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 30px; " />
+                                </a>
+                                <a href="{!v.socialInstagramURL}" target="_blank">
+                                    <img src="{!v.socialInstagramIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 30px; " />
+                                </a>
+                                <a href="{!v.socialYoutubelURL}" target="_blank">
+                                    <img src="{!v.socialYoutubeIcon}"
+                                         style="margin-right: 15px;
+                                                 width: 33px; " />
+                                </a>
+                                <a href="{!v.socialPinterestURL}" target="_blank">
+                                    <img src="{!v.socialPinterestIcon}"
+                                         style="margin-right: 13px;
+                                                 width: 30px; " />
+                                </a>
+                                <a href="{!v.socialHouzzURL}" target="_blank">
+                                    <img src="{!v.socialHouzzIcon}"
+                                         style="margin-right: 13px;
+                                                 width: 27px; " />
+                                </a>
+                            </div>
+                            <div style="margin-left:-13px;">
+                                <div style="width: 75px;
+                                            display:block;
+                                            margin-left:auto;
+                                            margin-right:auto;
+                                            border-bottom: 1px solid white;
+                                            margin-top:25px;
+                                            margin-bottom:25px;
+                                            ">
+                                    &nbsp;
+                                </div>
+
+
+
+                                    <p class="ikoCommercialType"
+                                       style="display: block;
+                                              margin-left:auto;
+                                              margin-right:auto;
+                                              color:white;
+                                              text-transform: none;
+                                              letter-spacing: 1.5px;
+                                              font-size:6px;
+                                              ">
+                                        {!v.socialFacebookCommercialTitle}
+                                    </p>
+
+                                    <div>
+                                        <a href="{!v.socialFacebookCommercialURL}"
+                                           target="_blank" >
+                                            <img src="{!v.socialFacebookCommercialIcon}"
+                                                 style="margin-left:0px;
+                                                        width: 30px; " />
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slds-medium-show-only slds-text-align--left" style="height:350px;  width:100%;  margin-bottom:-30px;">
+
+                    <div class="slds-grid center-div slds-text-align--center backgroundColorMarker"
+                         style="
+                            padding-left: 50px;
+                            padding-right:50px;
+                            /*max-width:1022px;*/
+                            height:100%;
+                            background-color:#0C3D4C;
+                            color:white;
+
+                        ">
+
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center" style="margin-top: -130px;  " >
+
+                        <div class="slds-col" style="margin-top: -170px;">
+                            <p  style="margin-bottom:50px">
+                                <!--a href="{!v.ikoNorthAmericaSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                                          font-size:10px;">
+                                    <span class="legalTextLarge">{!v.ikoNorthAmericaSiteLinkName}</span>
+                                </a>
+
+
+                                <span class="legalTextLargeLine" >|</span>
+
+                                <a href="{!v.ikoGlobalSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                               font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoGlobalSiteLinkName}</span>
+                                </a>
+
+
+                                <span class="legalTextLargeLine">|</span-->
+
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToTermsConditions}"
+                                   style="">
+                                    <span class="legalTextLarge">{!v.termsAndConditionsName}</span>
+                                </a>
+                                <span class="legalTextLargeLine">|</span>
+<br/>
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToPrivacyPolicy}"
+                                   style="">
+                                    <span class="legalTextLarge">{!v.privacyPolicyLinkName}</span>
+                                </a>
+                                <span class="legalTextLargeLine">|</span>
+
+
+                                <!--<a href="javascript:void(0)"-->
+                                   <!--onclick="{!c.navToCookiePolicy}"-->
+                                   <!--style="color: white;-->
+                               <!--font-size:11px;">-->
+                                    <!--<span class="legalTextLarge">{!v.cookiePolicyLinkName}</span>-->
+                                <!--</a>-->
+                                <!--<span class="legalTextLargeLine">|</span>-->
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToContactUs}"
+                                   style="color: white;
+                               font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoContactUsLinkName}</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slds-col center-div slds-text-align--center">
+                        <p style="font-size: 15px;
+                                      font-weight: 400;
+                                      color: white;
+                                      margin-top:-75px;
+                                      margin-bottom:50px;
+                                      letter-spacing: 1.5px;
+                                     ">
+                            {!v.gotQuestionsLine1OneLine}
+                            <br/>
+                            {!v.gotQuestionsLine3}&nbsp;{!v.gotQuestionsLine4}
+                        </p>
+                    </div>
+
+                    <div class="slds-col center-div slds-text-align--center">
+
+                        <p style="color:white;
+                              text-transform: uppercase;
+                              letter-spacing: 1.5px;
+                              font-size:8px;
+                              margin-bottom:18px;
+                              ">
+                            {!v.followUs}
+                        </p>
+
+                        <p style="display: inline-block;
+                              color:white;
+                              text-transform: none;
+                              letter-spacing: 1.5px;
+                              font-size:6px;
+                              margin-right: 10px;
+                              ">
+                            {!v.socialFacebookResidentialTitle}
+                        </p>
+                        <a href="{!v.socialFacebookResidentialURL}"  target="_blank"   >
+                            <img src="{!v.socialFacebookResidentialIcon}"
+                                 style="margin-right: 13px;
+                                 width: 20px; " />
+                        </a>
+                        <a href="{!v.socialTwitterURL}" target="_blank">
+                            <img src="{!v.socialTwitterIcon}"
+                                 style="margin-right: 13px;
+                                 width: 20px; " />
+                        </a>
+                        <a href="{!v.socialLinkedInURL}" target="_blank">
+                            <img src="{!v.socialLinkedInIcon}"
+                                 style="margin-right: 13px;
+                                 width: 20px; " />
+                        </a>
+                        <a href="{!v.socialInstagramURL}" target="_blank">
+                            <img src="{!v.socialInstagramIcon}"
+                                 style="margin-right: 13px;
+                                 width: 20px; " />
+                        </a>
+                        <a href="{!v.socialYoutubelURL}" target="_blank">
+                            <img src="{!v.socialYoutubeIcon}"
+                                 style="margin-right: 13px;
+                                 width: 22px; " />
+                        </a>
+                        <a href="{!v.socialPinterestURL}" target="_blank">
+                            <img src="{!v.socialPinterestIcon}"
+                                 style="margin-right: 13px;
+                                 width: 20px; " />
+                        </a>
+                        <a href="{!v.socialHouzzURL}" target="_blank">
+                            <img src="{!v.socialHouzzIcon}"
+                                 style="margin-right: 13px;
+                                 width: 17px; " />
+                        </a>
+
+
+                        <div id="linePosition"
+                             style="position: relative;
+                                    top:-15px;
+                                    height: 50px;
+                                    border-right: 1px solid white;
+                                    display:inline-block;
+                                    margin-top:-50px !important;
+                                    ">
+                            &nbsp;
+                        </div>
+
+                        <a href="{!v.socialFacebookCommercialURL}"
+                           target="_blank" >
+                            <img src="{!v.socialFacebookCommercialIcon}"
+                                 style="margin-left:35px;
+                                    width: 20px; " />
+                        </a>
+
+                        <p style="display: inline-block;
+                              color:white;
+                              text-transform: none;
+                              letter-spacing: 1.5px;
+                              font-size:6px;
+                              margin-left: 10px;
+                              ">
+                            {!v.socialFacebookCommercialTitle}
+                        </p>
+
+
+
+                    </div>
+                </div>
+
+                <div class="slds-max-medium-hide slds-text-align--left" style="position: absolute; left: 0;  width:100%;    height:350px; margin-bottom:0px;">
+
+                    <div class="slds-grid center-div slds-text-align--center backgroundColorMarker"
+                         style="
+                                padding-left: 50px;
+                                padding-right:50px;
+                               /* max-width:1022px;*/
+                                height:350px;
+                                background-color:#0C3D4C;
+                                color:white;
+
+                            ">
+
+                    </div>
+
+                    <div class="slds-grid  center-div slds-text-align--center" style="margin-top: -130px;  " >
+
+                        <div class="slds-col" style="margin-top: -170px;">
+                            <p  style="margin-bottom:50px">
+                                <!--a href="{!v.ikoNorthAmericaSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                                   font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoNorthAmericaSiteLinkName}</span>
+                                </a>
+
+
+                                <span class="legalTextLargeLine" >|</span>
+
+                                <a href="{!v.ikoGlobalSiteLinkURL}"
+                                   target="_blank"
+                                   style="color: white;
+                                   font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoGlobalSiteLinkName}</span>
+                                </a>
+
+
+                                <span class="legalTextLargeLine">|</span-->
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToTermsConditions}"
+                                   style="">
+                                    <span class="legalTextLarge">{!v.termsAndConditionsName}</span>
+                                </a>
+                                <span class="legalTextLargeLine">|</span>
+
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToPrivacyPolicy}"
+                                   style="">
+                                    <span class="legalTextLarge">{!v.privacyPolicyLinkName}</span>
+                                </a>
+                                <span class="legalTextLargeLine">|</span>
+
+
+                                <!--<a href="javascript:void(0)"-->
+                                   <!--onclick="{!c.navToCookiePolicy}"-->
+                                   <!--style="color: white;-->
+                                   <!--font-size:11px;">-->
+                                    <!--<span class="legalTextLarge">{!v.cookiePolicyLinkName}</span>-->
+                                <!--</a>-->
+                                <!--<span class="legalTextLargeLine">|</span>-->
+
+                                <a href="javascript:void(0)"
+                                   onclick="{!c.navToContactUs}"
+                                   style="color: white;
+                                   font-size:11px;">
+                                    <span class="legalTextLarge">{!v.ikoContactUsLinkName}</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slds-col center-div slds-text-align--center">
+                        <p style="font-size: 17px;
+                                      font-weight: 400;
+                                      color: white;
+                                      margin-top:-75px;
+                                      margin-bottom:50px;
+                                      letter-spacing: 1.5px;
+                                     ">
+                            {!v.gotQuestionsLine1OneLine}
+                            <br/>
+                            {!v.gotQuestionsLine3}&nbsp;{!v.gotQuestionsLine4}
+                        </p>
+                    </div>
+
+                    <div class="slds-col center-div slds-text-align--center">
+
+                        <p style="color:white;
+                                  text-transform: uppercase;
+                                  letter-spacing: 1.5px;
+                                  font-size:8px;
+                                  margin-bottom:18px;
+                                  ">
+                            {!v.followUs}
+                        </p>
+
+                        <p style="display: inline-block;
+                                  color:white;
+                                  text-transform: none;
+                                  letter-spacing: 1.5px;
+                                  font-size:6px;
+                                  margin-right: 10px;
+                                  ">
+                            {!v.socialFacebookResidentialTitle}
+                        </p>
+
+                        <a href="{!v.socialYoutubeURL}" target="_blank">
+                            <img src="{!v.socialYoutubeIcon}"
+                                 style="margin-right: 13px;
+                                     width: 22px; " />
+                        </a>
+
+
+
+
+                </div>
+
+                </div>
+
+
+            </div>
+    </div>
+
+
+
+    <div class="slds-grid center-div " style=" width:100%;  margin-bottom:-50px; ">
+
+        <div class="slds-col ">
+
+            <div class="slds-x-small-show-only slds-text-align--center">
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="position:relative;
+                            top:-10px;
+                            height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+
+                            ">
+
+                        <span style="font-size: 8px;
+                                     text-align:center;
+                                     vertical-align: middle;
+                                     display: table-cell;
+                                     margin:auto;
+
+                                     ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+            </div>
+            <div class="slds-small-show-only slds-text-align--center">
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="position:relative;
+                            top:-10px;
+                            height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            ">
+
+                    <span style="font-size: 12px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+                                 margin:auto;
+
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+
+            </div>
+            <div class="slds-medium-show-only slds-text-align--left"
+                 style="position: absolute;
+                        left: 0; width:100%;" >
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            ">
+
+                    <span style="font-size: 9px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+                                 margin-top:-100px;
+                                 margin-right:auto;
+                                 margin-left:auto;
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+            </div>
+            <div class="slds-max-medium-hide slds-text-align--left"
+                 style="position: absolute;
+                        left: 0;
+                        width:100%;
+                        margin-top:375px;">
+
+                <div class="slds-grid center-div slds-text-align--center"
+                     style="height:75px;
+                            background-color:#525457;
+                            color:white;
+                            display: table;
+                            width:100%;
+                            margin-top:-25px;
+                            ">
+                    <span style="font-size: 9px;
+                                 text-align:center;
+                                 vertical-align: middle;
+                                 display: table-cell;
+
+                                 margin:auto;
+                                 ">
+                        ©&nbsp;{!v.thisYear}&nbsp;{!v.copyrightType}
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</aura:component>

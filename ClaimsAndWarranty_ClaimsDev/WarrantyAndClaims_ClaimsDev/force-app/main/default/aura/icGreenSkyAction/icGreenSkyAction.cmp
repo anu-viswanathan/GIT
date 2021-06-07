@@ -1,0 +1,24 @@
+<!--
+ - Created by Francois Poirier on 2018-09-18.
+ -->
+
+<aura:component description="icGreenSkyAction" implements="force:lightningQuickAction,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <div aura:id="thecontainer" class="thecontainer" id="thecontainer">
+        <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open slds-modal--large" >
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                   <!-- <h2 id="header43" class="slds-text-heading&#45;&#45;medium">My Title</h2>-->
+                </div>
+                <div class="slds-modal__content slds-p-top--x-large slds-p-around--medium" aura:id="modalbody" id="modalbody">
+
+                    <!-- your component goes here -->
+                    <c:icMedGreenSky />
+                </div><!-- modal -->
+                <div class="slds-modal__footer">
+                    <!-- Footer elements, if required -->
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+</aura:component>

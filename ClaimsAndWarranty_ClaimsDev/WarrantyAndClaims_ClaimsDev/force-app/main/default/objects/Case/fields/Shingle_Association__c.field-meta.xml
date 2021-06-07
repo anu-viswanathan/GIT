@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shingle_Association__c</fullName>
+    <description>Set the shingle standard based on the service region. The default is Canada shingle standard</description>
+    <externalId>false</externalId>
+    <formula>CASE( Conga_Service_Region__c , 
+&apos;US&apos;, &apos;Asphalt Roofing Manufacturers Association (ARMA)&apos;, 
+&apos;Canadian Asphalt Shingle Manufacturers Association (CASMA)&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Set the shingle standard based on the service region. The default is Canada shingle standard</inlineHelpText>
+    <label>Shingle Association</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

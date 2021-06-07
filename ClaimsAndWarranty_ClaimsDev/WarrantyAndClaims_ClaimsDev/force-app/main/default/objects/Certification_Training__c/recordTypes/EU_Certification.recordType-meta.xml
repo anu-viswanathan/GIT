@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Certification</fullName>
+    <active>true</active>
+    <description>EU Certification</description>
+    <label>EU Certification</label>
+    <picklistValues>
+        <picklist>EU_Certification_Type__c</picklist>
+        <values>
+            <fullName>Goldseal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Certified Liquid Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Certified Roofing Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Concept Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Roof club member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IKO Trade Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquid contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mach One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PermaTEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permapark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permaphalt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot Dealer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polimar EC%2FUV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polimar FCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polimar FCS %28Car Park%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polimar WG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safestick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superflex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ultra Prevent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EU_Country__c</picklist>
+        <values>
+            <fullName>BE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

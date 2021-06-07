@@ -1,0 +1,186 @@
+/**
+ * Created by Yves Asselin on 2018-08-14.
+ */
+
+
+/*component position phone*/
+@media only screen and (min-width: 320px) and (max-width:479px) {
+   .THIS {
+       margin-top: -60px!important;
+       /*margin-top: -48px!important;*/
+   }
+}
+
+
+/* Phone */
+@media only screen and  (min-width: 320px) and (max-width:550px) {
+
+    /* For mobile : */
+
+
+    .THIS .mediaWidth {
+        width:480px !important;
+    }
+
+    .THIS .showTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showLargeTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showLargeDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+
+}
+
+/* Tablets */
+@media only screen and  (min-width: 551px) and (max-width: 768px) {
+
+    /* For TABLETS : */
+
+
+    .THIS body {
+        width:767px;
+
+    }
+
+    .THIS .showPhoneOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showLargeTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showLargeDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+
+
+}
+/* Large Tablets*/
+@media only screen and  (min-width: 768px) and (max-width: 1024px) {
+
+    /* For between TABLET and DESKTOP Small : */
+
+    .THIS body {
+        width:1023px;
+
+    }
+    .THIS .showPhoneOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+    .THIS .showDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    .THIS .showLargeDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+
+}
+/*Desktop */
+@media only screen and  (min-width: 1025px) and (max-width: 1500px) {
+    .THIS body {
+        width:1024px;
+
+    }
+
+    .THIS .showPhoneOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showLargeTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+
+
+    .THIS .showLargeDesktopOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+}
+/* Large Desktop */
+@media only screen and (min-width:1501px) {
+    /* For DESKTOP LARGE: */
+
+    .THIS .showPhoneOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showLargeTabletOnly{
+        display:none !important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .THIS .showDesktopOnly {
+        display: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+
+}

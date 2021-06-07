@@ -1,0 +1,29 @@
+<aura:component controller="icCTRLGenerateQuote" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+
+	<aura:attribute name="displaySpinner" type="boolean" default="false" />
+	<aura:attribute name="resultMessage" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<aura:if isTrue="{!v.displaySpinner}">
+		<div class="slds-align--absolute-center">
+			<lightning:spinner aura:id="spinner" variant="brand" size="large" />
+		</div>
+	</aura:if>
+
+	<form class="slds-form--stacked">
+		<div class="slds-text-heading_medium slds-align_center slds-notify slds-notify--alert slds-theme--success slds-theme--alert-texture" style="{!if(v.resultMessage == null, 'display:none','display:block')}">
+			{!v.resultMessage}
+		</div>
+
+		<div class="slds-text-heading_medium slds-align_center" style="height:100%;width:100%;">
+			<div class="slds-p-around_x-small">
+
+				<div class="slds-form-element slds-align_center footer-button-wrapper">
+					<ui:button label="{!$Label.c.icClose}" class="slds-button slds-button--brand" press="{!c.doClose}" />
+				</div>
+
+			</div>
+		</div>
+	</form>
+</aura:component>

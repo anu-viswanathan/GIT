@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Related Distributor for a Residential or Commercial Claim</description>
+    <externalId>false</externalId>
+    <label>Distributor</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Residential Account, Distributor, US Distributor</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Legacy_Claim_Account__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Distributor Cases</relationshipLabel>
+    <relationshipName>DistributorCases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nr_of_Files__c</fullName>
+    <description>Takes the &apos;Uploaded Files&apos;-text field and counts the nr of files based on the nr of characters each FileID has (including the comma).</description>
+    <externalId>false</externalId>
+    <formula>LEN( Uploaded_Files__c ) - LEN( SUBSTITUTE(Uploaded_Files__c , &apos;,&apos;, &apos;&apos;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Nr. of attached files (provided no files were removed after upload).</inlineHelpText>
+    <label>Nr. of Files</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

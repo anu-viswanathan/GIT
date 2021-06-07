@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalLockLabSampleFields</fullName>
+    <active>true</active>
+    <description>After approval, only the sample disposition section should be editable.</description>
+    <errorConditionFormula>$Profile.Name != &apos;System Administrator&apos; &amp;&amp; (TEXT(PRIORVALUE(Status__c)) == &quot;Approved&quot;
+|| Claim_Stage__c == &apos;Closed&apos; ||
+TEXT(Status__c) == &apos;Approved&apos;)
+&amp;&amp; (
+ISCHANGED(Sample_Number__c)
+|| ISCHANGED(Case__c)
+|| ISCHANGED(OwnerId)
+|| ISCHANGED(Observation__c)
+|| ISCHANGED(In_Brampton__c)
+|| ISCHANGED(Received_Date_Brampton__c)
+|| ISCHANGED(Generate_Sample_Number__c)
+|| ISCHANGED(Received_Date_Kankakee__c)
+|| ISCHANGED(Courier_to_Research_Lab__c)
+|| ISCHANGED(Product_Details__c)
+|| ISCHANGED(Tracking_No_to_Research_Lab__c)
+|| ISCHANGED(Shipping_Date_to_Research_Lab__c)
+
+|| ISCHANGED(Feedback__c)
+|| ISCHANGED(Incomplete_Documentation__c)
+|| ISCHANGED(CurrencyIsoCode)
+)</errorConditionFormula>
+    <errorMessage>This lab sample has been approved and non-disposition fields cannot be edited.</errorMessage>
+</ValidationRule>

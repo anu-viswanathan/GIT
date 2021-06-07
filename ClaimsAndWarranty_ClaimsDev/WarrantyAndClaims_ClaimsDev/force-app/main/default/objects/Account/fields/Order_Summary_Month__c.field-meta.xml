@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Summary_Month__c</fullName>
+    <description>The month which the order summary values apply to. This should help avoid confusion on, for example, the second day of March when the numbers are still for January because April&apos;s haven&apos;t been received yet.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The month which the order summary values apply to.</inlineHelpText>
+    <label>Order Summary: Month</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,170 @@
+/**
+ * Created by Francois Poirier on 2019-03-28.
+ */
+.THIS {
+}
+
+
+.THIS .notDisplay{
+    display:none;
+}
+
+.THIS td {
+    text-align: center;
+    width: 14%;
+    position: relative;
+    border: solid #E1E2E2 1px;
+}
+
+.THIS td:after {
+    content: '';
+    display: block;
+    margin-top: 85%;
+}
+
+.THIS th {
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    padding-bottom: 2%;
+}
+
+.THIS .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.THIS .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+.THIS .upperCase {
+    text-transform: uppercase;
+
+}
+
+.THIS .monthName {
+    color: #940D16;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.THIS .calendarTextContainer {
+
+    display: none;
+}
+
+.THIS .calendarCopyText{
+    color: #940D16;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+}
+
+
+.THIS .calendarRedText {
+    /*font-weight: bold;*/
+    color: #940D16;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+
+}
+
+.THIS .calendarBlackBoldText {
+    color: black;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:768px){
+    .THIS .monthSelector{
+        line-height:3rem;
+    }
+
+    .THIS .monthName{
+        position: relative;
+        top: 2px;
+        transform: scale(1.6);
+        display: block;
+    }
+
+    .THIS .dayName{
+        font-size: 10px!important;
+    }
+
+}
+
+@media screen and (min-width: 48em) {
+
+    .THIS .monthName {
+        color: #940D16;
+        font-family: Montserrat, 'Open Sans', 'sans-serif';
+        text-transform: uppercase;
+        font-size: 2vw;
+    }
+
+    .THIS .calendarTextContainer {
+        display: inline-table;
+        text-align: left!important;
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 20px;
+
+    }
+
+    .THIS .calendarRedText {
+
+        font-size: 14px;
+        line-height: 20px;
+        /*font-weight: 500;*/
+    }
+
+
+}
+
+@media screen and (min-width: 68.75em) {
+
+    .THIS .monthName {
+        color: #940D16;
+        font-family: Montserrat, 'Open Sans', 'sans-serif';
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+
+        
+    }
+
+
+}
+
+
+.THIS .weekend {
+    /*background: #FAFAFA;*/
+}
+
+.THIS .dayName {
+    background: #515456;
+    color: white;
+    font-family: Montserrat, 'Open Sans', 'sans-serif';
+    font-size: 8px;
+    height:35px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.THIS .notCurrentMonth {
+    /*color: #CDCDCD;*/
+}

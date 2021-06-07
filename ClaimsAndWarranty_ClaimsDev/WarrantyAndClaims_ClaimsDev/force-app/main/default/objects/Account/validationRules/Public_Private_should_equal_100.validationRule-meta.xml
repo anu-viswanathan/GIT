@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Public_Private_should_equal_100</fullName>
+    <active>false</active>
+    <errorConditionFormula>(RecordType.Name == &apos;Contractor&apos; || RecordType.Name == &apos;Designer&apos;) 
+&amp;&amp;
+(ISPICKVAL( Private_Work__c , &apos;&apos;) || ISPICKVAL( Public_Work__c , &apos;&apos;) 
+||
+(VALUE(SUBSTITUTE(TEXT( Private_Work__c ), &apos;%&apos;, &apos;&apos;)) + VALUE(SUBSTITUTE(TEXT( Public_Work__c ), &apos;%&apos;, &apos;&apos;)) != 100))</errorConditionFormula>
+    <errorDisplayField>Private_Work__c</errorDisplayField>
+    <errorMessage>Public Work % + Private Work % must equal 100%</errorMessage>
+</ValidationRule>

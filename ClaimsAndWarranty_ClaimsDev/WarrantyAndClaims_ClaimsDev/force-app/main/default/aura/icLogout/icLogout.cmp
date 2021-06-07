@@ -1,0 +1,10 @@
+<!--
+ - Created by Francois Poirier on 2018-12-19.
+ -->
+
+<aura:component description="icLogout" controller="icCtrlLogOut" implements="lightning:availableForFlowScreens,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="baseUrl" type="String" default="{!$Site.BaseUrl}"/>
+    <div>
+        <a><lightning:formattedText class="logout-text-size" linkify="true" value="{!$Label.c.icLogout}" onclick="{!c.doLogout}"/></a>
+    </div>
+</aura:component>

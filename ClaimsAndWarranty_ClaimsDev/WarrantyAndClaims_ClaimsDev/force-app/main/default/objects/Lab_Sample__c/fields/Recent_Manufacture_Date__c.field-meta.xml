@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recent_Manufacture_Date__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-294
+Capture the most recent manufacture date of the Lab Sample Tape Code</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Capture the most recent manufacture date of the Lab Sample Tape Code.</inlineHelpText>
+    <label>Recent Manufacture Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

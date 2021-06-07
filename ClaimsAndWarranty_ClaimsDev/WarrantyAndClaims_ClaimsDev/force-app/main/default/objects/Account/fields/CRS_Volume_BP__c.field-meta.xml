@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRS_Volume_BP__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Volume attributed to BP. (Residential Sales CA)</description>
+    <externalId>false</externalId>
+    <label>Volume BP</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

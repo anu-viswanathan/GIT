@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MembershipID_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISBLANK( Membership_ID__c )</errorConditionFormula>
+    <errorDisplayField>Membership_ID__c</errorDisplayField>
+    <errorMessage>Please enter your HomeAdvisor Membership ID on your Account if you wish to continue the HomeAdvisor setup process.</errorMessage>
+</ValidationRule>

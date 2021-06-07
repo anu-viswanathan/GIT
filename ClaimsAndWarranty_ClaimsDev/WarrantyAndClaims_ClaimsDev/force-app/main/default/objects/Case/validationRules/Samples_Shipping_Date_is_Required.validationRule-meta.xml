@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Samples_Shipping_Date_is_Required</fullName>
+    <active>false</active>
+    <description>Samples Shipping Date is required in order to Submit a Claim.</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos;, 
+TEXT(Origin) = &apos;Distributor&apos; 
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+TEXT(  Samples_Collected__c ) = &apos;Yes&apos;, 
+ISBLANK( Samples_Ship_Date__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Samples_Ship_Date__c</errorDisplayField>
+    <errorMessage>Please fill in Samples Shipped Date prior to Submitting a Claim.</errorMessage>
+</ValidationRule>

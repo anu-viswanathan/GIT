@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Master_Spec__c</fullName>
+    <externalId>false</externalId>
+    <label>Are IKO in Master Spec?</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Yes - Roof Only</fullName>
+                <default>false</default>
+                <label>Yes - Roof Only</label>
+            </value>
+            <value>
+                <fullName>Yes - Building Envelope Only</fullName>
+                <default>false</default>
+                <label>Yes - Building Envelope Only</label>
+            </value>
+            <value>
+                <fullName>Yes - Roof and Building Envelope</fullName>
+                <default>false</default>
+                <label>Yes - Roof and Building Envelope</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Project Specs Only</fullName>
+                <default>false</default>
+                <label>Project Specs Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

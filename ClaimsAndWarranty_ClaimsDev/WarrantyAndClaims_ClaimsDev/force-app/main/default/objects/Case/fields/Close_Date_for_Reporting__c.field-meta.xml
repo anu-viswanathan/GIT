@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date_for_Reporting__c</fullName>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-63
+Populate it with Case Closed Date when the Case is Closed and the Status Date Claim Open is populated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Close Date for Reporting</inlineHelpText>
+    <label>Close Date for Reporting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

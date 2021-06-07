@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ancillary_Items__c</fullName>
+    <externalId>false</externalId>
+    <label>Auxiliary Products</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AquaBarrier TWF</fullName>
+                <default>false</default>
+                <label>AquaBarrier TWF</label>
+            </value>
+            <value>
+                <fullName>IKO Spray Primer</fullName>
+                <default>false</default>
+                <label>IKO Spray Primer</label>
+            </value>
+            <value>
+                <fullName>IKO Water Based Adhesive</fullName>
+                <default>false</default>
+                <label>IKO Water Based Adhesive</label>
+            </value>
+            <value>
+                <fullName>AquaBarrier Mastic</fullName>
+                <default>false</default>
+                <label>AquaBarrier Mastic</label>
+            </value>
+            <value>
+                <fullName>MS Detail</fullName>
+                <default>false</default>
+                <label>MS Detail</label>
+            </value>
+            <value>
+                <fullName>IKO Mod Bit Primer</fullName>
+                <default>false</default>
+                <label>IKO Mod Bit Primer</label>
+            </value>
+            <value>
+                <fullName>Protectoboard</fullName>
+                <default>false</default>
+                <label>Protectoboard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

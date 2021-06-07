@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_ToBeDeleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For EU: used for Data Stewards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Your data steward will delete the record.</inlineHelpText>
+    <label>To Be Deleted</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

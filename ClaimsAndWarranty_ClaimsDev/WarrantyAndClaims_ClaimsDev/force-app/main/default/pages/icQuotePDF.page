@@ -1,0 +1,219 @@
+<apex:page standardController="Quote" extensions="icCTRLQuotePDF" applyBodyTag="false" applyHtmlTag="false" showHeader="false" renderAs="pdf">
+    <head>
+        <style type="text/css" media="print">
+        </style>
+        <style>
+            @page {
+                size:portrait;
+                margin-left: 0.8cm;
+                margin-right: 0.8cm;
+                margin-top: 4cm;
+                margin-bottom: 1.8cm;
+                @top-center {
+                    content: element(headerContent);
+                }
+                @bottom-center {
+                    content: element(footerContent);
+                }
+            }
+
+            .page-number:before {
+                content: counter(page);
+            }
+
+            .page-count:before {
+                content: counter(pages);
+            }
+
+            div {
+                page-break-inside:avoid;
+            }
+
+            div.headerContent {
+                position: running(headerContent);
+            }
+
+            .headerContent div {
+                display: inline-block;
+            }
+
+            .headerTitle {
+                float: right;
+                background-color: red;
+                width: 30%;
+                height: 2em;
+                color: white;
+                font-size: xx-large;
+                text-align: center;
+                vertical-align: top;
+                line-height: 2em;
+                border-bottom-left-radius: 10px;
+            }
+
+            div.footerContent {
+                position: running(footerContent);
+            }
+
+            .footerContent div {
+                display: inline-block;
+            }
+
+            .footerPageInfo {
+                float: right;
+            }
+
+            .pageContent {
+            }
+
+            .contentWrapper {
+                display: block;
+            }
+
+            .infoContent {
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            .inlineContent {
+                display: inline-block;
+                width: 45%;
+                text-align: left;
+            }
+
+            .contentTitle {
+                text-decoration: underline;
+                font-size: 16px;
+            }
+
+            .redBar {
+                color: red;
+                background-color: red;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="headerContent">
+            <div class="headerLogo">
+                <apex:outputText value="{!ImageHTMLMarkup}" escape="false" />
+                <!-- <img src="data:{!fileType};base64,{!fileData}" />
+                <img src="data:{!fileData}" />
+                <apex:image value="data:{!fileType};base64,{!fileData}" />
+                <apex:image value="data:{!fileData}" />
+                {!fileData}
+                <apex:image value="data:{!fileType};base64,{!fileVersionData}" />
+                <apex:image value="data:{!fileVersionData}" />
+                <img src="data:{!fileType};base64,{!fileVersionData}" />
+                <img src="data:{!fileVersionData}" />
+                {!fileVersionData}
+                <apex:image url="/resource/{!Quote.Account.Logo_Resource_Name__c}"/>﻿ -->
+            </div>
+            <div class="headerTitle">
+                {!$Label.icQUOTE}
+            </div>
+            <hr />
+        </div>
+
+        <div class="footerContent">
+            <hr />          
+            <div class="footerPageInfo">
+                <p>Page <span class="page-number" /> of <span class="page-count" /></p>
+            </div>
+        </div>
+
+        <div class="pageContent">
+            <div class="contentWrapper">
+                <div class="infoContent">
+                    <div class="inlineContent">
+                        {!$User.FirstName}&nbsp;{!$User.LastName}<br />
+                        {!$User.Phone}<br />
+                        {!$User.Email}<br />
+                    </div>
+                    <div class="inlineContent">
+                        {!Quote.Account.Name}<br />
+                        {!Quote.HomeOwnerPhone__c}<br />
+                        {!Quote.HomeOwner_Email__c}<br />
+                    </div>
+                </div>
+                <div class="infoContent">
+                    <div class="inlineContent">
+                        {!UserAccount.Name}<br />
+                        {!UserAccount.BillingStreet}<br />
+                        {!UserAccount.BillingCity}<br />
+                        {!UserAccount.BillingState}<br />
+                        {!UserAccount.BillingCountry}<br />
+                        {!UserAccount.BillingPostalCode}<br />
+                    </div>
+                    <div class="inlineContent">
+                        <br />
+                        {!Quote.BillingStreet}<br />
+                        {!Quote.BillingCity}<br />
+                        {!Quote.BillingState}<br />
+                        {!Quote.BillingCountry}<br />
+                        {!Quote.BillingPostalCode}<br />
+                    </div>
+                    
+                </div>
+                <hr />
+            </div>
+        </div>
+        
+        <div class="pageContent">
+            <div class="contentWrapper">
+                <div class="contentTitle">
+                    {!$Label.icQUOTE_DETAILS}
+                </div>
+                <div class="content">
+                    <apex:outputText value="{!Quote.Quote_Details__c}" escape="false" />
+                </div>
+                <hr class="redBar" />
+            </div>
+        </div>
+
+        <div class="pageContent">
+            <div class="contentWrapper">
+                <div class="content" >
+                    <div class="inlineContent" style="min-height:100px;">
+                        &nbsp;
+                    </div>
+                    <div class="inlineContent" style="float:right;">
+                        <hr />
+                            {!$Label.icQUOTE_TOTAL} {!Quote.Total_Incl_Taxes_Formula__c}
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pageContent">
+            <div class="contentWrapper">
+                <div class="content" style="min-height:100px;">
+                    {!$Label.icBy_signing_and_accepting}
+                </div>
+                <div class="infoContent">
+                    <div class="inlineContent" style="float:left;">
+                        <hr />
+                        {!$Label.icAuthorized_signature_for} {!Quote.Account.Name}
+                    </div>
+                    <div class="inlineContent" style="float:right;">
+                        <hr />
+                        {!$Label.icAuthorized_signature_for} {!UserAccount.Name}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="page-break-after:always;" />
+
+        <div class="pageContent">
+            <div class="contentWrapper">
+                <div class="contentTitle">
+                    {!$Label.icLEGAL_TERMS}
+                </div>
+                <div class="content">
+                    <apex:outputText value="{!Quote.Legal_Terms__c}" escape="false" />
+                </div>
+            </div>
+        </div>
+    </body>
+</apex:page>

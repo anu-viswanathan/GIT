@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <defaultValue>&quot;1- Current Inventory - Current inventory assessment in our inventory/control, items to be held until investigation complete, items ok to release. To help avoid selling more of the same problem.&quot; &amp; BR() &amp;
+&quot;2- Recommendations - Recommendations on how to proceed with inventory at customer locations.&quot; &amp; BR() &amp;
+&quot;3- Operating Conditions - Line operating conditions at the time of the incident.&quot; &amp; BR() &amp;
+&quot;4- Root Cause Analysis:&quot; &amp; BR() &amp;
+&quot; &quot; + &quot; &quot; + &quot; &quot; + &quot; &quot; + &quot;4.1 - Production Issues Cause Analysis.&quot; &amp; BR() &amp;
+&quot; &quot; + &quot; &quot; + &quot; &quot; + &quot; &quot; + &quot;4.2 - Product Leaving the Plant Root Cause Analysis.&quot; &amp; BR() &amp; 
+&quot;5- Units Impacted  - Estimated number of units impacted and number of units sold to the market.&quot; &amp; BR() &amp;
+&quot;6- Permanent Corrective Action - To eliminate re-occurrences, action plans, accountability by name, targeted completion date, verification by Plant Manager.&quot; &amp; BR() &amp;
+&quot;7- Communications - List communications with other plants to help them avoid the same problem.&quot;</defaultValue>
+    <description>https://ikoussfsc.atlassian.net/browse/CLAIMSV2-66
+Capture the Plant Team comments. Pre populate the field with PRM six categories</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Capture the Plant Team comments.</inlineHelpText>
+    <label>Description</label>
+    <length>131072</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>8</visibleLines>
+</CustomField>

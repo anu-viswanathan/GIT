@@ -1,0 +1,74 @@
+.THIS {
+}
+
+.THIS .accountIdText {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.THIS .accountIdText span{
+    width: 100%;
+    display:inline-block;
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width:479px) {
+
+
+    .THIS .accountIdText {
+        transform:scaleX(1.1);
+        position: fixed !important;
+        top: 0;
+        float:right;
+        /*margin-left:4%;*/
+        width: 100%;
+        font-family: Montserrat, "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        background-color: #999ca3;
+        /*background-color: red;*/
+        height: 30px;
+        z-index: 1000;
+    }
+
+    .THIS .accountIdText span{
+        position:relative;
+        top:7px;
+        transform:scaleX(0.9);
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .THIS .accountIdText {
+        position: fixed !important;
+        bottom: 0;
+        width: 100%;
+        font-family: Montserrat, "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        background-color: #999ca3;
+        height: 30px;
+        z-index: 1000;
+    }
+
+    .THIS .accountIdText span{
+        position:relative;
+        top:7px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:827px) {
+    .THIS .accountIdText {
+        position: relative;
+        top:-6px;
+    }
+}

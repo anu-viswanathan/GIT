@@ -1,0 +1,48 @@
+<!--
+ - Created by Yves Asselin and Andrea Pissinis on 1/21/2019.
+ -->
+
+<design:component label="icUi ZAP Image">
+
+    <design:attribute name="imageURL"
+                      label="Image URL"
+                      required="false"
+    />
+    <design:attribute name="imageSize"
+                      label="Image Size in Percent (do not put %)"
+                      required="false"
+    />
+    <design:attribute name="photoAlign"
+                      label="Image Alignment"
+                      datasource="margin-left:auto,margin-right:auto,margin:auto"
+    />
+    <design:attribute name="backgroundColor"
+                      label="Background Color (red, rgb(0,0,255), #990000)"
+                      required="false"
+    />
+    <design:attribute name="marginTop"
+                      label="Margin ABOVE paragraph (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="marginBottom"
+                      label="Margin BELOW paragraph (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingLeft"
+                      label="Padding Left (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingRight"
+                      label="Padding Right (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingTop"
+                      label="Padding Top (in pixels no px)"
+                      required="false"
+    />
+    <design:attribute name="paddingBottom"
+                      label="Padding Bottom (in pixels no px)"
+                      required="false"
+    />
+
+</design:component>

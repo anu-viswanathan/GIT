@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Status_Date_Payment_Generated__c</fullName>
+    <description>CLAIMS -328. This field will be populated the first time the &apos;Status Date: Payment Document Generated&apos; field is populated by Conga. It will be used on a Rollup Sumary field on the Case object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Populated the first time a payment request is generated and the settlement acceptance received date has to be filled in. (If the Settlement Acceptance Receive Date is empty, this will NEVER be populated.)</inlineHelpText>
+    <label>Initial Status Date: Payment Generated</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

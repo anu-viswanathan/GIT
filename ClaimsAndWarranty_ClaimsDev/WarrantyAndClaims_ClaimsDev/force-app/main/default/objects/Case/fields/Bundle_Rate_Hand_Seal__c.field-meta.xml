@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bundle_Rate_Hand_Seal__c</fullName>
+    <description>Used for overriding the default Bundle Hand Seal Rate</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used for overrides for the Hand Seal settlements; otherwise, defaults to $10</inlineHelpText>
+    <label>Bundle Rate (Hand Seal Override)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_is_Required_to_Submit_a_Claim</fullName>
+    <active>true</active>
+    <description>Product field must not be blank in order to submit a Claim.</description>
+    <errorConditionFormula>AND( 
+OR( 
+TEXT(Origin) = &apos;Owner&apos;, 
+TEXT(Origin) = &apos;Contractor&apos;, 
+TEXT(Origin) = &apos;Distributor&apos;
+), 
+OR( 
+RecordType.Name = &apos;Commercial Claim&apos;, 
+RecordType.Name = &apos;Residential Claim&apos; 
+), 
+TEXT( Claim_Stage__c ) = &apos;Submitted&apos;, 
+ISBLANK(Product__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Please ensure a Product is selected prior to submitting the Claim.</errorMessage>
+</ValidationRule>

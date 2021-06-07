@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Submit_Without_Line_Items</fullName>
+    <active>true</active>
+    <description>If the Intel Report is something other than a product issues report, it cannot be submitted without line items</description>
+    <errorConditionFormula>AND(
+ Count_of_Line_Items__c &lt; 1,
+ RecordType.DeveloperName &lt;&gt; &quot;Product_Issues_Report&quot;,
+ TEXT( Status__c ) = &quot;Submitted&quot;
+)</errorConditionFormula>
+    <errorMessage>A report must have line items associated with it prior to submission</errorMessage>
+</ValidationRule>

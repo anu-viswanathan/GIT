@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reimbursement_Items__c</fullName>
+    <description>Items against which Contractor will claim funds.</description>
+    <externalId>false</externalId>
+    <label>Claim Category</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Salesforce License Fees for ROOFPRO Contractor Portal</fullName>
+                <default>false</default>
+                <label>Additional Salesforce License Fees for ROOFPRO Contractor Portal</label>
+            </value>
+            <value>
+                <fullName>Digital Advertising</fullName>
+                <default>false</default>
+                <label>Digital Advertising</label>
+            </value>
+            <value>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <label>Direct Mail</label>
+            </value>
+            <value>
+                <fullName>Extended Iron Clad Protection Period Fees</fullName>
+                <default>false</default>
+                <label>Extended Iron Clad Protection Period Fees</label>
+            </value>
+            <value>
+                <fullName>Literature</fullName>
+                <default>false</default>
+                <label>Literature</label>
+            </value>
+            <value>
+                <fullName>Personalized Promotional Items</fullName>
+                <default>false</default>
+                <label>Personalized Promotional Items</label>
+            </value>
+            <value>
+                <fullName>Premiums items and wearables</fullName>
+                <default>false</default>
+                <label>Premiums items and wearables</label>
+            </value>
+            <value>
+                <fullName>Print Advertising, Yellow Pages and Billboards</fullName>
+                <default>false</default>
+                <label>Print Advertising, Yellow Pages and Billboards</label>
+            </value>
+            <value>
+                <fullName>Program Membership Fees</fullName>
+                <default>false</default>
+                <label>Program Membership Fees</label>
+            </value>
+            <value>
+                <fullName>Program Partners’ Services</fullName>
+                <default>false</default>
+                <label>Program Partners’ Services</label>
+            </value>
+            <value>
+                <fullName>Radio and TV Advertising</fullName>
+                <default>false</default>
+                <label>Radio and TV Advertising</label>
+            </value>
+            <value>
+                <fullName>Samples &amp; Displays</fullName>
+                <default>false</default>
+                <label>Samples &amp; Displays</label>
+            </value>
+            <value>
+                <fullName>Showroom Racks &amp; Wall Display Materials</fullName>
+                <default>false</default>
+                <label>Showroom Racks &amp; Wall Display Materials</label>
+            </value>
+            <value>
+                <fullName>Tradeshows and Home shows</fullName>
+                <default>false</default>
+                <label>Tradeshows and Home shows</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Travel to IKO ROOFPRO Profit Power Workshops</fullName>
+                <default>false</default>
+                <label>Travel to IKO ROOFPRO Profit Power Workshops</label>
+            </value>
+            <value>
+                <fullName>Truck Wraps and Graphics</fullName>
+                <default>false</default>
+                <label>Truck Wraps and Graphics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

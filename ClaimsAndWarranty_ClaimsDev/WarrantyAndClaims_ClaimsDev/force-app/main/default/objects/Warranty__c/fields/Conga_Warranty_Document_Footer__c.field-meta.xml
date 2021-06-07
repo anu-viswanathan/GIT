@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Warranty_Document_Footer__c</fullName>
+    <description>Document Footer for warranty services department. Used in the Warranty Conga Templates</description>
+    <externalId>false</externalId>
+    <formula>CASE(Warranty_Service_Region__c, 
+&apos;US&apos;, $Setup.Warranty_Claims_Defaults__c.US_Document_Footer__c, 
+&apos;Western Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Western_Canada_Document_Footer__c, 
+&apos;Eastern Canada&apos;, $Setup.Warranty_Claims_Defaults__c.Eastern_Canada_Document_Footer__c, 
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Document Footer for warranty services department. Used in the Warranty Conga Templates</inlineHelpText>
+    <label>Conga: Warranty Document Footer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

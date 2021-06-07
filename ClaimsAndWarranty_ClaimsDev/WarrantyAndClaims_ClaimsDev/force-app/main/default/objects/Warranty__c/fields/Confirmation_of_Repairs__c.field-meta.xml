@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmation_of_Repairs__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>2019-06-26 DO NOT USE see CLAIMSV2-38 Confirmation in writing that deficiencies, if any, from the Final Inspection report were repaired. This is being deprecated because we can&apos;t change a field type during a deployment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Confirmation in writing that deficiencies, if any, from the Final Inspection report were repaired</inlineHelpText>
+    <label>Confirmation of Repairs? (deprecated)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
