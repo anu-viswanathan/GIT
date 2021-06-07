@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Debit_Amount_Less_Than_Total_Credit_PRM</fullName>
-    <active>true</active>
-    <errorConditionFormula>AND(OR($Profile.Name = &quot;IKOPRO Loyalty Admin&quot;,$Profile.Name = &quot;System Administrator&quot; ), Text(Transaction_Type__c)=&quot;Debit&quot;, Text(Currency_Used__c)=&quot;Premium Co-op $&quot;,ISBLANK( Reimbursement_Claim__c),Amount__c  &gt;  Account_ID__r.Available_Premium_COOP_Funds__c + 1)</errorConditionFormula>
-    <errorMessage>Debit Amount should be less than Total Available Premium Coop $.</errorMessage>
-</ValidationRule>

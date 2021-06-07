@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Contractor_Program_Dates</fullName>
-    <active>true</active>
-    <description>Ensure that the Start Date is before the Expiration Data</description>
-    <errorConditionFormula>IKO_Contractor_Program_Start_Date__c &gt;   IKO_Contractor_Program_Expiration_Date__c</errorConditionFormula>
-    <errorMessage>The Contractor Program Expiration Date must  be after the IKO Contractor Program Start Date</errorMessage>
-</ValidationRule>

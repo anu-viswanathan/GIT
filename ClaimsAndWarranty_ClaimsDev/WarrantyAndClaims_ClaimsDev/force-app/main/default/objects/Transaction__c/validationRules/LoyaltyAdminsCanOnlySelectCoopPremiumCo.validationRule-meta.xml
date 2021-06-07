@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>LoyaltyAdminsCanOnlySelectCoopPremiumCo</fullName>
-    <active>true</active>
-    <description>Loyalty Admins can only select Coop and Premium Coop as Transaction Source</description>
-    <errorConditionFormula>AND(Text(Transaction_Sources__c)=&quot;Loyalty Admin&quot;, OR(Text(Currency_Used__c)=&quot;USD&quot;,Text(Currency_Used__c)=&quot;CAD&quot;))</errorConditionFormula>
-    <errorMessage>You cannot credit or debit using actual currency value (USD/CAD).</errorMessage>
-</ValidationRule>

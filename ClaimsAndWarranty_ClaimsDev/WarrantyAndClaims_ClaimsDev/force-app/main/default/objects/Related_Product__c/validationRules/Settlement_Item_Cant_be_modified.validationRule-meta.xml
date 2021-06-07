@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Settlement_Item_Cant_be_modified</fullName>
-    <active>true</active>
-    <description>Settlement Item can&apos;t be modified if the Parent Case has been approved for settlement.</description>
-    <errorConditionFormula>Case__r.ClaimApproved__c</errorConditionFormula>
-    <errorMessage>Offer has been approved. Settlement Item can&apos;t be created or modified.</errorMessage>
-</ValidationRule>

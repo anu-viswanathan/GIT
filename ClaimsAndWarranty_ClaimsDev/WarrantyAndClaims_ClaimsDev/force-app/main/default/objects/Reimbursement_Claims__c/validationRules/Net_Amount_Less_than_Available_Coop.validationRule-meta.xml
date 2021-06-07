@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Net_Amount_Less_than_Available_Coop</fullName>
-    <active>true</active>
-    <errorConditionFormula>if(AND(YEAR(Date_Submitted__c) == YEAR(TODAY()),NOT( Approved_by_Loyalty_Admin__c ),Net_Claim_Amount__c &gt; Contractor__r.Available_COOP_Funds__c),true, false)</errorConditionFormula>
-    <errorMessage>Net Reimbursable Amount cannot be greater than the Available Coop Funds.</errorMessage>
-</ValidationRule>

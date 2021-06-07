@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Invoice_Period_Compact_Layout</fullName>
-    <fields>Name</fields>
-    <fields>Date_Range__c</fields>
-    <label>Invoice Period Compact Layout</label>
-</CompactLayout>

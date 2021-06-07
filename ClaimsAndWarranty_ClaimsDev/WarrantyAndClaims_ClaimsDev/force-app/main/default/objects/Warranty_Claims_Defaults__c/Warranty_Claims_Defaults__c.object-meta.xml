@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customSettingsType>Hierarchy</customSettingsType>
-    <description>Default settings for the Warranty and Claims Process. This includes phone numbers, labour rates, etc</description>
-    <enableFeeds>false</enableFeeds>
-    <label>Warranty &amp; Claims Defaults</label>
-    <visibility>Public</visibility>
-</CustomObject>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Cannot_Created_if_Claim_Stage_Submited</fullName>
-    <active>true</active>
-    <description>CLAIMSV2-227 - Claim types can&apos;t be added if the Claim Stage is Submitted</description>
-    <errorConditionFormula>ISPICKVAL( Case__r.Claim_Stage__c , &apos;Submitted&apos;)
- &amp;&amp; ISNEW()</errorConditionFormula>
-    <errorMessage>You can&apos;t add a Claim Type because the Claim Stage is Submitted.</errorMessage>
-</ValidationRule>

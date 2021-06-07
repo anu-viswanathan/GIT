@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Second_Payee_Cannot_Equal_First_Payee</fullName>
-    <active>true</active>
-    <description>Second payee name cannot be the same as the first payee name</description>
-    <errorConditionFormula>!ISBLANK( Second_Payee__c ) &amp;&amp; Second_Payee__c =  Contact__c</errorConditionFormula>
-    <errorDisplayField>Second_Payee__c</errorDisplayField>
-    <errorMessage>The second payee name cannot be the same as the first payee name</errorMessage>
-</ValidationRule>

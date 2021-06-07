@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Product_and_Manufacturing_Manager_Roles</fullName>
-    <active>true</active>
-    <description>Non-hierarchy roles that are distribution only</description>
-    <label>Product and Manufacturing Manager Roles</label>
-</RecordType>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Need_Mapics_ERP_Id_Populated_for_Credit</fullName>
-    <active>false</active>
-    <description>Mapics ERP ID field must be populated for Credit Note Type.</description>
-    <errorConditionFormula>ISPICKVAL(Note_Type__c, &quot;Credit&quot;) &amp;&amp;  ISBLANK(Customer_Mapic_Number__c)</errorConditionFormula>
-    <errorMessage>MAPICS ERP ID field must be populated if Note Type is Credit.</errorMessage>
-</ValidationRule>

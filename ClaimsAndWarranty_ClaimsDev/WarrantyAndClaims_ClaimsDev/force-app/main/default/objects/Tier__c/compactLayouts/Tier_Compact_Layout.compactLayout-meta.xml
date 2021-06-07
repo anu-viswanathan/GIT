@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Tier_Compact_Layout</fullName>
-    <fields>Maximum_Squares__c</fields>
-    <fields>Minimum_Squares__c</fields>
-    <label>Tier Compact Layout</label>
-</CompactLayout>

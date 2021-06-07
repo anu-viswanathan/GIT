@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label>Iko Global Configurations</label>
-    <pluralLabel>Iko Global Configurations</pluralLabel>
-    <visibility>Public</visibility>
-</CustomObject>

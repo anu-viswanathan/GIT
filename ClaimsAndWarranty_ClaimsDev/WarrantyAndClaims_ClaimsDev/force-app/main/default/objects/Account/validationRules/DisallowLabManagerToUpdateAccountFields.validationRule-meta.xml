@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DisallowLabManagerToUpdateAccountFields</fullName>
-    <active>true</active>
-    <description>IWCN145 - disallow the Lab Manager from updating certain Account Fields</description>
-    <errorConditionFormula>AND(ISCHANGED(Name), $Profile.Name = &apos;Lab Manager&apos;)</errorConditionFormula>
-    <errorDisplayField>Name</errorDisplayField>
-    <errorMessage>You can not modify the Account Name</errorMessage>
-</ValidationRule>
